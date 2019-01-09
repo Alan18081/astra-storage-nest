@@ -49,20 +49,20 @@ export class AuthController {
   //   }
   // }
   //
-  @Get('google/success')
-  @ApiOperation({ title: 'Google success authentication' })
-  async googleSuccess(@Query('userId') userId: number): Promise<JwtResponse | void> {
-    const user = await this.usersService.findOne({ id: userId });
-    if (user) {
-      return await this.authService.login(user);
-    }
-  }
-
-  @Get('google/fail')
-  @ApiOperation({ title: 'Google failed authentication' })
-  async googleFail(): Promise<UnauthorizedException> {
-    return new UnauthorizedException(Messages.FAILED_GOOGLE_AUTH);
-  }
+  // @Get('google/success')
+  // @ApiOperation({ title: 'Google success authentication' })
+  // async googleSuccess(@Query('userId') userId: number): Promise<JwtResponse | void> {
+  //   const user = await this.usersService.findOne({ id: userId });
+  //   if (user) {
+  //     return await this.authService.login(user);
+  //   }
+  // }
+  //
+  // @Get('google/fail')
+  // @ApiOperation({ title: 'Google failed authentication' })
+  // async googleFail(): Promise<UnauthorizedException> {
+  //   return new UnauthorizedException(Messages.FAILED_GOOGLE_AUTH);
+  // }
   //
   // @Put('changePassword')
   // @UseGuards(AuthGuard('jwt'))
