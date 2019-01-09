@@ -4,7 +4,7 @@ import { AuthService } from '../auth.service';
 import { LoginDto } from '../dto/login.dto';
 import { JwtResponse } from '../interfaces/jwt-response';
 import { UsersService } from '../../users/users.service';
-import { User } from '../../users/user.entity';
+import { User } from '../../users/user-auth.entity';
 import { HashService } from '../../core/services/hash.service';
 import { BadRequestException, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { Messages } from '../../../helpers/enums/messages.enum';
@@ -73,7 +73,7 @@ describe('AuthController', () => {
       jest.spyOn(mockAuthService, 'signIn').mockImplementation(async () => jwtResponse);
     });
 
-    it('should return token\'s info if credentials valid and user is found', async () => {
+    it('should return token\'s info if credentials valid and user-auth is found', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => mockUserWithPassword);
       jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
 
@@ -97,7 +97,7 @@ describe('AuthController', () => {
 
     });
 
-    it('should throw an error if user is not found', async () => {
+    it('should throw an error if user-auth is not found', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => undefined);
 
       try {
@@ -108,7 +108,7 @@ describe('AuthController', () => {
       }
     });
 
-    it('should throw an error if user doesn\'t have password', async () => {
+    it('should throw an error if user-auth doesn\'t have password', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => mockUser);
 
       try {
@@ -119,7 +119,7 @@ describe('AuthController', () => {
       }
     });
 
-    it('should throw an error if user has provided invalid password', async () => {
+    it('should throw an error if user-auth has provided invalid password', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => mockUserWithPassword);
       jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => false);
 
@@ -157,7 +157,7 @@ describe('AuthController', () => {
 
     });
 
-    it('should throw an error if user doesn\'t exist', async () => {
+    it('should throw an error if user-auth doesn\'t exist', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => undefined);
 
       try {
@@ -195,16 +195,16 @@ describe('AuthController', () => {
 
     const spy = jest.spyOn(res, 'redirect');
 
-    it('should redirect to success route if user has been found', () => {
+    it('should redirect to success route if user-auth has been found', () => {
 
       authController.googleLoginCallback(user, res);
       expect(spy).toBeCalledWith(`/auth/google/success?userId=${user.id}`);
     });
 
-    it('should redirect to fail route if user has not been found', () => {
+    it('should redirect to fail route if user-auth has not been found', () => {
 
       authController.googleLoginCallback(null, res);
-      expect(spy).toBeCalledWith('/auth/google/fail');
+      expect(spy).toBeCalledWith('/user-auth/google/fail');
     });
 
   });

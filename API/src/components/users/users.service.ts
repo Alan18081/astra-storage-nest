@@ -18,23 +18,23 @@ export class UsersService {
     private readonly client: ClientProxy;
 
     findMany(dto: FindUsersListDto): Observable<IUser[]> {
-       return this.client.send(CommunicationCodes.GET_USERS_LIST, dto);
+       return this.client.send({ cmd: CommunicationCodes.GET_USERS_LIST }, dto);
     }
 
     findOne(dto: FindUserDto): Observable<IUser | undefined> {
-        return this.client.send(CommunicationCodes.GET_USER, dto);
+        return this.client.send({ cmd: CommunicationCodes.GET_USER }, dto);
     }
 
     createOne(dto: CreateUserDto): Observable<IUser> {
-        return this.client.send(CommunicationCodes.CREATE_USER, dto);
+        return this.client.send({ cmd: CommunicationCodes.CREATE_USER }, dto);
     }
 
     updateOne(dto: UpdateUserDto): Observable<IUser | undefined> {
-        return this.client.send(CommunicationCodes.CREATE_USER, dto);
+        return this.client.send({ cmd: CommunicationCodes.UPDATE_USER }, dto);
     }
 
     removeOne(dto: RemoveUserDto): Observable<void> {
-        return this.client.send(CommunicationCodes.CREATE_USER, dto);
+        return this.client.send({ cmd: CommunicationCodes.CREATE_USER }, dto);
     }
 
 }

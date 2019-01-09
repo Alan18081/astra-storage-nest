@@ -11,6 +11,7 @@ yarn build
 MICROSERVICES=(
     API
     UsersService
+    AuthService
     #ProjectsService
     #DataService
 )

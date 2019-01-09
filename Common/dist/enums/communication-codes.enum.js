@@ -43,4 +43,7 @@ var CommunicationCodes;
     CommunicationCodes["UPDATE_PROJECT_ACCOUNT"] = "[ProjectsService] Update Project Account";
     CommunicationCodes["REMOVE_PROJECT_ACCOUNT"] = "[ProjectsService] Remove Project Account";
     CommunicationCodes["REMOVE_PROJECT_ACCOUNT_BY_PROJECT_OWNER"] = "[ProjectsService] Remove Project Account By Project Owner";
+    CommunicationCodes["CREATE_REFRESH_TOKEN"] = "[UsersService] Create Refresh Token";
+    CommunicationCodes["GET_REFRESH_TOKEN"] = "[UsersService] Get Refresh Token";
+    CommunicationCodes["REMOVE_REFRESH_TOKEN"] = "[UsersService] Remove Refresh Token";
 })(CommunicationCodes = exports.CommunicationCodes || (exports.CommunicationCodes = {}));

@@ -8,7 +8,6 @@ exports.createClientOptions = (queue) => {
         options: {
             queue,
             urls: [config_1.RABBIT_MQ_URL],
-            queueOptions: { durable: false }
         }
     };
 };

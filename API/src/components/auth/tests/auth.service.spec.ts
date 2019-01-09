@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
 import { JwtService } from '@nestjs/jwt';
-import { User } from '../../users/user.entity';
+import { User } from '../../users/user-auth.entity';
 import { AuthController } from '../auth.controller';
 import { UsersService } from '../../users/users.service';
 import { AuthService } from '../auth.service';
@@ -9,7 +9,7 @@ import { NotFoundException } from '@nestjs/common';
 import { Messages } from '../../../helpers/enums/messages.enum';
 import { ResetPasswordDto } from '../dto/reset-password.dto';
 import { SetNewPasswordDto } from '../dto/set-new-password.dto';
-import { UserHashesService } from '../../user-hashes/user-hashes.service';
+import { UserHashesService } from '../../user-auth-hashes/user-auth-hashes.service';
 import { RefreshTokensService } from '../../refresh-tokens/refresh-tokens.service';
 import { RefreshToken } from '../../refresh-tokens/refresh-token.entity';
 import { CoreModule } from '../../core/core.module';
@@ -19,7 +19,7 @@ import { EmailSendingService } from '../../core/services/email-sending.service';
 import { HashTypes } from '../../../helpers/enums/hash-types.enum';
 import { TemplateTypes } from '../../../helpers/enums/template-types.enum';
 import { WsException } from '@nestjs/websockets';
-import { UserHash } from '../../user-hashes/user-hash.entity';
+import { UserHash } from '../../user-auth-hashes/user-auth-hash.entity';
 
 const mockUsersService = {
   async findOneByEmail() {}
@@ -189,7 +189,7 @@ describe('AuthService', () => {
       );
     });
 
-    it('should throw an error if user doesn\'t exist', async () => {
+    it('should throw an error if user-auth doesn\'t exist', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => undefined);
 
       try {
@@ -250,7 +250,7 @@ describe('AuthService', () => {
       );
     });
 
-    it('should throw an error if user doesn\'t exist', async () => {
+    it('should throw an error if user-auth doesn\'t exist', async () => {
       jest.spyOn(mockUsersService, 'findOneByEmail').mockImplementation(() => undefined);
 
       try {

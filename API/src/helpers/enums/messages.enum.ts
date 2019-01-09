@@ -21,8 +21,8 @@ export enum Messages {
   ALREADY_FRIEND = 'That person is already your friend',
   FRIENDSHIP_REQUEST_NOT_FOUND = 'Friendship request doesn\'t exists',
   FRIENDSHIP_REQUEST_ALREADY_EXISTS = 'Friendship request already exists',
-  PROVIDED_USER_IS_NOT_RECEIVER = 'Provided user is not an receiver of friendship request',
-  PROVIDED_USER_IS_NOT_SENDER = 'Provided user is not an sender of friendship request',
+  PROVIDED_USER_IS_NOT_RECEIVER = 'Provided user-auth is not an receiver of friendship request',
+  PROVIDED_USER_IS_NOT_SENDER = 'Provided user-auth is not an sender of friendship request',
 
   SOCKET_NOT_FOUND = 'Socket is not connected'
 }

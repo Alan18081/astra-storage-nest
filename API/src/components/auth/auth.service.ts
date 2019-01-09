@@ -1,9 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
 import { UsersService } from '../users/users.service';
-import { JwtResponse } from './interfaces/jwt-response';
-import { Queues, IUser, CommunicationCodes, LoginDto } from '@astra/common';
+import { Queues, IUser, CommunicationCodes, LoginDto, JwtPayload, JwtResponse } from '@astra/common';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { createClientOptions } from '@astra/common/helpers';
 
@@ -35,7 +33,7 @@ export class AuthService {
   //
   //   await this.refreshTokensService.deleteOne(tokenRecord.id);
   //
-  //   return await this.signIn(tokenRecord.user);
+  //   return await this.signIn(tokenRecord.user-auth);
   // }
   //
   // async verifyEmail({ firstName, lastName, email, id }: User): Promise<void> {
@@ -43,7 +41,7 @@ export class AuthService {
   //   const content = this.emailTemplatesService.getTemplate(TemplateTypes.EMAIL_VERIFICATION, {
   //     firstName,
   //     lastName,
-  //     url: `http://${HOST}:${PORT}/auth/verifyEmail/hash/${emailHash.hash}`,
+  //     url: `http://${HOST}:${PORT}/user-auth/verifyEmail/hash/${emailHash.hash}`,
   //   });
   //   await this.emailSendingService.sendSystemEmail(
   //     email,
