@@ -4,26 +4,31 @@ import { JwtService } from '@nestjs/jwt';
 import { RefreshToken } from './refresh-token.entity';
 import { Repository } from 'typeorm';
 import { CreateRefreshTokenInterface } from './interfaces/create-refresh-token.interface';
+import {RefreshTokensRepository} from './refresh-tokens.repository';
+import {CreateRefreshTokenDto} from '@astra/common';
 
 @Injectable()
 export class RefreshTokensService {
 
   constructor(
-    @InjectRepository(RefreshToken)
-    private readonly refreshTokensRepository: Repository<RefreshToken>,
+    @InjectRepository(RefreshTokensRepository)
+    private readonly refreshTokensRepository: RefreshTokensRepository,
     private readonly jwtService: JwtService,
   ) {}
 
   async findOneByUserId(userId: number): Promise<RefreshToken | undefined> {
-    return await this.refreshTokensRepository.findOne({ userId });
+    return await this.refreshTokensRepository.findOneByUserId(userId);
   }
 
   async findOneByToken(token: string): Promise<RefreshToken | undefined> {
-    return await this.refreshTokensRepository.findOne({ token }, { relations: ['user'] });
+    return await this.refreshTokensRepository.findOneByToken(token);
   }
 
-  async createOne(payload: CreateRefreshTokenInterface): Promise<RefreshToken> {
-    const { accessToken, userId } = payload;
+  async createOne(dto: CreateRefreshTokenDto): Promise<RefreshToken> {
+    const { accessToken, userId } = dto;
+
+
+
     const token = this.jwtService.sign({ accessToken, userId });
 
     const refreshToken = new RefreshToken();
@@ -34,7 +39,7 @@ export class RefreshTokensService {
   }
 
   async deleteOne(id: number): Promise<void> {
-    await this.refreshTokensRepository.delete({ id });
+    await this.refreshTokensRepository.deleteOne(id);
   }
 
 }
