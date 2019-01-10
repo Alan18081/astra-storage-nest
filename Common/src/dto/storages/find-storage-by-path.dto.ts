@@ -1,7 +1,6 @@
 import { IsString, IsOptional, IsBoolean } from 'class-validator';
-import { BaseDto } from '@astra/common';
 
-export class FindStorageByPathDto extends BaseDto {
+export class FindStorageByPathDto {
 
   @IsString()
   path: string;

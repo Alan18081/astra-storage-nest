@@ -10,7 +10,8 @@
     "@types/node": "^10.12.18",
     "bcrypt": "^3.0.3",
     "class-validator": "^0.9.1",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "typeorm": "^0.2.11"
   },
   "scripts": {
     "build": "rm -rf ./dist && tsc"

@@ -1,5 +1,5 @@
 import {IUser, Roles} from '@astra/common';
-import {Column, Entity, PrimaryGeneratedColumn} from 'typeorm';
+import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
 import {Exclude} from 'class-transformer';
 
 @Entity()
@@ -18,6 +18,7 @@ export class User implements IUser {
     roleId: Roles;
 
     @Column('varchar')
+    @Index()
     email: string;
 
     @Exclude()

@@ -1,7 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
-import { Queues, IUser, CommunicationCodes, LoginDto, JwtPayload, JwtResponse } from '@astra/common';
+import { Queues, IUser, CommunicationCodes, JwtPayload, JwtResponse } from '@astra/common';
+import { LoginDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { createClientOptions } from '@astra/common/helpers';
 

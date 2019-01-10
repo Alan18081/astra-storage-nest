@@ -8,3 +8,6 @@ __export(require("./queues.enum"));
 __export(require("./communication-codes.enum"));
 __export(require("./messages.enum"));
 __export(require("./storage-type.enum"));
+__export(require("./template-types.enum"));
+__export(require("./hash-types.enum"));
+__export(require("./email-titles.enum"));

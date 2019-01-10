@@ -1,11 +1,11 @@
-import { StorageType } from '../enums/storage-type.enum';
+import { StorageType } from '../enums';
+import { IProject } from './project';
 export interface IStorage {
     id: number;
     name: string;
-    description: string;
+    description?: string;
     path: string;
     projectId: number;
-    dataId?: string;
-    data?: object;
+    project: IProject;
     typeId: StorageType;
 }

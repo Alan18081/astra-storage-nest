@@ -1,7 +1,6 @@
 import {IsInt} from 'class-validator';
-import { PaginationDto } from '@astra/common';
 
-export class ValidateProjectDto extends PaginationDto {
+export class ValidateProjectDto {
 
     @IsInt()
     userId: number;

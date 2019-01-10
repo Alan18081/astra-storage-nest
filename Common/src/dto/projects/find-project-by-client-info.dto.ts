@@ -1,7 +1,6 @@
 import { IsString } from 'class-validator';
-import { BaseDto } from '@astra/common';
 
-export class FindProjectByClientInfoDto extends BaseDto {
+export class FindProjectByClientInfoDto {
 
     @IsString()
     clientId: string;

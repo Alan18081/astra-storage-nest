@@ -16,19 +16,7 @@ export class RefreshTokensService {
     private readonly jwtService: JwtService,
   ) {}
 
-  async findOneByUserId(userId: number): Promise<RefreshToken | undefined> {
-    return await this.refreshTokensRepository.findOneByUserId(userId);
-  }
-
-  async findOneByToken(token: string): Promise<RefreshToken | undefined> {
-    return await this.refreshTokensRepository.findOneByToken(token);
-  }
-
-  async createOne(dto: CreateRefreshTokenDto): Promise<RefreshToken> {
-    const { accessToken, userId } = dto;
-
-
-
+  async createOne({ accessToken, userId }: CreateRefreshTokenDto): Promise<RefreshToken> {
     const token = this.jwtService.sign({ accessToken, userId });
 
     const refreshToken = new RefreshToken();
@@ -36,10 +24,6 @@ export class RefreshTokensService {
     refreshToken.userId = userId;
 
     return await this.refreshTokensRepository.save(refreshToken);
-  }
-
-  async deleteOne(id: number): Promise<void> {
-    await this.refreshTokensRepository.deleteOne(id);
   }
 
 }

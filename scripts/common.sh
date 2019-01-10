@@ -12,7 +12,7 @@ MICROSERVICES=(
     API
     UsersService
     AuthService
-    #ProjectsService
+    ProjectsService
     #DataService
 )
 

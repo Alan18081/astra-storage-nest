@@ -12,7 +12,12 @@ export class UsersRepository extends Repository<User> {
         return await this.findOne({ email });
     }
 
-    async updateOne(id: number, data: Partial<User>): Promise<void> {
+    async updateOne(id: number, data: Partial<User>): Promise<User | undefined> {
         await this.update({ id }, data);
+        return await this.findById(id);
+    }
+
+    async removeOne(id: number): Promise<void> {
+        await this.delete({ id });
     }
 }

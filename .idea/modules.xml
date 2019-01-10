@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/astra-storage.iml" filepath="$PROJECT_DIR$/.idea/astra-storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/astra-storage-nest.iml" filepath="$PROJECT_DIR$/.idea/astra-storage-nest.iml" />
     </modules>
   </component>
 </project>

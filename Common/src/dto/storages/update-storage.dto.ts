@@ -1,7 +1,6 @@
 import { IsString, IsOptional, IsInt } from 'class-validator';
-import { BaseDto } from '@astra/common';
 
-export class UpdateStorageDto extends BaseDto {
+export class UpdateStorageDto {
 
     @IsInt()
     id: number;

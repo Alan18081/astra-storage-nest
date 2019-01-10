@@ -5,4 +5,6 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const UsersServiceConfig = require("./users-service");
 exports.UsersServiceConfig = UsersServiceConfig;
+const ProjectsServiceConfig = require("./projects-service");
+exports.ProjectsServiceConfig = ProjectsServiceConfig;
 __export(require("./common"));

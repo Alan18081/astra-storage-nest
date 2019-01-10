@@ -2,7 +2,7 @@ import {
   Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
   BadRequestException, HttpCode, HttpStatus, NotFoundException, Param,
 } from '@nestjs/common';
-import { ChangePasswordDto, ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto } from '@astra/common';
+import { ChangePasswordDto, ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto } from '@astra/common/dto';
 import { Response } from 'express';
 import {ApiBearerAuth, ApiOperation, ApiUseTags} from '@nestjs/swagger';
 import {UsersService} from '../users/users.service';

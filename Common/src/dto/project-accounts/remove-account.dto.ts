@@ -1,7 +1,6 @@
 import { IsInt } from 'class-validator';
-import { BaseDto } from '@astra/common';
 
-export class RemoveAccountDto extends BaseDto {
+export class RemoveAccountDto {
 
     @IsInt()
     accountId: number;
