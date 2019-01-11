@@ -1,6 +1,6 @@
 import { IsInt } from 'class-validator';
 
-export class RemoveAccountDto {
+export class RemoveProjectAccountDto {
 
     @IsInt()
     accountId: number;

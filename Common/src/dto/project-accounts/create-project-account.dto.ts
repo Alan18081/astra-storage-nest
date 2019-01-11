@@ -1,6 +1,7 @@
 import { IsString, IsEmail, IsInt } from 'class-validator';
+import { ValidateProjectDto } from './validate-project.dto';
 
-export class CreateAccountDto {
+export class CreateProjectAccountDto extends ValidateProjectDto {
 
     @IsString()
     login: string;

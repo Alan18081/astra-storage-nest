@@ -1,43 +1,51 @@
-import { injectable, inject } from 'inversify';
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
 import {ProjectAccountsRepository} from './project-accounts.repository';
-import {ProjectAccountEntity} from './project-account';
-import {CreateAccountDto} from '../../../../Common/src/dto/dto/create-account.dto';
-import {FindAccountsListDto} from '../../../../Common/src/dto/dto/find-accounts-list.dto';
-import {PaginatedResponse, PaginationDto, HashService} from '@astra/common';
+import {ProjectAccount} from './project-account.entity';
+import { Messages, PaginatedResponse } from '@astra/common';
+import { HashService } from '@astra/common/services';
+import { FindProjectAccountsListDto } from '@astra/common/dto';
+import { ProjectsRepository } from '../projects/projects.repository';
+import { RpcException } from '@nestjs/microservices';
 
-@injectable()
+@Injectable()
 export class ProjectAccountsService {
 
-    @inject(ProjectAccountsRepository)
-    private readonly projectAccountRepository: ProjectAccountsRepository;
+    constructor(
+      @InjectRepository(ProjectAccountsRepository)
+      private readonly projectAccountsRepository: ProjectAccountsRepository,
+      @InjectRepository(ProjectsRepository)
+      private readonly projectsRepository: ProjectsRepository,
+      private readonly hashService: HashService,
+    ) {}
 
-    @inject(HashService)
-    private readonly hashService: HashService;
+    async findMany({ page, limit, ...query }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
+        if (!(await this.isValidProjectOwner(query.projectId, query.userId))) {
+            throw new RpcException(Messages.INVALID_PERMISSIONS);
+        }
 
-    async findMany({userId, ...query}: FindAccountsListDto): Promise<ProjectAccountEntity[]> {
-        return await this.projectAccountRepository.find(query);
+        if (page && limit) {
+            return await this.projectAccountsRepository.findManyWithPagination(query, { page, limit });
+        }
+
+        return await this.projectAccountsRepository.findMany(query);
     }
 
-    async findManyWithPagination({ projectId }: FindAccountsListDto, { page, limit }: Required<PaginationDto>): Promise<PaginatedResponse<ProjectAccountEntity>> {
-        return await this.projectAccountRepository.findManyWithPagination({ projectId }, { page, limit });
-    }
 
-    async findById(id: number): Promise<ProjectAccountEntity | undefined> {
-       return await this.projectAccountRepository.findOne({ id });
-    }
+    async createOne(payload: CreateAccountDto): Promise<ProjectAccount> {
+        const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email);
 
-    async findOneByEmail(email: string): Promise<ProjectAccountEntity | undefined> {
-        return await this.projectAccountRepository.findOne({ email, deletedAt: null });
-    }
-
-    async createOne(payload: CreateAccountDto): Promise<ProjectAccountEntity> {
-        const newAccount = new ProjectAccountEntity(payload);
+        if (projectAccount) {
+            throw new RpcException(Messages.USER_ALREADY_EXISTS);
+        }
+        const newAccount = new ProjectAccount(payload);
         newAccount.password = await this.hashService.generateHash(payload.password);
 
-        return await this.projectAccountRepository.save(newAccount);
+        return await this.projectsRepository.save(newAccount);
     }
 
-    async removeOne(id: number): Promise<void> {
-        await this.projectAccountRepository.update({ id }, { deletedAt: new Date() });
+    private async isValidProjectOwner(projectId: number, userId: number): Promise<boolean> {
+        const project = await this.projectsRepository.findOneByUserId(projectId, userId);
+        return !!project;
     }
 }

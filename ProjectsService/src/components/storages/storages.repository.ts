@@ -28,21 +28,6 @@ export class StoragesRepository extends Repository<Storage> {
         return await this.findOne({ name });
     }
 
-    async findManyWithPagination(query: FindManyOptions<Storage>, { page, limit }: Required<PaginationDto>): Promise<PaginatedResponse<Storage>> {
-        const [data, count] = await this.findAndCount({
-           where: query,
-           skip: (page - 1) * limit,
-           take: limit,
-        });
-
-        return {
-            data,
-            totalCount: count,
-            itemsPerPage: limit,
-            page,
-        };
-    }
-
     async updateOne(id: number, data: Partial<Storage>): Promise<Storage | undefined> {
         await this.update({ id }, { ...data });
         return this.findById(id);

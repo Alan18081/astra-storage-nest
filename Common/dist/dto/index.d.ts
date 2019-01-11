@@ -5,3 +5,4 @@ export * from './projects';
 export * from './project-accounts';
 export * from './storages';
 export * from './common';
+export * from './storage-records';

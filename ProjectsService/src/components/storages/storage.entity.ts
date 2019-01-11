@@ -29,6 +29,7 @@ export class Storage extends BaseEntity implements IStorage {
   typeId: StorageType;
 
   constructor(partial: Partial<Storage>) {
+    super();
     Object.assign(this, partial);
   }
 }

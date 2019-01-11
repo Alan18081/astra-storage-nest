@@ -1,11 +1,11 @@
-export * from './create-account.dto';
+export * from './create-project-account.dto';
 
-export * from './find-accounts-list.dto';
+export * from './find-project-accounts-list.dto';
 
-export * from './find-account.dto';
+export * from './find-project-account.dto';
 
-export * from './find-account-by-email.dto';
+export * from './find-project-account-by-email.dto';
 
-export * from './find-account-by-email.dto';
+export * from './find-project-account-by-email.dto';
 
-export * from './remove-account.dto';
+export * from './remove-project-account.dto';

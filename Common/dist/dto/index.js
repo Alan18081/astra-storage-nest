@@ -10,3 +10,4 @@ __export(require("./projects"));
 __export(require("./project-accounts"));
 __export(require("./storages"));
 __export(require("./common"));
+__export(require("./storage-records"));
