@@ -40,6 +40,15 @@
     path-to-regexp "2.2.1"
     uuid "3.3.2"
 
+"@nestjs/microservices@^5.5.0":
+  version "5.5.0"
+  resolved "https://registry.yarnpkg.com/@nestjs/microservices/-/microservices-5.5.0.tgz#9fd6ef84dd1ccc955aed6fac910be874cbd9a1a8"
+  integrity sha512-sOZ2+dPxHvb+RNbmn4wo+MFg9ZHxx9N9RGZmlYQEJQ+s4zk0rJBalzJhKNuNkiL6oJDYYNom98YhWRVvuAkvwg==
+  dependencies:
+    iterare "0.0.8"
+    json-socket "^0.2.1"
+    optional "0.1.4"
+
 "@nestjs/mongoose@^5.2.2":
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/@nestjs/mongoose/-/mongoose-5.2.2.tgz#62de0bd1c2eda0865a2bb034270f1bda51a61915"
@@ -4533,6 +4542,11 @@ json-schema@0.2.3:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/json-schema/-/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
   integrity sha1-tIDIkuWaLwWVTOcnvT8qTogvnhM=
+
+json-socket@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/json-socket/-/json-socket-0.2.1.tgz#26e7ed8cc131f17aa0136c32068f473b5dbefb22"
+  integrity sha1-JuftjMEx8XqgE2wyBo9HO12++yI=
 
 json-stable-stringify@^1.0.1:
   version "1.0.1"

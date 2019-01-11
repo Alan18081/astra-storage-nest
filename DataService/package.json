@@ -20,6 +20,7 @@
     "@astra/common": "file:../Common/dist",
     "@nestjs/common": "^5.0.0",
     "@nestjs/core": "^5.0.0",
+    "@nestjs/microservices": "^5.5.0",
     "@nestjs/mongoose": "^5.2.2",
     "@types/mongoose": "^5.3.7",
     "fastify-formbody": "^2.0.0",

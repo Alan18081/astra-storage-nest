@@ -1,0 +1,94 @@
+<section fxLayoutAlign="center center">
+  <div>
+    <h1 class="title">New account</h1>
+    <mat-card>
+      <form
+        [formGroup]="form"
+        fxLayout="column"
+        fxLayoutGap="10px"
+        (ngSubmit)="submitForm()"
+      >
+        <mat-form-field>
+          <input
+            type="text"
+            matInput
+            formControlName="name"
+            placeholder="Nickname"
+          >
+          <mat-error *ngIf="form.get('name').hasError('required')">
+            Nickname cannot be empty
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            formControlName="email"
+            placeholder="Email"
+          >
+          <mat-error *ngIf="form.get('email').hasError('required')">
+            Email cannot be empty
+          </mat-error>
+          <mat-error *ngIf="form.get('email').hasError('email')">
+            Provide valid email
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            [matDatepicker]="birthPicker"
+            formControlName="birthday"
+            matInput
+            placeholder="Birthday"
+          >
+          <mat-datepicker-toggle matSuffix [for]="birthPicker"></mat-datepicker-toggle>
+          <mat-datepicker #birthPicker></mat-datepicker>
+          <mat-error *ngIf="form.get('birthday').hasError('required')">
+            Provide your birthday
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            formControlName="password"
+            placeholder="Password"
+          >
+          <mat-error *ngIf="form.get('password').hasError('required')">
+            Password cannot be empty
+          </mat-error>
+          <mat-error *ngIf="form.get('password').hasError('minLength')">
+            Password should have at least 3 characters
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            formControlName="confirmPassword"
+            placeholder="Confirm password"
+          >
+          <mat-error *ngIf="form.get('confirmPassword').hasError('required')">
+            Password cannot be empty
+          </mat-error>
+          <mat-error *ngIf="form.get('confirmPassword').hasError('minLength')">
+            Password should have at least 3 characters
+          </mat-error>
+        </mat-form-field>
+        <mat-error *ngIf="form.hasError('notMatch')">
+          Passwords should match
+        </mat-error>
+        <button
+          mat-raised-button
+          class="submitBtn"
+          color="primary"
+          [disabled]="form.invalid"
+        >Sign In</button>
+        <a routerLink="/login" mat-button>Login</a>
+      </form>
+    </mat-card>
+  </div>
+</section>

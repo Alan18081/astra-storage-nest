@@ -4,7 +4,7 @@ import {ProjectAccountsRepository} from './project-accounts.repository';
 import {ProjectAccount} from './project-account.entity';
 import { Messages, PaginatedResponse } from '@astra/common';
 import { HashService } from '@astra/common/services';
-import { FindProjectAccountsListDto } from '@astra/common/dto';
+import { CreateProjectAccountDto, FindProjectAccountsListDto } from '@astra/common/dto';
 import { ProjectsRepository } from '../projects/projects.repository';
 import { RpcException } from '@nestjs/microservices';
 
@@ -19,7 +19,7 @@ export class ProjectAccountsService {
       private readonly hashService: HashService,
     ) {}
 
-    async findMany({ page, limit, ...query }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
+    async findMany({ page, limit, userId, ...query }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
         if (!(await this.isValidProjectOwner(query.projectId, query.userId))) {
             throw new RpcException(Messages.INVALID_PERMISSIONS);
         }
@@ -30,9 +30,7 @@ export class ProjectAccountsService {
 
         return await this.projectAccountsRepository.findMany(query);
     }
-
-
-    async createOne(payload: CreateAccountDto): Promise<ProjectAccount> {
+    async createOne(payload: CreateProjectAccountDto): Promise<ProjectAccount> {
         const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email);
 
         if (projectAccount) {

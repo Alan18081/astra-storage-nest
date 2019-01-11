@@ -1,0 +1,53 @@
+<section fxLayoutAlign="center center">
+  <div>
+    <h1 class="title">Login</h1>
+    <mat-card>
+      <form
+        [formGroup]="form"
+        fxLayout="column"
+        fxLayoutGap="10px"
+        (ngSubmit)="submitForm()"
+      >
+        <mat-form-field>
+          <input
+            type="email"
+            matInput
+            formControlName="email"
+            placeholder="Email"
+          >
+          <mat-error *ngIf="form.get('email').hasError('required')">
+            Email cannot be empty
+          </mat-error>
+          <mat-error *ngIf="form.get('email').hasError('email')">
+            Provide valid email
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            type="password"
+            matInput
+            formControlName="password"
+            placeholder="Password"
+          >
+          <mat-error *ngIf="form.get('password').hasError('required')">
+            Password cannot be empty
+          </mat-error>
+          <mat-error *ngIf="form.get('password').hasError('minLength')">
+            Password should have at least 3 characters
+          </mat-error>
+        </mat-form-field>
+        <mat-progress-bar mode="indeterminate" *ngIf="loading | async"></mat-progress-bar>
+        <div fxLayout fxLayoutAlign="flex-end flex-end">
+          <a routerLink="/resetPassword" mat-button color="accent">Forgot password?</a>
+        </div>
+        <button
+          mat-raised-button
+          class="submitBtn"
+          color="primary"
+          [disabled]="form.invalid"
+        >Sign In</button>
+        <a mat-button routerLink="/signup">Create account</a>
+      </form>
+    </mat-card>
+  </div>
+</section>

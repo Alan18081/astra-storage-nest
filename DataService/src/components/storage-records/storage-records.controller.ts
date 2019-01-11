@@ -1,24 +1,25 @@
-import { injectable, inject } from 'inversify';
-import * as uid from 'uid';
-import { SubscribeMessage, Messages, BadRequest, PaginatedResponse, Validate } from '@astra/common';
+import { Controller } from '@nestjs/common';
+import { Messages, PaginatedResponse } from '@astra/common';
 import {StorageRecordsService} from './storage-records.service';
 import {CommunicationCodes} from '@astra/common';
-import {StorageRecordSchema} from './storage-record';
-import { FindRecordsListDto } from '../../../../Common/src/dto/dto/find-records-list.dto';
-import { AddRecordDto } from '../../../../Common/src/dto/dto/add-record.dto';
-import { RemoveRecordDto } from '../../../../Common/src/dto/dto/remove-record.dto';
-import { FindRecordDto } from '../../../../Common/src/dto/dto/find-record.dto';
-import {UpdateRecordDto} from '../../../../Common/src/dto/dto/update-record.dto';
+import { MessagePattern } from '@nestjs/microservices';
+import {
+    CreateStorageRecordDto,
+    FindStorageRecordDto,
+    FindStorageRecordsListDto, RemoveStorageRecordDto,
+    UpdateStorageRecordDto
+} from '@astra/common/dto';
+import { StorageRecord } from './interfaces/storage-record.model';
 
-@injectable()
+@Controller()
 export class StorageRecordsController {
 
-    @inject(StorageRecordsService)
-    private readonly storageRecordsService: StorageRecordsService;
+    constructor(
+      private readonly storageRecordsService: StorageRecordsService,
+    ) {}
 
-    @SubscribeMessage(CommunicationCodes.GET_STORAGE_RECORDS_LIST)
-    @Validate(FindRecordsListDto)
-    async findMany(payload: FindRecordsListDto): Promise<StorageRecordSchema[] | PaginatedResponse<StorageRecordSchema>> {
+    @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST })
+    async findMany(payload: FindStorageRecordsListDto): Promise<StorageRecord[] | PaginatedResponse<StorageRecord>> {
         if(payload.page && payload.limit) {
             const { page, limit, ...data } = payload;
             return this.storageRecordsService.findManyWithPagination(data, { page, limit });
@@ -27,27 +28,23 @@ export class StorageRecordsController {
         return this.storageRecordsService.findMany(payload);
     }
 
-    @SubscribeMessage(CommunicationCodes.GET_STORAGE_RECORD)
-    @Validate(FindRecordDto)
-    async findOne(payload: FindRecordDto): Promise<StorageRecordSchema | undefined> {
+    @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORD })
+    async findOne(payload: FindStorageRecordDto): Promise<StorageRecord | undefined> {
         return await this.storageRecordsService.findOneById(payload.id);
     }
 
-    @SubscribeMessage(CommunicationCodes.CREATE_STORAGE_RECORD)
-    @Validate(AddRecordDto)
-    async createOne(payload: AddRecordDto): Promise<StorageRecordSchema> {
+    @MessagePattern({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD })
+    async createOne(payload: CreateStorageRecordDto): Promise<StorageRecord> {
         return await this.storageRecordsService.createOne(payload);
     }
 
-    @SubscribeMessage(CommunicationCodes.UPDATE_STORAGE_RECORD)
-    @Validate(UpdateRecordDto)
-    async updateOne(payload: UpdateRecordDto): Promise<StorageRecordSchema | undefined> {
+    @MessagePattern({ cmd: CommunicationCodes.UPDATE_STORAGE_RECORD })
+    async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
         return await this.storageRecordsService.updateOne(payload);
     }
 
-    @SubscribeMessage(CommunicationCodes.REMOVE_STORAGE_RECORD)
-    @Validate(RemoveRecordDto)
-    async removeOne(payload: RemoveRecordDto): Promise<void> {
+    @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD })
+    async removeOne(payload: RemoveStorageRecordDto): Promise<void> {
         await this.storageRecordsService.removeOne(payload.id);
     }
 

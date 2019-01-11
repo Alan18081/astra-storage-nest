@@ -5,50 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7f1c7f55-2f12-44ee-975e-199b92beb6ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/create-storage-record.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-record.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-records-list-by-account.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-records-list.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/remove-storage-record.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/storage-records/update-storage-record.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/orm/base.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectsService/src/components/core/core.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/@store/auth/auth.actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/@store/auth/auth.effects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/@store/auth/auth.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/@store/auth/auth.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/@store/auth/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/@store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/app-routes.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/auth.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/login/login.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/login/login.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/login/login.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/new-password/new-password.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/new-password/new-password.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/new-password/new-password.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/new-password/new-password.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/reset-password/reset-password.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/reset-password/reset-password.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/reset-password/reset-password.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/signup/passwords-match.validator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/signup/signup.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/signup/signup.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/auth/containers/signup/signup.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/core/core.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/helpers/auth/signup.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/helpers/auth/user.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/helpers/services/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/helpers/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-end/src/app/material/material.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/dto/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/dto/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/project-accounts/create-account.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/project-accounts/create-project-account.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/project-accounts/find-account-by-email.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/project-accounts/find-project-account-by-email.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/project-accounts/find-account.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/project-accounts/find-project-account.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/project-accounts/find-accounts-list.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/project-accounts/find-project-accounts-list.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/project-accounts/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/project-accounts/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/project-accounts/remove-account.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/project-accounts/remove-project-account.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/orm/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/orm/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/app.controller.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/app.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/app.service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storage.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storage.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/common.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,99 +56,21 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-record.dto.ts">
+        <entry file="file://$PROJECT_DIR$/Front-end/src/app/auth/containers/new-password/new-password.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Common/src/dto/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/src/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#72#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="84">
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
+        <entry file="file://$PROJECT_DIR$/Front-end/src/app/auth/auth.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="88">
+              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
               <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/common.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -178,10 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Common/src/dto/storages/create-storage.dto.ts" />
-        <option value="$PROJECT_DIR$/Common/src/dto/storages/find-storage.dto.ts" />
-        <option value="$PROJECT_DIR$/Common/src/dto/storages/find-storage-by-path.dto.ts" />
-        <option value="$PROJECT_DIR$/Common/src/dto/storages/find-storage-list.dto.ts" />
         <option value="$PROJECT_DIR$/Common/src/dto/storages/remove-storage.dto.ts" />
         <option value="$PROJECT_DIR$/Common/src/dto/storages/update-storage.dto.ts" />
         <option value="$PROJECT_DIR$/Common/src/dto/storages/update-storage-data.dto.ts" />
@@ -211,7 +126,6 @@
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.module.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/storages/storage.entity.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/package.json" />
@@ -225,10 +139,15 @@
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.module.ts" />
         <option value="$PROJECT_DIR$/DataService/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" />
         <option value="$PROJECT_DIR$/scripts/common.sh" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.interface.ts" />
+        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts" />
+        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" />
+        <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" />
+        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" />
+        <option value="$PROJECT_DIR$/Front-end/src/app/nav/header/header.component.ts" />
+        <option value="$PROJECT_DIR$/Front-end/src/app/auth/auth.module.ts" />
       </list>
     </option>
   </component>
@@ -257,53 +176,28 @@
             <path>
               <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-end" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-end" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-end" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+              <item name="Front-end" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="storage-records" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="storage-records" type="462c0819:PsiDirectoryNode" />
-              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,13 +219,15 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Front-end/src" />
       <recent name="$PROJECT_DIR$/DataService/src/components" />
       <recent name="$PROJECT_DIR$/ProjectsService/src/components" />
       <recent name="$PROJECT_DIR$/Common/src/config" />
       <recent name="$PROJECT_DIR$/Common/src/enums" />
-      <recent name="$PROJECT_DIR$/AuthService" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Front-end/src/app" />
+      <recent name="$PROJECT_DIR$/Front-end/src/auth/containers" />
       <recent name="$PROJECT_DIR$/Common/src/dto" />
       <recent name="$PROJECT_DIR$/Common/src/interfaces" />
       <recent name="$PROJECT_DIR$/Common/src/dto/auth" />
@@ -363,18 +259,18 @@
       <workItem from="1547070845308" duration="6000" />
       <workItem from="1547096700768" duration="1075000" />
       <workItem from="1547109384340" duration="20152000" />
-      <workItem from="1547191300156" duration="10411000" />
+      <workItem from="1547191300156" duration="18989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61574000" />
+    <option name="totallyTimeSpent" value="70152000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="-11" width="1922" height="1092" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -387,7 +283,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.6447508" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.6447508" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32979852" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32979852" />
@@ -408,92 +304,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProjectsService/node_modules/typeorm/decorator/transaction/TransactionRepository.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/projects/projects.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/storages/storages.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/node_modules/typeorm/decorator/columns/PrimaryColumn.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/storages/storages.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1344">
-          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/orm/base.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/project-accounts/create-project-account.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="64" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/project-accounts/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/project-accounts/remove-project-account.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/dto/project-accounts/find-project-account.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -565,13 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ProjectsService/src/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -607,26 +410,6 @@
           <caret line="25" column="52" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/orm/base.repository.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="53" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -688,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/update-storage-record.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/remove-storage-record.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -713,42 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-record.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,33 +530,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/common.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="60" selection-start-line="3" selection-start-column="60" selection-end-line="3" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DataService/node_modules/@types/mongodb/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -824,12 +537,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="564">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/node_modules/@types/mongoose/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="3188" column="4" selection-start-line="3188" selection-start-column="4" selection-end-line="3188" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/update-storage-record.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/common.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-record.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="33" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/orm/base.repository.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="23" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectsService/node_modules/typeorm/find-options/FindManyOptions.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-130">
+          <caret line="20" column="151" selection-start-line="20" selection-start-column="151" selection-end-line="20" selection-end-column="151" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/nav/header/header.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/@store/ui/ui.reducer.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/@store/ui/ui.actions.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="40" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/@store/auth/index.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/auth/containers/new-password/new-password.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

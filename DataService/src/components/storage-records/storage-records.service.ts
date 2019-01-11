@@ -1,37 +1,37 @@
 import { StorageRecordsRepository } from './storage-records.repository';
 import {PaginatedResponse} from '../../../../Common/dist/interfaces';
 import { Injectable } from '@nestjs/common';
+import { StorageRecord } from './interfaces/storage-record.model';
+import { FindStorageRecordsListDto, PaginationDto, UpdateStorageRecordDto } from '@astra/common/dto';
 
 @Injectable()
 export class StorageRecordsService {
+    constructor(
+      private readonly storageRecordsRepository: StorageRecordsRepository,
+    ) {}
 
-    @inject(StorageRecordsRepository)
-    private readonly storageRecordsRepository: StorageRecordsRepository;
-
-    async findOneById(id: string): Promise<StorageRecordSchema> {
-        return await this.storageRecordsRepository.findById(id);
+    async findOneById(id: string): Promise<StorageRecord> {
+        return this.storageRecordsRepository.findById(id);
     }
 
-    async findMany(query: FindRecordsListDto): Promise<StorageRecordSchema[]> {
-        return await this.storageRecordsRepository.find(query);
+    async findMany(query: FindStorageRecordsListDto): Promise<StorageRecord[]> {
+        return this.storageRecordsRepository.findMany(query);
     }
 
-    async findManyWithPagination(query: FindRecordsListDto, pagination: Required<PaginationDto>): Promise<PaginatedResponse<StorageRecordSchema>> {
-        return await this.storageRecordsRepository.findManyWithPagination(query, pagination);
+    async findManyWithPagination(query: FindStorageRecordsListDto, pagination: Required<PaginationDto>): Promise<PaginatedResponse<StorageRecord>> {
+        return this.storageRecordsRepository.findManyWithPagination(query, pagination);
     }
 
-    async updateOne({ data, id }: UpdateRecordDto): Promise<StorageRecordSchema | undefined> {
-      return await this.storageRecordsRepository.updateById(id, { $set: { data } });
+    async updateOne({ data, id }: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
+      return await this.storageRecordsRepository.updateById(id, data);
     }
 
-    async createOne(payload: Partial<StorageRecordSchema>): Promise<StorageRecordSchema> {
-        const newStorageRecord = new StorageRecordSchema({...payload});
-
-        return await this.storageRecordsRepository.save(newStorageRecord);
+    async createOne(payload: Partial<StorageRecord>): Promise<StorageRecord> {
+        return await this.storageRecordsRepository.createOne(payload);
     }
 
     async removeOne(recordId: string): Promise<void> {
-        await this.storageRecordsRepository.deleteById(recordId);
+        await this.storageRecordsRepository.removeById(recordId);
     }
 
 }
