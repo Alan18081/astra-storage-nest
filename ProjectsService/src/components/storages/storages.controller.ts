@@ -5,7 +5,6 @@ import {
     PaginatedResponse,
 } from '@astra/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { StoragesRepository } from './storages.repository';
 import { MessagePattern } from '@nestjs/microservices';
 import { Storage } from './storage.entity';
 import {
@@ -21,8 +20,6 @@ import { StoragesService } from './storages.service';
 export class StoragesController {
 
   constructor(
-    @InjectRepository(StoragesRepository)
-    private readonly storagesRepository: StoragesRepository,
     private readonly storagesService: StoragesService,
   ) {}
 
@@ -33,12 +30,12 @@ export class StoragesController {
 
   @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE })
   async findOneById(dto: FindStorageDto): Promise<Storage | undefined> {
-    return this.storagesRepository.findById(dto.id);
+    return this.storagesService.findById(dto.id);
   }
 
   @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_BY_PATH })
   async findOneByPath(dto: FindStorageByPathDto): Promise<Storage | undefined> {
-      return this.storagesRepository.findOneByPath(dto.path);
+      return this.storagesService.findOneByPath(dto.path);
   }
 
   @MessagePattern({ cmd: CommunicationCodes.CREATE_STORAGE })
@@ -47,14 +44,14 @@ export class StoragesController {
   }
 
   @MessagePattern({ cmd: CommunicationCodes.UPDATE_STORAGE })
-  async updateOneData(body: UpdateStorageDto): Promise<Storage | undefined> {
-    return await this.storagesRepository.updateOne(body.id, body);
+  async updateOne(body: UpdateStorageDto): Promise<Storage | undefined> {
+    return await this.storagesService.updateOne(body.id, body);
 
   }
 
   @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE })
   async removeOne(dto: RemoveStorageDto): Promise<void> {
-    await this.storagesRepository.removeById(dto.id);
+    await this.storagesService.removeById(dto.id);
   }
 
 }

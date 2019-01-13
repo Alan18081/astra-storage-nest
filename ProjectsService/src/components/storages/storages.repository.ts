@@ -1,16 +1,13 @@
-import { PaginatedResponse, StorageType } from '@astra/common';
+import {BaseRepository } from '@astra/common';
 import { Storage } from './storage.entity';
 import {
   EntityRepository,
-  FindManyOptions,
-  Repository,
   Transaction, TransactionRepository,
 } from 'typeorm';
-import { FindStoragesListDto, PaginationDto } from '@astra/common/dto';
 import { ProjectsRepository } from '../projects/projects.repository';
 
 @EntityRepository(Storage)
-export class StoragesRepository extends Repository<Storage> {
+export class StoragesRepository extends BaseRepository<Storage> {
 
     async findById(id: number): Promise<Storage | undefined> {
         return this.findOne({ id });

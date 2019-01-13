@@ -1,6 +1,7 @@
 import { BaseEntity, IProjectAccount } from '@astra/common';
-import { Column, Index, PrimaryColumn, PrimaryGeneratedColumn, Unique } from 'typeorm';
+import {Column, Entity, Index, PrimaryColumn, PrimaryGeneratedColumn, Unique} from 'typeorm';
 
+@Entity()
 export class ProjectAccount extends BaseEntity implements IProjectAccount {
     @PrimaryGeneratedColumn()
     id: number;

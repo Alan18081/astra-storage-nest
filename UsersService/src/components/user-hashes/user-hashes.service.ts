@@ -9,10 +9,11 @@ import { HashTypes } from '@astra/common';
 export class UserHashesService {
 
   constructor(
+    private readonly hashService: HashService,
     @InjectRepository(UserHashesRepository)
     private readonly userHashesRepository: UserHashesRepository,
-    private readonly hashService: HashService,
   ) {}
+
   async createOne(userId: number, type: HashTypes): Promise<UserHash> {
     const userHash = new UserHash();
     userHash.hash = await this.hashService.generateHash(JSON.stringify({ userId, type }));

@@ -1,8 +1,9 @@
 import { BaseEntity, IStorage, StorageType } from '@astra/common';
 import { toNumber, toString } from 'lodash';
-import { Column, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
 import { Project } from '../projects/project.entity';
 
+@Entity()
 export class Storage extends BaseEntity implements IStorage {
 
   @PrimaryGeneratedColumn()

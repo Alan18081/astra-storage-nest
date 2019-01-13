@@ -30,6 +30,11 @@ export class ProjectAccountsService {
 
         return await this.projectAccountsRepository.findMany(query);
     }
+
+    async findById(id: number): Promise<ProjectAccount | undefined> {
+        return this.projectAccountsRepository.findById(id);
+    }
+
     async createOne(payload: CreateProjectAccountDto): Promise<ProjectAccount> {
         const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email);
 

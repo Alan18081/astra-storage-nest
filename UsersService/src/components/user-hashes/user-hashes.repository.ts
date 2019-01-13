@@ -5,7 +5,7 @@ import { UserHash } from './user-hash.entity';
 export class UserHashesRepository extends Repository<UserHash> {
 
   async findOneByHash(hash: string): Promise<UserHash | undefined> {
-    return await this.findOne({ hash });
+    return await super.findOne({ hash });
   }
 
 }

@@ -1,8 +1,9 @@
 import {Controller} from '@nestjs/common';
 import {UserAuthService} from './user-auth.service';
 import {MessagePattern} from '@nestjs/microservices';
-import {CommunicationCodes, LoginDto} from '@astra/common';
+import {CommunicationCodes} from '@astra/common';
 import { JwtResponse } from '@astra/common';
+import {LoginDto} from '@astra/common/dto';
 
 @Controller()
 export class UserAuthController {

@@ -31,6 +31,14 @@ export class StoragesService {
     return this.storagesRepository.findManyByProjectId(projectId);
   }
 
+  async findById(id: number): Promise<Storage | undefined> {
+    return this.storagesRepository.findById(id);
+  }
+
+  async findOneByPath(path: string): Promise<Storage | undefined> {
+    return this.storagesRepository.findOneByPath(path);
+  }
+
   async createOne({ userId, ...data }: CreateStorageDto): Promise<Storage> {
 
     const project = await this.projectsRepository.findOneByUserId(data.projectId, userId);
@@ -56,5 +64,13 @@ export class StoragesService {
     });
 
     return this.storagesRepository.createOne(storage, storage.projectId);
+  }
+
+  async updateOne(id: number, data: Partial<Storage>): Promise<Storage | undefined> {
+    return this.storagesRepository.updateOne(id, data);
+  }
+
+  async removeById(id: number): Promise<void> {
+    await this.storagesRepository.removeById(id);
   }
 }

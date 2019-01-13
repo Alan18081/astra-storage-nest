@@ -7,10 +7,10 @@ import { Response } from 'express';
 import {ApiBearerAuth, ApiOperation, ApiUseTags} from '@nestjs/swagger';
 import {UsersService} from '../users/users.service';
 import {Messages} from '../../helpers/enums/messages.enum';
-import {JwtResponse} from './interfaces/jwt-response';
 import {AuthService} from './auth.service';
 import {AuthGuard} from '@nestjs/passport';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
+import {JwtResponse} from '@astra/common';
 
 @Controller('auth')
 @ApiUseTags('Auth')
@@ -24,7 +24,7 @@ export class AuthController {
   @Post('login')
   @ApiOperation({ title: 'Login for generating access token' })
   async login(@Body() dto: LoginDto): Promise<JwtResponse> {
-    return await this.authService.login(dto);
+    return this.authService.login(dto);
   }
 
   // @Post('token')

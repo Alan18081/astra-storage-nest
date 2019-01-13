@@ -1,40 +1,47 @@
 import {Injectable} from '@nestjs/common';
-import {Client, Transport, ClientProxy} from '@nestjs/microservices';
-import { Observable } from 'rxjs';
+import {Client, ClientProxy} from '@nestjs/microservices';
 import {
     CommunicationCodes,
-    CreateUserDto,
-    FindUserDto,
-    FindUsersListDto,
     IUser,
     Queues,
-    RABBIT_MQ_URL, RemoveUserDto, UpdateUserDto
 } from '@astra/common';
+import {CreateUserDto, FindUserDto, FindUsersListDto, RemoveUserDto, UpdateUserDto} from '@astra/common/dto';
+import {createClientOptions} from '@astra/common/helpers';
 
 @Injectable()
 export class UsersService {
 
-    @Client({ transport: Transport.RMQ, options: { queue: Queues.USERS_SERVICE, urls: [RABBIT_MQ_URL] } })
+    @Client(createClientOptions(Queues.USERS_SERVICE))
     private readonly client: ClientProxy;
 
-    findMany(dto: FindUsersListDto): Observable<IUser[]> {
-       return this.client.send({ cmd: CommunicationCodes.GET_USERS_LIST }, dto);
+    findMany(dto: FindUsersListDto): Promise<IUser[]> {
+       return this.client
+           .send({ cmd: CommunicationCodes.GET_USERS_LIST }, dto)
+           .toPromise();
     }
 
-    findOne(dto: FindUserDto): Observable<IUser | undefined> {
-        return this.client.send({ cmd: CommunicationCodes.GET_USER }, dto);
+    findOne(dto: FindUserDto): Promise<IUser | undefined> {
+        return this.client
+            .send({ cmd: CommunicationCodes.GET_USER }, dto)
+            .toPromise();
     }
 
-    createOne(dto: CreateUserDto): Observable<IUser> {
-        return this.client.send({ cmd: CommunicationCodes.CREATE_USER }, dto);
+    createOne(dto: CreateUserDto): Promise<IUser> {
+        return this.client
+            .send({ cmd: CommunicationCodes.CREATE_USER }, dto)
+            .toPromise();
     }
 
-    updateOne(dto: UpdateUserDto): Observable<IUser | undefined> {
-        return this.client.send({ cmd: CommunicationCodes.UPDATE_USER }, dto);
+    updateOne(dto: UpdateUserDto): Promise<IUser | undefined> {
+        return this.client
+            .send({ cmd: CommunicationCodes.UPDATE_USER }, dto)
+            .toPromise();
     }
 
-    removeOne(dto: RemoveUserDto): Observable<void> {
-        return this.client.send({ cmd: CommunicationCodes.CREATE_USER }, dto);
+    removeOne(dto: RemoveUserDto): Promise<void> {
+        return this.client
+            .send({ cmd: CommunicationCodes.CREATE_USER }, dto)
+            .toPromise();
     }
 
 }

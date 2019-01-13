@@ -9,15 +9,12 @@ import {
     FindProjectAccountDto, RemoveProjectAccountDto,
 } from '@astra/common/dto';
 import { ProjectAccount } from './project-account.entity';
-import { ProjectAccountsRepository } from './project-accounts.repository';
 import { ProjectAccountsService } from './project-accounts.service';
 
 @Controller()
 export class ProjectAccountsController {
 
     constructor(
-      @InjectRepository(ProjectAccountsRepository)
-      private readonly projectAccountsRepository: ProjectAccountsRepository,
       private readonly projectAccountsService: ProjectAccountsService,
     ) {}
 
@@ -29,12 +26,12 @@ export class ProjectAccountsController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT })
     async findOne(query: FindProjectAccountDto): Promise<ProjectAccount | undefined> {
-        return await this.projectAccountsRepository.findById(query.id);
+        return await this.projectAccountsService.findById(query.id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL })
     async findOneByEmail(query: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {
-        return await this.projectAccountsRepository.findOneByEmail(query.email);
+        return await this.projectAccountsService.findOneByEmail(query.email);
     }
 
 
@@ -45,7 +42,7 @@ export class ProjectAccountsController {
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT })
     async removeOne(dto: RemoveProjectAccountDto): Promise<void> {
-        await this.projectAccountsRepository.removeOne(dto.accountId);
+        await this.projectAccountService.removeOne(dto.accountId);
     }
 
 }
