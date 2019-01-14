@@ -1,7 +1,6 @@
 import {CommunicationCodes} from '@astra/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import {ProjectsService} from './projects.service';
-import { Injectable } from '@nestjs/common';
+import {Controller, UseFilters} from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { Project } from './project.entity';
 import {
@@ -10,15 +9,14 @@ import {
     FindProjectDto,
     FindProjectsListByUserDto, RemoveProjectDto, UpdateProjectDto
 } from '@astra/common/dto';
-import { ProjectsRepository } from './projects.repository';
+import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
-@Injectable()
+@Controller()
+@UseFilters(ExceptionFilter)
 export class ProjectsController {
 
     constructor(
       private readonly projectsService: ProjectsService,
-      @InjectRepository(ProjectsRepository)
-      private readonly projectsRepository: ProjectsRepository,
      ) {}
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECTS_LIST })
@@ -28,17 +26,17 @@ export class ProjectsController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECTS_LIST_BY_USER })
     async findManyByUser(dto: FindProjectsListByUserDto): Promise<Project[]> {
-        return this.projectsRepository.findManyByUser(dto.userId);
+        return this.projectsService.findManyByUser(dto.userId);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT })
     async findOne(dto: FindProjectDto): Promise<Project | undefined> {
-        return this.projectsRepository.findById(dto.id);
+        return this.projectsService.findById(dto);
     }
 
-    @MessagePattern(CommunicationCodes.GET_PROJECT_BY_CLIENT_INFO)
+    @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_BY_CLIENT_INFO })
     async findOneByClientInfo(dto: FindProjectByClientInfoDto): Promise<Project | undefined> {
-        return this.projectsRepository.findOneByClientInfo(dto.clientId, dto.clientSecret);
+        return this.projectsService.findOneByClientInfo(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_PROJECT })
@@ -48,12 +46,12 @@ export class ProjectsController {
 
     @MessagePattern({ cmd: CommunicationCodes.UPDATE_PROJECT })
     async updateOne(dto: UpdateProjectDto): Promise<Project | undefined> {
-        return this.projectsRepository.updateOne(dto.id, dto);
+        return this.projectsService.updateOne(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT })
     async removeOne(dto: RemoveProjectDto): Promise<void> {
-        await this.projectsRepository.removeById(dto.id);
+        await this.projectsService.removeOne(dto.id);
     }
 
 

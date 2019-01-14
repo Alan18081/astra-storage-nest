@@ -12,7 +12,10 @@ import {ProjectAccountRequest} from './types/project-account-request';
 export class AuthService {
 
   @Client(createClientOptions(Queues.AUTH_SERVICE))
-  client: ClientProxy;
+  private readonly authClient: ClientProxy;
+
+  @Client(createClientOptions(Queues.USERS_SERVICE))
+  private readonly usersClient: ClientProxy;
 
   constructor(
     private readonly usersService: UsersService,
@@ -20,11 +23,12 @@ export class AuthService {
   ) {}
 
   async login(dto: LoginDto): Promise<JwtResponse> {
-    return this.client.send(CommunicationCodes.LOGIN, dto).toPromise();
+    return this.authClient.send({ cmd: CommunicationCodes.LOGIN }, dto).toPromise();
   }
 
   async validateUser(payload: JwtPayload): Promise<IUser | undefined> {
-    return await this.client.send(CommunicationCodes.GET_USER_BY_EMAIL, { email: payload.email}).toPromise();
+    console.log('Validating user', payload);
+    return this.usersClient.send({ cmd: CommunicationCodes.GET_USER_BY_EMAIL }, { email: payload.email}).toPromise();
   }
 
   async validateProject(req: ProjectRequest): Promise<boolean> {
@@ -34,7 +38,7 @@ export class AuthService {
       throw new UnauthorizedException(Messages.PROJECT_TOKEN_NOT_FOUND);
     }
 
-    const project = await this.client.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, { token: projectToken }).toPromise();
+    const project = await this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, { token: projectToken }).toPromise();
     if(!project) {
       throw new UnauthorizedException(Messages.PROJECT_NOT_FOUND);
     }
@@ -52,7 +56,7 @@ export class AuthService {
           throw new UnauthorizedException(Messages.ACCOUNT_TOKEN_NOT_FOUND);
       }
 
-      const projectAccount = await this.client.send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { token: accountToken }).toPromise();
+      const projectAccount = await this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { token: accountToken }).toPromise();
       if(!projectAccount) {
           throw new UnauthorizedException(Messages.ACCOUNT_NOT_FOUND);
       }

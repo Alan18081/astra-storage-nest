@@ -14,9 +14,10 @@ import {
 } from '@astra/common/dto';
 import {User} from './user.entity';
 import {UsersService} from './users.service';
+import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
 @Controller()
-@UseInterceptors(ClassSerializerInterceptor)
+@UseFilters(ExceptionFilter)
 export class UsersController {
 
     constructor(

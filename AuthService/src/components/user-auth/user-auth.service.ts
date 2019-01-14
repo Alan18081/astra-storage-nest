@@ -1,19 +1,20 @@
 import {Injectable} from '@nestjs/common';
 import {ClientProxy, Client, RpcException} from '@nestjs/microservices';
-import {CommunicationCodes, IUser, JWT_EXPIRES, JwtResponse, Messages} from '@astra/common';
+import {CommunicationCodes, IUser, JWT_EXPIRES, JwtResponse, Messages, Queues} from '@astra/common';
 import {HashService} from '@astra/common/services';
 import {JwtService} from '@nestjs/jwt';
 import {LoginDto} from '@astra/common/dto';
+import {createClientOptions} from '@astra/common/helpers';
 
 @Injectable()
 export class UserAuthService {
 
-    @Client()
+    @Client(createClientOptions(Queues.USERS_SERVICE))
     private readonly client: ClientProxy;
 
     constructor(
        private readonly hashService: HashService,
-       private readonly jwtService: JwtService
+       private readonly jwtService: JwtService,
     ) {}
 
     async login(dto: LoginDto): Promise<JwtResponse> {
@@ -24,7 +25,7 @@ export class UserAuthService {
             throw new RpcException(Messages.USER_NOT_FOUND);
         }
 
-        if (!this.hashService.compareHash(dto.password, user.password)) {
+        if (!( await this.hashService.compareHash(dto.password, user.password))) {
             throw new RpcException(Messages.WRONG_PASSWORD);
         }
 

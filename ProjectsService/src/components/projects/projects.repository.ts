@@ -14,15 +14,15 @@ export class ProjectsRepository extends Repository<Project> {
     return this.findOne({ id, userId });
   }
 
-  async findById(id: number): Promise<Project | undefined> {
-    return this.findOne({ id });
+  async findById(id: number, userId: number): Promise<Project | undefined> {
+    return this.findOne({ id, userId });
   }
 
   async findOneByClientInfo(clientId: string, clientSecret: string): Promise<Project | undefined> {
     return this.findOne({ clientId, clientSecret });
   }
 
-  async updateOne(id: number, data: Partial<User>): Promise<Project | undefined> {
+  async updateOne(id: number, data: Partial<Project>): Promise<Project | undefined> {
     await this.update({ id }, data);
     return this.findById(id);
   }
@@ -34,6 +34,11 @@ export class ProjectsRepository extends Repository<Project> {
   async incrementStoragesCount(id: number): Promise<Project | undefined> {
     await this.increment({ id }, 'storagesCount', 1);
     return this.findById(id);
+  }
+
+  async decrementStoragesCount(id: number): Promise<Project | undefined> {
+      await this.decrement({ id }, 'storagesCount', 1);
+      return this.findById(id);
   }
 
 }

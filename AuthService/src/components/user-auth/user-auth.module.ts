@@ -3,6 +3,7 @@ import {UserAuthController} from './user-auth.controller';
 import {UserAuthService} from './user-auth.service';
 import {JwtModule} from '@nestjs/jwt';
 import {JWT_EXPIRES, JWT_SECRET} from '@astra/common';
+import {CoreModule} from '../core/core.module';
 
 @Module({
     imports: [
@@ -12,8 +13,9 @@ import {JWT_EXPIRES, JWT_SECRET} from '@astra/common';
                 expiresIn: JWT_EXPIRES,
             },
         }),
+        CoreModule,
     ],
     controllers: [UserAuthController],
-    providers: [UserAuthService]
+    providers: [UserAuthService],
 })
 export class UserAuthModule {}

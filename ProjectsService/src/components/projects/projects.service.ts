@@ -2,7 +2,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import * as uid from 'uid';
 import {Project} from './project.entity';
 import {ProjectsRepository} from './projects.repository';
-import { CreateProjectDto } from '@astra/common/dto';
+import {CreateProjectDto, FindProjectByClientInfoDto, FindProjectDto, UpdateProjectDto} from '@astra/common/dto';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
@@ -13,6 +13,13 @@ export class ProjectsService {
       private readonly projectsRepository: ProjectsRepository,
     ) {}
 
+    async findManyByUser(userId: number): Promise<Project[]> {
+        return this.projectsRepository.findManyByUser(userId);
+    }
+
+    async findById({ id, userId }: FindProjectDto): Promise<Project | undefined> {
+        return this.projectsRepository.findById(id, userId);
+    }
 
     async createOne(body: CreateProjectDto): Promise<Project> {
         const project = new Project({ ...body });
@@ -23,21 +30,19 @@ export class ProjectsService {
     }
 
     async incrementStoragesCount(id: number): Promise<void> {
-        const query = this.projectsRepository.queryBuilder()
-            .where({ id })
-            .increment('storagesCount', 1);
-        await this.projectsRepository.getOneQueryResult(query);
+        return this.incrementStoragesCount(id);
     }
 
     async decrementStoragesCount(id: number): Promise<void> {
-        const query = this.projectsRepository.queryBuilder()
-            .where({ id })
-            .decrement('storagesCount', 1);
-        await this.projectsRepository.getOneQueryResult(query);
+        return this.decrementStoragesCount(id);
     }
 
-    async updateOne(body: UpdateProjectDto): Promise<Project | undefined> {
-        return await this.projectsRepository.update({ id: body.id }, { ...body });
+    async findOneByClientInfo(dto: FindProjectByClientInfoDto): Promise<Project | undefined> {
+        return this.projectsRepository.findOneByClientInfo(dto.clientId, dto.clientSecret);
+    }
+
+    async updateOne({ id, ...data }: UpdateProjectDto): Promise<Project | undefined> {
+        return this.projectsRepository.updateOne(id, { ...data });
     }
 
     async removeOne(id: number): Promise<void> {

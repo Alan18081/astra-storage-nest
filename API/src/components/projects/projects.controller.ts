@@ -1,13 +1,15 @@
 import { toNumber } from 'lodash';
-import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseFilters, UseGuards} from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
 import {IProject, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {CreateProjectDto, UpdateProjectDto} from '@astra/common/dto';
 import {ProjectsService} from './projects.service';
+import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
 @Controller('projects')
 @UseGuards(AuthGuard('jwt'))
+@UseFilters(ExceptionFilter)
 export class ProjectsController {
 
     constructor(
@@ -36,7 +38,7 @@ export class ProjectsController {
 
     @Put(':id')
     async updateOne(@Param('id') id: number, @ReqUser() user: IUser, @Body() dto: UpdateProjectDto): Promise<IProject | undefined> {
-        return this.projectsService.updateOne(id, user.id, dto);
+        return this.projectsService.updateOne(+id, user.id, dto);
     }
 
     @Delete(':id')

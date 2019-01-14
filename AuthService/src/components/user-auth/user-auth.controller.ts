@@ -9,7 +9,7 @@ import {LoginDto} from '@astra/common/dto';
 export class UserAuthController {
 
     constructor(
-       private readonly usersAuthService: UserAuthService
+       private readonly usersAuthService: UserAuthService,
     ) {}
 
     @MessagePattern({ cmd: CommunicationCodes.LOGIN })
