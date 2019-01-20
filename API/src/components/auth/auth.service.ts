@@ -98,10 +98,21 @@ export class AuthService {
           .toPromise();
   }
 
-  async setNewPassword(dto: SetNewPasswordDto): Promise<void> {
+  async verifyResetPasswordHash(hash: string): Promise<void> {
+      return this.usersClient
+          .send({ cmd: CommunicationCodes.VERIFY_RESET_PASSWORD_HASH }, { hash })
+          .toPromise();
   }
 
-  async changePassword(): Promise<void> {
+  async setNewPassword({ hash, password }: SetNewPasswordDto): Promise<void> {
+     return this.usersClient
+        .send({ cmd: CommunicationCodes.SET_NEW_PASSWORD }, { hash, password })
+        .toPromise();
+  }
 
+  async changePassword(userId: number, oldPassword: string, newPassword: string): Promise<void> {
+    return this.usersClient
+        .send({ cmd: CommunicationCodes.CHANGE_USER_PASSWORD }, { id: userId, oldPassword, newPassword })
+        .toPromise();
   }
 }

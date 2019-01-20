@@ -10,7 +10,7 @@ import {
     FindUserByEmailDto,
     FindUserDto,
     FindUsersListDto,
-    RemoveUserDto, ResetPasswordDto,
+    RemoveUserDto, ResetPasswordDto, SetNewPasswordDto,
     UpdateUserDto,
 } from '@astra/common/dto';
 import {User} from './user.entity';
@@ -33,6 +33,9 @@ export class UsersController {
     async findOne(dto: FindUserDto): Promise<User | undefined> {
         return await this.usersService.findById(dto.id);
     }
+
+    @MessagePattern({ cmd: CommunicationCodes.GET_USER_BY_GOOGLE_ID })
+    async findOneByGoogleId(dto: F)
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USER_BY_EMAIL })
     async findOneByEmail(dto: FindUserByEmailDto): Promise<User | undefined> {
@@ -57,6 +60,11 @@ export class UsersController {
     @MessagePattern({ cmd: CommunicationCodes.RESET_USER_PASSWORD })
     async resetPassword(dto: ResetPasswordDto): Promise<void> {
         return this.usersService.resetPassword(dto.email);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.SET_NEW_PASSWORD })
+    async setNewPassword(dto: SetNewPasswordDto): Promise<void> {
+        return this.usersService.setNewPassword(dto);
     }
 
 }

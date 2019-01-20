@@ -26,4 +26,8 @@ export class UserHashesService {
     return await this.userHashesRepository.save(userHash);
   }
 
+  async verifyResetPasswordHash(hash: string): Promise<boolean> {
+    return !!this.userHashesRepository.findOneByHash(hash);
+  }
+
 }

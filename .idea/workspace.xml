@@ -2,93 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f1c7f55-2f12-44ee-975e-199b92beb6ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Common/src/config/auth-service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/config/emails-service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/emails/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/emails/send-reset-password-email.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/user-hashes/find-user-hash-by-hash.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/filters/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Common/src/filters/service.filter.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/nest-cli.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/nodemon-debug.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email.sending.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/templates/email-verification.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/src/templates/reset-password.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/tsconfig.build.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/EmailsService/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/dto/user-hashes/verify-user-hash.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/dto/users/create-user-by-google.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Common/src/dto/users/find-user-by-google-id.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/app.controller.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/auth/tests/auth.controller.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/auth/tests/auth.service.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/projects/projects.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/projects/projects.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AuthService/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/config/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/dto/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/dto/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/API/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/common.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/common.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/dist/enums/messages.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/messages.enum.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/dist/enums/messages.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/messages.enum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/enums/queues.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/queues.enum.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/enums/queues.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/queues.enum.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/index.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/dist/services/hash.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/hash.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/config/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/config/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/projects/remove-project.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/projects/remove-project.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/projects/update-project.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/projects/update-project.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/config/common.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/config/common.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/config/emails-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/config/emails-service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/auth/change-password.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/auth/change-password.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/users/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/users/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Common/src/enums/messages.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/enums/messages.enum.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/enums/queues.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/enums/queues.enum.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/orm/base.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/orm/base.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/components/refresh-tokens/refresh-token.entity.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/components/refresh-tokens/refresh-tokens.controller.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/components/refresh-tokens/refresh-tokens.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/components/refresh-tokens/refresh-tokens.repository.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/components/refresh-tokens/refresh-tokens.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email.sending.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/templates/reset-password.pug" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/templates/reset-password.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/users.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/users.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/users.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/src/helpers/filters/custom.filter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/helpers/filters/custom.filter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecosystem.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/ecosystem.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/build.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/build.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/common.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/common.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,68 +62,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ecosystem.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ecosystem.config.js">
+      <file leaf-file-name="auth.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1549">
-              <caret line="107" column="30" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
+            <state relative-caret-position="336">
+              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email.sending.controller.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email.sending.controller.ts">
+      <file leaf-file-name="google.strategy.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#54#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="28">
+              <caret line="1" column="47" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="users.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.service.ts">
+        <entry file="file://$PROJECT_DIR$/API/src/components/users/users.service.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1960">
-              <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="137">
+              <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email-sending.service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts">
+      <file leaf-file-name="create-user-by-google.dto.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Common/src/dto/users/create-user-by-google.dto.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="25" selection-start-column="25" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email-templates.service.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
-              <folding>
-                <element signature="e#0#42#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="emails-service.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Common/src/config/emails-service.ts">
+      <file leaf-file-name="index.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Common/src/dto/users/index.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="224">
-              <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+              <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -182,8 +119,8 @@
       <file leaf-file-name="users.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="364">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
               <folding>
                 <element signature="e#0#99#0" expanded="true" />
               </folding>
@@ -191,25 +128,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user-hashes.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.module.ts">
+      <file leaf-file-name="find-user-by-google-id.dto.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Common/src/dto/users/find-user-by-google-id.dto.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="196">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Common/src/config/index.ts">
+      <file leaf-file-name="jwt.strategy.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state>
               <folding>
-                <element signature="e#0#54#0" expanded="true" />
+                <element signature="e#0#65#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -239,32 +172,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Common/src/dto/projects/remove-project.dto.ts" />
-        <option value="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.controller.ts" />
-        <option value="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts" />
-        <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" />
-        <option value="$PROJECT_DIR$/Common/src/orm/base.repository.ts" />
-        <option value="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.service.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" />
-        <option value="$PROJECT_DIR$/UsersService/src/app.module.ts" />
-        <option value="$PROJECT_DIR$/Common/src/config/auth-service.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-token.entity.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.module.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.service.ts" />
-        <option value="$PROJECT_DIR$/Common/src/enums/messages.enum.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.module.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/app.module.ts" />
         <option value="$PROJECT_DIR$/Common/src/dto/user-hashes/find-user-hash-by-hash.dto.ts" />
-        <option value="$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts" />
-        <option value="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts" />
-        <option value="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" />
         <option value="$PROJECT_DIR$/Common/src/enums/queues.enum.ts" />
-        <option value="$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts" />
         <option value="$PROJECT_DIR$/UsersService/src/components/users/users.repository.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.service.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts" />
         <option value="$PROJECT_DIR$/UsersService/src/components/users/users.module.ts" />
         <option value="$PROJECT_DIR$/EmailsService/package.json" />
@@ -283,13 +199,30 @@
         <option value="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.module.ts" />
         <option value="$PROJECT_DIR$/ecosystem.config.js" />
         <option value="$PROJECT_DIR$/EmailsService/src/main.ts" />
-        <option value="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" />
         <option value="$PROJECT_DIR$/EmailsService/src/components/email-sending/email.sending.controller.ts" />
-        <option value="$PROJECT_DIR$/UsersService/src/components/users/users.service.ts" />
-        <option value="$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts" />
         <option value="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.module.ts" />
-        <option value="$PROJECT_DIR$/Common/src/config/emails-service.ts" />
         <option value="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts" />
+        <option value="$PROJECT_DIR$/EmailsService/src/templates/reset-password.pug" />
+        <option value="$PROJECT_DIR$/Common/src/config/emails-service.ts" />
+        <option value="$PROJECT_DIR$/Common/src/dto/user-hashes/verify-user-hash.dto.ts" />
+        <option value="$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts" />
+        <option value="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts" />
+        <option value="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts" />
+        <option value="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" />
+        <option value="$PROJECT_DIR$/Common/src/enums/messages.enum.ts" />
+        <option value="$PROJECT_DIR$/UsersService/src/components/users/users.service.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" />
+        <option value="$PROJECT_DIR$/Common/src/dto/auth/change-password.dto.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" />
+        <option value="$PROJECT_DIR$/Common/src/config/common.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/auth.module.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts" />
+        <option value="$PROJECT_DIR$/Common/src/dto/users/create-user-by-google.dto.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/users/users.service.ts" />
+        <option value="$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts" />
+        <option value="$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts" />
+        <option value="$PROJECT_DIR$/Common/src/dto/users/find-user-by-google-id.dto.ts" />
+        <option value="$PROJECT_DIR$/Common/src/dto/users/index.ts" />
       </list>
     </option>
   </component>
@@ -345,28 +278,71 @@
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="UsersService" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="UsersService" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="UsersService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="UsersService" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="user-hashes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="strategies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
@@ -389,23 +365,23 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/DataService/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Common/src/dto/users" />
+      <recent name="$PROJECT_DIR$/EmailsService/src" />
+      <recent name="$PROJECT_DIR$/Common/src/config" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/AuthService/src/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/UsersService/src/helpers" />
       <recent name="$PROJECT_DIR$/Front-end/src/app" />
       <recent name="$PROJECT_DIR$/Front-end/src/auth/containers" />
       <recent name="$PROJECT_DIR$/Common/src/dto" />
       <recent name="$PROJECT_DIR$/Common/src/interfaces" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/EmailsService/src" />
-      <recent name="$PROJECT_DIR$/Common/src/config" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/AuthService/src/components" />
-      <recent name="$PROJECT_DIR$/ProjectsService/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -438,12 +414,13 @@
       <workItem from="1547376662080" duration="2075000" />
       <workItem from="1547451920186" duration="6270000" />
       <workItem from="1547972870367" duration="15236000" />
-      <workItem from="1547993988373" duration="8276000" />
+      <workItem from="1547993988373" duration="10244000" />
+      <workItem from="1548006743712" duration="6204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148871000" />
+    <option name="totallyTimeSpent" value="157043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -452,16 +429,16 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32979852" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.74385244" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.74297607" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -497,143 +474,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-token.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.repository.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/projects/projects.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="45" selection-start-column="45" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/user-hashes/find-user-hash-by-hash.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.repository.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hash.entity.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/auth/change-password.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/auth/set-new-password.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/auth/reset-password.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/enums/queues.enum.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthService/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="57" column="76" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.repository.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="51" selection-start-column="44" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="924">
@@ -650,42 +490,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2324">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2408">
-          <caret line="94" column="8" selection-start-line="94" selection-start-column="8" selection-end-line="94" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/core/core.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/core/core.module.ts" />
     <entry file="file://$PROJECT_DIR$/Common/src/filters/service.filter.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#93#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -759,9 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/src/templates/reset-password.pug">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/EmailsService/src/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -769,23 +578,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/EmailsService/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -803,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/node_modules/@astra/common/config/emails-service.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="112" lean-forward="true" selection-start-column="112" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/config/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -820,49 +609,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email.sending.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1960">
-          <caret line="70" column="24" selection-start-line="70" selection-start-column="24" selection-end-line="70" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#99#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="28">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
@@ -870,30 +619,239 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts">
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="56" selection-end-line="17" selection-end-column="56" />
+        <state relative-caret-position="336">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/templates/email-verification.pug">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/templates/reset-password.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/node_modules/@astra/common/config/emails-service.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="112" lean-forward="true" selection-start-column="112" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-227">
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Common/src/config/emails-service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+        <state relative-caret-position="280">
+          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts">
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/user-hashes/verify-user-hash.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/user-hashes/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/auth/set-new-password.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/enums/messages.enum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="23" column="65" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/auth/change-password.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="17" column="85" selection-start-line="17" selection-start-column="85" selection-end-line="17" selection-end-column="85" />
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2153">
+          <caret line="81" column="74" selection-start-line="81" selection-start-column="74" selection-end-line="81" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="114" column="76" selection-start-line="114" selection-start-column="76" selection-end-line="114" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/node_modules/@astra/common/config/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/users/create-user-by-google.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/users/find-users-list.dto.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/users/users.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/config/common.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="7" column="64" selection-start-line="7" selection-start-column="64" selection-end-line="7" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#99#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/users/find-user-by-google-id.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/users/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
         </state>
       </provider>
     </entry>

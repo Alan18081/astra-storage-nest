@@ -1,9 +1,11 @@
 export enum CommunicationCodes {
     GET_USERS_LIST = '[UsersService] Get Users List',
     GET_USER = '[UsersService] Get User',
+    GET_USER_BY_GOOGLE_ID = '[UsersService] Get User By Google Id',
     GET_USER_BY_ID = '[UsersService] Get User By ID',
     GET_USER_BY_EMAIL = '[UsersService] Get User By Email',
     CREATE_USER = '[UsersService] Create User',
+    CREATE_USER_BY_GOOGLE = '[UsersService] Get User By Google',
     UPDATE_USER = '[UsersService] Update User',
     REMOVE_USER = '[UsersService] Remove User',
     RESET_USER_PASSWORD = '[UsersService] Reset User Password',
@@ -56,4 +58,8 @@ export enum CommunicationCodes {
     GET_USER_HASH_BY_HASH = '[UsersService] Get User Hash By Hash',
 
     SEND_RESET_PASSWORD_EMAIL = '[EmailsService] Send Reset Password Email',
+
+    VERIFY_RESET_PASSWORD_HASH = '[UsersService] Verify Reset Password Hash',
+    SET_NEW_PASSWORD = '[UsersService] Set New Password',
+    CHANGE_USER_PASSWORD = '[UsersService] Change User Password',
 }

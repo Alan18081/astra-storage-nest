@@ -6,7 +6,7 @@ import {AuthController} from './auth.controller';
 import {AuthService} from './auth.service';
 import {JwtStrategy} from './strategies/jwt.strategy';
 import {JWT_EXPIRES, JWT_SECRET} from '@astra/common';
-// import {GoogleStrategy} from './strategies/google.strategy';
+import {GoogleStrategy} from './strategies/google.strategy';
 
 @Module({
   imports: [
@@ -24,6 +24,7 @@ import {JWT_EXPIRES, JWT_SECRET} from '@astra/common';
   providers: [
       AuthService,
       JwtStrategy,
+      GoogleStrategy,
   ],
 })
 export class AuthModule {}

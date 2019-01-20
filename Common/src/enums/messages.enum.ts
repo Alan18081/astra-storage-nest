@@ -21,4 +21,5 @@ export enum Messages {
 
     INVALID_PERMISSIONS = 'You don\'t have permissions to do this operation',
     INVALID_REFRESH_TOKEN = 'Provided refresh token is invalid',
+    INVALID_PASSWORD_HASH = 'Provided hash for resetting password is invalid',
 }

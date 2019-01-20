@@ -5,7 +5,14 @@ import {
     IUser,
     Queues,
 } from '@astra/common';
-import {CreateUserDto, FindUserDto, FindUsersListDto, RemoveUserDto, UpdateUserDto} from '@astra/common/dto';
+import {
+    CreateUserByGoogleDto,
+    CreateUserDto,
+    FindUserDto,
+    FindUsersListDto,
+    RemoveUserDto,
+    UpdateUserDto
+} from '@astra/common/dto';
 import {createClientOptions} from '@astra/common/helpers';
 
 @Injectable()
@@ -26,9 +33,21 @@ export class UsersService {
             .toPromise();
     }
 
+    findOneByGoogleId(googleId: string): Promise<IUser | undefined> {
+        return this.client
+            .send({ cmd: CommunicationCodes.GET_USER_BY_GOOGLE_ID }, { googleId })
+            .toPromise();
+    }
+
     createOne(dto: CreateUserDto): Promise<IUser> {
         return this.client
             .send({ cmd: CommunicationCodes.CREATE_USER }, dto)
+            .toPromise();
+    }
+
+    createOneByGoogle(dto: CreateUserByGoogleDto): Promise<IUser> {
+        return this.client
+            .send({ cmd: CommunicationCodes.CREATE_USER_BY_GOOGLE }, dto)
             .toPromise();
     }
 

@@ -4,7 +4,7 @@ import {User} from './user.entity';
 import {UsersRepository} from './users.repository';
 import {HashService} from '@astra/common/services';
 import {InjectRepository} from '@nestjs/typeorm';
-import { CreateUserDto } from '@astra/common/dto';
+import {CreateUserDto, SetNewPasswordDto} from '@astra/common/dto';
 import {ClientProxy, RpcException, Client} from '@nestjs/microservices';
 import {UserHashesService} from '../user-hashes/user-hashes.service';
 import {createClientOptions} from '@astra/common/helpers';
@@ -69,6 +69,17 @@ export class UsersService {
                hash: userHash.hash,
             })
             .toPromise();
+    }
+
+    async setNewPassword({ hash, password }: SetNewPasswordDto): Promise<void> {
+        const userHash = await this.userHashesService.findOneByHash(hash);
+
+        if (!userHash) {
+           throw new RpcException(Messages.INVALID_PASSWORD_HASH);
+        }
+
+        const passwordHash = await this.hashService.generateHash(password);
+        await this.updateOne(userHash.userId, { password: passwordHash });
     }
 
 }

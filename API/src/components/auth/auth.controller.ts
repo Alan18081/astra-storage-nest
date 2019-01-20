@@ -1,6 +1,6 @@
 import {
-  Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
-  HttpCode, HttpStatus,
+    Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
+    HttpCode, HttpStatus, Param,
 } from '@nestjs/common';
 import { ChangePasswordDto, ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto } from '@astra/common/dto';
 import { Response } from 'express';
@@ -66,10 +66,11 @@ export class AuthController {
 
   @Put('changePassword')
   @UseGuards(AuthGuard('jwt'))
+  @HttpCode(HttpStatus.ACCEPTED)
   @ApiBearerAuth()
   @ApiOperation({ title: 'Create new password' })
-  async changePassword(@ReqUser() user: IUser, @Body() payload: ChangePasswordDto): Promise<void> {
-    await this.authService.changePassword();
+  async changePassword(@ReqUser() user: IUser, @Body() payload: any): Promise<void> {
+    await this.authService.changePassword(user.id, payload.oldPassword, payload.newPassword);
 
   }
   //
@@ -94,6 +95,12 @@ export class AuthController {
   @ApiOperation({ title: 'Reset password' })
   async resetPassword(@Body() body: ResetPasswordDto): Promise<void> {
     await this.authService.resetPassword(body.email);
+  }
+
+  @Get('resetPassword/hash/:hash')
+  @ApiOperation({ title: 'Verify reset password hash' })
+  async verifyResetPasswordHash(@Param('hash') hash: string): Promise<void> {
+    await this.authService.verifyResetPasswordHash(hash);
   }
 
   @Post('newPassword')

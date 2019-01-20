@@ -14,10 +14,11 @@ export class EmailSendingService {
         sgEmail.setApiKey(EmailsServiceConfig.SENDGRID_API_KEY);
     }
 
-    async sendResetPasswordEmail({ firstName, lastName, email }: SendResetPasswordEmailDto): Promise<void> {
+    async sendResetPasswordEmail({ firstName, lastName, email, hash }: SendResetPasswordEmailDto): Promise<void> {
         const html = this.emailTemplatesService.renderResetPasswordTemplate({
             firstName,
             lastName,
+            link: `${EmailsServiceConfig.APP_URL}/resetPassword/hash/${hash}`,
         });
         await sgEmail.send(
             new Email(

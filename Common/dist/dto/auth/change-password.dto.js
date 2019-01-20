@@ -14,6 +14,10 @@ const config_1 = require("../../config");
 class ChangePasswordDto {
 }
 __decorate([
+    class_validator_1.IsInt(),
+    __metadata("design:type", Number)
+], ChangePasswordDto.prototype, "id", void 0);
+__decorate([
     class_validator_1.IsString(),
     class_validator_1.MinLength(config_1.PASSWORD_LENGTH),
     __metadata("design:type", String)
