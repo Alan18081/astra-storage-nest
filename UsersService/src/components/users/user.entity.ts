@@ -21,8 +21,11 @@ export class User implements IUser {
     @Index()
     email: string;
 
+    @Column({ type: 'varchar', nullable: true })
+    googleId: string;
+
     @Exclude()
-    @Column()
+    @Column({ type: 'varchar', nullable: true })
     password: string;
 
     constructor(partial: Partial<User>) {

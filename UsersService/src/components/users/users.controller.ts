@@ -6,6 +6,7 @@ import {
     ServiceExceptionFilter,
 } from '@astra/common';
 import {
+    CreateUserByGoogleDto,
     CreateUserDto,
     FindUserByEmailDto,
     FindUserDto,
@@ -15,6 +16,7 @@ import {
 } from '@astra/common/dto';
 import {User} from './user.entity';
 import {UsersService} from './users.service';
+import {FindUserByGoogleIdDto} from '../../../../Common/src/dto/users/find-user-by-google-id.dto';
 
 @Controller()
 @UseFilters(ServiceExceptionFilter)
@@ -26,30 +28,37 @@ export class UsersController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USERS_LIST })
     async findMany(dto: FindUsersListDto): Promise<User[]> {
-        return await this.usersService.findMany();
+        return this.usersService.findMany();
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USER })
     async findOne(dto: FindUserDto): Promise<User | undefined> {
-        return await this.usersService.findById(dto.id);
+        return this.usersService.findById(dto.id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USER_BY_GOOGLE_ID })
-    async findOneByGoogleId(dto: F)
+    async findOneByGoogleId(dto: FindUserByGoogleIdDto): Promise<User | undefined> {
+        return this.usersService.findOneByGoogleId(dto.googleId);
+    }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USER_BY_EMAIL })
     async findOneByEmail(dto: FindUserByEmailDto): Promise<User | undefined> {
-        return await this.usersService.findOneByEmail(dto.email);
+        return this.usersService.findOneByEmail(dto.email);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_USER })
     async createOne(dto: CreateUserDto): Promise<User> {
-        return await this.usersService.createOne(dto);
+        return this.usersService.createOne(dto);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.CREATE_USER_BY_GOOGLE })
+    async createOneByGoogle(dto: CreateUserByGoogleDto): Promise<User> {
+        return this.usersService.createOneByGoogle(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.UPDATE_USER })
     async updateOne(dto: UpdateUserDto): Promise<User | undefined> {
-        return await this.usersService.updateOne(dto.id, dto);
+        return this.usersService.updateOne(dto.id, dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_USER} )
