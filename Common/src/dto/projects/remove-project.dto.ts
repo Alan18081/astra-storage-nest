@@ -5,4 +5,7 @@ export class RemoveProjectDto {
   @IsInt()
   id: number;
 
+  @IsInt()
+  userId: number;
+
 }

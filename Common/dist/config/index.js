@@ -7,4 +7,8 @@ const UsersServiceConfig = require("./users-service");
 exports.UsersServiceConfig = UsersServiceConfig;
 const ProjectsServiceConfig = require("./projects-service");
 exports.ProjectsServiceConfig = ProjectsServiceConfig;
+const AuthServiceConfig = require("./auth-service");
+exports.AuthServiceConfig = AuthServiceConfig;
+const EmailsServiceConfig = require("./emails-service");
+exports.EmailsServiceConfig = EmailsServiceConfig;
 __export(require("./common"));

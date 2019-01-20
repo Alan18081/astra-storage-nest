@@ -31,6 +31,7 @@
     "amqplib": "^0.5.3",
     "bcrypt": "^3.0.3",
     "class-validator": "^0.9.1",
+    "pg": "^7.8.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
     "rxjs": "^6.2.2",

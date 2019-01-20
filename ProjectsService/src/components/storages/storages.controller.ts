@@ -1,10 +1,8 @@
-import { Controller } from '@nestjs/common';
+import {Controller, UseFilters} from '@nestjs/common';
 import {
     CommunicationCodes,
-    Messages,
     PaginatedResponse,
 } from '@astra/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import { MessagePattern } from '@nestjs/microservices';
 import { Storage } from './storage.entity';
 import {
@@ -15,8 +13,10 @@ import {
   UpdateStorageDto,
 } from '@astra/common/dto';
 import { StoragesService } from './storages.service';
+import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
 @Controller()
+@UseFilters(ExceptionFilter)
 export class StoragesController {
 
   constructor(

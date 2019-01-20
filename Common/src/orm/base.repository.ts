@@ -15,6 +15,8 @@ export class BaseRepository<T> extends Repository<T> {
       where: query,
     });
 
+    console.log('Paginated result', data, count);
+
     return {
       data,
       itemsPerPage: limit,

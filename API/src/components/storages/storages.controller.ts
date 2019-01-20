@@ -1,11 +1,13 @@
-import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseGuards} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseFilters, UseGuards} from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
 import {IStorage, IUser} from '@astra/common';
 import {StoragesService} from './storages.service';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
+import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
 @Controller('storages')
 @UseGuards(AuthGuard('jwt'))
+@UseFilters(ExceptionFilter)
 export class StoragesController {
 
     constructor(
@@ -14,12 +16,17 @@ export class StoragesController {
 
     @Get('')
     async findManyByProject(@Query() query: any,  @ReqUser() user: IUser): Promise<IStorage[]> {
-        return this.storagesService.findManyByProject(query.projectId, user.id);
+        return this.storagesService.findManyByProject({
+            projectId: +query.projectId,
+            page: +query.page,
+            limit: +query.limit,
+            userId: user.id
+        });
     }
 
     @Get(':id')
     async findOne(@Param('id') id: number, @ReqUser() user: IUser, @Query() query: any): Promise<IStorage | undefined> {
-        return this.storagesService.findOne(id, user.id, query.includeData);
+        return this.storagesService.findOne(+id, user.id, query.includeData);
     }
 
     @Post('')
@@ -29,12 +36,12 @@ export class StoragesController {
 
     @Put(':id')
     async updateOne(@Param('id') id: number, @ReqUser() user: IUser, @Body() body: any): Promise<IStorage | undefined> {
-        return this.storagesService.updateOne(id, user.id, body);
+        return this.storagesService.updateOne(+id, user.id, body);
     }
 
     @Delete(':id')
     async removeOne(@Param('id') id: number, @ReqUser() user: IUser): Promise<void> {
-        await this.storagesService.removeOne(id, user.id);
+        await this.storagesService.removeOne(+id, user.id);
     }
 
 }

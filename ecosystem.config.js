@@ -101,5 +101,22 @@ module.exports = {
                 NODE_ENV: 'production'
             }
         },
+      {
+          name: 'EmailsService',
+          cwd: './EmailsService',
+          script: 'npm',
+          args: 'run start:dev',
+          instances: 1,
+          merge_logs: true,
+          autorestart: false,
+          exec_mode: 'fork',
+          max_memory_restart: '1G',
+          env: {
+              NODE_ENV: 'development'
+          },
+          env_production: {
+              NODE_ENV: 'production'
+          }
+      },
   ]
 };

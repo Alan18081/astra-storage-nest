@@ -6,7 +6,6 @@ import { RefreshToken } from './refresh-token.entity';
 import { JWT_EXPIRES, JWT_SECRET } from '@astra/common';
 import {RefreshTokensRepository} from './refresh-tokens.repository';
 import {RefreshTokensController} from './refresh-tokens.controller';
-import {UsersModule} from '../users/users.module';
 
 @Module({
   imports: [
@@ -17,7 +16,6 @@ import {UsersModule} from '../users/users.module';
         expiresIn: JWT_EXPIRES,
       },
     }),
-    UsersModule
   ],
   controllers: [RefreshTokensController],
   exports: [RefreshTokensService],

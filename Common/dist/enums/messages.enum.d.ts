@@ -13,5 +13,6 @@ export declare enum Messages {
     STORAGE_NAME_ERROR = "Storage with provided name already exists",
     STORAGE_PATH_ERROR = "Storage with provided path already exists",
     STORAGE_DATA_ALREADY_EXISTS = "Storage Data for provided storage already exists",
-    INVALID_PERMISSIONS = "You don't have permissions to do this operation"
+    INVALID_PERMISSIONS = "You don't have permissions to do this operation",
+    INVALID_REFRESH_TOKEN = "Provided refresh token is invalid"
 }

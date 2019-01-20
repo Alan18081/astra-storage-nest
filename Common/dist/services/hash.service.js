@@ -22,12 +22,13 @@ let HashService = class HashService {
     }
     generateHash(str) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield bcrypt.hash(str, this.ROUNDS);
+            return bcrypt.hash(str, this.ROUNDS);
         });
     }
     compareHash(str, hash) {
         return __awaiter(this, void 0, void 0, function* () {
-            return yield bcrypt.compare(str, hash);
+            console.log('Hash info', str, hash);
+            return bcrypt.compare(str, hash);
         });
     }
 };

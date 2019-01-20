@@ -41,6 +41,9 @@ export declare enum CommunicationCodes {
     REMOVE_PROJECT_ACCOUNT = "[ProjectsService] Remove Project Account",
     REMOVE_PROJECT_ACCOUNT_BY_PROJECT_OWNER = "[ProjectsService] Remove Project Account By Project Owner",
     CREATE_REFRESH_TOKEN = "[UsersService] Create Refresh Token",
-    GET_REFRESH_TOKEN = "[UsersService] Get Refresh Token",
-    REMOVE_REFRESH_TOKEN = "[UsersService] Remove Refresh Token"
+    GET_REFRESH_TOKEN_BY_TOKEN = "[UsersService] Get Refresh Token By Token",
+    REMOVE_REFRESH_TOKEN = "[UsersService] Remove Refresh Token",
+    EXCHANGE_TOKEN = "[AuthService] Exchange Token",
+    GET_USER_HASH_BY_HASH = "[UsersService] Get User Hash By Hash",
+    SEND_RESET_PASSWORD_EMAIL = "[EmailsService] Send Reset Password Email"
 }

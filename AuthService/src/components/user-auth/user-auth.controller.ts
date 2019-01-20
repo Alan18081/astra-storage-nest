@@ -3,7 +3,7 @@ import {UserAuthService} from './user-auth.service';
 import {MessagePattern} from '@nestjs/microservices';
 import {CommunicationCodes} from '@astra/common';
 import { JwtResponse } from '@astra/common';
-import {LoginDto} from '@astra/common/dto';
+import {ExchangeTokenDto, LoginDto} from '@astra/common/dto';
 
 @Controller()
 export class UserAuthController {
@@ -14,7 +14,11 @@ export class UserAuthController {
 
     @MessagePattern({ cmd: CommunicationCodes.LOGIN })
     async login(dto: LoginDto): Promise<JwtResponse> {
-        return await this.usersAuthService.login(dto);
+        return this.usersAuthService.login(dto);
     }
 
+    @MessagePattern({ cmd: CommunicationCodes.EXCHANGE_TOKEN })
+    async exchangeToken(dto: ExchangeTokenDto): Promise<JwtResponse> {
+        return this.usersAuthService.exchangeToken(dto.refreshToken);
+    }
 }

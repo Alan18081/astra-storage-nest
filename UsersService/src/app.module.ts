@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import {UsersModule} from './components/users/users.module';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import { UsersServiceConfig } from '@astra/common';
-import {RefreshTokensModule} from './components/refresh-tokens/refresh-tokens.module';
 import {UserHashesModule} from './components/user-hashes/user-hashes.module';
 
 @Module({
@@ -18,7 +17,6 @@ import {UserHashesModule} from './components/user-hashes/user-hashes.module';
           synchronize: true,
       }),
       UsersModule,
-      RefreshTokensModule,
       UserHashesModule,
   ],
   controllers: [],

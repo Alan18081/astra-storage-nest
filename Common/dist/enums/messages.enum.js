@@ -17,4 +17,5 @@ var Messages;
     Messages["STORAGE_PATH_ERROR"] = "Storage with provided path already exists";
     Messages["STORAGE_DATA_ALREADY_EXISTS"] = "Storage Data for provided storage already exists";
     Messages["INVALID_PERMISSIONS"] = "You don't have permissions to do this operation";
+    Messages["INVALID_REFRESH_TOKEN"] = "Provided refresh token is invalid";
 })(Messages = exports.Messages || (exports.Messages = {}));

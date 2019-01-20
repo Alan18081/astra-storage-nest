@@ -3,21 +3,21 @@ import {BaseRpcExceptionFilter, MessagePattern} from '@nestjs/microservices';
 import {
     CommunicationCodes,
     Messages,
+    ServiceExceptionFilter,
 } from '@astra/common';
 import {
-  CreateUserDto,
-  FindUserByEmailDto,
-  FindUserDto,
-  FindUsersListDto,
-  RemoveUserDto,
-  UpdateUserDto,
+    CreateUserDto,
+    FindUserByEmailDto,
+    FindUserDto,
+    FindUsersListDto,
+    RemoveUserDto, ResetPasswordDto,
+    UpdateUserDto,
 } from '@astra/common/dto';
 import {User} from './user.entity';
 import {UsersService} from './users.service';
-import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
 @Controller()
-@UseFilters(ExceptionFilter)
+@UseFilters(ServiceExceptionFilter)
 export class UsersController {
 
     constructor(
@@ -52,6 +52,11 @@ export class UsersController {
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_USER} )
     async removeOne(dto: RemoveUserDto): Promise<void> {
         await this.usersService.removeById(dto.id);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.RESET_USER_PASSWORD })
+    async resetPassword(dto: ResetPasswordDto): Promise<void> {
+        return this.usersService.resetPassword(dto.email);
     }
 
 }

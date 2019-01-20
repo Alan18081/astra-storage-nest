@@ -2,7 +2,7 @@ import {Injectable, UnauthorizedException} from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { UsersService } from '../users/users.service';
 import {Queues, IUser, CommunicationCodes, JwtPayload, JwtResponse, Messages} from '@astra/common';
-import { LoginDto } from '@astra/common/dto';
+import {LoginDto, SetNewPasswordDto} from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { createClientOptions } from '@astra/common/helpers';
 import {ProjectRequest} from './types/project-request';
@@ -17,17 +17,11 @@ export class AuthService {
   @Client(createClientOptions(Queues.USERS_SERVICE))
   private readonly usersClient: ClientProxy;
 
-  constructor(
-    private readonly usersService: UsersService,
-    private readonly jwtService: JwtService,
-  ) {}
-
   async login(dto: LoginDto): Promise<JwtResponse> {
     return this.authClient.send({ cmd: CommunicationCodes.LOGIN }, dto).toPromise();
   }
 
   async validateUser(payload: JwtPayload): Promise<IUser | undefined> {
-    console.log('Validating user', payload);
     return this.usersClient.send({ cmd: CommunicationCodes.GET_USER_BY_EMAIL }, { email: payload.email}).toPromise();
   }
 
@@ -39,7 +33,7 @@ export class AuthService {
     }
 
     const project = await this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, { token: projectToken }).toPromise();
-    if(!project) {
+    if (!project) {
       throw new UnauthorizedException(Messages.PROJECT_NOT_FOUND);
     }
 
@@ -52,12 +46,12 @@ export class AuthService {
   async validateProjectAccount(req: ProjectAccountRequest): Promise<boolean> {
       const { accountToken } = req.query;
 
-      if(!accountToken) {
+      if (!accountToken) {
           throw new UnauthorizedException(Messages.ACCOUNT_TOKEN_NOT_FOUND);
       }
 
       const projectAccount = await this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { token: accountToken }).toPromise();
-      if(!projectAccount) {
+      if (!projectAccount) {
           throw new UnauthorizedException(Messages.ACCOUNT_NOT_FOUND);
       }
 
@@ -66,17 +60,11 @@ export class AuthService {
       return true;
   }
 
-  // async exchangeToken(token: string): Promise<JwtResponse> {
-  //   const tokenRecord = await this.refreshTokensService.findOneByToken(token);
-  //
-  //   if (!tokenRecord) {
-  //     throw new NotFoundException(Messages.REFRESH_TOKEN_NOT_FOUND);
-  //   }
-  //
-  //   await this.refreshTokensService.deleteOne(tokenRecord.id);
-  //
-  //   return await this.signIn(tokenRecord.user-auth);
-  // }
+  async exchangeToken(refreshToken: string): Promise<JwtResponse> {
+    return this.authClient
+        .send({ cmd: CommunicationCodes.EXCHANGE_TOKEN }, { refreshToken })
+        .toPromise();
+  }
   //
   // async verifyEmail({ firstName, lastName, email, id }: User): Promise<void> {
   //   const emailHash = await this.userHashesService.createOne(id, HashTypes.EMAIL_VERIFICATION);
@@ -103,11 +91,17 @@ export class AuthService {
   //     this.userHashesService.deleteOne(userHash.id)
   //   ]);
   // }
-  //
-  // async resetPassword(: User): Promise<void> {
-  // }
-  //
-  // setNewPassword(dto: SetNewPasswordDto): Observable<void> {
-  //   return this.
-  // }
+
+  async resetPassword(email: string): Promise<void> {
+      return this.usersClient
+          .send({ cmd: CommunicationCodes.RESET_USER_PASSWORD }, { email })
+          .toPromise();
+  }
+
+  async setNewPassword(dto: SetNewPasswordDto): Promise<void> {
+  }
+
+  async changePassword(): Promise<void> {
+
+  }
 }

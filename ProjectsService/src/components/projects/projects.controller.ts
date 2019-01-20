@@ -50,8 +50,8 @@ export class ProjectsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT })
-    async removeOne(dto: RemoveProjectDto): Promise<void> {
-        await this.projectsService.removeOne(dto.id);
+    async removeOne({ id, userId }: RemoveProjectDto): Promise<void> {
+        await this.projectsService.removeOne(id, userId);
     }
 
 

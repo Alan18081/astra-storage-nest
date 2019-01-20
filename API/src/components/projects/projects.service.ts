@@ -19,7 +19,7 @@ export class ProjectsService {
 
     async findManyByUser(userId: number): Promise<IProject[]> {
         return this.client
-            .send({ cmd: CommunicationCodes.GET_PROJECTS_LIST }, { userId })
+            .send({ cmd: CommunicationCodes.GET_PROJECTS_LIST_BY_USER }, { userId })
             .toPromise();
     }
 

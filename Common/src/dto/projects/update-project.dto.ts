@@ -5,6 +5,9 @@ export class UpdateProjectDto {
   @IsInt()
   id: number;
 
+  @IsInt()
+  userId: number;
+
   @IsString()
   @IsOptional()
   name: string;

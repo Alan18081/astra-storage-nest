@@ -14,6 +14,10 @@ export class UserHashesService {
     private readonly userHashesRepository: UserHashesRepository,
   ) {}
 
+  async findOneByHash(hash: string): Promise<UserHash | undefined> {
+    return this.userHashesRepository.findOneByHash(hash);
+  }
+
   async createOne(userId: number, type: HashTypes): Promise<UserHash> {
     const userHash = new UserHash();
     userHash.hash = await this.hashService.generateHash(JSON.stringify({ userId, type }));

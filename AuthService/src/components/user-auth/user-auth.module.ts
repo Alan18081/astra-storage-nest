@@ -4,6 +4,7 @@ import {UserAuthService} from './user-auth.service';
 import {JwtModule} from '@nestjs/jwt';
 import {JWT_EXPIRES, JWT_SECRET} from '@astra/common';
 import {CoreModule} from '../core/core.module';
+import {RefreshTokensModule} from '../refresh-tokens/refresh-tokens.module';
 
 @Module({
     imports: [
@@ -14,6 +15,7 @@ import {CoreModule} from '../core/core.module';
             },
         }),
         CoreModule,
+        RefreshTokensModule,
     ],
     controllers: [UserAuthController],
     providers: [UserAuthService],

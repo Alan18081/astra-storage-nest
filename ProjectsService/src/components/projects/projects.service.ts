@@ -41,12 +41,12 @@ export class ProjectsService {
         return this.projectsRepository.findOneByClientInfo(dto.clientId, dto.clientSecret);
     }
 
-    async updateOne({ id, ...data }: UpdateProjectDto): Promise<Project | undefined> {
-        return this.projectsRepository.updateOne(id, { ...data });
+    async updateOne({ id, userId, ...data }: UpdateProjectDto): Promise<Project | undefined> {
+        return this.projectsRepository.updateOne({ id, userId }, { ...data });
     }
 
-    async removeOne(id: number): Promise<void> {
-        await this.projectsRepository.delete({ id });
+    async removeOne(id: number, userId: number): Promise<void> {
+        await this.projectsRepository.delete({ id, userId });
     }
 
 }

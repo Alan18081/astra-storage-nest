@@ -1,7 +1,6 @@
-import { Controller } from '@nestjs/common';
-import { MessagePattern, RpcException } from '@nestjs/microservices';
-import { InjectRepository } from '@nestjs/typeorm';
-import { CommunicationCodes, Messages, PaginatedResponse } from '@astra/common';
+import {Controller, UseFilters} from '@nestjs/common';
+import { MessagePattern} from '@nestjs/microservices';
+import { CommunicationCodes, PaginatedResponse } from '@astra/common';
 import {
     CreateProjectAccountDto,
     FindProjectAccountsListDto,
@@ -10,8 +9,10 @@ import {
 } from '@astra/common/dto';
 import { ProjectAccount } from './project-account.entity';
 import { ProjectAccountsService } from './project-accounts.service';
+import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 
 @Controller()
+@UseFilters(ExceptionFilter)
 export class ProjectAccountsController {
 
     constructor(

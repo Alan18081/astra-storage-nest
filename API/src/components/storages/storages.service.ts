@@ -12,14 +12,14 @@ export class StoragesService {
     @Client(createClientOptions(Queues.DATA_SERVICE))
     private readonly dataClient: ClientProxy;
 
-    async findManyByProject(projectId: number, userId: number): Promise<IStorage[]> {
+    async findManyByProject(query: any): Promise<IStorage[]> {
         return this.projectsClient
-            .send({ cmd: CommunicationCodes.GET_STORAGES_LIST }, { projectId, userId })
+            .send({ cmd: CommunicationCodes.GET_STORAGES_LIST }, query)
             .toPromise();
     }
 
     async findOne(id: number, userId: number, includeData: boolean = false): Promise<IStorage | undefined> {
-        return this.dataClient
+        return this.projectsClient
             .send({ cmd: CommunicationCodes.GET_STORAGE }, { id, userId, includeData })
             .toPromise();
     }

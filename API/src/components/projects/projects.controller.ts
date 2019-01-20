@@ -28,7 +28,7 @@ export class ProjectsController {
 
     @Get(':id')
     async findOne(@Param('id') id: number, @ReqUser() user: IUser): Promise<IProject> {
-        return this.projectsService.findOne(id, user.id);
+        return this.projectsService.findOne(+id, user.id);
     }
 
     @Post('')
@@ -43,7 +43,7 @@ export class ProjectsController {
 
     @Delete(':id')
     async removeOne(@Param('id') id: number, @ReqUser() user: IUser): Promise<void> {
-        await this.projectsService.removeOne(id, user.id);
+        await this.projectsService.removeOne(+id, user.id);
     }
 
 }

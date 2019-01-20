@@ -8,3 +8,4 @@ export * from './interfaces';
 
 export * from './orm';
 
+export * from './filters';

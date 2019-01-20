@@ -24,6 +24,8 @@ export class StoragesService {
       throw new RpcException(Messages.INVALID_PERMISSIONS);
     }
 
+    console.log('Page', page, limit);
+
     if (page && limit) {
       return this.storagesRepository.findManyWithPagination({ projectId }, { page, limit });
     }
