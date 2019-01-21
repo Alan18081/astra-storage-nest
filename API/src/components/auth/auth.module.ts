@@ -10,6 +10,7 @@ import {GoogleStrategy} from './strategies/google.strategy';
 import { ProjectsModule } from '../projects/projects.module';
 import { ProjectAccountsModule } from '../project-accounts/project-accounts.module';
 import { JwtProjectStrategy } from './strategies/jwt-project.strategy';
+import {JwtProjectAccountStrategy} from './strategies/jwt-project-account.strategy';
 
 @Module({
   imports: [
@@ -31,6 +32,7 @@ import { JwtProjectStrategy } from './strategies/jwt-project.strategy';
       JwtStrategy,
       GoogleStrategy,
       JwtProjectStrategy,
+      JwtProjectAccountStrategy,
   ],
 })
 export class AuthModule {}

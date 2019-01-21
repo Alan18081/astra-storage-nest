@@ -7,5 +7,6 @@ import {StoragesService} from './storages.service';
     imports: [AuthModule],
     controllers: [StoragesController],
     providers: [StoragesService],
+    exports: [StoragesService],
 })
 export class StoragesModule {}

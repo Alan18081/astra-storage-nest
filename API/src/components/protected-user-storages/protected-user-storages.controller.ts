@@ -1,13 +1,13 @@
-import {JwtProjectGuard} from '../../helpers/guards/jwt-project.guard';
-import {JwtProjectAccountGuard} from '../../helpers/guards/jwt-project-account.guard';
 import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
 import {IProjectAccount, IStorageRecord} from '@astra/common';
 import {ProtectedUserStoragesService} from './protected-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
+import {AuthGuard} from '@nestjs/passport';
 
 @Controller('storages/protected/:storageId')
 @UseFilters(ApiExceptionFilter)
+@UseGuards(AuthGuard('jwtProjectAccount'))
 export class ProtectedUserStoragesController {
 
     constructor(
@@ -15,7 +15,6 @@ export class ProtectedUserStoragesController {
     ) {}
 
     @Get('')
-    @UseGuards(JwtProjectAccountGuard)
     async findStorageRecordsList(
         @Param('storageId') storageId: number,
         @ProjectAccount() account: IProjectAccount,
@@ -24,7 +23,6 @@ export class ProtectedUserStoragesController {
     }
 
     @Get(':recordId')
-    @UseGuards(JwtProjectAccountGuard)
     async getStorageDataRecord(
         @Param('storageId') storageId: number,
         @Param('recordId') recordId: string,
@@ -34,7 +32,6 @@ export class ProtectedUserStoragesController {
     }
 
     @Post('')
-    @UseGuards(JwtProjectAccountGuard)
     async createStorageRecordData(
         @Param('storageId') storageId: number,
         @ProjectAccount() account: IProjectAccount,
@@ -44,7 +41,6 @@ export class ProtectedUserStoragesController {
     }
 
     @Put(':recordId')
-    @UseGuards(JwtProjectAccountGuard)
     async updateStorageRecordData(
         @Param('storageId') storageId: number,
         @Param('recordId') recordId: string,
@@ -55,7 +51,6 @@ export class ProtectedUserStoragesController {
     }
 
     @Delete(':recordId')
-    @UseGuards(JwtProjectGuard)
     async removeOne(
         @Param('storageId') storageId: number,
         @Param('recordId') recordId: string,

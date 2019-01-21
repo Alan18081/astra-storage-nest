@@ -1,8 +1,9 @@
-import {Injectable, UnauthorizedException} from '@nestjs/common';
+import {Injectable, Req, UnauthorizedException} from '@nestjs/common';
+import { Request } from 'express';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
 import {AuthService} from '../auth.service';
-import { JwtPayload } from '@astra/common';
+import { JwtUserPayload } from '@astra/common';
 import {Messages} from '../../../helpers/enums/messages.enum';
 import { IUser, JWT_SECRET } from '@astra/common';
 
@@ -15,7 +16,7 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
     });
   }
 
-  async validate(payload: JwtPayload): Promise<IUser> {
+  async validate(payload: JwtUserPayload): Promise<IUser> {
     const user = await this.authService.validateUser(payload);
     if (!user) {
       throw new UnauthorizedException(Messages.INVALID_TOKEN);

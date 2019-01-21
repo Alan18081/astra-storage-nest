@@ -6,7 +6,7 @@ import {PublicUserStoragesService} from './public-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
 @Controller('storages/public/:path')
-@UseGuards(AuthGuard('jwt-project'))
+@UseGuards(AuthGuard('jwtProject'))
 @UseFilters(ApiExceptionFilter)
 export class PublicUserStoragesController {
 
@@ -30,12 +30,11 @@ export class PublicUserStoragesController {
 
     @Post('')
     async createStorageRecord(
-        @Param('path') storageId: number,
+        @Param('path') path: string,
         @Project() project: IProject,
         @Body() body: any,
     ): Promise<IStorageRecord> {
-        console.log(project);
-        return this.publicUserStoragesService.createOne(project.id, storageId, body);
+        return this.publicUserStoragesService.createOne(path, project.id, body);
     }
 
     @Put(':recordId')

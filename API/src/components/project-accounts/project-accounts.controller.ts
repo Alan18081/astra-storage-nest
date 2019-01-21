@@ -8,6 +8,7 @@ import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
 @Controller('projects/:projectId/accounts')
 @UseFilters(ApiExceptionFilter)
+@UseGuards(AuthGuard('jwt'))
 export class ProjectAccountsController {
 
     constructor(
@@ -15,7 +16,6 @@ export class ProjectAccountsController {
     ) {}
 
     @Get('')
-    @UseGuards(AuthGuard('jwt'))
     async findMany(
         @ReqUser() user: IUser,
         @Param('projectId') projectId: number,
@@ -25,7 +25,6 @@ export class ProjectAccountsController {
     }
 
     @Get(':id')
-    @UseGuards(AuthGuard('jwt'))
     async findOne(
         @ReqUser() user: IUser,
         @Param('projectId') projectId: number,
@@ -35,7 +34,6 @@ export class ProjectAccountsController {
     }
 
     @Delete(':id')
-    @UseGuards(AuthGuard('jwt'))
     async removeOne(
         @ReqUser() user: IUser,
         @Param('projectId') projectId: number,

@@ -1,15 +1,15 @@
 import { Body, Controller, Post, UseFilters, UseGuards } from '@nestjs/common';
 import { ApiUseTags } from '@nestjs/swagger';
-import { IProject, JwtResponse } from '@astra/common';
+import { IProject, JwtProjectAccountResponse } from '@astra/common';
 import {Project} from '../../helpers/decorators/project.decorator';
 import {ApiAuthService} from './api-auth.service';
 import {CreateProjectAccountDto, LoginDto} from '@astra/common/dto';
-import {JwtProjectGuard} from '../../helpers/guards/jwt-project.guard';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
+import {AuthGuard} from '@nestjs/passport';
 
 @Controller('apiAuth')
 @UseFilters(ApiExceptionFilter)
-@UseGuards(JwtProjectGuard)
+@UseGuards(AuthGuard('jwt-project'))
 @ApiUseTags('Api Auth')
 export class ApiAuthController {
 
@@ -29,7 +29,7 @@ export class ApiAuthController {
     async login(
         @Project() project: IProject,
         @Body() dto: LoginDto,
-    ): Promise<JwtResponse> {
+    ): Promise<JwtProjectAccountResponse> {
         return await this.apiAuthService.login(project.id, dto);
     }
 }

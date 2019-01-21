@@ -23,11 +23,11 @@ export class StorageRecordsService {
     }
 
     async updateOne({ data, id }: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
-      return await this.storageRecordsRepository.updateById(id, data);
+      return this.storageRecordsRepository.updateById(id, data);
     }
 
     async createOne(payload: Partial<StorageRecord>): Promise<StorageRecord> {
-        return await this.storageRecordsRepository.createOne(payload);
+        return this.storageRecordsRepository.createOne(payload);
     }
 
     async removeOne(recordId: string): Promise<void> {

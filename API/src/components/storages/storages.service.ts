@@ -24,6 +24,12 @@ export class StoragesService {
             .toPromise();
     }
 
+    async findOneByPath(path: string, projectId: number): Promise<IStorage | undefined> {
+        return this.projectsClient
+            .send({ cmd: CommunicationCodes.GET_STORAGE_BY_PATH }, { path, projectId })
+            .toPromise();
+    }
+
     async createOne(userId: number, data: any): Promise<IStorage | undefined> {
         return this.projectsClient
             .send({ cmd: CommunicationCodes.CREATE_STORAGE }, { userId, ...data })

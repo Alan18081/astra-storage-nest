@@ -46,7 +46,7 @@ export class StorageRecordsRepository {
     }
 
     async updateById(id: string, data: Partial<IStorageRecord>): Promise<StorageRecord | undefined> {
-      return this.storageRecordsModel.findByIdAndUpdate(id, data);
+      return this.storageRecordsModel.findOneAndUpdate({ _id: id }, { data }, { new: true });
     }
 
     async removeById(id: string): Promise<void> {
