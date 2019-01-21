@@ -1,9 +1,7 @@
 import {ClassSerializerInterceptor, Controller, UseFilters, UseInterceptors} from '@nestjs/common';
-import {BaseRpcExceptionFilter, MessagePattern} from '@nestjs/microservices';
+import {MessagePattern} from '@nestjs/microservices';
 import {
     CommunicationCodes,
-    Messages,
-    ServiceExceptionFilter,
 } from '@astra/common';
 import {
     CreateUserByGoogleDto,
@@ -12,14 +10,12 @@ import {
     FindUserDto,
     FindUsersListDto,
     RemoveUserDto, ResetPasswordDto, SetNewPasswordDto,
-    UpdateUserDto,
+    UpdateUserDto, FindUserByGoogleIdDto,
 } from '@astra/common/dto';
 import {User} from './user.entity';
 import {UsersService} from './users.service';
-import {FindUserByGoogleIdDto} from '../../../../Common/src/dto/users/find-user-by-google-id.dto';
 
 @Controller()
-@UseFilters(ServiceExceptionFilter)
 export class UsersController {
 
     constructor(

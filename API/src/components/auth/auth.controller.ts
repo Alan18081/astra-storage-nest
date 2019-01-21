@@ -1,8 +1,8 @@
 import {
-    Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
-    HttpCode, HttpStatus, Param,
+  Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
+  HttpCode, HttpStatus, Param, UseFilters,
 } from '@nestjs/common';
-import { ChangePasswordDto, ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto } from '@astra/common/dto';
+import { ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Response } from 'express';
 import {ApiBearerAuth, ApiOperation, ApiUseTags} from '@nestjs/swagger';
 import {UsersService} from '../users/users.service';
@@ -10,9 +10,11 @@ import {Messages} from '../../helpers/enums/messages.enum';
 import {AuthService} from './auth.service';
 import {AuthGuard} from '@nestjs/passport';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
-import {IUser, JwtResponse} from '@astra/common';
+import { IUser, JwtProjectResponse, JwtUserResponse } from '@astra/common';
+import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
 @Controller('auth')
+@UseFilters(ApiExceptionFilter)
 @ApiUseTags('Auth')
 export class AuthController {
 
@@ -23,13 +25,19 @@ export class AuthController {
 
   @Post('login')
   @ApiOperation({ title: 'Login for generating access token' })
-  async login(@Body() dto: LoginDto): Promise<JwtResponse> {
+  async login(@Body() dto: LoginDto): Promise<JwtUserResponse> {
     return this.authService.login(dto);
+  }
+
+  @Post('login/project')
+  @ApiOperation({ title: 'Login project for generating project access token' })
+  async loginProject(@Body() dto: LoginProjectDto): Promise<JwtProjectResponse> {
+    return this.authService.loginProject(dto);
   }
 
   @Post('token')
   @ApiOperation({ title: 'Exchange refresh token for new access token' })
-  async exchangeToken(@Body() payload: ExchangeTokenDto): Promise<JwtResponse> {
+  async exchangeToken(@Body() payload: ExchangeTokenDto): Promise<JwtUserResponse> {
    return this.authService.exchangeToken(payload.refreshToken);
   }
 
@@ -51,7 +59,7 @@ export class AuthController {
 
   @Get('google/success')
   @ApiOperation({ title: 'Google success authentication' })
-  async googleSuccess(@Query('userId') userId: number): Promise<JwtResponse | void> {
+  async googleSuccess(@Query('userId') userId: number): Promise<JwtUserResponse | void> {
     const user = await this.usersService.findOne({ id: userId });
     if (user) {
       return await this.authService.login(user);
@@ -70,7 +78,7 @@ export class AuthController {
   @ApiBearerAuth()
   @ApiOperation({ title: 'Create new password' })
   async changePassword(@ReqUser() user: IUser, @Body() payload: any): Promise<void> {
-    await this.authService.changePassword(user.id, payload.oldPassword, payload.newPassword);
+    await this.usersService.changePassword(user.id, payload.oldPassword, payload.newPassword);
 
   }
   //
@@ -93,20 +101,20 @@ export class AuthController {
   @Post('resetPassword')
   @HttpCode(HttpStatus.ACCEPTED)
   @ApiOperation({ title: 'Reset password' })
-  async resetPassword(@Body() body: ResetPasswordDto): Promise<void> {
-    await this.authService.resetPassword(body.email);
+  async resetPassword(@Body() dto: ResetPasswordDto): Promise<void> {
+    await this.usersService.resetPassword(dto.email);
   }
 
   @Get('resetPassword/hash/:hash')
   @ApiOperation({ title: 'Verify reset password hash' })
   async verifyResetPasswordHash(@Param('hash') hash: string): Promise<void> {
-    await this.authService.verifyResetPasswordHash(hash);
+    await this.usersService.verifyResetPasswordHash(hash);
   }
 
   @Post('newPassword')
   @HttpCode(HttpStatus.ACCEPTED)
   @ApiOperation({ title: 'Set new password' })
   async setNewPassword(@Body() body: SetNewPasswordDto): Promise<void> {
-    await this.authService.setNewPassword(body);
+    await this.usersService.setNewPassword(body);
   }
 }

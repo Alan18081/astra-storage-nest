@@ -5,7 +5,6 @@ import {MessagePattern} from '@nestjs/microservices';
 import {VerifyUserHashDto} from '@astra/common/dto';
 
 @Controller()
-@UseFilters(ServiceExceptionFilter)
 export class UserHashesController {
 
     constructor(

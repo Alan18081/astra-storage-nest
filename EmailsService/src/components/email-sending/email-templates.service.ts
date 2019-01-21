@@ -15,7 +15,7 @@ export class EmailTemplatesService {
     }
 
     private renderTemplate(filename: string): compileTemplate {
-        return compileFile(join(`../../${EmailsServiceConfig.EMAIL_TEMPLATES_FOLDER}`, `${filename}.pug`));
+        return compileFile(join(`./src/${EmailsServiceConfig.EMAIL_TEMPLATES_FOLDER}`, `${filename}.pug`));
     }
 
     createSubject(title: string): string {

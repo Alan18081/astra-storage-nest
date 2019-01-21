@@ -5,11 +5,11 @@ import {IProject, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {CreateProjectDto, UpdateProjectDto} from '@astra/common/dto';
 import {ProjectsService} from './projects.service';
-import {ExceptionFilter} from '../../helpers/filters/custom.filter';
+import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
 @Controller('projects')
 @UseGuards(AuthGuard('jwt'))
-@UseFilters(ExceptionFilter)
+@UseFilters(ApiExceptionFilter)
 export class ProjectsController {
 
     constructor(

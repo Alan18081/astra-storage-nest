@@ -29,6 +29,12 @@ export class ProjectsService {
             .toPromise();
     }
 
+    async findOneByClientInfo(clientId: string, clientSecret: string): Promise<IProject | undefined> {
+        return this.client
+          .send({ cmd: CommunicationCodes.GET_PROJECT_BY_CLIENT_INFO }, {  clientId, clientSecret })
+          .toPromise();
+    }
+
     async createOne(userId: number, dto: CreateProjectDto): Promise<IProject | undefined> {
         return this.client
             .send({ cmd: CommunicationCodes.CREATE_PROJECT }, { userId, ...dto })
@@ -46,6 +52,4 @@ export class ProjectsService {
             .send({ cmd: CommunicationCodes.REMOVE_PROJECT }, { id, userId })
             .toPromise();
     }
-
-
 }

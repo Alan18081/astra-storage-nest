@@ -15,7 +15,6 @@ export class EmailSendingController {
 
     @MessagePattern({ cmd: CommunicationCodes.SEND_RESET_PASSWORD_EMAIL })
     async sendResetPasswordEmail(dto: SendResetPasswordEmailDto): Promise<void> {
-        console.log('Email dto', dto);
         await this.emailSendingService.sendResetPasswordEmail(dto);
     }
 

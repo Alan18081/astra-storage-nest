@@ -1,12 +1,19 @@
 import {Injectable, UnauthorizedException} from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt';
-import { UsersService } from '../users/users.service';
-import {Queues, IUser, CommunicationCodes, JwtPayload, JwtResponse, Messages} from '@astra/common';
-import {LoginDto, SetNewPasswordDto} from '@astra/common/dto';
+import {
+  Queues,
+  IUser,
+  CommunicationCodes,
+  JwtUserResponse,
+  Messages,
+  JwtProjectPayload,
+  JwtProjectResponse, IProject, JwtProjectAccountPayload, IProjectAccount, JwtUserPayload,
+} from '@astra/common';
+import { LoginDto, LoginProjectDto, SetNewPasswordDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { createClientOptions } from '@astra/common/helpers';
-import {ProjectRequest} from './types/project-request';
-import {ProjectAccountRequest} from './types/project-account-request';
+import { UsersService } from '../users/users.service';
+import { ProjectsService } from '../projects/projects.service';
+import { ProjectAccountsService } from '../project-accounts/project-accounts.service';
 
 @Injectable()
 export class AuthService {
@@ -14,53 +21,33 @@ export class AuthService {
   @Client(createClientOptions(Queues.AUTH_SERVICE))
   private readonly authClient: ClientProxy;
 
-  @Client(createClientOptions(Queues.USERS_SERVICE))
-  private readonly usersClient: ClientProxy;
+  constructor(
+    private readonly usersService: UsersService,
+    private readonly projectsService: ProjectsService,
+    private readonly projectAccountsService: ProjectAccountsService,
+  ) {}
 
-  async login(dto: LoginDto): Promise<JwtResponse> {
+  async login(dto: LoginDto): Promise<JwtUserResponse> {
     return this.authClient.send({ cmd: CommunicationCodes.LOGIN }, dto).toPromise();
   }
 
-  async validateUser(payload: JwtPayload): Promise<IUser | undefined> {
-    return this.usersClient.send({ cmd: CommunicationCodes.GET_USER_BY_EMAIL }, { email: payload.email}).toPromise();
+  async loginProject(dto: LoginProjectDto): Promise<JwtProjectResponse> {
+    return this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, dto).toPromise();
   }
 
-  async validateProject(req: ProjectRequest): Promise<boolean> {
-    const { projectToken } = req.query;
-
-    if (!projectToken) {
-      throw new UnauthorizedException(Messages.PROJECT_TOKEN_NOT_FOUND);
-    }
-
-    const project = await this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, { token: projectToken }).toPromise();
-    if (!project) {
-      throw new UnauthorizedException(Messages.PROJECT_NOT_FOUND);
-    }
-
-    req.project = project;
-
-    return true;
-
+  async validateUser(payload: JwtUserPayload): Promise<IUser | undefined> {
+    return this.usersService.findOneByEmail(payload.email);
   }
 
-  async validateProjectAccount(req: ProjectAccountRequest): Promise<boolean> {
-      const { accountToken } = req.query;
-
-      if (!accountToken) {
-          throw new UnauthorizedException(Messages.ACCOUNT_TOKEN_NOT_FOUND);
-      }
-
-      const projectAccount = await this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { token: accountToken }).toPromise();
-      if (!projectAccount) {
-          throw new UnauthorizedException(Messages.ACCOUNT_NOT_FOUND);
-      }
-
-      req.projectAccount = projectAccount;
-
-      return true;
+  async validateProject({ clientId, clientSecret }: JwtProjectPayload): Promise<IProject | undefined> {
+    return this.projectsService.findOneByClientInfo(clientId, clientSecret);
   }
 
-  async exchangeToken(refreshToken: string): Promise<JwtResponse> {
+  async validateProjectAccount({ email, projectId }: JwtProjectAccountPayload): Promise<IProjectAccount | undefined> {
+    return this.projectAccountsService.findOneByEmail(projectId, email);
+  }
+
+  async exchangeToken(refreshToken: string): Promise<JwtUserResponse> {
     return this.authClient
         .send({ cmd: CommunicationCodes.EXCHANGE_TOKEN }, { refreshToken })
         .toPromise();
@@ -91,28 +78,4 @@ export class AuthService {
   //     this.userHashesService.deleteOne(userHash.id)
   //   ]);
   // }
-
-  async resetPassword(email: string): Promise<void> {
-      return this.usersClient
-          .send({ cmd: CommunicationCodes.RESET_USER_PASSWORD }, { email })
-          .toPromise();
-  }
-
-  async verifyResetPasswordHash(hash: string): Promise<void> {
-      return this.usersClient
-          .send({ cmd: CommunicationCodes.VERIFY_RESET_PASSWORD_HASH }, { hash })
-          .toPromise();
-  }
-
-  async setNewPassword({ hash, password }: SetNewPasswordDto): Promise<void> {
-     return this.usersClient
-        .send({ cmd: CommunicationCodes.SET_NEW_PASSWORD }, { hash, password })
-        .toPromise();
-  }
-
-  async changePassword(userId: number, oldPassword: string, newPassword: string): Promise<void> {
-    return this.usersClient
-        .send({ cmd: CommunicationCodes.CHANGE_USER_PASSWORD }, { id: userId, oldPassword, newPassword })
-        .toPromise();
-  }
 }

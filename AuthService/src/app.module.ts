@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import {UserAuthModule} from './components/user-auth/user-auth.module';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import { AuthServiceConfig } from '@astra/common/config';
+import { ProjectAuthModule } from './components/project-auth/project-auth.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { AuthServiceConfig } from '@astra/common/config';
           synchronize: true,
       }),
       UserAuthModule,
+      ProjectAuthModule,
   ],
   controllers: [],
   providers: [],

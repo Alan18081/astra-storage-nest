@@ -3,14 +3,11 @@ import { AppModule } from './app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as helmet from 'helmet';
 import * as rateLimit from 'express-rate-limit';
-import {ExceptionFilter} from './helpers/filters/custom.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors();
-
-  app.useGlobalFilters(new ExceptionFilter());
 
   app.use(helmet());
   app.use(rateLimit({

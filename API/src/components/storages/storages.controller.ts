@@ -3,11 +3,11 @@ import {AuthGuard} from '@nestjs/passport';
 import {IStorage, IUser} from '@astra/common';
 import {StoragesService} from './storages.service';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
-import {ExceptionFilter} from '../../helpers/filters/custom.filter';
+import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
 @Controller('storages')
 @UseGuards(AuthGuard('jwt'))
-@UseFilters(ExceptionFilter)
+@UseFilters(ApiExceptionFilter)
 export class StoragesController {
 
     constructor(

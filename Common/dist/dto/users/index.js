@@ -7,6 +7,7 @@ __export(require("./create-user.dto"));
 __export(require("./create-user-by-google.dto"));
 __export(require("./find-user.dto"));
 __export(require("./find-user-by-email.dto"));
+__export(require("./find-user-by-google-id.dto"));
 __export(require("./remove-user.dto"));
 __export(require("./reset-user-password.dto"));
 __export(require("./update-user.dto"));

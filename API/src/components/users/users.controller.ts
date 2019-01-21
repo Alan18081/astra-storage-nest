@@ -1,16 +1,18 @@
 import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseFilters, UseGuards} from '@nestjs/common';
+import { ApiUseTags } from '@nestjs/swagger';
 import { AuthGuard } from '@nestjs/passport';
 import { UsersService } from './users.service';
 import { IUser } from '../../../../Common/src/entities';
 import {CreateUserDto, FindUsersListDto} from '@astra/common/dto';
-import {ExceptionFilter} from '../../helpers/filters/custom.filter';
+import {ApiExceptionFilter} from '../../helpers/filters/api.filter';
 
 @Controller('users')
-@UseFilters(ExceptionFilter)
+@UseFilters(ApiExceptionFilter)
+@ApiUseTags('Auth')
 export class UsersController {
 
   constructor(
-    private readonly usersService: UsersService
+    private readonly usersService: UsersService,
   ) {}
 
   @Get('')
@@ -40,6 +42,5 @@ export class UsersController {
   async removeOne(@Param('id') id: number): Promise<void> {
     await this.usersService.removeOne({ id });
   }
-
 
 }

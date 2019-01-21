@@ -1,11 +1,13 @@
-import {JwtProjectGuard} from '../../helpers/guards/jwt-project.guard';
-import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
+import { AuthGuard } from '@nestjs/passport';
 import {Project} from '../../helpers/decorators/project.decorator';
 import {IProject, IStorageRecord} from '@astra/common';
 import {PublicUserStoragesService} from './public-user-storages.service';
+import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
-@Controller('storages/public/:storageId')
-@UseGuards(JwtProjectGuard)
+@Controller('storages/public/:path')
+@UseGuards(AuthGuard('jwt-project'))
+@UseFilters(ApiExceptionFilter)
 export class PublicUserStoragesController {
 
     constructor(
@@ -28,10 +30,11 @@ export class PublicUserStoragesController {
 
     @Post('')
     async createStorageRecord(
-        @Param('storageId') storageId: number,
+        @Param('path') storageId: number,
         @Project() project: IProject,
         @Body() body: any,
     ): Promise<IStorageRecord> {
+        console.log(project);
         return this.publicUserStoragesService.createOne(project.id, storageId, body);
     }
 

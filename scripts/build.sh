@@ -3,6 +3,7 @@ MICROSERVICES=(
     AuthService
     UsersService
     ProjectsService
+    DataService
     EmailsService
 )
 
@@ -11,5 +12,4 @@ for i in ${MICROSERVICES[@]}; do
     rm -rf node_modules
     yarn
     rm -rf dist
-    yarn build
 done

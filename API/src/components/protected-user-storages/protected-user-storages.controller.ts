@@ -1,11 +1,13 @@
 import {JwtProjectGuard} from '../../helpers/guards/jwt-project.guard';
 import {JwtProjectAccountGuard} from '../../helpers/guards/jwt-project-account.guard';
-import {Body, Controller, Delete, Get, Param, Post, Put, UseGuards} from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
 import {IProjectAccount, IStorageRecord} from '@astra/common';
 import {ProtectedUserStoragesService} from './protected-user-storages.service';
+import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 
 @Controller('storages/protected/:storageId')
+@UseFilters(ApiExceptionFilter)
 export class ProtectedUserStoragesController {
 
     constructor(
