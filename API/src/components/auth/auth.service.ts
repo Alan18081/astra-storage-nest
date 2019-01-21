@@ -1,12 +1,12 @@
 import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {
-  Queues,
-  IUser,
-  CommunicationCodes,
-  JwtUserResponse,
-  Messages,
-  JwtProjectPayload,
-  JwtProjectResponse, IProject, JwtProjectAccountPayload, IProjectAccount, JwtUserPayload,
+    Queues,
+    IUser,
+    CommunicationCodes,
+    JwtUserResponse,
+    Messages,
+    JwtProjectPayload,
+    JwtProjectResponse, IProject, JwtProjectAccountPayload, IProjectAccount, JwtUserPayload, JwtProjectAccountResponse,
 } from '@astra/common';
 import { LoginDto, LoginProjectDto, SetNewPasswordDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
@@ -33,6 +33,10 @@ export class AuthService {
 
   async loginProject(dto: LoginProjectDto): Promise<JwtProjectResponse> {
     return this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, dto).toPromise();
+  }
+
+  async loginProjectAccount(projectId: number, dto: LoginDto): Promise<JwtProjectAccountResponse> {
+      return this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { ...dto, projectId }).toPromise();
   }
 
   async validateUser(payload: JwtUserPayload): Promise<IUser | undefined> {

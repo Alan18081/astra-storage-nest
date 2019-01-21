@@ -10,8 +10,9 @@ import {Messages} from '../../helpers/enums/messages.enum';
 import {AuthService} from './auth.service';
 import {AuthGuard} from '@nestjs/passport';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
-import { IUser, JwtProjectResponse, JwtUserResponse } from '@astra/common';
+import {IProject, IUser, JwtProjectAccountResponse, JwtProjectResponse, JwtUserResponse} from '@astra/common';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
+import {Project} from '../../helpers/decorators/project.decorator';
 
 @Controller('auth')
 @UseFilters(ApiExceptionFilter)
@@ -33,6 +34,15 @@ export class AuthController {
   @ApiOperation({ title: 'Login project for generating project access token' })
   async loginProject(@Body() dto: LoginProjectDto): Promise<JwtProjectResponse> {
     return this.authService.loginProject(dto);
+  }
+
+  @Post('login/projectAccount')
+  @UseGuards(AuthGuard('jwtProject'))
+  async loginProjectAccount(
+      @Project() project: IProject,
+      @Body() dto: LoginDto,
+  ): Promise<JwtProjectAccountResponse> {
+      return await this.authService.loginProjectAccount(project.id, dto);
   }
 
   @Post('token')

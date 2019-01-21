@@ -24,12 +24,4 @@ export class ApiAuthController {
     ): Promise<void> {
         await this.apiAuthService.createOne(project.id, dto);
     }
-
-    @Post('login')
-    async login(
-        @Project() project: IProject,
-        @Body() dto: LoginDto,
-    ): Promise<JwtProjectAccountResponse> {
-        return await this.apiAuthService.login(project.id, dto);
-    }
 }

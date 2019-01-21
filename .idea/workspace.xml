@@ -4,25 +4,11 @@
     <list default="true" id="7f1c7f55-2f12-44ee-975e-199b92beb6ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project.strategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/helpers/guards/jwt-project-account.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/src/helpers/guards/jwt-project.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Common/src/dto/storages/find-storage-by-path.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/storages/find-storage-by-path.dto.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,14 +33,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="storage-records.service.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts">
+      <file leaf-file-name="auth.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="24" column="95" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
+            <state relative-caret-position="653">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding>
-                <element signature="e#0#72#0" expanded="true" />
+                <element signature="e#0#38#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="public-user-storages.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/app.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="560">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api-auth.module.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api-auth.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="700">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#79#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.controller.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#158#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project-accounts.controller.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1008">
+              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="e#0#104#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project-accounts.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="588">
+              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="api-auth.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -84,8 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/API/src/components/users/users.controller.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/main.ts" />
         <option value="$PROJECT_DIR$/SDK/package.json" />
@@ -106,15 +176,10 @@
         <option value="$PROJECT_DIR$/Common/src/interfaces/jwt-user-payload.ts" />
         <option value="$PROJECT_DIR$/Common/src/interfaces/jwt-project-account-response.ts" />
         <option value="$PROJECT_DIR$/Common/src/interfaces/index.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts" />
         <option value="$PROJECT_DIR$/Common/src/interfaces/jwt-project-account-payload.ts" />
         <option value="$PROJECT_DIR$/API/src/components/users/users.service.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" />
         <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.module.ts" />
         <option value="$PROJECT_DIR$/API/src/components/projects/projects.module.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts" />
         <option value="$PROJECT_DIR$/API/node_modules/@nestjs/passport/dist/passport.module.d.ts" />
         <option value="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project.strategy.ts" />
@@ -129,12 +194,19 @@
         <option value="$PROJECT_DIR$/API/src/components/storage-records/storage-records.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/components/storage-records/storage-records.service.ts" />
         <option value="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.module.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" />
         <option value="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts" />
         <option value="$PROJECT_DIR$/Common/src/dto/storages/find-storage-by-path.dto.ts" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" />
-        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" />
+        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" />
+        <option value="$PROJECT_DIR$/API/src/app.module.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" />
       </list>
     </option>
   </component>
@@ -197,28 +269,30 @@
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
-              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="storage-records" type="462c0819:PsiDirectoryNode" />
+              <item name="api-auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="DataService" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
@@ -291,12 +365,12 @@
       <workItem from="1547972870367" duration="15236000" />
       <workItem from="1547993988373" duration="10244000" />
       <workItem from="1548006743712" duration="7874000" />
-      <workItem from="1548094256888" duration="10333000" />
+      <workItem from="1548094256888" duration="12409000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183911000" />
+    <option name="totallyTimeSpent" value="185987000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -309,7 +383,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.7428279" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959569" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" weight="0.32991913" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
@@ -382,31 +456,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/interfaces/jwt-project-account-payload.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/src/components/users/users.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1176">
           <caret line="50" column="25" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -490,56 +543,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/src/main.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#94#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -606,26 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="39" column="32" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,25 +750,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="44" column="49" selection-start-line="44" selection-start-column="49" selection-end-line="44" selection-end-column="49" />
+        <state relative-caret-position="656">
+          <caret line="51" column="52" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
           <folding>
             <element signature="e#0#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts">
+    <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/remove-storage-record.dto.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="40" column="10" selection-start-line="40" selection-start-column="10" selection-end-line="40" selection-end-column="10" />
+        <state relative-caret-position="56">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="17" column="50" lean-forward="true" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+        <state relative-caret-position="628">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -790,23 +778,113 @@
     <entry file="file://$PROJECT_DIR$/DataService/node_modules/@types/mongoose/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
-          <caret line="3050" column="4" selection-start-line="3050" selection-start-column="4" selection-end-line="3050" selection-end-column="4" />
+          <caret line="3130" column="4" selection-start-line="3130" selection-start-column="4" selection-end-line="3130" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
+        <state relative-caret-position="712">
+          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="24" column="95" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
+        <state relative-caret-position="600">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="653">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#158#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -22,7 +22,7 @@ export class PublicUserStoragesService {
 
     async findOne(id: string): Promise<IStorageRecord | undefined> {
         return this.client
-            .send({ cmd: CommunicationCodes.GET_STORAGE }, { id })
+            .send({ cmd: CommunicationCodes.GET_STORAGE_RECORD }, { id })
             .toPromise();
     }
 

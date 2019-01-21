@@ -50,6 +50,6 @@ export class StorageRecordsRepository {
     }
 
     async removeById(id: string): Promise<void> {
-      await this.storageRecordsModel.deleteOne(id);
+      await this.storageRecordsModel.deleteOne({ _id: id });
     }
 }
