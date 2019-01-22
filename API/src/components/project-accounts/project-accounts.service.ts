@@ -22,6 +22,12 @@ export class ProjectAccountsService {
             .toPromise();
     }
 
+    async findOneForSdk(id: number): Promise<IProjectAccount | undefined> {
+        return this.client
+            .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_FOR_SDK }, { id })
+            .toPromise();
+    }
+
     async findOneByEmail(projectId: number, email: string): Promise<IProjectAccount | undefined> {
         return this.client
           .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL }, { email, projectId })
@@ -37,6 +43,12 @@ export class ProjectAccountsService {
     async removeOne(projectId: number, id: number, userId: number): Promise<void> {
         await this.client
             .send({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT }, { projectId, id, userId })
+            .toPromise();
+    }
+
+    async removeOneByToken(id: number): Promise<void> {
+        await this.client
+            .send({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT_BY_TOKEN }, { id })
             .toPromise();
     }
 

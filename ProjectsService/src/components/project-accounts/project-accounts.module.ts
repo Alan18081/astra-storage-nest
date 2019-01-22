@@ -6,6 +6,8 @@ import {ProjectAccountsRepository} from './project-accounts.repository';
 import {ProjectsModule} from '../projects/projects.module';
 import { ProjectAccount } from './project-account.entity';
 import { CoreModule } from '../core/core.module';
+import {APP_GUARD} from '@nestjs/core';
+import {ValidProjectOwnerGuard} from '../../helpers/guards/valid-project-owner.guard';
 
 @Module({
     imports: [
@@ -14,6 +16,12 @@ import { CoreModule } from '../core/core.module';
       CoreModule,
     ],
     controllers: [ProjectAccountsController],
-    providers: [ProjectAccountsService],
+    providers: [
+        ProjectAccountsService,
+        {
+            provide: APP_GUARD,
+            useClass: ValidProjectOwnerGuard,
+        },
+    ],
 })
 export class ProjectAccountsModule {}

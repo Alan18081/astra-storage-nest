@@ -5,6 +5,7 @@ import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {ProjectAccountsService} from './project-accounts.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import { Project } from '../../helpers/decorators/project.decorator';
+import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
 
 @Controller('projectAccounts')
 @UseFilters(ApiExceptionFilter)
@@ -21,6 +22,14 @@ export class ProjectAccountsController {
         @Query('projectId') projectId: string,
     ): Promise<IProjectAccount[]> {
         return this.projectAccountsService.findMany(+projectId, user.id);
+    }
+
+    @Get('me')
+    @UseGuards(AuthGuard('jwtProjectAccount'))
+    async findOneByToken(
+        @ProjectAccount() projectAccount: IProjectAccount,
+    ): Promise<IProjectAccount | undefined> {
+        return this.projectAccountsService.findOneForSdk(projectAccount.id);
     }
 
     @Get(':id')
@@ -50,6 +59,14 @@ export class ProjectAccountsController {
         @Query('projectId') projectId: string,
     ): Promise<void> {
         await this.projectAccountsService.removeOne(+projectId, +id, user.id);
+    }
+
+    @Delete('token')
+    @UseGuards(AuthGuard('jwtProjectToken'))
+    async removeOneByToken(
+        @ProjectAccount() projectAccount: IProjectAccount,
+    ): Promise<void> {
+        await this.projectAccountsService.removeOneByToken(projectAccount.id);
     }
 
 }

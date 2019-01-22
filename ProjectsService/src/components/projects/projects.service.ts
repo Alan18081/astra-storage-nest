@@ -49,4 +49,8 @@ export class ProjectsService {
         await this.projectsRepository.delete({ id, userId });
     }
 
+    async isValidOwner(projectId: number, userId: number): Promise<boolean> {
+        return !!(await this.projectsRepository.findOneByUserId(projectId, userId));
+    }
+
 }

@@ -1,15 +1,16 @@
-import {Controller, UseFilters} from '@nestjs/common';
+import {ClassSerializerInterceptor, Controller, UseFilters, UseGuards, UseInterceptors} from '@nestjs/common';
 import { MessagePattern} from '@nestjs/microservices';
 import { CommunicationCodes, PaginatedResponse } from '@astra/common';
 import {
     CreateProjectAccountDto,
     FindProjectAccountsListDto,
     FindProjectAccountByEmailDto,
-    FindProjectAccountDto, RemoveProjectAccountDto,
+    FindProjectAccountDto, RemoveProjectAccountDto, FindProjectAccountSdkDto,
 } from '@astra/common/dto';
 import { ProjectAccount } from './project-account.entity';
 import { ProjectAccountsService } from './project-accounts.service';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';
+import {ValidProjectOwnerGuard} from '../../helpers/guards/valid-project-owner.guard';
 
 @Controller()
 @UseFilters(ExceptionFilter)
@@ -20,28 +21,44 @@ export class ProjectAccountsController {
     ) {}
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNTS_LIST })
+    @UseGuards(ValidProjectOwnerGuard)
     async findMany(query: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
         return this.projectAccountsService.findMany(query);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT })
+    @UseGuards(ValidProjectOwnerGuard)
     async findOne(dto: FindProjectAccountDto): Promise<ProjectAccount | undefined> {
-        return await this.projectAccountsService.findById(dto);
+        return this.projectAccountsService.findById(dto.id);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_FOR_SDK })
+    @UseInterceptors(ClassSerializerInterceptor)
+    async findOneForSdk(dto: FindProjectAccountSdkDto): Promise<ProjectAccount | undefined> {
+        return this.projectAccountsService.findById(dto.id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL })
+    @UseGuards(ValidProjectOwnerGuard)
     async findOneByEmail(dto: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {
-        return await this.projectAccountsService.findOneByEmail(dto);
+        return this.projectAccountsService.findOneByEmail(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_PROJECT_ACCOUNT })
+    @UseGuards(ValidProjectOwnerGuard)
     async createOne(dto: CreateProjectAccountDto): Promise<ProjectAccount> {
         return this.projectAccountsService.createOne(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT })
-    async removeOne({ id, projectId, userId }: RemoveProjectAccountDto): Promise<void> {
-        await this.projectAccountsService.removeOne(id, projectId, userId);
+    @UseGuards(ValidProjectOwnerGuard)
+    async removeOne({ id }: RemoveProjectAccountDto): Promise<void> {
+        await this.projectAccountsService.removeOne(id);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT_BY_TOKEN })
+    async removeOne({ id }: RemoveProjectAccountDto): Promise<void> {
+        await this.projectAccountsService.removeOne(id);
     }
 
 }

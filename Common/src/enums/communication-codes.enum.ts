@@ -43,11 +43,12 @@ export enum CommunicationCodes {
     LOGIN_PROJECT_ACCOUNT = '[ProjectsService] Login Project Account',
     GET_PROJECT_ACCOUNTS_LIST = '[ProjectsService] Get Project Accounts List',
     GET_PROJECT_ACCOUNT = '[ProjectsService] Get Project Account',
+    GET_PROJECT_ACCOUNT_FOR_SDK = '[ProjectsService] Get Project Account For Sdk',
     GET_PROJECT_ACCOUNT_BY_EMAIL = '[ProjectsService] Get Project Account By Email',
     CREATE_PROJECT_ACCOUNT = '[ProjectsService] Create Project Account',
     UPDATE_PROJECT_ACCOUNT = '[ProjectsService] Update Project Account',
     REMOVE_PROJECT_ACCOUNT = '[ProjectsService] Remove Project Account',
-    REMOVE_PROJECT_ACCOUNT_BY_PROJECT_OWNER = '[ProjectsService] Remove Project Account By Project Owner',
+    REMOVE_PROJECT_ACCOUNT_BY_TOKEN = '[ProjectsService] Remove Project Account By Project Owner',
 
     CREATE_REFRESH_TOKEN = '[UsersService] Create Refresh Token',
     GET_REFRESH_TOKEN_BY_TOKEN = '[UsersService] Get Refresh Token By Token',

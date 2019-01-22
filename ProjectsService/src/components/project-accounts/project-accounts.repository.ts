@@ -10,8 +10,8 @@ export class ProjectAccountsRepository extends BaseRepository<ProjectAccount> {
     return this.find({ ...query, deletedAt: null });
   }
 
-  async findOneById(id: number, projectId: number): Promise<ProjectAccount | undefined> {
-    return this.findOne({ id, projectId, deletedAt: null });
+  async findOneById(id: number): Promise<ProjectAccount | undefined> {
+    return this.findOne({ id, deletedAt: null });
   }
 
   async findManyWithPagination(query: FindManyOptions<ProjectAccount>, pagination: Required<PaginationDto>): Promise<PaginatedResponse<ProjectAccount>> {

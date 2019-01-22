@@ -1,21 +1,20 @@
 import { PaginatedResponse } from '@astra/common/interfaces';
 
-export class Storage {
+export abstract class Storage {
 
-  constructor(
-    private readonly projectToken: string,
+  protected constructor(
     private readonly path: string,
   ) {}
 
-  async findMany(query: object): Promise<object[]> {
-    return [];
+  async findMany(query: object, params: object = {}): Promise<object[]> {
+    return ;
   }
 
-  async findManyWithPagination(query: object, page: number, limit: number): Promise<PaginatedResponse<object>> {
+  async findManyWithPagination(query: object, page: number, limit: number, params: object = {}): Promise<PaginatedResponse<object>> {
     return null;
   }
 
-  async findById(id: string): Promise<object | undefined> {
+  async findById(id: string, params: object = {}): Promise<object | undefined> {
     return null;
   }
 
@@ -23,11 +22,11 @@ export class Storage {
     return null;
   }
 
-  async updateById(id: string, data: object): Promise<object | undefined> {
+  async updateById(id: string, data: object, params: object = {}): Promise<object | undefined> {
     return null;
   }
 
-  async removeById(id: string): Promise<void> {
+  async removeById(id: string, params: object = {}): Promise<void> {
     return null;
   }
 
