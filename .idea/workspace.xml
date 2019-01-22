@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f1c7f55-2f12-44ee-975e-199b92beb6ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SDK/src/components/project-account/profile.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/src/components/project-account/project-account.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/src/components/project/project.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/src/components/storage/storage.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/src/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/src/helpers/api-request.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SDK/tester.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SDK/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SDK/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDK/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SDK/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,18 +26,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SDK/src/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="1" column="51" selection-start-line="1" selection-start-column="51" selection-end-line="1" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SDK/src/components/project/project.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,11 +65,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/storage.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="59" selection-start-column="59" selection-end-column="59" />
+            <state relative-caret-position="84">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SDK/.prettierrc">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SDK/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -146,7 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/API/src/components/api-auth/api-auth.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/components/api-auth/api-auth.service.ts" />
         <option value="$PROJECT_DIR$/API/src/components/storages/storages.module.ts" />
         <option value="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts" />
@@ -197,6 +189,7 @@
         <option value="$PROJECT_DIR$/SDK/src/components/project/project.ts" />
         <option value="$PROJECT_DIR$/SDK/src/index.ts" />
         <option value="$PROJECT_DIR$/SDK/src/components/storage/storage.ts" />
+        <option value="$PROJECT_DIR$/SDK/.gitignore" />
       </list>
     </option>
   </component>
@@ -225,27 +218,6 @@
               <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
               <item name="SDK" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="SDK" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="SDK" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
-              <item name="SDK" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,18 +287,18 @@
       <workItem from="1547972870367" duration="15236000" />
       <workItem from="1547993988373" duration="10244000" />
       <workItem from="1548006743712" duration="7874000" />
-      <workItem from="1548140563725" duration="23266000" />
+      <workItem from="1548140563725" duration="23326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199014000" />
+    <option name="totallyTimeSpent" value="199074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26627535" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26627535" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -370,13 +342,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/auth/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AuthService/src/components/project-account-auth/project-account-auth.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -676,9 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/SDK/src/components/auth/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -781,8 +743,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/storage.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="59" selection-start-column="59" selection-end-column="59" />
+        <state relative-caret-position="84">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/.prettierrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
