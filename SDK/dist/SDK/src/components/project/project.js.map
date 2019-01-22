@@ -1,0 +1,1 @@
+{"version":3,"file":"project.js","sourceRoot":"","sources":["../../../../../src/components/project/project.ts"],"names":[],"mappings":";;;;;;;;;;AAEA,MAAa,OAAO;IAElB,YACmB,KAAa;QAAb,UAAK,GAAL,KAAK,CAAQ;IAC7B,CAAC;IAEE,aAAa,CAAC,KAAa,EAAE,KAAa,EAAE,QAAgB;;YAChE,OAAO,IAAI,CAAC;QACd,CAAC;KAAA;IAEK,KAAK,CAAC,KAAa,EAAE,QAAgB;;YACzC,OAAO,IAAI,CAAC;QACd,CAAC;KAAA;CAEF;AAdD,0BAcC"}
