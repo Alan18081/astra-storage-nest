@@ -42,7 +42,7 @@ export class AuthController {
       @Project() project: IProject,
       @Body() dto: LoginDto,
   ): Promise<JwtProjectAccountResponse> {
-      return await this.authService.loginProjectAccount(project.id, dto);
+      return await this.authService.loginProjectAccount(project.id, project.userId, dto);
   }
 
   @Post('token')

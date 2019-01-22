@@ -11,5 +11,6 @@ import { Project } from './project.entity';
     ],
     controllers: [ProjectsController],
     providers: [ProjectsService],
+    exports: [ProjectsService],
 })
 export class ProjectsModule {}

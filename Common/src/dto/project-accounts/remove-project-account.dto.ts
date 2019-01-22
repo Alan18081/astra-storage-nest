@@ -3,6 +3,12 @@ import { IsInt } from 'class-validator';
 export class RemoveProjectAccountDto {
 
     @IsInt()
-    accountId: number;
+    id: number;
+
+    @IsInt()
+    projectId: number;
+
+    @IsInt()
+    userId: number;
 
 }

@@ -16,9 +16,7 @@ export class JwtProjectStrategy extends PassportStrategy(Strategy, 'jwtProject')
   }
 
   async validate(req: any, payload: JwtProjectPayload): Promise<IProject> {
-      console.log('Auth project', payload);
-      const project = await this.authService.validateProject(payload);
-    console.log('Auth project', project);
+    const project = await this.authService.validateProject(payload);
     if (!project) {
       throw new UnauthorizedException(Messages.INVALID_TOKEN);
     }

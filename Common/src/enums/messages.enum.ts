@@ -7,6 +7,7 @@ export enum Messages {
     USER_NOT_FOUND = 'User with that email doesn\'t exists',
     WRONG_PASSWORD = 'Wrong password',
     INVALID_TOKEN = 'Invalid token',
+    USER_DOESNT_HAVE_PASSWORD = 'User doesn\'t have password because of using google for authentication',
 
     PROJECT_TOKEN_NOT_FOUND = 'Auth token for project is not found',
     ACCOUNT_TOKEN_NOT_FOUND = 'Auth token for project account is not found',

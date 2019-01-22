@@ -7,5 +7,6 @@ __export(require("./change-password.dto"));
 __export(require("./exchangeToken.dto"));
 __export(require("./login.dto"));
 __export(require("./login-project.dto"));
+__export(require("./login-project-account.dto"));
 __export(require("./reset-password.dto"));
 __export(require("./set-new-password.dto"));

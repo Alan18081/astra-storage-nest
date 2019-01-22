@@ -16,9 +16,13 @@ export class UsersRepository extends Repository<User> {
         return super.findOne({ googleId });
     }
 
-    async updateOne(id: number, data: Partial<User>): Promise<User | undefined> {
-        await super.update({ id }, data);
+    async updateOneAndFind(id: number, data: Partial<User>): Promise<User | undefined> {
+        await this.update({ id }, data);
         return this.findById(id);
+    }
+
+    async updateOne(id: number, data: Partial<User>): Promise<void> {
+        await this.update({ id }, data);
     }
 
     async removeOne(id: number): Promise<void> {

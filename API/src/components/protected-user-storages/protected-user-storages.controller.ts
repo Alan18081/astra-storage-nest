@@ -5,7 +5,7 @@ import {ProtectedUserStoragesService} from './protected-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {AuthGuard} from '@nestjs/passport';
 
-@Controller('storages/protected/:storageId')
+@Controller('storages/protected/:path')
 @UseFilters(ApiExceptionFilter)
 @UseGuards(AuthGuard('jwtProjectAccount'))
 export class ProtectedUserStoragesController {
@@ -16,47 +16,46 @@ export class ProtectedUserStoragesController {
 
     @Get('')
     async findStorageRecordsList(
-        @Param('storageId') storageId: number,
+        @Param('path') path: string,
         @ProjectAccount() account: IProjectAccount,
     ): Promise<IStorageRecord[]> {
-        return this.protectedUserStoragesService.findMany(storageId, account.id);
+        return this.protectedUserStoragesService.findMany(path, account.id);
     }
 
     @Get(':recordId')
     async getStorageDataRecord(
-        @Param('storageId') storageId: number,
         @Param('recordId') recordId: string,
         @ProjectAccount() account: IProjectAccount,
     ): Promise<IStorageRecord | undefined> {
-        return this.protectedUserStoragesService.findOne(storageId, recordId, account.id);
+        return this.protectedUserStoragesService.findOne(recordId, account.id);
     }
 
     @Post('')
-    async createStorageRecordData(
-        @Param('storageId') storageId: number,
+    async createStorageRecord(
+        @Param('path') path: string,
         @ProjectAccount() account: IProjectAccount,
         @Body() body: any,
     ): Promise<IStorageRecord> {
-        return this.protectedUserStoragesService.createOne(storageId, body, account.id);
+        return this.protectedUserStoragesService.createOne(path, body, account.id);
     }
 
     @Put(':recordId')
     async updateStorageRecordData(
-        @Param('storageId') storageId: number,
+        @Param('path') path: string,
         @Param('recordId') recordId: string,
         @ProjectAccount() account: IProjectAccount,
         @Body() body: any,
     ): Promise<IStorageRecord | undefined> {
-        return this.protectedUserStoragesService.updateOne(storageId, recordId, body, account.id);
+        return this.protectedUserStoragesService.updateOne(recordId, body, account.id);
     }
 
     @Delete(':recordId')
     async removeOne(
-        @Param('storageId') storageId: number,
+        @Param('path') path: string,
         @Param('recordId') recordId: string,
         @ProjectAccount() account: IProjectAccount,
     ): Promise<void> {
-        await this.protectedUserStoragesService.removeOne(storageId, recordId, account.id);
+        await this.protectedUserStoragesService.removeOne(recordId, account.id);
     }
 
 }

@@ -1,9 +1,11 @@
-import { IsEmail } from 'class-validator';
-import { ValidateProjectDto } from './validate-project.dto';
+import { IsEmail, IsInt } from 'class-validator';
 
-export class FindProjectAccountByEmailDto extends ValidateProjectDto {
+export class FindProjectAccountByEmailDto {
 
     @IsEmail()
     email: string;
+
+    @IsInt()
+    projectId: number;
 
 }

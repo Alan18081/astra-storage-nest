@@ -1,6 +1,6 @@
 import {Injectable} from '@nestjs/common';
 import {ClientProxy, Client, RpcException} from '@nestjs/microservices';
-import {CommunicationCodes, IUser, JWT_EXPIRES, JwtResponse, Messages, Queues} from '@astra/common';
+import {CommunicationCodes, IUser, JWT_EXPIRES, JwtUserResponse, Messages, Queues} from '@astra/common';
 import {HashService} from '@astra/common/services';
 import {JwtService} from '@nestjs/jwt';
 import {LoginDto} from '@astra/common/dto';
@@ -19,7 +19,7 @@ export class UserAuthService {
        private readonly refreshTokensService: RefreshTokensService,
     ) {}
 
-    async login(dto: LoginDto): Promise<JwtResponse> {
+    async login(dto: LoginDto): Promise<JwtUserResponse> {
         const user: IUser = await this.usersClient.send({ cmd: CommunicationCodes.GET_USER_BY_EMAIL }, { email: dto.email })
             .toPromise();
 
@@ -41,7 +41,7 @@ export class UserAuthService {
         };
     }
 
-    async exchangeToken(refreshToken: string): Promise<JwtResponse> {
+    async exchangeToken(refreshToken: string): Promise<JwtUserResponse> {
 
         const refreshTokenRecord = await this.refreshTokensService.findOneByToken(refreshToken);
 
@@ -65,23 +65,4 @@ export class UserAuthService {
             expiresIn: JWT_EXPIRES,
         };
     }
-
-    // async changePassword(): Promise<void> {
-    //     const user = await this.client
-    //         .send();
-    //
-    //     if (!user.password) {
-    //         throw new RpcException(Messages.USER_DOESNT_HAVE_PASSWORD);
-    //     }
-    //
-    //     const isValid = await this.hashService.compareHash(payload.oldPassword, user.password);
-    //
-    //     if (!isValid) {
-    //         throw new RpcException(Messages.INVALID_PASSWORD);
-    //     }
-    //
-    //     const newPassword = await this.hashService.generateHash(payload.newPassword);
-    //
-    //     await this.usersService.updateOne({ id: user.id, password: newPassword });
-    // }
 }

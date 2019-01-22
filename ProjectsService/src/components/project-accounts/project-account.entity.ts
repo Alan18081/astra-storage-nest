@@ -20,7 +20,7 @@ export class ProjectAccount extends BaseEntity implements IProjectAccount {
     @PrimaryColumn('integer')
     projectId: number;
 
-    @Column()
+    @Column({ nullable: true })
     deletedAt: Date;
 
     constructor(partial: Partial<ProjectAccount>) {

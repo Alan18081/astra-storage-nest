@@ -2,6 +2,7 @@ import {Injectable} from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {createClientOptions} from '@astra/common/helpers';
 import {CommunicationCodes, IProjectAccount, Queues} from '@astra/common';
+import { CreateProjectAccountDto } from '@astra/common/dto';
 
 @Injectable()
 export class ProjectAccountsService {
@@ -17,7 +18,7 @@ export class ProjectAccountsService {
 
     async findOne(projectId: number, accountId: number, userId: number): Promise<IProjectAccount | undefined> {
         return this.client
-            .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT }, { projectId, accountId, userId })
+            .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT }, { projectId, id: accountId, userId })
             .toPromise();
     }
 
@@ -27,9 +28,15 @@ export class ProjectAccountsService {
           .toPromise();
     }
 
-    async removeOne(projectId: number, accountId: number, userId: number): Promise<void> {
+    async createOne(projectId: number, dto: any): Promise<void> {
         await this.client
-            .send({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT }, { projectId, accountId, userId })
+          .send({ cmd: CommunicationCodes.CREATE_PROJECT_ACCOUNT }, { ...dto, projectId })
+          .toPromise();
+    }
+
+    async removeOne(projectId: number, id: number, userId: number): Promise<void> {
+        await this.client
+            .send({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT }, { projectId, id, userId })
             .toPromise();
     }
 

@@ -27,7 +27,6 @@ let HashService = class HashService {
     }
     compareHash(str, hash) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log('Hash info', str, hash);
             return bcrypt.compare(str, hash);
         });
     }

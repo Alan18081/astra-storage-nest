@@ -19,22 +19,20 @@ export class ProjectAccountsController {
       private readonly projectAccountsService: ProjectAccountsService,
     ) {}
 
-
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNTS_LIST })
     async findMany(query: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
         return this.projectAccountsService.findMany(query);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT })
-    async findOne(query: FindProjectAccountDto): Promise<ProjectAccount | undefined> {
-        return await this.projectAccountsService.findById(query.id);
+    async findOne(dto: FindProjectAccountDto): Promise<ProjectAccount | undefined> {
+        return await this.projectAccountsService.findById(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL })
-    async findOneByEmail(query: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {
-        return await this.projectAccountsService.findOneByEmail(query.email);
+    async findOneByEmail(dto: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {
+        return await this.projectAccountsService.findOneByEmail(dto);
     }
-
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_PROJECT_ACCOUNT })
     async createOne(dto: CreateProjectAccountDto): Promise<ProjectAccount> {
@@ -42,8 +40,8 @@ export class ProjectAccountsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT })
-    async removeOne(dto: RemoveProjectAccountDto): Promise<void> {
-        await this.projectAccountService.removeOne(dto.accountId);
+    async removeOne({ id, projectId, userId }: RemoveProjectAccountDto): Promise<void> {
+        await this.projectAccountsService.removeOne(id, projectId, userId);
     }
 
 }

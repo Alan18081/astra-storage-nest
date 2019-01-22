@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { StorageRecord } from './interfaces/storage-record.model';
-import { FilterQuery } from 'mongodb';
+import { FilterQuery, ObjectId } from 'mongodb';
 import { IStorageRecord, PaginatedResponse } from '@astra/common';
 import { PaginationDto } from '@astra/common/dto';
 
@@ -46,10 +46,10 @@ export class StorageRecordsRepository {
     }
 
     async updateById(id: string, data: Partial<IStorageRecord>): Promise<StorageRecord | undefined> {
-      return this.storageRecordsModel.findOneAndUpdate({ _id: id }, { data }, { new: true });
+      return this.storageRecordsModel.findByIdAndUpdate(id, { data }, { new: true });
     }
 
     async removeById(id: string): Promise<void> {
-      await this.storageRecordsModel.deleteOne({ _id: id });
+      await this.storageRecordsModel.findByIdAndDelete(id);
     }
 }

@@ -8,6 +8,7 @@ var Messages;
     Messages["USER_NOT_FOUND"] = "User with that email doesn't exists";
     Messages["WRONG_PASSWORD"] = "Wrong password";
     Messages["INVALID_TOKEN"] = "Invalid token";
+    Messages["USER_DOESNT_HAVE_PASSWORD"] = "User doesn't have password because of using google for authentication";
     Messages["PROJECT_TOKEN_NOT_FOUND"] = "Auth token for project is not found";
     Messages["ACCOUNT_TOKEN_NOT_FOUND"] = "Auth token for project account is not found";
     Messages["PROJECT_NOT_FOUND"] = "Project doesn't exist";

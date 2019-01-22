@@ -10,12 +10,16 @@ export class ProjectAccountsRepository extends BaseRepository<ProjectAccount> {
     return this.find({ ...query, deletedAt: null });
   }
 
-  async findManyWithPagination(query: FindManyOptions<ProjectAccount>, pagination: Required<PaginationDto>): Promise<PaginatedResponse<ProjectAccount>> {
-    return super.findManyWithPagination(query, pagination);
+  async findOneById(id: number, projectId: number): Promise<ProjectAccount | undefined> {
+    return this.findOne({ id, projectId, deletedAt: null });
   }
 
-  async findOneByEmail(email: string): Promise<ProjectAccount | undefined> {
-    return this.findOne({ email, deletedAt: null });
+  async findManyWithPagination(query: FindManyOptions<ProjectAccount>, pagination: Required<PaginationDto>): Promise<PaginatedResponse<ProjectAccount>> {
+    return super.findManyWithPagination({ ...query, deletedAt: null }, pagination);
+  }
+
+  async findOneByEmail(email: string, projectId: number): Promise<ProjectAccount | undefined> {
+    return this.findOne({ email, projectId, deletedAt: null });
   }
 
   async removeOne(id: number): Promise<void> {

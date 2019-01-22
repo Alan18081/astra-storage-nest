@@ -4,7 +4,7 @@ import {User} from './user.entity';
 import {UsersRepository} from './users.repository';
 import {HashService} from '@astra/common/services';
 import {InjectRepository} from '@nestjs/typeorm';
-import {CreateUserByGoogleDto, CreateUserDto, SetNewPasswordDto} from '@astra/common/dto';
+import { ChangePasswordDto, CreateUserByGoogleDto, CreateUserDto, SetNewPasswordDto } from '@astra/common/dto';
 import {ClientProxy, RpcException, Client} from '@nestjs/microservices';
 import {UserHashesService} from '../user-hashes/user-hashes.service';
 import {createClientOptions} from '@astra/common/helpers';
@@ -39,7 +39,7 @@ export class UsersService {
     }
 
     async updateOne(id: number, data: Partial<User>): Promise<User | undefined> {
-        return this.usersRepository.updateOne(id, data);
+        return this.usersRepository.updateOneAndFind(id, data);
     }
 
     async createOne(dto: CreateUserDto): Promise<User> {
@@ -93,6 +93,28 @@ export class UsersService {
 
         const passwordHash = await this.hashService.generateHash(password);
         await this.updateOne(userHash.userId, { password: passwordHash });
+    }
+
+    async changePassword({ id, oldPassword, newPassword }: ChangePasswordDto): Promise<void> {
+        const user = await this.usersRepository.findById(id);
+
+        if (!user) {
+            throw new RpcException(Messages.USER_NOT_FOUND);
+        }
+
+        if (!user.password) {
+            throw new RpcException(Messages.USER_DOESNT_HAVE_PASSWORD);
+        }
+
+        const isValid = await this.hashService.compareHash(oldPassword, user.password);
+
+        if (!isValid) {
+            throw new RpcException(Messages.WRONG_PASSWORD);
+        }
+
+        const newPasswordHash = await this.hashService.generateHash(newPassword);
+
+        await this.usersRepository.updateOne(id,{ password: newPasswordHash });
     }
 
 }

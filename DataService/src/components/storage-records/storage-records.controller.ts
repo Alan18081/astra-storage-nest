@@ -1,5 +1,5 @@
 import { Controller } from '@nestjs/common';
-import { Messages, PaginatedResponse } from '@astra/common';
+import { PaginatedResponse } from '@astra/common';
 import {StorageRecordsService} from './storage-records.service';
 import {CommunicationCodes} from '@astra/common';
 import { MessagePattern } from '@nestjs/microservices';
@@ -7,7 +7,7 @@ import {
     CreateStorageRecordDto,
     FindStorageRecordDto,
     FindStorageRecordsListDto, RemoveStorageRecordDto,
-    UpdateStorageRecordDto
+    UpdateStorageRecordDto,
 } from '@astra/common/dto';
 import { StorageRecord } from './interfaces/storage-record.model';
 
@@ -20,7 +20,7 @@ export class StorageRecordsController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST })
     async findMany(payload: FindStorageRecordsListDto): Promise<StorageRecord[] | PaginatedResponse<StorageRecord>> {
-        if(payload.page && payload.limit) {
+        if (payload.page && payload.limit) {
             const { page, limit, ...data } = payload;
             return this.storageRecordsService.findManyWithPagination(data, { page, limit });
         }
@@ -35,6 +35,7 @@ export class StorageRecordsController {
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD })
     async createOne(payload: CreateStorageRecordDto): Promise<StorageRecord> {
+        console.log(payload);
         return this.storageRecordsService.createOne(payload);
     }
 

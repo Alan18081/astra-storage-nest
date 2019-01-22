@@ -35,8 +35,10 @@ export class AuthService {
     return this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT }, dto).toPromise();
   }
 
-  async loginProjectAccount(projectId: number, dto: LoginDto): Promise<JwtProjectAccountResponse> {
-      return this.authClient.send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { ...dto, projectId }).toPromise();
+  async loginProjectAccount(projectId: number, userId: number, dto: LoginDto): Promise<JwtProjectAccountResponse> {
+      return this.authClient
+        .send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { ...dto, projectId, userId })
+        .toPromise();
   }
 
   async validateUser(payload: JwtUserPayload): Promise<IUser | undefined> {

@@ -10,7 +10,7 @@ import {
     FindUserDto,
     FindUsersListDto,
     RemoveUserDto, ResetPasswordDto, SetNewPasswordDto,
-    UpdateUserDto, FindUserByGoogleIdDto,
+    UpdateUserDto, FindUserByGoogleIdDto, ChangePasswordDto,
 } from '@astra/common/dto';
 import {User} from './user.entity';
 import {UsersService} from './users.service';
@@ -70,6 +70,11 @@ export class UsersController {
     @MessagePattern({ cmd: CommunicationCodes.SET_NEW_PASSWORD })
     async setNewPassword(dto: SetNewPasswordDto): Promise<void> {
         return this.usersService.setNewPassword(dto);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.CHANGE_USER_PASSWORD })
+    async changePassword(dto: ChangePasswordDto): Promise<void> {
+        return this.usersService.changePassword(dto);
     }
 
 }

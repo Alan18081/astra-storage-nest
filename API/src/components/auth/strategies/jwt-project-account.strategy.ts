@@ -3,7 +3,7 @@ import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
 import {AuthService} from '../auth.service';
 import {Messages} from '../../../helpers/enums/messages.enum';
-import {IProject, IProjectAccount, IUser, JWT_SECRET, JwtProjectAccountPayload} from '@astra/common';
+import {IProjectAccount, JWT_SECRET, JwtProjectAccountPayload} from '@astra/common';
 
 @Injectable()
 export class JwtProjectAccountStrategy extends PassportStrategy(Strategy, 'jwtProjectAccount') {
