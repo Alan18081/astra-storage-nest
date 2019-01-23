@@ -11,4 +11,6 @@ const AuthServiceConfig = require("./auth-service");
 exports.AuthServiceConfig = AuthServiceConfig;
 const EmailsServiceConfig = require("./emails-service");
 exports.EmailsServiceConfig = EmailsServiceConfig;
+const DataServiceConfig = require("./data-service");
+exports.DataServiceConfig = DataServiceConfig;
 __export(require("./common"));

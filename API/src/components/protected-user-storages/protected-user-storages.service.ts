@@ -16,7 +16,7 @@ export class ProtectedUserStoragesService {
     async findMany(path: string, accountId: number): Promise<IStorageRecord[]> {
         return this.client
             .send(
-                { cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST },
+                { cmd: CommunicationCodes.SDK_GET_STORAGE_RECORDS_LIST },
                 { path,  accountId },
             ).toPromise();
 
@@ -24,25 +24,25 @@ export class ProtectedUserStoragesService {
 
     async findOne(id: string, accountId: number): Promise<IStorageRecord | undefined> {
         return this.client
-            .send({ cmd: CommunicationCodes.GET_STORAGE_RECORD }, { id, accountId })
+            .send({ cmd: CommunicationCodes.SDK_GET_STORAGE_RECORD }, { id, accountId })
             .toPromise();
     }
 
     async createOne(path: string, data: any, accountId: number): Promise<IStorageRecord> {
         return this.client
-            .send({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD }, { path, data, accountId })
+            .send({ cmd: CommunicationCodes.SDK_CREATE_STORAGE_RECORD }, { path, data, accountId })
             .toPromise();
     }
 
     async updateOne(id: string, data: any, accountId: number): Promise<IStorageRecord> {
         return this.client
-            .send({ cmd: CommunicationCodes.UPDATE_STORAGE_RECORD }, { id, data, accountId })
+            .send({ cmd: CommunicationCodes.SDK_UPDATE_STORAGE_RECORD }, { id, data, accountId })
             .toPromise();
     }
 
     async removeOne(id: string, accountId: number): Promise<IStorageRecord> {
         return this.client
-            .send({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD }, { id, accountId })
+            .send({ cmd: CommunicationCodes.SDK_REMOVE_STORAGE_RECORD }, { id, accountId })
             .toPromise();
     }
 }

@@ -1,5 +1,5 @@
 export interface IStorageRecord {
-    _id: string;
+    id: string;
     storageId: number;
     projectId: number;
     path: string;

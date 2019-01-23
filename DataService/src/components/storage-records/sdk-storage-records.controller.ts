@@ -1,45 +1,45 @@
-import { Controller } from '@nestjs/common';
-import { PaginatedResponse } from '@astra/common';
+import {ClassSerializerInterceptor, Controller, UseInterceptors} from '@nestjs/common';
 import {StorageRecordsService} from './storage-records.service';
-import {CommunicationCodes} from '@astra/common';
-import { MessagePattern } from '@nestjs/microservices';
+import {MessagePattern} from '@nestjs/microservices';
+import {CommunicationCodes, PaginatedResponse} from '@astra/common';
+import {StorageRecord} from './storage-record.entity';
 import {
     CreateStorageRecordDto,
     FindStorageRecordDto,
     FindStorageRecordsListDto, RemoveStorageRecordDto,
     UpdateStorageRecordDto,
 } from '@astra/common/dto';
-import { StorageRecord } from './storage-record.entity';
+import {RecordsInterceptor} from '../../helpers/interceptors/records.interceptor';
 
 @Controller()
-export class StorageRecordsController {
+@UseInterceptors(ClassSerializerInterceptor, RecordsInterceptor)
+export class SdkStorageRecordsController {
 
     constructor(
-      private readonly storageRecordsService: StorageRecordsService,
+       private readonly storageRecordsService: StorageRecordsService,
     ) {}
 
-    @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST })
+    @MessagePattern({ cmd: CommunicationCodes.SDK_GET_STORAGE_RECORDS_LIST })
     async findMany(payload: FindStorageRecordsListDto): Promise<StorageRecord[] | PaginatedResponse<StorageRecord>> {
         return this.storageRecordsService.findMany(payload);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORD })
+    @MessagePattern({ cmd: CommunicationCodes.SDK_GET_STORAGE_RECORD })
     async findOne(payload: FindStorageRecordDto): Promise<StorageRecord | undefined> {
         return this.storageRecordsService.findOneById(payload.id);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD })
+    @MessagePattern({ cmd: CommunicationCodes.SDK_CREATE_STORAGE_RECORD })
     async createOne(payload: CreateStorageRecordDto): Promise<StorageRecord> {
-        console.log(payload);
         return this.storageRecordsService.createOne(payload);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.UPDATE_STORAGE_RECORD })
+    @MessagePattern({ cmd: CommunicationCodes.SDK_UPDATE_STORAGE_RECORD })
     async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
         return this.storageRecordsService.updateOne(payload);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD })
+    @MessagePattern({ cmd: CommunicationCodes.SDK_REMOVE_STORAGE_RECORD })
     async removeOne(payload: RemoveStorageRecordDto): Promise<void> {
         await this.storageRecordsService.removeOne(payload.id);
     }

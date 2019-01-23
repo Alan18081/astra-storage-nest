@@ -23,7 +23,7 @@ export class PublicStorage extends Storage{
     return super.findById(id, StorageType.PUBLIC, { projectToken: this.projectToken });
   }
 
-  async createOne(payload: object, type: StorageType, params: object = {}): Promise<object> {
+  async createOne(payload: object): Promise<object> {
     return super.createOne(payload, StorageType.PUBLIC, { projectToken: this.projectToken });
   }
 

@@ -16,13 +16,13 @@ export class PublicUserStoragesService {
 
     async findMany(storageId: number): Promise<IStorageRecord[]> {
         return this.client
-            .send({ cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST }, { storageId })
+            .send({ cmd: CommunicationCodes.SDK_GET_STORAGE_RECORDS_LIST }, { storageId })
             .toPromise();
     }
 
     async findOne(id: string): Promise<IStorageRecord | undefined> {
         return this.client
-            .send({ cmd: CommunicationCodes.GET_STORAGE_RECORD }, { id })
+            .send({ cmd: CommunicationCodes.SDK_GET_STORAGE_RECORD }, { id })
             .toPromise();
     }
 
@@ -34,19 +34,19 @@ export class PublicUserStoragesService {
         }
 
         return this.client
-            .send({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD }, { projectId, storageId: storage.id, data })
+            .send({ cmd: CommunicationCodes.SDK_CREATE_STORAGE_RECORD }, { projectId, storageId: storage.id, data })
             .toPromise();
     }
 
     async updateOne(id: string, data: any): Promise<IStorageRecord> {
         return this.client
-            .send({ cmd: CommunicationCodes.UPDATE_STORAGE_RECORD }, { id, data })
+            .send({ cmd: CommunicationCodes.SDK_UPDATE_STORAGE_RECORD }, { id, data })
             .toPromise();
     }
 
     async removeOne(id: string): Promise<void> {
         await this.client
-            .send({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD }, { id })
+            .send({ cmd: CommunicationCodes.SDK_REMOVE_STORAGE_RECORD }, { id })
             .toPromise();
     }
 

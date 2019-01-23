@@ -7,6 +7,6 @@ export class FindStorageRecordsListDto extends PaginationDto {
     storageId: number;
 
     @IsString()
-    path: number;
+    path: string;
 
 }

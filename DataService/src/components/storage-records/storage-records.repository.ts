@@ -1,30 +1,22 @@
-import { Injectable } from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import { StorageRecord } from './interfaces/storage-record.model';
-import { FilterQuery, ObjectId } from 'mongodb';
-import { IStorageRecord, PaginatedResponse } from '@astra/common';
+import { PaginatedResponse } from '@astra/common';
 import { PaginationDto } from '@astra/common/dto';
+import {EntityRepository, MongoRepository, } from 'typeorm';
+import { StorageRecord } from './storage-record.entity';
+import {ObjectId} from 'mongodb';
 
-@Injectable()
-export class StorageRecordsRepository {
+@EntityRepository(StorageRecord)
+export class StorageRecordsRepository extends MongoRepository<StorageRecord> {
 
-    constructor(
-      @InjectModel('StorageRecord')
-      private readonly storageRecordsModel: Model<StorageRecord>,
-    ) {}
-
-    async findMany(query: FilterQuery<IStorageRecord>): Promise<StorageRecord[]> {
-      return this.storageRecordsModel.find(query);
+    async findMany(query: Partial<StorageRecord>): Promise<StorageRecord[]> {
+      return this.find(query);
     }
 
-    async findManyWithPagination(query: FilterQuery<IStorageRecord>, { page, limit }: Required<PaginationDto>): Promise<PaginatedResponse<StorageRecord>> {
-      const [data, count] = await Promise.all([
-        this.storageRecordsModel.find(query)
-          .skip((page - 1) * limit)
-          .limit(limit),
-        this.storageRecordsModel.count(query),
-      ]);
+    async findManyWithPagination(query: Partial<StorageRecord>, { page, limit }: Required<PaginationDto>): Promise<PaginatedResponse<StorageRecord>> {
+      const [data, count] = await this.findAndCount({
+          where: query,
+          skip: (page - 1) * limit,
+          take: limit,
+      });
 
       return {
         data,
@@ -35,21 +27,15 @@ export class StorageRecordsRepository {
     }
 
     async findById(id: string): Promise<StorageRecord | undefined> {
-      return this.storageRecordsModel.findById(id);
+      return this.findOne(id);
     }
 
-    async createOne(data: Partial<IStorageRecord>): Promise<StorageRecord> {
-      const newRecord = new this.storageRecordsModel({
-        ...data,
-      });
-      return await newRecord.save();
-    }
-
-    async updateById(id: string, data: Partial<IStorageRecord>): Promise<StorageRecord | undefined> {
-      return this.storageRecordsModel.findByIdAndUpdate(id, { data }, { new: true });
+    async updateById(id: string, data: Partial<StorageRecord>): Promise<StorageRecord | undefined> {
+      const result = await this.findOneAndUpdate({ _id: new ObjectId(id) }, { $set: { data }});
+      return result.value;
     }
 
     async removeById(id: string): Promise<void> {
-      await this.storageRecordsModel.findByIdAndDelete(id);
+      await this.deleteOne({ _id: new ObjectId(id) });
     }
 }

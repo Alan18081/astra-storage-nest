@@ -1,15 +1,16 @@
 import { Module } from '@nestjs/common';
-import { MongooseModule } from '@nestjs/mongoose';
 import { StorageRecordsService } from './storage-records.service';
 import { StorageRecordsRepository } from './storage-records.repository';
 import { StorageRecordsController } from './storage-records.controller';
-import { StorageRecordSchema } from './storage-record.schema';
+import {SdkStorageRecordsController} from './sdk-storage-records.controller';
+import {TypeOrmModule} from '@nestjs/typeorm';
+import {StorageRecord} from './storage-record.entity';
 
 @Module({
     imports: [
-      MongooseModule.forFeature([{ name: 'StorageRecord', schema: StorageRecordSchema }]),
+      TypeOrmModule.forFeature([StorageRecord, StorageRecordsRepository])
     ],
-    providers: [StorageRecordsService, StorageRecordsRepository],
-    controllers: [StorageRecordsController],
+    providers: [StorageRecordsService],
+    controllers: [StorageRecordsController, SdkStorageRecordsController],
 })
 export class StorageRecordsModule {}
