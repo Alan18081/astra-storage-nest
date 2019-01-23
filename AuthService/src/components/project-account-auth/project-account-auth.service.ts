@@ -36,7 +36,12 @@ export class ProjectAccountAuthService {
       throw new RpcException(Messages.WRONG_PASSWORD);
     }
 
-    const accessToken = this.jwtService.sign({ email: projectAccount.email, id: projectAccount.id, projectId: projectAccount.projectId });
+    const accessToken = this.jwtService.sign({
+      email: projectAccount.email,
+      id: projectAccount.id,
+      projectId: projectAccount.projectId,
+      ownerId: projectAccount.ownerId,
+    });
     return {
       accessToken,
     };

@@ -32,7 +32,7 @@ export class ProjectAccountsController {
         return this.projectAccountsService.findById(dto.id);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_FOR_SDK })
+    @MessagePattern({ cmd: CommunicationCodes.SDK_GET_PROJECT_ACCOUNT })
     @UseInterceptors(ClassSerializerInterceptor)
     async findOneForSdk(dto: FindProjectAccountSdkDto): Promise<ProjectAccount | undefined> {
         return this.projectAccountsService.findById(dto.id);
@@ -45,7 +45,6 @@ export class ProjectAccountsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_PROJECT_ACCOUNT })
-    @UseGuards(ValidProjectOwnerGuard)
     async createOne(dto: CreateProjectAccountDto): Promise<ProjectAccount> {
         return this.projectAccountsService.createOne(dto);
     }
@@ -56,8 +55,8 @@ export class ProjectAccountsController {
         await this.projectAccountsService.removeOne(id);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT_BY_TOKEN })
-    async removeOne({ id }: RemoveProjectAccountDto): Promise<void> {
+    @MessagePattern({ cmd: CommunicationCodes.SDK_REMOVE_PROJECT_ACCOUNT })
+    async removeOneSdk({ id }: RemoveProjectAccountDto): Promise<void> {
         await this.projectAccountsService.removeOne(id);
     }
 

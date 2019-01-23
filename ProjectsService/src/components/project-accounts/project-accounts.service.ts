@@ -10,6 +10,7 @@ import {
     FindProjectAccountsListDto,
 } from '@astra/common/dto';
 import { RpcException } from '@nestjs/microservices';
+import { ProjectsService } from '../projects/projects.service';
 
 @Injectable()
 export class ProjectAccountsService {
@@ -18,6 +19,7 @@ export class ProjectAccountsService {
       @InjectRepository(ProjectAccountsRepository)
       private readonly projectAccountsRepository: ProjectAccountsRepository,
       private readonly hashService: HashService,
+      private readonly projectsService: ProjectsService,
     ) {}
 
     async findMany({ page, limit, userId, ...query }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
@@ -37,6 +39,7 @@ export class ProjectAccountsService {
     }
 
     async createOne(payload: CreateProjectAccountDto): Promise<ProjectAccount> {
+        console.log('Project account payload', payload);
         const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email, payload.projectId);
 
         if (projectAccount) {

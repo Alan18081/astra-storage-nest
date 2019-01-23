@@ -1,4 +1,6 @@
-import { PaginatedResponse } from '@astra/common/interfaces';
+import { PaginatedResponse } from '@astra/common/interfaces/paginated-response.interface';
+import { apiRequest } from '../../helpers/api-request';
+import { StorageType } from '../../helpers/storage-types.enum';
 
 export abstract class Storage {
 
@@ -6,28 +8,95 @@ export abstract class Storage {
     private readonly path: string,
   ) {}
 
-  async findMany(query: object, params: object = {}): Promise<object[]> {
-    return ;
+  async findMany(query: object, type: StorageType, params: object = {}): Promise<object[]> {
+    try {
+      const { data } = await apiRequest({
+        url: `/storages/${type}/${this.path}`,
+        method: 'GET',
+        params,
+      });
+
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
+
   }
 
-  async findManyWithPagination(query: object, page: number, limit: number, params: object = {}): Promise<PaginatedResponse<object>> {
-    return null;
+  async findManyWithPagination(query: object, page: number, limit: number, type: StorageType,  params: object = {}): Promise<PaginatedResponse<object>> {
+    try {
+      const { data } = await apiRequest({
+        url: `/storages/${type}/${this.path}`,
+        method: 'GET',
+        params: {
+          ...params,
+          page,
+          limit,
+        },
+      });
+
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
-  async findById(id: string, params: object = {}): Promise<object | undefined> {
-    return null;
+  async findById(id: string, type: StorageType, params: object = {}): Promise<object | undefined> {
+    try {
+      const { data } = await apiRequest({
+        url: `/storages/${type}/${this.path}/${id}`,
+        method: 'GET',
+        params,
+      });
+
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
-  async createOne(data: object): Promise<object> {
-    return null;
+  async createOne(payload: object, type: StorageType, params: object = {}): Promise<object> {
+    try {
+      const { data } = await apiRequest({
+        url: `/storages/${type}/${this.path}`,
+        method: 'POST',
+        params,
+        data: payload,
+      });
+
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
-  async updateById(id: string, data: object, params: object = {}): Promise<object | undefined> {
-    return null;
+  async updateById(id: string, payload: object, type: StorageType, params: object = {}): Promise<object | undefined> {
+    try {
+      const { data } = await apiRequest({
+        url: `/storages/${type}/${this.path}/${id}`,
+        method: 'PUT',
+        params,
+        data: payload,
+      });
+
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
-  async removeById(id: string, params: object = {}): Promise<void> {
-    return null;
+  async removeById(id: string, type: StorageType, params: object = {}): Promise<void> {
+    try {
+      const { data } = await apiRequest({
+        url: `/storages/${type}/${this.path}/${id}`,
+        method: 'DELETE',
+        params,
+      });
+
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
   }
 
 }

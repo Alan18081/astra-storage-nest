@@ -19,6 +19,7 @@
   "dependencies": {
     "@astra/common": "file:../Common/dist",
     "@types/axios": "^0.14.0",
+    "@types/node": "^10.12.18",
     "axios": "^0.18.0",
     "typescript": "^2.6.2"
   },

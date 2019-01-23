@@ -37,7 +37,6 @@ export declare enum CommunicationCodes {
     LOGIN_PROJECT_ACCOUNT = "[ProjectsService] Login Project Account",
     GET_PROJECT_ACCOUNTS_LIST = "[ProjectsService] Get Project Accounts List",
     GET_PROJECT_ACCOUNT = "[ProjectsService] Get Project Account",
-    GET_PROJECT_ACCOUNT_FOR_SDK = "[ProjectsService] Get Project Account For Sdk",
     GET_PROJECT_ACCOUNT_BY_EMAIL = "[ProjectsService] Get Project Account By Email",
     CREATE_PROJECT_ACCOUNT = "[ProjectsService] Create Project Account",
     UPDATE_PROJECT_ACCOUNT = "[ProjectsService] Update Project Account",
@@ -51,5 +50,14 @@ export declare enum CommunicationCodes {
     SEND_RESET_PASSWORD_EMAIL = "[EmailsService] Send Reset Password Email",
     VERIFY_RESET_PASSWORD_HASH = "[UsersService] Verify Reset Password Hash",
     SET_NEW_PASSWORD = "[UsersService] Set New Password",
-    CHANGE_USER_PASSWORD = "[UsersService] Change User Password"
+    CHANGE_USER_PASSWORD = "[UsersService] Change User Password",
+    SDK_GET_PROJECT_ACCOUNTS_LIST = "{SDK} [ProjectsService] Get Project Accounts List",
+    SDK_GET_PROJECT_ACCOUNT = "{SDK} [ProjectsService] Get Project Account",
+    SDK_REMOVE_PROJECT_ACCOUNT = "{SDK} [ProjectsService] Remove Project Account",
+    SDK_GET_STORAGE_RECORDS_LIST = "{SDK} [DataService] Get Storage Records List",
+    SDK_GET_STORAGE_RECORD = "{SDK} [DataService] Get Storage Record",
+    SDK_CREATE_STORAGE_RECORD = "{SDK} [DataService] Create Storage Record",
+    SDK_UPDATE_STORAGE_RECORD = "{SDK} [DataService] Update Storage Record",
+    SDK_REMOVE_STORAGE_RECORD = "{SDK} [DataService] Remove Storage Record",
+    SDK_REMOVE_STORAGE_RECORDS_LIST = "{SDK} [DataService] Remove Storage Records List"
 }

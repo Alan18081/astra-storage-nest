@@ -24,23 +24,24 @@ export class ProjectAccountsController {
         return this.projectAccountsService.findMany(+projectId, user.id);
     }
 
-    @Get('me')
+    @Get('me/profile')
     @UseGuards(AuthGuard('jwtProjectAccount'))
     async findOneByToken(
         @ProjectAccount() projectAccount: IProjectAccount,
     ): Promise<IProjectAccount | undefined> {
+        console.log('fdfd',projectAccount);
         return this.projectAccountsService.findOneForSdk(projectAccount.id);
     }
-
-    @Get(':id')
-    @UseGuards(AuthGuard('jwt'))
-    async findOne(
-        @ReqUser() user: IUser,
-        @Param('id') accountId: number,
-        @Query('projectId') projectId: string,
-    ): Promise<IProjectAccount | undefined> {
-        return this.projectAccountsService.findOne(+projectId, +accountId, user.id);
-    }
+    //
+    // @Get(':id')
+    // @UseGuards(AuthGuard('jwt'))
+    // async findOne(
+    //     @ReqUser() user: IUser,
+    //     @Param('id') accountId: number,
+    //     @Query('projectId') projectId: string,
+    // ): Promise<IProjectAccount | undefined> {
+    //     return this.projectAccountsService.findOne(+projectId, +accountId, user.id);
+    // }
 
     @Post('')
     @UseGuards(AuthGuard('jwtProject'))
@@ -48,7 +49,7 @@ export class ProjectAccountsController {
       @Project() project: IProject,
       @Body() dto: any,
     ): Promise<void> {
-        await this.projectAccountsService.createOne(project.id, dto);
+        await this.projectAccountsService.createOne(project.id, project.userId, dto);
     }
 
     @Delete(':id')

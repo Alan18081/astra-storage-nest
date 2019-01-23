@@ -1,6 +1,6 @@
 import { BaseEntity, IProjectAccount } from '@astra/common';
 import {Column, Entity, Index, PrimaryColumn, PrimaryGeneratedColumn, Unique} from 'typeorm';
-import {Expose} from 'class-transformer';
+import {Exclude} from 'class-transformer';
 
 @Entity()
 export class ProjectAccount extends BaseEntity implements IProjectAccount {
@@ -16,19 +16,19 @@ export class ProjectAccount extends BaseEntity implements IProjectAccount {
     email: string;
 
     @Column()
-    @Expose()
+    @Exclude()
     password: string;
 
     @PrimaryColumn('integer')
-    @Expose()
+    @Exclude()
     projectId: number;
 
     @PrimaryColumn('integer')
-    @Expose()
+    @Exclude()
     ownerId: number;
 
     @Column({ nullable: true })
-    @Expose()
+    @Exclude()
     deletedAt: Date;
 
     constructor(partial: Partial<ProjectAccount>) {

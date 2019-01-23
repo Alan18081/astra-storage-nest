@@ -14,4 +14,7 @@ export class CreateProjectAccountDto {
     @IsInt()
     projectId: number;
 
+    @IsInt()
+    ownerId: number;
+
 }

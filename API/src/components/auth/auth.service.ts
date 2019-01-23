@@ -49,8 +49,9 @@ export class AuthService {
     return this.projectsService.findOneByClientInfo(clientId, clientSecret);
   }
 
-  async validateProjectAccount({ email, projectId }: JwtProjectAccountPayload): Promise<IProjectAccount | undefined> {
-    return this.projectAccountsService.findOneByEmail(projectId, email);
+  async validateProjectAccount({ email, projectId, ownerId }: JwtProjectAccountPayload): Promise<IProjectAccount | undefined> {
+    console.log(email, projectId, ownerId);
+    return this.projectAccountsService.findOneByEmail(projectId, email, ownerId);
   }
 
   async exchangeToken(refreshToken: string): Promise<JwtUserResponse> {

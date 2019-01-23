@@ -5,4 +5,5 @@ export interface IProjectAccount extends IEntityInfo {
     email: string;
     password: string;
     projectId: number;
+    ownerId: number;
 }

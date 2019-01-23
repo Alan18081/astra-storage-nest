@@ -23,20 +23,21 @@ export class ProjectAccountsService {
     }
 
     async findOneForSdk(id: number): Promise<IProjectAccount | undefined> {
+      console.log('Account ', id);
         return this.client
-            .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_FOR_SDK }, { id })
+            .send({ cmd: CommunicationCodes.SDK_GET_PROJECT_ACCOUNT }, { id })
             .toPromise();
     }
 
-    async findOneByEmail(projectId: number, email: string): Promise<IProjectAccount | undefined> {
+    async findOneByEmail(projectId: number, email: string, userId: number): Promise<IProjectAccount | undefined> {
         return this.client
-          .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL }, { email, projectId })
+          .send({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL }, { email, projectId, userId })
           .toPromise();
     }
 
-    async createOne(projectId: number, dto: any): Promise<void> {
+    async createOne(projectId: number, userId: number, dto: any): Promise<void> {
         await this.client
-          .send({ cmd: CommunicationCodes.CREATE_PROJECT_ACCOUNT }, { ...dto, projectId })
+          .send({ cmd: CommunicationCodes.CREATE_PROJECT_ACCOUNT }, { ...dto, projectId, ownerId: userId })
           .toPromise();
     }
 
