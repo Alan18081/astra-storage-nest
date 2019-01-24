@@ -17,6 +17,7 @@ import {StoragesService} from './storages.service';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import { Project } from '../../helpers/decorators/project.decorator';
+import {ApiOperation} from '@nestjs/swagger';
 
 @Controller('storages')
 @UseFilters(ApiExceptionFilter)
@@ -28,6 +29,7 @@ export class StoragesController {
 
     @Get('')
     @UseGuards(AuthGuard('jwt'))
+    @ApiOperation({ title: 'Find list of storages by user' })
     async findManyByProject(@Query() query: any,  @ReqUser() user: IUser): Promise<IStorage[]> {
         return this.storagesService.findManyByProject({
             projectId: +query.projectId,

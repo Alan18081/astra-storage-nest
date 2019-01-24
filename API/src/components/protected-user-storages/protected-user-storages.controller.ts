@@ -4,6 +4,7 @@ import {IProjectAccount, IStorageRecord} from '@astra/common';
 import {ProtectedUserStoragesService} from './protected-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {AuthGuard} from '@nestjs/passport';
+import {ApiOperation} from '@nestjs/swagger';
 
 @Controller('storages/protected/:path')
 @UseFilters(ApiExceptionFilter)
@@ -15,6 +16,7 @@ export class ProtectedUserStoragesController {
     ) {}
 
     @Get('')
+    @ApiOperation({ title: 'Find list of storage records' })
     async findStorageRecordsList(
         @Param('path') path: string,
         @ProjectAccount() account: IProjectAccount,
@@ -23,6 +25,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Get(':recordId')
+    @ApiOperation({ title: 'Find storage record by id' })
     async getStorageDataRecord(
         @Param('recordId') recordId: string,
         @ProjectAccount() account: IProjectAccount,
@@ -31,6 +34,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Post('')
+    @ApiOperation({ title: 'Create new storage record' })
     async createStorageRecord(
         @Param('path') path: string,
         @ProjectAccount() account: IProjectAccount,
@@ -40,6 +44,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Put(':recordId')
+    @ApiOperation({ title: 'Update storage record by id' })
     async updateStorageRecordData(
         @Param('path') path: string,
         @Param('recordId') recordId: string,
@@ -50,6 +55,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Delete(':recordId')
+    @ApiOperation({ title: 'Delete storage record by id' })
     async removeOne(
         @Param('path') path: string,
         @Param('recordId') recordId: string,

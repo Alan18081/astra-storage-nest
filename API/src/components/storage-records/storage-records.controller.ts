@@ -4,6 +4,7 @@ import {IStorageRecord, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {StorageRecordsService} from './storage-records.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
+import {ApiOperation} from '@nestjs/swagger';
 
 @Controller('storages/:storageId/records')
 @UseGuards(AuthGuard('jwt'))
@@ -15,11 +16,13 @@ export class StorageRecordsController {
   ) {}
 
   @Get('')
+  @ApiOperation({ title: 'Get storage record by id as admin' })
   async findMany(@Param('storageId') storageId: number): Promise<IStorageRecord[]> {
     return this.storageRecordsService.findMany(storageId);
   }
 
   @Post('')
+  @ApiOperation({ title: 'Create storage record by id as admin' })
   async createOne(
     @Param('storageId') storageId: number,
     @ReqUser() user: IUser,
@@ -29,6 +32,7 @@ export class StorageRecordsController {
   }
 
   @Put(':id')
+  @ApiOperation({ title: 'Update storage by id as admin' })
   async updateOne(
       @Param('id') id: string,
       @Body() body: any,
@@ -37,6 +41,7 @@ export class StorageRecordsController {
   }
 
   @Delete(':id')
+  @ApiOperation({ title: 'Delete storage by id as admin' })
   async removeOne(@Param('id') id: string): Promise<any> {
     await this.storageRecordsService.removeOne(id);
   }

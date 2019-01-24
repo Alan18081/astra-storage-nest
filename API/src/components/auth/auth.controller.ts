@@ -38,6 +38,7 @@ export class AuthController {
 
   @Post('login/projectAccount')
   @UseGuards(AuthGuard('jwtProject'))
+  @ApiOperation({ title: 'Login project account for generation access token' })
   async loginProjectAccount(
       @Project() project: IProject,
       @Body() dto: LoginDto,
