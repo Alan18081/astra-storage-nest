@@ -1,7 +1,7 @@
-import {Injectable} from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {createClientOptions} from '@astra/common/helpers';
-import {CommunicationCodes, IStorage, Queues} from '@astra/common';
+import { CommunicationCodes, IStorage, Messages, Queues, StorageType } from '@astra/common';
 
 @Injectable()
 export class StoragesService {
@@ -28,6 +28,17 @@ export class StoragesService {
         return this.projectsClient
             .send({ cmd: CommunicationCodes.GET_STORAGE_BY_PATH }, { path, projectId })
             .toPromise();
+    }
+
+    async checkIfStorageExists(path: string, typeId: StorageType, projectId: number): Promise<void> {
+        const foundStorage = await this.findOneByPath(path, projectId);
+        if (!foundStorage) {
+            throw new NotFoundException(Messages.STORAGE_NOT_FOUND);
+        }
+
+        if (foundStorage.typeId !== typeId) {
+            throw new BadRequestException(Messages.INVALID_STORAGE_TYPE);
+        }
     }
 
     async createOne(userId: number, data: any): Promise<IStorage | undefined> {

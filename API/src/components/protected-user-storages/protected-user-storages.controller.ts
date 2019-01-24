@@ -4,11 +4,12 @@ import {IProjectAccount, IStorageRecord} from '@astra/common';
 import {ProtectedUserStoragesService} from './protected-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {AuthGuard} from '@nestjs/passport';
-import {ApiOperation} from '@nestjs/swagger';
+import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
 
 @Controller('storages/protected/:path')
 @UseFilters(ApiExceptionFilter)
 @UseGuards(AuthGuard('jwtProjectAccount'))
+@ApiUseTags('Protected User Storages')
 export class ProtectedUserStoragesController {
 
     constructor(
@@ -40,7 +41,9 @@ export class ProtectedUserStoragesController {
         @ProjectAccount() account: IProjectAccount,
         @Body() body: any,
     ): Promise<IStorageRecord> {
-        return this.protectedUserStoragesService.createOne(path, body, account.id);
+        const res = await this.protectedUserStoragesService.createOne(path, body, account.id);
+        console.log(res);
+        return res;
     }
 
     @Put(':recordId')

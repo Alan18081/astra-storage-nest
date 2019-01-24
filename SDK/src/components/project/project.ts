@@ -1,7 +1,8 @@
 import { ProjectAccount } from '../project-account/project-account';
 import { apiRequest } from '../../helpers/api-request';
-import {PublicStorage} from '../storage/public-storage';
-import {ProtectedStorage} from '../storage/protected-storage';
+import { PublicStorage } from '../storage/public-storage';
+import { ProtectedStorage } from '../storage/protected-storage';
+import { StorageType } from '@astra/common/enums';
 
 export class Project {
 
@@ -24,8 +25,7 @@ export class Project {
         },
       });
     } catch (e) {
-      console.info(JSON.stringify(e.response.data));
-      throw new Error(e.response.data);
+      throw new Error(e.response.data.message.message);
     }
   }
 
@@ -47,14 +47,14 @@ export class Project {
       return new ProjectAccount(accessToken);
 
     } catch (e) {
-        console.log(e);
+      throw new Error(e.response.data.message.message);
     }
   }
 
-  private async checkIsStorageExists(path: string): Promise<void> {
+  private async checkIsStorageExists(path: string, typeId: StorageType): Promise<void> {
     try {
       await apiRequest({
-        url: `/storages/path/${path}/exists`,
+        url: `/storages/path/${path}/exists/${typeId}`,
         method: 'GET',
         params: {
           projectToken: this.token,
@@ -66,12 +66,12 @@ export class Project {
   }
 
   async getPublicStorage(path: string): Promise<PublicStorage> {
-    await this.checkIsStorageExists(path);
+    await this.checkIsStorageExists(path, StorageType.FREE);
     return new PublicStorage(path, this.token);
   }
 
   async getProtectedStorage(path: string, projectAccount: ProjectAccount): Promise<ProtectedStorage> {
-    await this.checkIsStorageExists(path);
+    await this.checkIsStorageExists(path, StorageType.PROTECTED);
     return new ProtectedStorage(path, projectAccount.getToken());
   }
 

@@ -4,11 +4,12 @@ import {IStorageRecord, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {StorageRecordsService} from './storage-records.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
-import {ApiOperation} from '@nestjs/swagger';
+import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
 
 @Controller('storages/:storageId/records')
 @UseGuards(AuthGuard('jwt'))
 @UseFilters(ApiExceptionFilter)
+@ApiUseTags('Storage Records')
 export class StorageRecordsController {
 
   constructor(

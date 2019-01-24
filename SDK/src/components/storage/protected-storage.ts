@@ -5,8 +5,8 @@ import { PaginatedResponse } from '@astra/common/interfaces/paginated-response.i
 export class ProtectedStorage extends Storage {
 
   constructor(
-    private readonly accountToken: string,
     path: string,
+    private readonly accountToken: string,
   ) {
     super(path);
   }
@@ -23,7 +23,7 @@ export class ProtectedStorage extends Storage {
     return super.findById(id, StorageType.PROTECTED, { accountToken: this.accountToken });
   }
 
-  async createOne(payload: object, type: StorageType, params: object = {}): Promise<object> {
+  async createOne(payload: object): Promise<object> {
     return super.createOne(payload, StorageType.PROTECTED, { accountToken: this.accountToken });
   }
 

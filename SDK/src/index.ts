@@ -14,6 +14,6 @@ export const initProject = async (clientId: string, clientSecret: string): Promi
       const { token } = res.data;
       return new Project(token);
     } catch (e) {
-      throw new Error(e.data);
+      throw new Error(e.response.data.message.message);
     }
 };

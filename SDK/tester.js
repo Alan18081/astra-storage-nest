@@ -1,20 +1,16 @@
 const astraStorage = require('./dist');
 
 const app = async () => {
-  try {
-    const project = await astraStorage.initProject('lu17xt757h', 'i0ukcdh536j');
-    // const account = await project.login('alanmorgan@gmail.com', '12345');
-    // console.log(await account.getProfile());
-    const storage = await project.getPublicStorage('mark');
-      await storage.removeById('5c48d39466ce1c692f75f511');
-      const foundRecord = await storage.findMany({});
-      console.log(foundRecord);
-      // console.log('Found record', foundRecord);
-      // const record  = await storage.updateById(foundRecord.id, { markus: 'fddf' });
-    // const record = await storage.createOne({ name: 'Mark', age: 20 });
-    // console.log(record);
-  } catch (e) {
-    console.log(e.message);
-  }
+    try {
+        const project = await astraStorage.initProject('x0gc7sb0a1', 'l3bxxnximo');
+        const account = await project.login('alanmorgan@gmail.com', '12345');
+        const storage = await project.getProtectedStorage('alan', account);
+        // const record = await storage.createOne({ type: 'User', build: 'alan' });
+        const record = await storage.updateById('5c49c2426c36574cb5c035ff', { emily: 'wonem' });
+        console.log(record);
+    } catch (e) {
+        console.log(e);
+    }
+
 };
 app();

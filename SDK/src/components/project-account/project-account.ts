@@ -18,7 +18,7 @@ export class ProjectAccount {
       });
       return data;
     } catch (e) {
-      console.log(inspect(e.response.data, false, null, true));
+      throw new Error(e.response.data.message.message);
     }
   }
 
@@ -32,7 +32,7 @@ export class ProjectAccount {
              },
           });
       } catch (e) {
-          inspect(JSON.stringify(e.response.data));
+        throw new Error(e.response.data.message.message);
       }
   }
 

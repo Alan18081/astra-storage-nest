@@ -20,4 +20,5 @@ var Messages;
     Messages["INVALID_PERMISSIONS"] = "You don't have permissions to do this operation";
     Messages["INVALID_REFRESH_TOKEN"] = "Provided refresh token is invalid";
     Messages["INVALID_PASSWORD_HASH"] = "Provided hash for resetting password is invalid";
+    Messages["INVALID_STORAGE_TYPE"] = "Provided type doesn't match with storage type";
 })(Messages = exports.Messages || (exports.Messages = {}));

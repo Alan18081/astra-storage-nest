@@ -6,10 +6,11 @@ import {ProjectAccountsService} from './project-accounts.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import { Project } from '../../helpers/decorators/project.decorator';
 import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
-import {ApiOperation} from '@nestjs/swagger';
+import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
 
 @Controller('projectAccounts')
 @UseFilters(ApiExceptionFilter)
+@ApiUseTags('Project Accounts')
 export class ProjectAccountsController {
 
     constructor(

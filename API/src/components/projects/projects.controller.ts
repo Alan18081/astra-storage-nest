@@ -6,11 +6,12 @@ import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {CreateProjectDto, UpdateProjectDto} from '@astra/common/dto';
 import {ProjectsService} from './projects.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
-import {ApiOperation} from '@nestjs/swagger';
+import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
 
 @Controller('projects')
 @UseGuards(AuthGuard('jwt'))
 @UseFilters(ApiExceptionFilter)
+@ApiUseTags('Projects')
 export class ProjectsController {
 
     constructor(

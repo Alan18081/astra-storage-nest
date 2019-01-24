@@ -6,14 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="7f1c7f55-2f12-44ee-975e-199b92beb6ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project-account.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project-account.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/test/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/test/jest-e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/test/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/test/jest-e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/test/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/test/jest-e2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDK/src/components/storage/protected-storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SDK/src/components/storage/protected-storage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDK/src/components/storage/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SDK/src/components/storage/storage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SDK/tester.js" beforeDir="false" afterPath="$PROJECT_DIR$/SDK/tester.js" afterDir="false" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,34 +48,51 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="storage.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/storage.ts">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="2212">
               <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+=======
+            <state relative-caret-position="673">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#104#0" expanded="true" />
+              </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="public-storage.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/public-storage.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/protected-storage.ts">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="868">
               <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+=======
+            <state relative-caret-position="672">
+              <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tester.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SDK/tester.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/storage.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+            <state relative-caret-position="383">
+              <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="storage-records.repository.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -70,21 +101,51 @@
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-318">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="main.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/src/main.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <folding>
                 <element signature="e#0#43#0" expanded="true" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#0#87#0" expanded="true" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="auth.controller.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/src/components/auth/auth.controller.ts">
           <provider selected="true" editor-type-id="text-editor">
@@ -138,6 +199,13 @@
               <folding>
                 <element signature="e#0#104#0" expanded="true" />
               </folding>
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SDK/tester.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
             </state>
           </provider>
         </entry>
@@ -153,6 +221,7 @@
       <find>Observable</find>
       <find>UserHashesService</find>
       <find>PUBLIC</find>
+      <find>console.log(e)</find>
     </findStrings>
     <replaceStrings>
       <replace>Project</replace>
@@ -160,6 +229,7 @@
       <replace>ProjectAccount</replace>
       <replace>Promise</replace>
       <replace>PROTECTED</replace>
+      <replace>throw new Error(e.response.data.message.message);</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -168,6 +238,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$APPLICATION_CONFIG_DIR$/phpstorm64.vmoptions" />
         <option value="$PROJECT_DIR$/Common/src/dto/project-accounts/find-project-account-sdk.dto.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts" />
@@ -179,6 +250,8 @@
         <option value="$PROJECT_DIR$/SDK/src/index.ts" />
         <option value="$PROJECT_DIR$/SDK/dist/index.js" />
         <option value="$PROJECT_DIR$/AuthService/src/components/project-auth/project-auth.controller.ts" />
+=======
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
         <option value="$PROJECT_DIR$/AuthService/src/components/project-auth/project-auth.service.ts" />
         <option value="$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.module.ts" />
@@ -187,7 +260,11 @@
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/helpers/guards/valid-project-owner.guard.ts" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/SDK/src/components/project-account/project-account.ts" />
+=======
+        <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
         <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts" />
         <option value="$PROJECT_DIR$/Common/src/interfaces/jwt-project-account-payload.ts" />
         <option value="$PROJECT_DIR$/Common/src/entities/project-account.ts" />
@@ -195,8 +272,6 @@
         <option value="$PROJECT_DIR$/AuthService/src/components/project-account-auth/project-account-auth.service.ts" />
         <option value="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts" />
         <option value="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts" />
-        <option value="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" />
-        <option value="$PROJECT_DIR$/SDK/src/components/project/project.ts" />
         <option value="$PROJECT_DIR$/Common/src/config/data-service.ts" />
         <option value="$PROJECT_DIR$/Common/src/config/index.ts" />
         <option value="$PROJECT_DIR$/DataService/src/app.module.ts" />
@@ -208,12 +283,10 @@
         <option value="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" />
         <option value="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.service.ts" />
         <option value="$PROJECT_DIR$/SDK/src/components/storage/public-storage.ts" />
-        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts" />
         <option value="$PROJECT_DIR$/DataService/src/helpers/interceptors/records.interceptor.ts" />
-        <option value="$PROJECT_DIR$/SDK/src/components/storage/storage.ts" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.entity.ts" />
-        <option value="$PROJECT_DIR$/SDK/tester.js" />
         <option value="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" />
         <option value="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" />
@@ -9874,11 +9947,37 @@
       <path value="$PROJECT_DIR$/UsersService/package.json" />
     </packageJsonPaths>
   </component>
+=======
+        <option value="$PROJECT_DIR$/SDK/dist/index.js" />
+        <option value="$PROJECT_DIR$/SDK/src/helpers/error.ts" />
+        <option value="$PROJECT_DIR$/SDK/src/index.ts" />
+        <option value="$PROJECT_DIR$/SDK/src/components/project-account/project-account.ts" />
+        <option value="$PROJECT_DIR$/Common/src/enums/storage-type.enum.ts" />
+        <option value="$PROJECT_DIR$/Common/src/enums/messages.enum.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" />
+        <option value="$PROJECT_DIR$/Front-end/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Admin/src/styles.sass" />
+        <option value="$PROJECT_DIR$/Admin/src/app/core/core.module.ts" />
+        <option value="$PROJECT_DIR$/Admin/src/app/core/components/logo/logo.component.html" />
+        <option value="$PROJECT_DIR$/Admin/src/app/core/components/logo/logo.component.sass" />
+        <option value="$PROJECT_DIR$/Admin/src/app/auth/containers/login/login.component.html" />
+        <option value="$PROJECT_DIR$/SDK/src/components/project/project.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project-account.strategy.ts" />
+        <option value="$PROJECT_DIR$/SDK/src/components/storage/protected-storage.ts" />
+        <option value="$PROJECT_DIR$/SDK/src/components/storage/storage.ts" />
+        <option value="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" />
+        <option value="$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts" />
+        <option value="$PROJECT_DIR$/SDK/tester.js" />
+      </list>
+    </option>
+  </component>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="64" />
-    <option name="y" value="-11" />
-    <option name="width" value="1857" />
-    <option name="height" value="1092" />
+    <option name="x" value="1920" />
+    <option name="y" value="-4" />
+    <option name="width" value="1920" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -9893,10 +9992,11 @@
         <subPane>
           <expand>
             <path>
-              <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
+              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
@@ -9911,21 +10011,46 @@
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
+              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
+              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
+              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
+<<<<<<< HEAD
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="astra-storage" type="462c0819:PsiDirectoryNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="astra-storage-nest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="astra-storage-nest" type="462c0819:PsiDirectoryNode" />
+              <item name="DataService" type="462c0819:PsiDirectoryNode" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="storage-records" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
             <path>
               <item name="astra-storage" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
+=======
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
           </expand>
           <select />
         </subPane>
@@ -9943,22 +10068,26 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+<<<<<<< HEAD
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/DataService/node_modules/typescript/lib" />
+=======
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/EmailsService/node_modules/typescript/lib" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Admin/src/app/core/components" />
+      <recent name="$PROJECT_DIR$/Admin/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Frontend/src" />
+      <recent name="$PROJECT_DIR$/SDK/src/components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Common/src/config" />
       <recent name="$PROJECT_DIR$/SDK/src/components/storage" />
       <recent name="$PROJECT_DIR$/Common/src/dto/project-accounts" />
       <recent name="$PROJECT_DIR$/AuthService/src/components" />
-      <recent name="$PROJECT_DIR$/Common/src/interfaces" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/SDK/src/components" />
-      <recent name="$PROJECT_DIR$/UsersService/src/helpers" />
-      <recent name="$PROJECT_DIR$/Front-end/src/app" />
-      <recent name="$PROJECT_DIR$/Front-end/src/auth/containers" />
-      <recent name="$PROJECT_DIR$/Common/src/dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -9995,17 +10124,27 @@
       <workItem from="1548006743712" duration="7874000" />
       <workItem from="1548140563725" duration="23326000" />
       <workItem from="1548182088388" duration="8109000" />
+<<<<<<< HEAD
       <workItem from="1548356586177" duration="1681000" />
+=======
+      <workItem from="1548314144106" duration="10961000" />
+      <workItem from="1548332745410" duration="5538000" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="236666000" />
+=======
+    <option name="totallyTimeSpent" value="250443000" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <frame x="1920" y="-4" width="1920" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50026953" side_tool="true" weight="0.74297607" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
@@ -10016,9 +10155,16 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2722372" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27908218" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+<<<<<<< HEAD
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -10050,6 +10196,45 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
+=======
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49973047" weight="0.76458114" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50026953" side_tool="true" weight="0.74297607" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.43032786" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2657682" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298647" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49973047" weight="0.74297607" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50026953" side_tool="true" weight="0.74297607" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Database Console" order="13" weight="0.43032786" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -10080,206 +10265,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="36" column="71" lean-forward="true" selection-start-line="36" selection-start-column="71" selection-end-line="36" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/@types/mongoose/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="3165" column="38" lean-forward="true" selection-start-line="3165" selection-start-column="38" selection-end-line="3165" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts" />
-    <entry file="file://$PROJECT_DIR$/API/src/components/storages/storages.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="39" column="27" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/src/components/project-account/project-account.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1064">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/config/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/config/data-service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/typeorm/find-options/FindOneOptions.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/typeorm/find-options/FindManyOptions.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="59" selection-start-line="4" selection-start-column="59" selection-end-line="4" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/src/components/project/project.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts" />
-    <entry file="file://$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/entities/storage-record.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Common/src/dto/storage-records/find-storage-records-list.dto.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.module.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/protected-storage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="862">
-          <caret line="34" column="88" selection-start-line="34" selection-start-column="88" selection-end-line="34" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/TransformOperationExecutor.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/metadata/ExposeExcludeOptions.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/ClassTransformOptions.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/decorators.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/storage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2212">
-          <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/decorators.d.ts" />
     <entry file="file://$PROJECT_DIR$/DataService/node_modules/typeorm/repository/SaveOptions.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-168">
@@ -10305,13 +10294,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -10330,6 +10315,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DataService/node_modules/typeorm/driver/mongodb/typings.d.ts">
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="3304" column="17" selection-start-line="3304" selection-start-column="17" selection-end-line="3304" selection-end-column="17" />
@@ -10338,22 +10324,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="635">
+          <caret line="32" column="51" selection-start-line="32" selection-start-column="51" selection-end-line="32" selection-end-column="51" />
+=======
         <state relative-caret-position="60">
           <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/public-storage.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SDK/tester.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="56" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
         </state>
       </provider>
     </entry>
@@ -10371,8 +10351,405 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/interfaces/storage-record.model.ts" />
+    <entry file="file://$PROJECT_DIR$/API/src/components/storages/storages.controller.ts">
+=======
+    <entry file="file://$PROJECT_DIR$/SDK/node_modules/@types/node/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1223">
+          <caret line="164" column="10" selection-start-line="164" selection-start-column="10" selection-end-line="164" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EmailsService/node_modules/typescript/lib/lib.es5.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="967" column="10" selection-start-line="967" selection-start-column="10" selection-end-line="967" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/helpers/error.ts" />
+    <entry file="file://$PROJECT_DIR$/Common/src/enums/storage-type.enum.ts">
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/storages/storage.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="448">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+=======
+        <state relative-caret-position="644">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#66#0" expanded="true" />
+          </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/projects/project.entity.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/components/project-account/project-account.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="364">
+          <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+=======
+        <state relative-caret-position="508">
+          <caret line="34" column="56" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#53#0" expanded="true" />
+          </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.schema.ts" />
+    <entry file="file://$PROJECT_DIR$/Common/src/enums/communication-codes.enum.ts">
+=======
+    <entry file="file://$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-504">
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Common/src/enums/messages.enum.ts">
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-end/angular.json" />
+    <entry file="file://$PROJECT_DIR$/Front-end/src/main.ts" />
+    <entry file="file://$PROJECT_DIR$/Front-end/src/app/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/Front-end/package.json" />
+    <entry file="file://$PROJECT_DIR$/Frontend/package.json" />
+    <entry file="file://$PROJECT_DIR$/Admin/src/styles.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="60" selection-start-column="60" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/core/components/logo/logo.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="392">
+          <caret line="22" column="60" lean-forward="true" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+=======
+        <state>
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/auth/containers/login/login.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/DataService/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+=======
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/auth/containers/login/login.component.scss">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/core/components/logo/logo.component.sass">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="756">
+          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.module.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+=======
+        <state relative-caret-position="28">
+          <caret line="1" column="13" lean-forward="true" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/core/components/logo/logo.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="21" selection-start-column="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#294#336#0" expanded="true" />
+            <element signature="e#367#388#0" expanded="true" />
+            <element signature="e#423#444#0" expanded="true" />
+            <element signature="e#782#803#0" expanded="true" />
+            <element signature="e#908#929#0" expanded="true" />
+            <element signature="e#1646#1667#0" expanded="true" />
+            <element signature="e#1869#1890#0" expanded="true" />
+            <element signature="e#2119#2140#0" expanded="true" />
+            <element signature="e#2345#2366#0" expanded="true" />
+            <element signature="e#2555#2576#0" expanded="true" />
+            <element signature="e#2848#2869#0" expanded="true" />
+            <element signature="e#3101#3122#0" expanded="true" />
+            <element signature="e#3259#3280#0" expanded="true" />
+            <element signature="e#3466#3487#0" expanded="true" />
+            <element signature="e#3782#3803#0" expanded="true" />
+            <element signature="e#4138#4159#0" expanded="true" />
+            <element signature="e#4460#4481#0" expanded="true" />
+            <element signature="e#4583#4604#0" expanded="true" />
+            <element signature="e#4733#4754#0" expanded="true" />
+            <element signature="e#5038#5059#0" expanded="true" />
+            <element signature="e#5351#5372#0" expanded="true" />
+            <element signature="e#5467#5488#0" expanded="true" />
+            <element signature="e#5616#5637#0" expanded="true" />
+            <element signature="e#5894#5915#0" expanded="true" />
+            <element signature="e#6210#6231#0" expanded="true" />
+            <element signature="e#6273#6294#0" expanded="true" />
+            <element signature="e#6335#6356#0" expanded="true" />
+            <element signature="e#6601#6622#0" expanded="true" />
+            <element signature="e#7101#7122#0" expanded="true" />
+            <element signature="e#7517#7538#0" expanded="true" />
+            <element signature="e#8033#8054#0" expanded="true" />
+            <element signature="e#8459#8480#0" expanded="true" />
+            <element signature="e#8963#8984#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/core/components/logo/logo.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="60">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+=======
+        <state relative-caret-position="140">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/auth/containers/login/login.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/auth/auth.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="65">
+          <caret line="39" column="10" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/node_modules/class-transformer/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+=======
+        <state>
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/src/app/core/core.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/public-storage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/storages/storages.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/storages/storages.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/storages/storages.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="2212">
+          <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
+=======
+        <state relative-caret-position="536">
+          <caret line="60" column="19" lean-forward="true" selection-start-line="60" selection-start-column="19" selection-end-line="60" selection-end-column="19" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/dist/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project-account.strategy.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="11" column="68" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/components/project/project.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-976">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="476">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+=======
+        <state relative-caret-position="673">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#104#0" expanded="true" />
+          </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="392">
+          <caret line="14" column="63" selection-start-line="14" selection-start-column="63" selection-end-line="14" selection-end-column="63" />
+=======
+        <state relative-caret-position="340">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#0#87#0" expanded="true" />
+          </folding>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="60">
+          <caret line="7" selection-start-line="7" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/public-storage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+=======
+        <state relative-caret-position="299">
+          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
+    <entry file="file://$PROJECT_DIR$/SDK/tester.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/protected-storage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SDK/src/components/storage/storage.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="75" column="50" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="60">
           <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding>
@@ -10434,6 +10811,10 @@
           <folding>
             <element signature="e#0#104#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="-318">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+>>>>>>> f3c5c0c04828655b144b03f57a46ab71d708b505
         </state>
       </provider>
     </entry>

@@ -4,10 +4,12 @@ import {Project} from '../../helpers/decorators/project.decorator';
 import {IProject, IStorageRecord} from '@astra/common';
 import {PublicUserStoragesService} from './public-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
+import {ApiUseTags} from '@nestjs/swagger';
 
 @Controller('storages/public/:path')
 @UseGuards(AuthGuard('jwtProject'))
 @UseFilters(ApiExceptionFilter)
+@ApiUseTags('Public User Storages')
 export class PublicUserStoragesController {
 
     constructor(
