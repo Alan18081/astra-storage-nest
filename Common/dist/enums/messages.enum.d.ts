@@ -16,5 +16,6 @@ export declare enum Messages {
     STORAGE_DATA_ALREADY_EXISTS = "Storage Data for provided storage already exists",
     INVALID_PERMISSIONS = "You don't have permissions to do this operation",
     INVALID_REFRESH_TOKEN = "Provided refresh token is invalid",
-    INVALID_PASSWORD_HASH = "Provided hash for resetting password is invalid"
+    INVALID_PASSWORD_HASH = "Provided hash for resetting password is invalid",
+    INVALID_STORAGE_TYPE = "Provided type doesn't match with storage type"
 }

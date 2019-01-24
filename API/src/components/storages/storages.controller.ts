@@ -1,18 +1,19 @@
 import {
+    BadRequestException,
     Body,
     Controller,
-    Delete,
+    Delete, ForbiddenException,
     Get,
     NotFoundException,
-    Param,
+    Param, ParseIntPipe,
     Post,
     Put,
     Query,
     UseFilters,
-    UseGuards
+    UseGuards,
 } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
-import { IProject, IStorage, IUser, Messages } from '@astra/common';
+import { IProject, IStorage, IUser, StorageType } from '@astra/common';
 import {StoragesService} from './storages.service';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
@@ -37,16 +38,14 @@ export class StoragesController {
         });
     }
 
-    @Get('path/:path/exists')
+    @Get('path/:path/exists/:typeId')
     @UseGuards(AuthGuard('jwtProject'))
     async checkIfStorageExists(
       @Param('path') path: string,
+      @Param('typeId', new ParseIntPipe()) typeId: StorageType,
       @Project() project: IProject,
     ): Promise<void> {
-        const foundProject = await this.storagesService.findOneByPath(path, project.id);
-        if (!foundProject) {
-            throw new NotFoundException(Messages.STORAGE_NOT_FOUND);
-        }
+        return this.storagesService.checkIfStorageExists(path, typeId, project.id);
     }
 
     @Get(':id')
