@@ -36,7 +36,9 @@ export class ProtectedUserStoragesController {
         @ProjectAccount() account: IProjectAccount,
         @Body() body: any,
     ): Promise<IStorageRecord> {
-        return this.protectedUserStoragesService.createOne(path, body, account.id);
+        const res = await this.protectedUserStoragesService.createOne(path, body, account.id);
+        console.log(res);
+        return res;
     }
 
     @Put(':recordId')

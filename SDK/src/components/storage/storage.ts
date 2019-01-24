@@ -18,7 +18,7 @@ export abstract class Storage {
 
       return data;
     } catch (e) {
-      throw new Error(e.response.data.message.message);
+      throw new Error(e.response.data.message);
     }
 
   }
@@ -37,7 +37,7 @@ export abstract class Storage {
 
       return data;
     } catch (e) {
-      throw new Error(e.response.data.message.message);
+      throw new Error(e.response.data.message);
     }
   }
 
@@ -51,7 +51,7 @@ export abstract class Storage {
 
       return data;
     } catch (e) {
-      throw new Error(e.response.data.message.message);
+      throw new Error(e.response.data.message);
     }
   }
 
@@ -66,7 +66,7 @@ export abstract class Storage {
 
       return data;
     } catch (e) {
-      throw new Error(e.response.data.message.message);
+      throw new Error(e.response.data.message);
     }
   }
 
@@ -81,7 +81,7 @@ export abstract class Storage {
 
       return data;
     } catch (e) {
-      throw new Error(e.response.data.message.message);
+      throw new Error(e.response.data.message);
     }
   }
 
@@ -95,7 +95,7 @@ export abstract class Storage {
 
       return data;
     } catch (e) {
-      throw new Error(e.response.data.message.message);
+      throw new Error(e.response.data.message);
     }
   }
 
