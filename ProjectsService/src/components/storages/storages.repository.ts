@@ -21,11 +21,7 @@ export class StoragesRepository extends BaseRepository<Storage> {
         return this.findOne({ path });
     }
 
-    async findOneByName(name: string): Promise<Storage | undefined> {
-        return await this.findOne({ name });
-    }
-
-    async updateOne(id: number, data: Partial<Storage>): Promise<Storage | undefined> {
+    async updateOneAndFind(id: number, data: Partial<Storage>): Promise<Storage | undefined> {
         await this.update({ id }, { ...data });
         return this.findById(id);
     }
@@ -43,8 +39,7 @@ export class StoragesRepository extends BaseRepository<Storage> {
       @TransactionRepository()
       projectsRepository?: ProjectsRepository,
     ): Promise<Storage> {
-        const savedStorage = await this.save(storage);
         await projectsRepository.incrementStoragesCount(projectId);
-        return savedStorage;
+        return this.save(storage);
     }
 }

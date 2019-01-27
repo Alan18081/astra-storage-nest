@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for project-accounts/project-accounts.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">project-accounts</a> project-accounts.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.24% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>45/51</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.63% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>42/64</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.24% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>38/40</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from<span class="branch-1 cbranch-no" title="branch not covered" > '@nestjs/common</span>';
+import { InjectRepository } from '@nestjs/typeorm';<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+impo<span class="missing-if-branch" title="else path not taken" >E</span>rt {ProjectAccountsRepository} from './project-accounts.repository';
+import {P<span class="cstat-no" title="statement not covered" >rojectAccount} from './project-account.entity';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+import { Messages, P<span class="branch-1 cbranch-no" title="branch not covered" >ag</span>ina<span class="branch-2 cbranch-no" title="branch not covered" >tedResponse } from '@astra/common';</span>
+import { HashService } from '@astra/common/services';
+import {<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+    <span class="missing-if-branch" title="else path not taken" >E</span>CreateProjectAccountDto,
+    FindProjectAccountByEmailDto,
+    FindProjectAccounts<span class="branch-1 cbranch-no" title="branch not covered" >ListDto,</span>
+} from '@astra/common/dto';
+import { RpcException } from '@nestjs/microservices';
+import {ProjectsService} <span class="branch-1 cbranch-no" title="branch not covered" >from '../projec</span>ts/projects.service';
+&nbsp;
+@Injectable()
+export class Proj<span class="fstat-no" title="function not covered" >ectAccoun</span>tsService<span class="cstat-no" title="statement not covered" > {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span>
+&nbsp;
+    constructor(
+      @InjectRepository(ProjectAccountsRepository)
+      private readonly projectAccountsRepository: ProjectAccountsRepository,
+      private readonly hashService: HashService,
+      private readonly projectsService: ProjectsService,
+    ) {}
+&nbsp;
+    async findMany({ page, limit, userId, projectId }: FindProjectAccountsListDto): Promise&lt;ProjectAccount[] | PaginatedResponse&lt;ProjectAccount&gt;&gt; {
+        const project = await this.projectsService.findOneByUserId(projectId, userId);
+&nbsp;
+        if (!project) {
+            throw new RpcException(Messages.INVALID_PERMISSIONS);
+        }
+&nbsp;
+        if (page &amp;&amp; limit) {
+            return await this.projectAccountsRepository.findManyWithPagination({ projectId }, { page, limit });
+        }
+&nbsp;
+        return await this.projectAccountsRepository.findMany({ projectId });
+    }
+&nbsp;
+    async findById(id: number): Promise&lt;ProjectAccount | undefined&gt; {
+        return this.projectAccountsRepository.findById(id);
+    }
+&nbsp;
+    async findOneByEmail({ email, projectId }: FindProjectAccountByEmailDto): Promise&lt;ProjectAccount | undefined&gt; {
+        return this.projectAccountsRepository.findOneByEmail(email, projectId);
+    }
+&nbsp;
+    async createOne(payload: CreateProjectAccountDto): Promise&lt;ProjectAccount&gt; {
+        const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email, payload.projectId);
+&nbsp;
+        if (projectAccount) {
+            throw new RpcException(Messages.USER_ALREADY_EXISTS);
+        }
+        const newAccount = new ProjectAccount(payload);
+        newAccount.password = await this.hashService.generateHash(payload.password);
+&nbsp;
+        return await this.projectAccountsRepository.save(newAccount);
+    }
+&nbsp;
+    async removeById(id: number): Promise&lt;void&gt; {
+        await this.projectAccountsRepository.removeById(id);
+    }
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sun Jan 27 2019 00:20:54 GMT+0200 (Eastern European Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

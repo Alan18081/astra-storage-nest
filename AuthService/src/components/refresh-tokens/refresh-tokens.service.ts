@@ -27,11 +27,15 @@ export class RefreshTokensService {
       refreshToken.token = token;
       refreshToken.userId = userId;
 
-      return await this.refreshTokensRepository.save(refreshToken);
+      return this.refreshTokensRepository.save(refreshToken);
   }
 
   async findOneByToken(token: string): Promise<RefreshToken | undefined> {
       return this.refreshTokensRepository.findOneByToken(token);
+  }
+
+  async removeById(id: number): Promise<void> {
+      await this.refreshTokensRepository.removeById(id);
   }
 
 }

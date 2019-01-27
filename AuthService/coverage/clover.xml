@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1548538325674" clover="3.2.0">
+  <project timestamp="1548538325674" name="All files">
+    <metrics statements="109" coveredstatements="106" conditionals="16" coveredconditionals="16" methods="14" coveredmethods="14" elements="139" coveredelements="136" complexity="0" loc="109" ncloc="109" packages="9" files="11" classes="11">
+      <package name="core">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="core.module.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/core/core.module.ts">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="project-account-auth">
+        <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+        <file name="project-account-auth.service.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/project-account-auth/project-account-auth.service.ts">
+          <metrics statements="17" coveredstatements="17" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+          <line num="19" count="1" type="stmt"/>
+          <line num="22" count="6" type="stmt"/>
+          <line num="23" count="6" type="stmt"/>
+          <line num="27" count="6" type="stmt"/>
+          <line num="31" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="32" count="1" type="stmt"/>
+          <line num="35" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="39" count="4" type="stmt"/>
+          <line num="45" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="project-account-auth.tests">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/project-account-auth/tests/mocks.ts">
+          <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="project-auth">
+        <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="project-auth.service.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/project-auth/project-auth.service.ts">
+          <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="12" count="1" type="stmt"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="23" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="27" count="3" type="stmt"/>
+          <line num="28" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="project-auth.tests">
+        <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/project-auth/tests/mocks.ts">
+          <metrics statements="5" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="17" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="refresh-tokens">
+        <metrics statements="29" coveredstatements="29" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+        <file name="refresh-token.entity.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/refresh-tokens/refresh-token.entity.ts">
+          <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="4" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
+        </file>
+        <file name="refresh-tokens.repository.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/refresh-tokens/refresh-tokens.repository.ts">
+          <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="2" count="3" type="stmt"/>
+          <line num="5" count="3" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+        <file name="refresh-tokens.service.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/refresh-tokens/refresh-tokens.service.ts">
+          <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="13" count="7" type="stmt"/>
+          <line num="14" count="7" type="stmt"/>
+          <line num="19" count="4" type="stmt"/>
+          <line num="20" count="4" type="cond" truecount="2" falsecount="0"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="27" count="2" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="refresh-tokens.tests">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/refresh-tokens/tests/mocks.ts">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="7" count="3" type="stmt"/>
+          <line num="12" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="user-auth">
+        <metrics statements="28" coveredstatements="28" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+        <file name="user-auth.service.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/user-auth/user-auth.service.ts">
+          <metrics statements="28" coveredstatements="28" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+          <line num="1" count="1" type="stmt"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="17" count="13" type="stmt"/>
+          <line num="18" count="13" type="stmt"/>
+          <line num="19" count="13" type="stmt"/>
+          <line num="23" count="7" type="stmt"/>
+          <line num="26" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="27" count="1" type="stmt"/>
+          <line num="30" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="34" count="5" type="stmt"/>
+          <line num="35" count="5" type="stmt"/>
+          <line num="37" count="5" type="stmt"/>
+          <line num="46" count="6" type="stmt"/>
+          <line num="48" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="52" count="5" type="stmt"/>
+          <line num="56" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="60" count="4" type="stmt"/>
+          <line num="62" count="4" type="stmt"/>
+        </file>
+      </package>
+      <package name="user-auth.tests">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/AuthService/src/components/user-auth/tests/mocks.ts">
+          <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="3" type="stmt"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="22" count="3" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

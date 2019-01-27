@@ -30,7 +30,7 @@ export class StorageRecordsRepository extends MongoRepository<StorageRecord> {
       return this.findOne(id);
     }
 
-    async updateById(id: string, data: Partial<StorageRecord>): Promise<StorageRecord | undefined> {
+    async updateOneAndFind(id: string, data: Partial<StorageRecord>): Promise<StorageRecord | undefined> {
       const result = await this.findOneAndUpdate({ _id: new ObjectId(id) }, { $set: { data }});
       return result.value;
     }

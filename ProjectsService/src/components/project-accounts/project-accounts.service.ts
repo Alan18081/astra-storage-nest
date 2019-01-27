@@ -10,7 +10,7 @@ import {
     FindProjectAccountsListDto,
 } from '@astra/common/dto';
 import { RpcException } from '@nestjs/microservices';
-import { ProjectsService } from '../projects/projects.service';
+import {ProjectsService} from '../projects/projects.service';
 
 @Injectable()
 export class ProjectAccountsService {
@@ -22,16 +22,22 @@ export class ProjectAccountsService {
       private readonly projectsService: ProjectsService,
     ) {}
 
-    async findMany({ page, limit, userId, ...query }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
-        if (page && limit) {
-            return await this.projectAccountsRepository.findManyWithPagination(query, { page, limit });
+    async findMany({ page, limit, userId, projectId }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
+        const project = await this.projectsService.findOneByUserId(projectId, userId);
+
+        if (!project) {
+            throw new RpcException(Messages.INVALID_PERMISSIONS);
         }
 
-        return await this.projectAccountsRepository.findMany(query);
+        if (page && limit) {
+            return await this.projectAccountsRepository.findManyWithPagination({ projectId }, { page, limit });
+        }
+
+        return await this.projectAccountsRepository.findMany({ projectId });
     }
 
     async findById(id: number): Promise<ProjectAccount | undefined> {
-        return this.projectAccountsRepository.findOneById(id);
+        return this.projectAccountsRepository.findById(id);
     }
 
     async findOneByEmail({ email, projectId }: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {
@@ -39,7 +45,6 @@ export class ProjectAccountsService {
     }
 
     async createOne(payload: CreateProjectAccountDto): Promise<ProjectAccount> {
-        console.log('Project account payload', payload);
         const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email, payload.projectId);
 
         if (projectAccount) {
@@ -51,7 +56,7 @@ export class ProjectAccountsService {
         return await this.projectAccountsRepository.save(newAccount);
     }
 
-    async removeOne(id: number): Promise<void> {
-        await this.projectAccountsRepository.removeOne(id);
+    async removeById(id: number): Promise<void> {
+        await this.projectAccountsRepository.removeById(id);
     }
 }

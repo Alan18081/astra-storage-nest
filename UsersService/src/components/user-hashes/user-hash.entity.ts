@@ -13,4 +13,8 @@ export class UserHash {
   @Column()
   userId: number;
 
+  constructor(partial: Partial<UserHash>) {
+    Object.assign(this, partial);
+  }
+
 }

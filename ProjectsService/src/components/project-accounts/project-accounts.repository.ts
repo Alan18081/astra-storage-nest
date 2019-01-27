@@ -1,4 +1,4 @@
-import { EntityRepository, FindManyOptions, Repository } from 'typeorm';
+import { EntityRepository, FindManyOptions } from 'typeorm';
 import { ProjectAccount } from './project-account.entity';
 import { BaseRepository, PaginatedResponse } from '@astra/common';
 import { PaginationDto } from '@astra/common/dto';
@@ -10,7 +10,7 @@ export class ProjectAccountsRepository extends BaseRepository<ProjectAccount> {
     return this.find({ ...query, deletedAt: null });
   }
 
-  async findOneById(id: number): Promise<ProjectAccount | undefined> {
+  async findById(id: number): Promise<ProjectAccount | undefined> {
     return this.findOne({ id, deletedAt: null });
   }
 
@@ -22,7 +22,7 @@ export class ProjectAccountsRepository extends BaseRepository<ProjectAccount> {
     return this.findOne({ email, projectId, deletedAt: null });
   }
 
-  async removeOne(id: number): Promise<void> {
+  async removeById(id: number): Promise<void> {
     await this.update({ id }, { deletedAt: new Date() });
   }
 }

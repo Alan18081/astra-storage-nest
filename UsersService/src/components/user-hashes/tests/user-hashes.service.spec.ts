@@ -1,52 +1,84 @@
 import { Test } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import { CoreModule } from '../../core/core.module';
-import { HashService } from '../../core/services/hash.service';
-import { mockRepository } from '../../../helpers/test-helpers/mock-repository';
 import { UserHashesService } from '../user-hashes.service';
 import { UserHash } from '../user-hash.entity';
-import { HashTypes } from '../../../helpers/enums/hash-types.enum';
+import {UserHashesRepository} from '../user-hashes.repository';
+import {mockHash, mockUserHashesRepository} from './mocks';
+import {HashService} from '@astra/common/services';
+import { HashTypes } from '@astra/common/enums';
+import {mockHashService} from '../../users/tests/mocks';
 
 describe('UserHashesService', () => {
-  let userHashesService, hashService;
-
+  let userHashesService;
 
   beforeEach(async () => {
     const module = await Test.createTestingModule({
-      imports: [CoreModule],
-      providers: [UserHashesService, { provide: getRepositoryToken(UserHash), useValue: mockRepository }]
+      providers: [
+          UserHashesService,
+          { provide: getRepositoryToken(UserHashesRepository), useValue: mockUserHashesRepository },
+          { provide: HashService, useValue: mockHashService },
+      ],
     }).compile();
 
     userHashesService = module.get<UserHashesService>(UserHashesService);
-    hashService = module.get<HashService>(HashService);
   });
 
   describe('findOneByHash', () => {
-    it('should return user', async () => {
-      const result = new UserHash();
-      result.userId = 5;
-      result.hash = "hash";
+    it('should call userHashesRepository.findOneByHash', async () => {
+      const providedHash = 'fdfdgdfgf';
+      const spy = jest.spyOn(mockUserHashesRepository, 'findOneByHash').mockImplementation(async () => mockHash);
+      await userHashesService.findOneByHash(providedHash);
+      expect(spy).toBeCalledWith(providedHash);
+    });
 
-      jest.spyOn(mockRepository, 'findOne').mockImplementation(async () => result);
+    it('should return user-hash', async () => {
+      jest.spyOn(mockUserHashesRepository, 'findOneByHash').mockImplementation(async () => mockHash);
 
-      expect(await userHashesService.findOneByHash(result.hash)).toEqual(result);
+      expect(await userHashesService.findOneByHash(mockHash.hash)).toEqual(mockHash);
     });
   });
 
   describe('createOne', () => {
+    const result = new UserHash({
+      userId: 5,
+      hash: 'my hash',
+    });
+
+    it('should call hashService.generateHash', async () => {
+        const spy = jest.spyOn(mockHashService, 'generateHash').mockImplementation(async () => result.hash);
+        await userHashesService.createOne(result.userId, HashTypes.RESET_PASSWORD);
+        expect(spy).toBeCalledWith(JSON.stringify({ userId: result.userId, type: HashTypes.RESET_PASSWORD }));
+    });
+
     it('should create new user hash and return it', async () => {
-      const userId = 5;
-      const result = {
-        ...new UserHash(),
-        userId,
-        hash: hashService.generateHash(JSON.stringify({ userId, typ: HashTypes.EMAIL_VERIFICATION }))
-      };
+      jest.spyOn(mockUserHashesRepository, 'save').mockImplementation(async () => result);
 
-
-      jest.spyOn(mockRepository, 'save').mockImplementation(async () => result);
-
-      expect(await userHashesService.createOne(userId, HashTypes.EMAIL_VERIFICATION)).toEqual(result);
+      expect(await userHashesService.createOne(result.userId, HashTypes.EMAIL_VERIFICATION)).toEqual(result);
     });
   });
+
+    describe('verifyResetPasswordHash', () => {
+        it('should call userHashesRepository.findOneByHash', async () => {
+            const providedHash = 'fdfdgdfgf';
+            const spy = jest.spyOn(mockUserHashesRepository, 'findOneByHash').mockImplementation(async () => mockHash);
+            await userHashesService.verifyResetPasswordHash(providedHash);
+            expect(spy).toBeCalledWith(providedHash);
+        });
+
+        it('should return true if user-hash is found', async () => {
+            jest.spyOn(mockUserHashesRepository, 'findOneByHash').mockImplementation(async () => mockHash);
+
+            expect(await userHashesService.verifyResetPasswordHash(mockHash.hash)).toEqual(true);
+        });
+    });
+
+    describe('verifyResetPasswordHash', () => {
+        it('should call userHashesRepository.removeById', async () => {
+            const id = 20;
+            const spy = jest.spyOn(mockUserHashesRepository, 'removeById').mockImplementation(async () => mockHash);
+            await userHashesService.removeById(id);
+            expect(spy).toBeCalledWith(id);
+        });
+    });
 
 });

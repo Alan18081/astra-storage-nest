@@ -62,7 +62,7 @@ export class UsersService {
     }
 
     async removeById(id: number): Promise<void> {
-        await this.usersRepository.removeOne(id);
+        await this.usersRepository.removeById(id);
     }
 
     async resetPassword(email: string): Promise<void> {
@@ -86,13 +86,14 @@ export class UsersService {
 
     async setNewPassword({ hash, password }: SetNewPasswordDto): Promise<void> {
         const userHash = await this.userHashesService.findOneByHash(hash);
-
         if (!userHash) {
            throw new RpcException(Messages.INVALID_PASSWORD_HASH);
         }
-
         const passwordHash = await this.hashService.generateHash(password);
-        await this.updateOne(userHash.userId, { password: passwordHash });
+        await Promise.all([
+            this.updateOne(userHash.userId, { password: passwordHash }),
+            this.userHashesService.removeById(userHash.id),
+        ]);
     }
 
     async changePassword({ id, oldPassword, newPassword }: ChangePasswordDto): Promise<void> {
@@ -113,7 +114,6 @@ export class UsersService {
         }
 
         const newPasswordHash = await this.hashService.generateHash(newPassword);
-
         await this.usersRepository.updateOne(id,{ password: newPasswordHash });
     }
 

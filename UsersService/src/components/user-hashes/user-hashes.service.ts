@@ -19,15 +19,20 @@ export class UserHashesService {
   }
 
   async createOne(userId: number, type: HashTypes): Promise<UserHash> {
-    const userHash = new UserHash();
+    const userHash = new UserHash({
+        userId,
+    });
     userHash.hash = await this.hashService.generateHash(JSON.stringify({ userId, type }));
-    userHash.userId = userId;
 
     return await this.userHashesRepository.save(userHash);
   }
 
   async verifyResetPasswordHash(hash: string): Promise<boolean> {
     return !!this.userHashesRepository.findOneByHash(hash);
+  }
+
+  async removeById(id: number): Promise<void> {
+    await this.userHashesRepository.removeById(id);
   }
 
 }

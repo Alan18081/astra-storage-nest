@@ -25,18 +25,17 @@ export class StorageRecordsController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORD })
     async findOne(payload: FindStorageRecordDto): Promise<StorageRecord | undefined> {
-        return this.storageRecordsService.findOneById(payload.id);
+        return this.storageRecordsService.findById(payload.id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD })
     async createOne(payload: CreateStorageRecordDto): Promise<StorageRecord> {
-        console.log(payload);
         return this.storageRecordsService.createOne(payload);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.UPDATE_STORAGE_RECORD })
     async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
-        return this.storageRecordsService.updateOne(payload);
+        return this.storageRecordsService.updateOne(payload.id, payload.data);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD })

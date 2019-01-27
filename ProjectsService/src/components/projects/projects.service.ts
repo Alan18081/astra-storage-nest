@@ -8,6 +8,8 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class ProjectsService {
 
+    private readonly randomGenerator = uid;
+
     constructor(
       @InjectRepository(ProjectsRepository)
       private readonly projectsRepository: ProjectsRepository,
@@ -17,36 +19,40 @@ export class ProjectsService {
         return this.projectsRepository.findManyByUser(userId);
     }
 
-    async findById({ id, userId }: FindProjectDto): Promise<Project | undefined> {
-        return this.projectsRepository.findById(id, userId);
+    async findById(id: number): Promise<Project | undefined> {
+        return this.projectsRepository.findById(id);
+    }
+
+    async findOneByUserId(id: number, userId: number): Promise<Project | undefined> {
+        return this.projectsRepository.findOneByUserId(id, userId);
     }
 
     async createOne(body: CreateProjectDto): Promise<Project> {
         const project = new Project({ ...body });
-        project.clientId = uid(10);
-        project.clientSecret = uid(15);
+        project.clientId = this.randomGenerator(10);
+        project.clientSecret = this.randomGenerator(15);
 
-        return await this.projectsRepository.save(project);
+        return this.projectsRepository.save(project);
     }
 
-    async incrementStoragesCount(id: number): Promise<void> {
-        return this.incrementStoragesCount(id);
-    }
-
-    async decrementStoragesCount(id: number): Promise<void> {
-        return this.decrementStoragesCount(id);
-    }
+    // async incrementStoragesCount(id: number): Promise<void> {
+    //     return this.projectsRepository.incrementStoragesCount(id);
+    // }
+    //
+    // async decrementStoragesCount(id: number): Promise<void> {
+    //     return this.decrementStoragesCount(id);
+    // }
 
     async findOneByClientInfo(dto: FindProjectByClientInfoDto): Promise<Project | undefined> {
         return this.projectsRepository.findOneByClientInfo(dto.clientId, dto.clientSecret);
     }
 
     async updateOne({ id, userId, ...data }: UpdateProjectDto): Promise<Project | undefined> {
-        return this.projectsRepository.updateOne({ id, userId }, { ...data });
+        return this.projectsRepository.updateOneAndFind(id, { ...data });
     }
 
-    async removeOne(id: number, userId: number): Promise<void> {
-        await this.projectsRepository.delete({ id, userId });
+    async removeById(id: number, userId: number): Promise<void> {
+        await this.projectsRepository.removeById(id, userId);
     }
 
     async isValidOwner(projectId: number, userId: number): Promise<boolean> {

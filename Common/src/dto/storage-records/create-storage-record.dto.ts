@@ -16,6 +16,6 @@ export class CreateStorageRecordDto {
 
     @IsInt()
     @IsOptional()
-    accountId: number;
+    accountId?: number;
 
 }

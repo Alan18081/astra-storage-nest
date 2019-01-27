@@ -5,15 +5,15 @@ import {User} from './user.entity';
 export class UsersRepository extends Repository<User> {
 
     async findById(id: number): Promise<User | undefined> {
-        return super.findOne({ id });
+        return this.findOne({ id });
     }
 
     async findOneByEmail(email: string): Promise<User | undefined> {
-        return super.findOne({ email });
+        return this.findOne({ email });
     }
 
     async findOneByGoogleId(googleId: string): Promise<User | undefined> {
-        return super.findOne({ googleId });
+        return this.findOne({ googleId });
     }
 
     async updateOneAndFind(id: number, data: Partial<User>): Promise<User | undefined> {
@@ -25,7 +25,7 @@ export class UsersRepository extends Repository<User> {
         await this.update({ id }, data);
     }
 
-    async removeOne(id: number): Promise<void> {
-        await super.delete({ id });
+    async removeById(id: number): Promise<void> {
+        await this.delete({ id });
     }
 }

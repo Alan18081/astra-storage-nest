@@ -4,7 +4,7 @@ import { PaginationDto } from '../common';
 export class FindStorageRecordsListDto extends PaginationDto {
 
     @IsInt()
-    storageId: number;
+    projectId: number;
 
     @IsString()
     path: string;

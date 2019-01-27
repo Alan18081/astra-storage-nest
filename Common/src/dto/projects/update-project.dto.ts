@@ -10,14 +10,14 @@ export class UpdateProjectDto {
 
   @IsString()
   @IsOptional()
-  name: string;
+  name?: string;
 
   @IsString()
   @IsOptional()
-  description: string;
+  description?: string;
 
   @IsInt()
   @IsOptional()
-  storagesCount: number;
+  storagesCount?: number;
 
 }

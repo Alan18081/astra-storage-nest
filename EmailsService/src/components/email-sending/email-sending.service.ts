@@ -8,10 +8,12 @@ import {EmailTemplatesService} from './email-templates.service';
 @Injectable()
 export class EmailSendingService {
 
+    private readonly sgEmail = sgEmail;
+
     constructor(
         private readonly emailTemplatesService: EmailTemplatesService,
     ) {
-        sgEmail.setApiKey(EmailsServiceConfig.SENDGRID_API_KEY);
+        this.sgEmail.setApiKey(EmailsServiceConfig.SENDGRID_API_KEY);
     }
 
     async sendResetPasswordEmail({ firstName, lastName, email, hash }: SendResetPasswordEmailDto): Promise<void> {
@@ -20,7 +22,7 @@ export class EmailSendingService {
             lastName,
             link: `${EmailsServiceConfig.APP_URL}/resetPassword/hash/${hash}`,
         });
-        await sgEmail.send(
+        await this.sgEmail.send(
             new Email(
                 EmailsServiceConfig.APP_EMAIL,
                 email,

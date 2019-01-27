@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1548541254622" clover="3.2.0">
+  <project timestamp="1548541254622" name="All files">
+    <metrics statements="307" coveredstatements="267" conditionals="459" coveredconditionals="271" methods="150" coveredmethods="123" elements="916" coveredelements="661" complexity="0" loc="307" ncloc="307" packages="7" files="13" classes="13">
+      <package name="core">
+        <metrics statements="7" coveredstatements="6" conditionals="22" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <file name="core.module.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/core/core.module.ts">
+          <metrics statements="7" coveredstatements="6" conditionals="22" coveredconditionals="7" methods="1" coveredmethods="1"/>
+          <line num="1" count="3" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="3" type="cond" truecount="1" falsecount="3"/>
+          <line num="3" count="3" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="3" type="cond" truecount="1" falsecount="2"/>
+          <line num="9" count="3" type="stmt"/>
+          <line num="11" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="project-accounts">
+        <metrics statements="82" coveredstatements="72" conditionals="134" coveredconditionals="79" methods="42" coveredmethods="35"/>
+        <file name="project-account.entity.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/project-accounts/project-account.entity.ts">
+          <metrics statements="18" coveredstatements="17" conditionals="39" coveredconditionals="22" methods="3" coveredmethods="3"/>
+          <line num="1" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="16" type="cond" truecount="3" falsecount="1"/>
+          <line num="3" count="16" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="16" type="cond" truecount="2" falsecount="1"/>
+          <line num="7" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="16" type="cond" truecount="3" falsecount="1"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="16" count="6" type="stmt"/>
+          <line num="17" count="6" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="34" count="2" type="stmt"/>
+          <line num="39" count="2" type="stmt"/>
+          <line num="44" count="2" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+          <line num="54" count="2" type="stmt"/>
+        </file>
+        <file name="project-accounts.repository.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/project-accounts/project-accounts.repository.ts">
+          <metrics statements="24" coveredstatements="17" conditionals="31" coveredconditionals="15" methods="18" coveredmethods="12"/>
+          <line num="1" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="2" type="cond" truecount="1" falsecount="3"/>
+          <line num="3" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="2" type="cond" truecount="1" falsecount="2"/>
+          <line num="7" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="6" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="2" type="stmt"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
+          <line num="42" count="1" type="stmt"/>
+          <line num="46" count="2" type="stmt"/>
+        </file>
+        <file name="project-accounts.service.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/project-accounts/project-accounts.service.ts">
+          <metrics statements="40" coveredstatements="38" conditionals="64" coveredconditionals="42" methods="21" coveredmethods="20"/>
+          <line num="1" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="1" type="cond" truecount="1" falsecount="3"/>
+          <line num="3" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="1" type="cond" truecount="1" falsecount="2"/>
+          <line num="7" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="10" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="14" count="13" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="17" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="28" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="13" type="cond" truecount="2" falsecount="0"/>
+          <line num="30" count="1" type="stmt"/>
+          <line num="32" count="13" type="stmt"/>
+          <line num="33" count="13" type="stmt"/>
+          <line num="34" count="13" type="stmt"/>
+          <line num="37" count="5" type="stmt"/>
+          <line num="38" count="5" type="stmt"/>
+          <line num="39" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="42" count="4" type="cond" truecount="4" falsecount="0"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="45" count="3" type="stmt"/>
+          <line num="49" count="2" type="stmt"/>
+          <line num="50" count="2" type="stmt"/>
+          <line num="54" count="2" type="stmt"/>
+          <line num="55" count="2" type="stmt"/>
+          <line num="59" count="3" type="stmt"/>
+          <line num="60" count="3" type="stmt"/>
+          <line num="61" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="62" count="1" type="stmt"/>
+          <line num="64" count="2" type="stmt"/>
+          <line num="65" count="2" type="stmt"/>
+          <line num="66" count="2" type="stmt"/>
+          <line num="70" count="1" type="stmt"/>
+          <line num="71" count="1" type="stmt"/>
+          <line num="75" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="project-accounts.tests">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/project-accounts/tests/mocks.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="10" count="2" type="stmt"/>
+          <line num="11" count="2" type="stmt"/>
+          <line num="21" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="projects">
+        <metrics statements="101" coveredstatements="90" conditionals="129" coveredconditionals="72" methods="56" coveredmethods="48"/>
+        <file name="project.entity.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/projects/project.entity.ts">
+          <metrics statements="22" coveredstatements="20" conditionals="39" coveredconditionals="22" methods="5" coveredmethods="3"/>
+          <line num="1" count="5" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="55" type="cond" truecount="3" falsecount="1"/>
+          <line num="3" count="55" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="55" type="cond" truecount="2" falsecount="1"/>
+          <line num="7" count="5" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="55" type="cond" truecount="3" falsecount="1"/>
+          <line num="14" count="5" type="stmt"/>
+          <line num="16" count="9" type="stmt"/>
+          <line num="17" count="9" type="stmt"/>
+          <line num="20" count="5" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
+          <line num="28" count="5" type="stmt"/>
+          <line num="32" count="5" type="stmt"/>
+          <line num="36" count="5" type="stmt"/>
+          <line num="40" count="5" type="stmt"/>
+          <line num="44" count="5" type="stmt"/>
+          <line num="48" count="5" type="stmt"/>
+          <line num="52" count="5" type="stmt"/>
+          <line num="56" count="5" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="60" count="5" type="stmt"/>
+        </file>
+        <file name="projects.repository.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/projects/projects.repository.ts">
+          <metrics statements="32" coveredstatements="26" conditionals="31" coveredconditionals="15" methods="23" coveredmethods="18"/>
+          <line num="1" count="5" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="5" type="cond" truecount="1" falsecount="3"/>
+          <line num="3" count="5" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="5" type="cond" truecount="1" falsecount="2"/>
+          <line num="7" count="5" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="9" count="10" type="stmt"/>
+          <line num="10" count="0" type="stmt"/>
+          <line num="11" count="24" type="cond" truecount="2" falsecount="0"/>
+          <line num="12" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="5" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="30" count="2" type="stmt"/>
+          <line num="31" count="2" type="stmt"/>
+          <line num="35" count="2" type="stmt"/>
+          <line num="36" count="2" type="stmt"/>
+          <line num="40" count="3" type="stmt"/>
+          <line num="41" count="3" type="stmt"/>
+          <line num="42" count="3" type="stmt"/>
+          <line num="46" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="51" count="3" type="stmt"/>
+          <line num="52" count="3" type="stmt"/>
+          <line num="53" count="3" type="stmt"/>
+          <line num="57" count="3" type="stmt"/>
+          <line num="58" count="3" type="stmt"/>
+          <line num="59" count="3" type="stmt"/>
+          <line num="63" count="5" type="stmt"/>
+        </file>
+        <file name="projects.service.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/projects/projects.service.ts">
+          <metrics statements="47" coveredstatements="44" conditionals="59" coveredconditionals="35" methods="28" coveredmethods="27"/>
+          <line num="1" count="3" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="3" type="cond" truecount="1" falsecount="3"/>
+          <line num="3" count="3" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="3" type="cond" truecount="1" falsecount="2"/>
+          <line num="7" count="3" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="3" type="cond" truecount="3" falsecount="1"/>
+          <line num="10" count="3" type="cond" truecount="2" falsecount="1"/>
+          <line num="11" count="3" type="stmt"/>
+          <line num="13" count="3" type="cond" truecount="2" falsecount="1"/>
+          <line num="14" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="3" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="17" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="14" type="cond" truecount="2" falsecount="0"/>
+          <line num="21" count="3" type="cond" truecount="2" falsecount="1"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="23" count="6" type="cond" truecount="4" falsecount="0"/>
+          <line num="24" count="2" type="stmt"/>
+          <line num="25" count="2" type="cond" truecount="3" falsecount="1"/>
+          <line num="26" count="2" type="cond" truecount="0" falsecount="2"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="2" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="38" count="14" type="stmt"/>
+          <line num="39" count="14" type="stmt"/>
+          <line num="42" count="2" type="stmt"/>
+          <line num="43" count="2" type="stmt"/>
+          <line num="47" count="3" type="stmt"/>
+          <line num="48" count="3" type="stmt"/>
+          <line num="52" count="2" type="stmt"/>
+          <line num="53" count="2" type="stmt"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="58" count="1" type="stmt"/>
+          <line num="59" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="70" count="2" type="stmt"/>
+          <line num="71" count="2" type="stmt"/>
+          <line num="72" count="2" type="stmt"/>
+          <line num="76" count="1" type="stmt"/>
+          <line num="77" count="1" type="stmt"/>
+          <line num="81" count="2" type="stmt"/>
+          <line num="82" count="2" type="stmt"/>
+          <line num="86" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="projects.tests">
+        <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/projects/tests/mocks.ts">
+          <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="4" type="stmt"/>
+          <line num="12" count="4" type="stmt"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="24" count="4" type="stmt"/>
+          <line num="28" count="4" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="storages">
+        <metrics statements="103" coveredstatements="86" conditionals="174" coveredconditionals="113" methods="51" coveredmethods="39"/>
+        <file name="storage.entity.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/storages/storage.entity.ts">
+          <metrics statements="19" coveredstatements="17" conditionals="44" coveredconditionals="27" methods="5" coveredmethods="3"/>
+          <line num="1" count="5" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="40" type="cond" truecount="3" falsecount="1"/>
+          <line num="3" count="40" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="40" type="cond" truecount="2" falsecount="1"/>
+          <line num="7" count="5" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="40" type="cond" truecount="3" falsecount="1"/>
+          <line num="14" count="5" type="stmt"/>
+          <line num="16" count="8" type="stmt"/>
+          <line num="17" count="8" type="stmt"/>
+          <line num="20" count="5" type="stmt"/>
+          <line num="24" count="5" type="stmt"/>
+          <line num="28" count="5" type="stmt"/>
+          <line num="32" count="5" type="stmt"/>
+          <line num="37" count="5" type="stmt"/>
+          <line num="41" count="5" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="46" count="5" type="stmt"/>
+          <line num="50" count="5" type="stmt"/>
+        </file>
+        <file name="storages.repository.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/storages/storages.repository.ts">
+          <metrics statements="32" coveredstatements="23" conditionals="56" coveredconditionals="38" methods="22" coveredmethods="15"/>
+          <line num="1" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="4" type="cond" truecount="3" falsecount="1"/>
+          <line num="3" count="4" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="4" type="cond" truecount="3" falsecount="0"/>
+          <line num="7" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="6" type="cond" truecount="3" falsecount="1"/>
+          <line num="10" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="11" count="4" type="stmt"/>
+          <line num="13" count="2" type="cond" truecount="2" falsecount="1"/>
+          <line num="14" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="4" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="11" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="7" type="cond" truecount="2" falsecount="0"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="28" count="3" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="43" count="3" type="stmt"/>
+          <line num="44" count="3" type="stmt"/>
+          <line num="45" count="3" type="stmt"/>
+          <line num="49" count="1" type="stmt"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="54" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="60" count="2" type="stmt"/>
+          <line num="68" count="2" type="stmt"/>
+        </file>
+        <file name="storages.service.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/storages/storages.service.ts">
+          <metrics statements="52" coveredstatements="46" conditionals="74" coveredconditionals="48" methods="24" coveredmethods="21"/>
+          <line num="1" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="2" count="1" type="cond" truecount="1" falsecount="3"/>
+          <line num="3" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="4" count="0" type="cond" truecount="0" falsecount="8"/>
+          <line num="5" count="1" type="cond" truecount="1" falsecount="2"/>
+          <line num="7" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="8" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="10" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="14" count="15" type="cond" truecount="2" falsecount="0"/>
+          <line num="15" count="12" type="stmt"/>
+          <line num="16" count="0" type="stmt"/>
+          <line num="17" count="25" type="cond" truecount="2" falsecount="0"/>
+          <line num="18" count="15" type="cond" truecount="2" falsecount="0"/>
+          <line num="21" count="1" type="cond" truecount="2" falsecount="1"/>
+          <line num="22" count="3" type="stmt"/>
+          <line num="23" count="15" type="cond" truecount="4" falsecount="0"/>
+          <line num="24" count="9" type="stmt"/>
+          <line num="25" count="3" type="cond" truecount="3" falsecount="1"/>
+          <line num="26" count="3" type="cond" truecount="0" falsecount="2"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="3" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="40" count="15" type="stmt"/>
+          <line num="41" count="15" type="stmt"/>
+          <line num="44" count="5" type="stmt"/>
+          <line num="45" count="5" type="stmt"/>
+          <line num="46" count="5" type="cond" truecount="2" falsecount="0"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="49" count="4" type="cond" truecount="4" falsecount="0"/>
+          <line num="50" count="1" type="stmt"/>
+          <line num="52" count="3" type="stmt"/>
+          <line num="56" count="2" type="stmt"/>
+          <line num="57" count="2" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="62" count="0" type="stmt"/>
+          <line num="66" count="3" type="stmt"/>
+          <line num="67" count="3" type="stmt"/>
+          <line num="68" count="3" type="stmt"/>
+          <line num="69" count="3" type="cond" truecount="1" falsecount="1"/>
+          <line num="70" count="0" type="stmt"/>
+          <line num="72" count="3" type="stmt"/>
+          <line num="73" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="74" count="1" type="stmt"/>
+          <line num="76" count="2" type="stmt"/>
+          <line num="77" count="2" type="stmt"/>
+          <line num="81" count="4" type="stmt"/>
+          <line num="82" count="4" type="stmt"/>
+          <line num="86" count="1" type="stmt"/>
+          <line num="87" count="1" type="stmt"/>
+          <line num="91" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="storages.tests">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="mocks.ts" path="/home/alex/PhpstormProjects/astra-storage/ProjectsService/src/components/storages/tests/mocks.ts">
+          <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="3" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+          <line num="14" count="3" type="stmt"/>
+          <line num="26" count="3" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

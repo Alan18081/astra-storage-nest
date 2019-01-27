@@ -1,11 +1,11 @@
 import { Messages, PaginatedResponse } from '@astra/common';
-import { InjectRepository } from '@nestjs/typeorm';
 import { Storage} from './storage.entity';
 import {StoragesRepository} from './storages.repository';
 import { Injectable } from '@nestjs/common';
 import { CreateStorageDto, FindStoragesListDto } from '@astra/common/dto';
-import { ProjectsRepository } from '../projects/projects.repository';
 import { RpcException } from '@nestjs/microservices';
+import {InjectRepository} from '@nestjs/typeorm';
+import {ProjectsService} from '../projects/projects.service';
 
 @Injectable()
 export class StoragesService {
@@ -13,18 +13,15 @@ export class StoragesService {
   constructor(
     @InjectRepository(StoragesRepository)
     private readonly storagesRepository: StoragesRepository,
-    @InjectRepository(ProjectsRepository)
-    private readonly projectsRepository: ProjectsRepository,
+    private readonly projectsService: ProjectsService,
   ) {}
 
   async findManyByProject({ projectId, userId, page, limit }: FindStoragesListDto): Promise<Storage[] | PaginatedResponse<Storage>> {
-    const project = await this.projectsRepository.findOneByUserId(projectId, userId);
+    const project = await this.projectsService.findOneByUserId(projectId, userId);
 
     if (!project) {
       throw new RpcException(Messages.INVALID_PERMISSIONS);
     }
-
-    console.log('Page', page, limit);
 
     if (page && limit) {
       return this.storagesRepository.findManyWithPagination({ projectId }, { page, limit });
@@ -41,9 +38,9 @@ export class StoragesService {
     return this.storagesRepository.findOneByPath(path);
   }
 
-  async createOne({ userId, ...data }: CreateStorageDto): Promise<Storage> {
+  async createOne({ projectId, userId, ...data }: CreateStorageDto): Promise<Storage> {
 
-    const project = await this.projectsRepository.findOneByUserId(data.projectId, userId);
+    const project = await this.projectsService.findById(projectId);
 
     if (!project) {
       throw new RpcException(Messages.PROJECT_NOT_FOUND);
@@ -55,12 +52,6 @@ export class StoragesService {
       throw new RpcException(Messages.STORAGE_PATH_ERROR);
     }
 
-    const storageByName = await this.storagesRepository.findOneByName(data.name);
-
-    if (storageByName) {
-      throw new RpcException(Messages.STORAGE_NAME_ERROR);
-    }
-
     const storage = new Storage({
       ...data,
     });
@@ -69,7 +60,7 @@ export class StoragesService {
   }
 
   async updateOne(id: number, data: Partial<Storage>): Promise<Storage | undefined> {
-    return this.storagesRepository.updateOne(id, data);
+    return this.storagesRepository.updateOneAndFind(id, data);
   }
 
   async removeById(id: number): Promise<void> {

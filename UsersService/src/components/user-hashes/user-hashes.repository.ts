@@ -5,7 +5,10 @@ import { UserHash } from './user-hash.entity';
 export class UserHashesRepository extends Repository<UserHash> {
 
   async findOneByHash(hash: string): Promise<UserHash | undefined> {
-    return await super.findOne({ hash });
+    return this.findOne({ hash });
   }
 
+  async removeById(id: number): Promise<void> {
+    await this.delete({ id });
+  }
 }
