@@ -1,13 +1,12 @@
 import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
-import {AuthService} from '../auth.service';
-import {Messages} from '../../../helpers/enums/messages.enum';
-import {IProjectAccount, JWT_SECRET, JwtProjectAccountPayload} from '@astra/common';
+import {IProjectAccount, JWT_SECRET, JwtProjectAccountPayload, Messages} from '@astra/common';
+import {ProjectAccountsService} from '../../project-accounts/project-accounts.service';
 
 @Injectable()
 export class JwtProjectAccountStrategy extends PassportStrategy(Strategy, 'jwtProjectAccount') {
-  constructor(private readonly authService: AuthService) {
+    constructor(private readonly projectAccountsService: ProjectAccountsService) {
     super({
       jwtFromRequest: ExtractJwt.fromUrlQueryParameter('accountToken'),
       secretOrKey: JWT_SECRET,
@@ -16,8 +15,7 @@ export class JwtProjectAccountStrategy extends PassportStrategy(Strategy, 'jwtPr
   }
 
   async validate(req: any, payload: JwtProjectAccountPayload): Promise<IProjectAccount> {
-    console.log(payload);
-    const projectAccount = await this.authService.validateProjectAccount(payload);
+    const projectAccount = await this.projectAccountsService.findOneByEmail(payload.projectId, payload.email, payload.ownerId);
     if (!projectAccount) {
       throw new UnauthorizedException(Messages.INVALID_TOKEN);
     }

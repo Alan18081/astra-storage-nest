@@ -1,13 +1,12 @@
 import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
-import {AuthService} from '../auth.service';
-import {Messages} from '../../../helpers/enums/messages.enum';
-import { IProject, JWT_SECRET, JwtProjectPayload } from '@astra/common';
+import { IProject, JWT_SECRET, JwtProjectPayload, Messages } from '@astra/common';
+import {ProjectsService} from '../../projects/projects.service';
 
 @Injectable()
 export class JwtProjectStrategy extends PassportStrategy(Strategy, 'jwtProject') {
-  constructor(private readonly authService: AuthService) {
+  constructor(private readonly projectsService: ProjectsService) {
     super({
       jwtFromRequest: ExtractJwt.fromUrlQueryParameter('projectToken'),
       secretOrKey: JWT_SECRET,
@@ -16,7 +15,7 @@ export class JwtProjectStrategy extends PassportStrategy(Strategy, 'jwtProject')
   }
 
   async validate(req: any, payload: JwtProjectPayload): Promise<IProject> {
-    const project = await this.authService.validateProject(payload);
+    const project = await this.projectsService.findOneByClientInfo(payload.clientId, payload.clientSecret);
     if (!project) {
       throw new UnauthorizedException(Messages.INVALID_TOKEN);
     }

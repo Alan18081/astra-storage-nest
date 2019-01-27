@@ -21,12 +21,6 @@ export class AuthService {
   @Client(createClientOptions(Queues.AUTH_SERVICE))
   private readonly authClient: ClientProxy;
 
-  constructor(
-    private readonly usersService: UsersService,
-    private readonly projectsService: ProjectsService,
-    private readonly projectAccountsService: ProjectAccountsService,
-  ) {}
-
   async login(dto: LoginDto): Promise<JwtUserResponse> {
     return this.authClient.send({ cmd: CommunicationCodes.LOGIN }, dto).toPromise();
   }
@@ -39,19 +33,6 @@ export class AuthService {
       return this.authClient
         .send({ cmd: CommunicationCodes.LOGIN_PROJECT_ACCOUNT }, { ...dto, projectId, userId })
         .toPromise();
-  }
-
-  async validateUser(payload: JwtUserPayload): Promise<IUser | undefined> {
-    return this.usersService.findOneByEmail(payload.email);
-  }
-
-  async validateProject({ clientId, clientSecret }: JwtProjectPayload): Promise<IProject | undefined> {
-    return this.projectsService.findOneByClientInfo(clientId, clientSecret);
-  }
-
-  async validateProjectAccount({ email, projectId, ownerId }: JwtProjectAccountPayload): Promise<IProjectAccount | undefined> {
-    console.log(email, projectId, ownerId);
-    return this.projectAccountsService.findOneByEmail(projectId, email, ownerId);
   }
 
   async exchangeToken(refreshToken: string): Promise<JwtUserResponse> {

@@ -1,5 +1,5 @@
 import { toNumber } from 'lodash';
-import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseFilters, UseGuards} from '@nestjs/common';
+import {Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards} from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
 import {IProject, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
