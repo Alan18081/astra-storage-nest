@@ -6,7 +6,6 @@ import { Queues } from '@astra/common/enums';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.SOCKETS_SERVICE));
-  // app.connectMicroservice(createClientOptions(Queues.SOCKETS_SERVICE));
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(() => console.log('SocketsService is running'));
 }

@@ -38,23 +38,24 @@ export class StoragesService {
     return this.storagesRepository.findOneByPath(path);
   }
 
-  async createOne({ projectId, userId, ...data }: CreateStorageDto): Promise<Storage> {
+  async createOne({ userId, ...payload}: CreateStorageDto): Promise<Storage> {
 
-    const project = await this.projectsService.findById(projectId);
+    const project = await this.projectsService.findById(payload.projectId);
 
     if (!project) {
       throw new RpcException(Messages.PROJECT_NOT_FOUND);
     }
 
-    const storageByPath = await this.storagesRepository.findOneByPath(data.path);
+    const storageByPath = await this.storagesRepository.findOneByPath(payload.path);
 
     if (storageByPath) {
       throw new RpcException(Messages.STORAGE_PATH_ERROR);
     }
 
     const storage = new Storage({
-      ...data,
+      ...payload,
     });
+
 
     return this.storagesRepository.createOne(storage, storage.projectId);
   }

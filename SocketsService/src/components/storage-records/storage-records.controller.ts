@@ -18,12 +18,7 @@ export class StorageRecordsController {
 
   @MessagePattern({ cmd: CommunicationCodes.SOCKET_UPDATED_STORAGE_RECORD })
   handleUpdate(payload: IStorageRecord): void {
-    this.storageRecordsGateway.emitCreatedEvent(payload);
-  }
-
-  @MessagePattern({ cmd: CommunicationCodes.SOCKET_REMOVED_STORAGE_RECORD })
-  handleRemove({ id }): void {
-    this.storageRecordsGateway.emitCreatedEvent(id);
+    this.storageRecordsGateway.emitUpdatedEvent(payload);
   }
 
 }

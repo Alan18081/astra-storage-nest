@@ -26,6 +26,7 @@
     "@types/mongoose": "^5.3.7",
     "amqp-connection-manager": "^2.3.0",
     "amqplib": "^0.5.3",
+    "bcrypt": "^3.0.3",
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
     "fastify-formbody": "^2.0.0",

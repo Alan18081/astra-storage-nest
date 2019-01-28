@@ -3,11 +3,15 @@ const { map } = require('rxjs/operators');
 
 const app = async () => {
     try {
-        const project = await astraStorage.initProject('x0gc7sb0a1', 'l3bxxnximo');
+        const project = await astraStorage.initProject('lu17xt757h', 'i0ukcdh536j');
         project.subscribeToStorageChanges('alex')
-          .pipe(map(data => {
+          .subscribe(data => {
               console.log(data);
-          }));
+          });
+        const storage = await project.getPublicStorage('alan');
+        await storage.createOne({
+            name: 'Alex',
+        })
     } catch (e) {
         console.log(e);
     }

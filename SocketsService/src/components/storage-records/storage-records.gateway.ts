@@ -1,22 +1,24 @@
 import { WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
-import { IStorageRecord } from '@astra/common';
-import { WsCodes } from '../../../../Common/src/enums/ws-codes.enum';
+import {Action} from '@astra/common/interfaces';
+import { WsCodes } from '@astra/common/enums';
+import { IStorageRecord } from '@astra/common/entities';
+import * as actions from './storage-records.actions';
 
-@WebSocketGateway()
+@WebSocketGateway(5001, { namespace: '/' })
 export class StorageRecordsGateway {
 
   @WebSocketServer()
   private readonly server: any;
 
+  private emitDataEvent(payload: Action) {
+    this.server.emit(WsCodes.DATA_CHANGED, payload)
+  }
+
   emitCreatedEvent(payload: IStorageRecord) {
-    this.server.emit(WsCodes.CREATED_STORAGE_RECORD, payload);
+    this.emitDataEvent(new actions.CreatedStorageRecordAction(payload));
   }
 
   emitUpdatedEvent(payload: IStorageRecord) {
-    this.server.emit(WsCodes.UPDATED_STORAGE_RECORD, payload);
-  }
-
-  emitRemovedEvent(id: string) {
-    this.server.emit(WsCodes.REMOVED_STORAGE_RECORD, { id });
+      this.emitDataEvent(new actions.UpdatedStorageRecordAction(payload));
   }
 }

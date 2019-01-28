@@ -81,9 +81,11 @@ export class Project {
 
   subscribeToStorageChanges(path: string): Observable<any> {
     return new Observable(observer => {
-      this.socket.on(WsCodes.DATA_CHANGED, (payload: Action) => {
-        observer.next(payload);
-      });
+        console.log('Observable');
+        this.socket.on(WsCodes.DATA_CHANGED, (payload: Action) => {
+          console.log('Socket event', payload);
+          observer.next(payload);
+        });
     });
   }
 
