@@ -7,7 +7,8 @@ export const mockProjectsClient = {
 };
 
 export const mockJwtService = {
-  sign() {}
+  sign() {},
+  decode() {},
 };
 
 export const mockHashService = {
@@ -23,4 +24,9 @@ export const mockProject = {
     storagesCount: 0,
     userId: 5,
     createdAt: new Date(),
+};
+
+export const mockJwtProjectPayload = {
+    clientId: 'some random str',
+    clientSecret: 'some random str',
 };

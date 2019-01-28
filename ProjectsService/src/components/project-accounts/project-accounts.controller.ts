@@ -52,12 +52,12 @@ export class ProjectAccountsController {
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT_ACCOUNT })
     @UseGuards(ValidProjectOwnerGuard)
     async removeOne({ id }: RemoveProjectAccountDto): Promise<void> {
-        await this.projectAccountsService.removeOne(id);
+        await this.projectAccountsService.removeById(id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.SDK_REMOVE_PROJECT_ACCOUNT })
     async removeOneSdk({ id }: RemoveProjectAccountDto): Promise<void> {
-        await this.projectAccountsService.removeOne(id);
+        await this.projectAccountsService.removeById(id);
     }
 
 }

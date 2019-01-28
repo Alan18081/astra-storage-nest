@@ -1,7 +1,14 @@
 import { Test } from '@nestjs/testing';
 import {UserAuthService} from '../user-auth.service';
 import {JwtService} from '@nestjs/jwt';
-import {mockHashService, mockJwtService, mockUsersClient, mockUser, mockRefreshTokensService} from './mocks';
+import {
+    mockHashService,
+    mockJwtService,
+    mockUsersClient,
+    mockUser,
+    mockRefreshTokensService,
+    mockJwtPayload,
+} from './mocks';
 import {HashService} from '@astra/common/services';
 import {LoginDto} from '@astra/common/dto';
 import {CommunicationCodes, JWT_EXPIRES, Messages} from '@astra/common';
@@ -126,7 +133,7 @@ describe('UserAuthService', () => {
                     async toPromise() {
                         return mockUser;
                     },
-                })
+                }),
             );
         });
 
@@ -185,4 +192,5 @@ describe('UserAuthService', () => {
             });
         });
     });
+
 });

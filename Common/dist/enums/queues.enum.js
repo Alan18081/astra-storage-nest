@@ -9,4 +9,5 @@ var Queues;
     Queues["DATA_SERVICE"] = "[Queue] Data Service";
     Queues["PAYMENTS_SERVICE"] = "[Queue] Payments Service";
     Queues["EMAILS_SERVICE"] = "[Queue] Emails Service";
+    Queues["SOCKETS_SERVICE"] = "[Queue] Sockets Service";
 })(Queues = exports.Queues || (exports.Queues = {}));

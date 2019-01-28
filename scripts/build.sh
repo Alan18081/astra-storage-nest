@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 MICROSERVICES=(
     API
     AuthService
@@ -5,6 +6,8 @@ MICROSERVICES=(
     ProjectsService
     DataService
     EmailsService
+    SocketsService
+    SDK
 )
 
 for i in ${MICROSERVICES[@]}; do

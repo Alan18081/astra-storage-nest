@@ -11,3 +11,5 @@ __export(require("./storage-type.enum"));
 __export(require("./template-types.enum"));
 __export(require("./hash-types.enum"));
 __export(require("./email-titles.enum"));
+__export(require("./ws-codes.enum"));
+__export(require("./data-actions.enum"));

@@ -26,7 +26,7 @@ export class SdkStorageRecordsController {
 
     @MessagePattern({ cmd: CommunicationCodes.SDK_GET_STORAGE_RECORD })
     async findOne(payload: FindStorageRecordDto): Promise<StorageRecord | undefined> {
-        return this.storageRecordsService.findOneById(payload.id);
+        return this.storageRecordsService.findById(payload.id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.SDK_CREATE_STORAGE_RECORD })
@@ -36,12 +36,12 @@ export class SdkStorageRecordsController {
 
     @MessagePattern({ cmd: CommunicationCodes.SDK_UPDATE_STORAGE_RECORD })
     async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
-        return this.storageRecordsService.updateOne(payload);
+        return this.storageRecordsService.updateOne(payload.id, payload.data);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.SDK_REMOVE_STORAGE_RECORD })
     async removeOne(payload: RemoveStorageRecordDto): Promise<void> {
-        await this.storageRecordsService.removeOne(payload.id);
+        await this.storageRecordsService.removeById(payload.id);
     }
 
 }

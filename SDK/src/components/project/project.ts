@@ -2,12 +2,16 @@ import { ProjectAccount } from '../project-account/project-account';
 import { apiRequest } from '../../helpers/api-request';
 import { PublicStorage } from '../storage/public-storage';
 import { ProtectedStorage } from '../storage/protected-storage';
-import { StorageType } from '@astra/common/enums';
+import { StorageType, WsCodes } from '@astra/common/enums';
+import { Observable } from 'rxjs';
+import * as SocketIOClient from 'socket.io-client';
+import { Action } from '@astra/common/interfaces';
 
 export class Project {
 
   constructor(
     private readonly token: string,
+    private readonly socket: SocketIOClient.Socket,
   ) {}
 
   async register(login: string, email: string, password: string): Promise<void> {
@@ -73,6 +77,14 @@ export class Project {
   async getProtectedStorage(path: string, projectAccount: ProjectAccount): Promise<ProtectedStorage> {
     await this.checkIsStorageExists(path, StorageType.PROTECTED);
     return new ProtectedStorage(path, projectAccount.getToken());
+  }
+
+  subscribeToStorageChanges(path: string): Observable<any> {
+    return new Observable(observer => {
+      this.socket.on(WsCodes.DATA_CHANGED, (payload: Action) => {
+        observer.next(payload);
+      });
+    });
   }
 
 }

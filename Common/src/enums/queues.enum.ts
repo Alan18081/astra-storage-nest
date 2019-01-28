@@ -12,4 +12,6 @@ export enum Queues {
     PAYMENTS_SERVICE = '[Queue] Payments Service',
 
     EMAILS_SERVICE = '[Queue] Emails Service',
+  
+    SOCKETS_SERVICE = '[Queue] Sockets Service',
 }

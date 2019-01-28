@@ -12,7 +12,7 @@ export enum CommunicationCodes {
 
     LOGIN = '[AuthService] Login User',
     LOGIN_PROJECT = '[AuthService] Login Project',
-    AUTH_BY_TOKEN = '[AuthService] Auth By Token',
+    AUTH_PROJECT_BY_TOKEN = '[AuthService] Auth Project By Token',
 
     GET_PROJECTS_LIST = '[ProjectsService] Get Projects List',
     GET_PROJECTS_LIST_BY_USER = '[ProjectsService] Get Projects By User',
@@ -72,4 +72,8 @@ export enum CommunicationCodes {
     SDK_UPDATE_STORAGE_RECORD = '{SDK} [DataService] Update Storage Record',
     SDK_REMOVE_STORAGE_RECORD = '{SDK} [DataService] Remove Storage Record',
     SDK_REMOVE_STORAGE_RECORDS_LIST = '{SDK} [DataService] Remove Storage Records List',
+
+    SOCKET_CREATED_STORAGE_RECORD = '[SocketsService] Created Storage Record',
+    SOCKET_UPDATED_STORAGE_RECORD = '[SocketsService] Update Storage Record',
+    SOCKET_REMOVED_STORAGE_RECORD = '[SocketsService] Removed Storage Record',
 }

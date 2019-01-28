@@ -7,7 +7,8 @@ export const mockUsersClient = {
 };
 
 export const mockJwtService = {
-  sign() {}
+  sign() {},
+  decode() {},
 };
 
 export const mockHashService = {
@@ -25,4 +26,9 @@ export const mockUser = {
     lastName: 'Morgan',
     email: 'gogunov00@gmail.com',
     password: 'hello',
+};
+
+export const mockJwtPayload = {
+  id: 20,
+  email: 'alan@gmail.com',
 };

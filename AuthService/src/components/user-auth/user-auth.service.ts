@@ -1,6 +1,15 @@
 import {Injectable} from '@nestjs/common';
 import {ClientProxy, Client, RpcException} from '@nestjs/microservices';
-import {CommunicationCodes, IUser, JWT_EXPIRES, JwtUserResponse, Messages, Queues} from '@astra/common';
+import {
+    CommunicationCodes,
+    IUser,
+    JWT_EXPIRES,
+    JwtUserPayload,
+    JwtUserResponse,
+    Messages,
+    Queues,
+} from '@astra/common';
+import { isString } from 'lodash';
 import {HashService} from '@astra/common/services';
 import {JwtService} from '@nestjs/jwt';
 import {LoginDto} from '@astra/common/dto';
@@ -65,4 +74,6 @@ export class UserAuthService {
             expiresIn: JWT_EXPIRES,
         };
     }
+
+
 }

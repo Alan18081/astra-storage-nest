@@ -1,9 +1,18 @@
 import { Injectable } from '@nestjs/common';
-import { CommunicationCodes, IProject, JwtProjectResponse, Messages, Queues } from '@astra/common';
+import {
+  CommunicationCodes,
+  IProject,
+  IUser, JwtProjectPayload,
+  JwtProjectResponse,
+  JwtUserPayload,
+  Messages,
+  Queues
+} from '@astra/common';
 import { JwtService } from '@nestjs/jwt';
 import { LoginProjectDto } from '@astra/common/dto';
 import { createClientOptions } from '@astra/common/helpers';
 import { ClientProxy, Client, RpcException } from '@nestjs/microservices';
+import { isString } from 'util';
 
 @Injectable()
 export class ProjectAuthService {
@@ -28,6 +37,18 @@ export class ProjectAuthService {
     return {
       token,
     };
+  }
+
+  async authByToken(token: string): Promise<IUser | undefined> {
+    const payload = this.jwtService.decode(token);
+    if (!payload || isString(payload)) {
+      throw new RpcException(Messages.INVALID_TOKEN);
+    }
+    const { clientId, clientSecret } = payload as JwtProjectPayload;
+
+    return this.projectsClient
+      .send({ cmd: CommunicationCodes.GET_PROJECT_BY_CLIENT_INFO }, { clientId, clientSecret })
+      .toPromise();
   }
 
 }

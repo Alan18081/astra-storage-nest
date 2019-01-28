@@ -1,21 +1,27 @@
 import { Controller } from '@nestjs/common';
-import { PaginatedResponse } from '@astra/common';
-import {StorageRecordsService} from './storage-records.service';
-import {CommunicationCodes} from '@astra/common';
-import { MessagePattern } from '@nestjs/microservices';
+import { CommunicationCodes, PaginatedResponse, Queues } from '@astra/common';
+import { StorageRecordsService } from './storage-records.service';
+import { ClientProxy, MessagePattern, Client } from '@nestjs/microservices';
 import {
     CreateStorageRecordDto,
     FindStorageRecordDto,
-    FindStorageRecordsListDto, RemoveStorageRecordDto,
+    FindStorageRecordsListDto,
+    RemoveStorageRecordDto,
     UpdateStorageRecordDto,
 } from '@astra/common/dto';
 import { StorageRecord } from './storage-record.entity';
+import { createClientOptions } from '@astra/common/helpers';
+import { SerializerService } from '@astra/common/services';
 
 @Controller()
 export class StorageRecordsController {
 
+    @Client(createClientOptions(Queues.SOCKETS_SERVICE))
+    private readonly socketsClient: ClientProxy;
+
     constructor(
       private readonly storageRecordsService: StorageRecordsService,
+      private readonly serializerService: SerializerService,
     ) {}
 
     @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST })
@@ -30,17 +36,26 @@ export class StorageRecordsController {
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD })
     async createOne(payload: CreateStorageRecordDto): Promise<StorageRecord> {
-        return this.storageRecordsService.createOne(payload);
+        const storageRecord = await this.storageRecordsService.createOne(payload);
+        const preparedRecord = this.serializerService.exclude(storageRecord);
+        this.socketsClient
+          .send({ cmd: CommunicationCodes.SOCKET_CREATED_STORAGE_RECORD }, { path: storageRecord.path, record: preparedRecord });
+        return storageRecord;
     }
 
     @MessagePattern({ cmd: CommunicationCodes.UPDATE_STORAGE_RECORD })
     async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
-        return this.storageRecordsService.updateOne(payload.id, payload.data);
+        const storageRecord = await this.storageRecordsService.updateOne(payload.id, payload.data);
+        const preparedRecord = this.serializerService.exclude(storageRecord);
+        this.socketsClient
+          .send({ cmd: CommunicationCodes.SOCKET_CREATED_STORAGE_RECORD }, { path: storageRecord.path, record: preparedRecord });
+        return storageRecord;
+
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD })
     async removeOne(payload: RemoveStorageRecordDto): Promise<void> {
-        await this.storageRecordsService.removeOne(payload.id);
+        await this.storageRecordsService.removeById(payload.id);
     }
 
 }

@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import {ProjectAuthService} from '../project-auth.service';
 import {JwtService} from '@nestjs/jwt';
-import {mockHashService, mockJwtService, mockProject, mockProjectsClient} from './mocks';
+import { mockHashService, mockJwtProjectPayload, mockJwtService, mockProject, mockProjectsClient } from './mocks';
 import {HashService} from '@astra/common/services';
 import {LoginProjectDto} from '@astra/common/dto';
 import {CommunicationCodes, Messages} from '@astra/common';
@@ -78,6 +78,53 @@ describe('ProjectAuthService', () => {
             jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
             jest.spyOn(mockJwtService, 'sign').mockImplementation( () => accessToken);
             expect(await projectAuthService.login(payload)).toEqual({ token: accessToken });
+        });
+    });
+
+    describe('authByToken', () => {
+        const token = 'some jwt token';
+
+        beforeEach(() => {
+            jest.spyOn(mockProjectsClient, 'send').mockImplementation(
+              () => ({
+                  async toPromise() {
+                      return mockProject;
+                  },
+              }),
+            );
+        });
+
+        it('should call jwtService.decode', async () => {
+            const spy = jest.spyOn(mockJwtService, 'decode').mockImplementation(() => mockJwtProjectPayload);
+            await projectAuthService.authByToken(token);
+            expect(spy).toBeCalledWith(token);
+        });
+
+        it('should throw an exception if decoded result is null', async () => {
+            jest.spyOn(mockJwtService, 'decode').mockImplementation(async () => null);
+            try {
+                await projectAuthService.authByToken(token);
+                expect(false);
+            } catch (e) {
+                expect(JSON.stringify(e)).toEqual(JSON.stringify(new RpcException(Messages.INVALID_TOKEN)));
+            }
+        });
+
+        it('should throw an exception if decoded result is string', async () => {
+            jest.spyOn(mockJwtService, 'decode').mockImplementation(() => 'some string');
+            try {
+                await projectAuthService.authByToken(token);
+                expect(false);
+            } catch (e) {
+                expect(JSON.stringify(e)).toEqual(JSON.stringify(new RpcException(Messages.INVALID_TOKEN)));
+            }
+        });
+
+        it('should call projectsClient.send', async () => {
+            jest.spyOn(mockJwtService, 'decode').mockImplementation(() => mockJwtProjectPayload);
+            const spy = jest.spyOn(mockProjectsClient, 'send');
+            await projectAuthService.authByToken(token);
+            expect(spy).toBeCalledWith({ cmd: CommunicationCodes.GET_PROJECT_BY_CLIENT_INFO }, { ...mockJwtProjectPayload });
         });
     });
 });

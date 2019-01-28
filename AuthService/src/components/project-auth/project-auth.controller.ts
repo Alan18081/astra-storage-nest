@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { ProjectAuthService } from './project-auth.service';
-import { CommunicationCodes, JwtProjectResponse } from '@astra/common';
-import { LoginProjectDto } from '@astra/common/dto';
+import { CommunicationCodes, IUser, JwtProjectResponse } from '@astra/common';
+import { AuthByTokenDto, LoginProjectDto } from '@astra/common/dto';
 import { MessagePattern } from '@nestjs/microservices';
 
 @Controller()
@@ -14,6 +14,11 @@ export class ProjectAuthController {
   @MessagePattern({ cmd: CommunicationCodes.LOGIN_PROJECT })
   async login(dto: LoginProjectDto): Promise<JwtProjectResponse> {
     return this.projectAuthService.login(dto);
+  }
+
+  @MessagePattern({ cmd: CommunicationCodes.AUTH_PROJECT_BY_TOKEN })
+  async authByToken(dto: AuthByTokenDto): Promise<IUser | undefined> {
+    return this.projectAuthService.authByToken(dto.token);
   }
 
 }

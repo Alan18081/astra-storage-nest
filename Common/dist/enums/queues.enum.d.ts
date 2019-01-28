@@ -5,5 +5,6 @@ export declare enum Queues {
     PROJECTS_SERVICE = "[Queue] Projects Service",
     DATA_SERVICE = "[Queue] Data Service",
     PAYMENTS_SERVICE = "[Queue] Payments Service",
-    EMAILS_SERVICE = "[Queue] Emails Service"
+    EMAILS_SERVICE = "[Queue] Emails Service",
+    SOCKETS_SERVICE = "[Queue] Sockets Service"
 }
