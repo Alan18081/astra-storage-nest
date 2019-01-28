@@ -81,10 +81,10 @@ export class Project {
 
   subscribeToStorageChanges(path: string): Observable<any> {
     return new Observable(observer => {
-        console.log('Observable');
         this.socket.on(WsCodes.DATA_CHANGED, (payload: Action) => {
-          console.log('Socket event', payload);
-          observer.next(payload);
+          if (payload.payload.path === path) {
+              observer.next(payload);
+          }
         });
     });
   }
