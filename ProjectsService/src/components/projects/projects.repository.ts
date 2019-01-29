@@ -26,8 +26,8 @@ export class ProjectsRepository extends Repository<Project> {
     return this.findById(id);
   }
 
-  async removeById(id: number, userId: number): Promise<void> {
-    await this.delete({ id, userId });
+  async removeById(id: number): Promise<void> {
+    await this.delete({ id });
   }
 
   async incrementStoragesCount(id: number): Promise<Project | undefined> {

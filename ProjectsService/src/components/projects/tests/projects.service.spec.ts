@@ -119,8 +119,8 @@ describe('ProjectsService', () => {
         };
         it('should call projectsRepository.removeById', async () => {
             const spy = jest.spyOn(mockProjectsRepository, 'removeById').mockImplementation(async () => mockProject);
-            await projectsService.removeById(payload.id, payload.userId);
-            expect(spy).toBeCalledWith(payload.id, payload.userId);
+            await projectsService.removeById(payload.id);
+            expect(spy).toBeCalledWith(payload.id);
         });
     });
 

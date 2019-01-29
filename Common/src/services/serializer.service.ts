@@ -4,7 +4,7 @@ import { classToPlain } from 'class-transformer';
 @Injectable()
 export class SerializerService {
 
-  exclude(obj: object): object {
+  exclude(obj: any): any {
     return classToPlain(obj);
   }
 

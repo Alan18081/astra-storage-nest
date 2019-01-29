@@ -1,5 +1,5 @@
 import {Column, Entity, ObjectID, ObjectIdColumn} from 'typeorm';
-import {IStorageRecord} from '@astra/common';
+import {IStorageRecord} from '@astra/common/entities';
 import {Exclude, Transform} from 'class-transformer';
 
 @Entity()

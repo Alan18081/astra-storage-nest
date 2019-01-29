@@ -8,6 +8,6 @@ export const createClientOptions = (queue: Queues): RmqOptions => {
     options: {
       queue,
       urls: [RABBIT_MQ_URL],
-    }
-  }
+    },
+  };
 };

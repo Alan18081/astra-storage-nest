@@ -11,6 +11,6 @@ export class ValidProjectOwnerGuard implements CanActivate {
 
     canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
         const data = context.switchToRpc().getData();
-        return this.projectsService.isValidOwner(data.projectId, data.userId);
+        return this.projectsService.isValidOwner(data.id, data.userId);
     }
 }

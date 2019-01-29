@@ -1,5 +1,6 @@
 import { Controller } from '@nestjs/common';
-import { CommunicationCodes, PaginatedResponse, Queues } from '@astra/common';
+import { CommunicationCodes, Queues } from '@astra/common/enums';
+import { PaginatedResponse } from '@astra/common/interfaces';
 import { StorageRecordsService } from './storage-records.service';
 import { ClientProxy, MessagePattern, Client } from '@nestjs/microservices';
 import {

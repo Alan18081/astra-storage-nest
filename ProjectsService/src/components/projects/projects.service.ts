@@ -47,12 +47,12 @@ export class ProjectsService {
         return this.projectsRepository.findOneByClientInfo(dto.clientId, dto.clientSecret);
     }
 
-    async updateOne({ id, userId, ...data }: UpdateProjectDto): Promise<Project | undefined> {
+    async updateOne({ id, ...data }: UpdateProjectDto): Promise<Project | undefined> {
         return this.projectsRepository.updateOneAndFind(id, { ...data });
     }
 
-    async removeById(id: number, userId: number): Promise<void> {
-        await this.projectsRepository.removeById(id, userId);
+    async removeById(id: number): Promise<void> {
+        await this.projectsRepository.removeById(id);
     }
 
     async isValidOwner(projectId: number, userId: number): Promise<boolean> {

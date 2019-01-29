@@ -1,4 +1,4 @@
-import {ClassSerializerInterceptor, Controller, UseFilters, UseInterceptors} from '@nestjs/common';
+import {ClassSerializerInterceptor, Controller, UseInterceptors} from '@nestjs/common';
 import {MessagePattern} from '@nestjs/microservices';
 import {
     CommunicationCodes,
@@ -28,6 +28,7 @@ export class UsersController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USER })
+    @UseInterceptors(ClassSerializerInterceptor)
     async findOne(dto: FindUserDto): Promise<User | undefined> {
         return this.usersService.findById(dto.id);
     }
@@ -43,6 +44,7 @@ export class UsersController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.CREATE_USER })
+    @UseInterceptors(ClassSerializerInterceptor)
     async createOne(dto: CreateUserDto): Promise<User> {
         return this.usersService.createOne(dto);
     }

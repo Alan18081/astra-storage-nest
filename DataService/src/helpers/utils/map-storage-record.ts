@@ -1,12 +1,5 @@
-import {IStorageRecord} from '@astra/common';
+import {IStorageRecord} from '@astra/common/entities';
 
-export const mapStorageRecord = (data: IStorageRecord[] | IStorageRecord) => {
-    if (!data) {
-        return data;
-    }
-    if (Array.isArray(data)) {
-        return data.map(item => ({ id: item.id, ...item.data }));
-    } else {
-        return { id: data.id, ...data.data };
-    }
+export const mapStorageRecord = (record: IStorageRecord) => {
+  return { id: record.id, ...record.data };
 };

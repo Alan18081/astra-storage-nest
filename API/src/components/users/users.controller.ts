@@ -1,4 +1,16 @@
-import {Body, Controller, Delete, Get, Param, Post, Put, Query, UseFilters, UseGuards} from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  HttpCode, HttpStatus,
+  Param,
+  Post,
+  Put,
+  Query,
+  UseFilters,
+  UseGuards
+} from '@nestjs/common';
 import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
 import { AuthGuard } from '@nestjs/passport';
 import { UsersService } from './users.service';
@@ -29,6 +41,7 @@ export class UsersController {
   }
 
   @Post('')
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({ title: 'Create new user' })
   createOne(@Body() dto: CreateUserDto): Promise<IUser> {
     return this.usersService.createOne(dto);

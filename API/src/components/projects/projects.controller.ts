@@ -1,5 +1,17 @@
 import { toNumber } from 'lodash';
-import {Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards} from '@nestjs/common';
+import {
+    Body,
+    Controller,
+    Delete,
+    Get,
+    HttpCode,
+    HttpStatus,
+    Param,
+    Post,
+    Put,
+    UseFilters,
+    UseGuards
+} from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
 import {IProject, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
@@ -31,6 +43,7 @@ export class ProjectsController {
     }
 
     @Post('')
+    @HttpCode(HttpStatus.OK)
     @ApiOperation({ title: 'Create new project' })
     async createOne(@ReqUser() user: IUser, @Body() dto: CreateProjectDto): Promise<IProject> {
         return this.projectsService.createOne(user.id, dto);

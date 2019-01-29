@@ -1,19 +1,13 @@
-import {Injectable, UnauthorizedException} from '@nestjs/common';
+import {Injectable} from '@nestjs/common';
 import {
     Queues,
-    IUser,
     CommunicationCodes,
     JwtUserResponse,
-    Messages,
-    JwtProjectPayload,
-    JwtProjectResponse, IProject, JwtProjectAccountPayload, IProjectAccount, JwtUserPayload, JwtProjectAccountResponse,
+    JwtProjectResponse, JwtProjectAccountResponse,
 } from '@astra/common';
-import { LoginDto, LoginProjectDto, SetNewPasswordDto } from '@astra/common/dto';
+import { LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { createClientOptions } from '@astra/common/helpers';
-import { UsersService } from '../users/users.service';
-import { ProjectsService } from '../projects/projects.service';
-import { ProjectAccountsService } from '../project-accounts/project-accounts.service';
 
 @Injectable()
 export class AuthService {

@@ -1,6 +1,6 @@
 import {CommunicationCodes} from '@astra/common';
 import {ProjectsService} from './projects.service';
-import {Controller, UseFilters} from '@nestjs/common';
+import { Controller, UseFilters, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
 import { Project } from './project.entity';
 import {
@@ -10,9 +10,11 @@ import {
     FindProjectsListByUserDto, RemoveProjectDto, UpdateProjectDto
 } from '@astra/common/dto';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';
+import { ValidProjectOwnerGuard } from '../../helpers/guards/valid-project-owner.guard';
 
 @Controller()
 @UseFilters(ExceptionFilter)
+
 export class ProjectsController {
 
     constructor(
@@ -30,8 +32,9 @@ export class ProjectsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT })
+    @UseGuards(ValidProjectOwnerGuard)
     async findOne(dto: FindProjectDto): Promise<Project | undefined> {
-        return this.projectsService.findById(dto);
+        return this.projectsService.findById(dto.id);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_BY_CLIENT_INFO })
@@ -45,13 +48,15 @@ export class ProjectsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.UPDATE_PROJECT })
+    @UseGuards(ValidProjectOwnerGuard)
     async updateOne(dto: UpdateProjectDto): Promise<Project | undefined> {
         return this.projectsService.updateOne(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT })
-    async removeOne({ id, userId }: RemoveProjectDto): Promise<void> {
-        await this.projectsService.removeOne(id, userId);
+    @UseGuards(ValidProjectOwnerGuard)
+    async removeOne({ id }: RemoveProjectDto): Promise<void> {
+        await this.projectsService.removeById(id);
     }
 
 

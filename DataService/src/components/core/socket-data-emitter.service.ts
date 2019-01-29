@@ -1,6 +1,6 @@
 import {Injectable} from '@nestjs/common';
-import {CommunicationCodes, IStorageRecord} from '@astra/common';
-import {Queues} from '@astra/common/enums';
+import {IStorageRecord} from '@astra/common/entities';
+import {Queues, CommunicationCodes} from '@astra/common/enums';
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {createClientOptions} from '@astra/common/helpers';
 import {SerializerService} from '@astra/common/services';
