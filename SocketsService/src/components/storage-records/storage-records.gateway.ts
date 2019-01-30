@@ -11,7 +11,7 @@ export class StorageRecordsGateway {
   private readonly server: any;
 
   private emitDataEvent(payload: Action) {
-    this.server.emit(WsCodes.DATA_CHANGED, payload)
+    this.server.emit(WsCodes.DATA_CHANGED, payload);
   }
 
   emitCreatedEvent(payload: IStorageRecord) {
@@ -20,5 +20,9 @@ export class StorageRecordsGateway {
 
   emitUpdatedEvent(payload: IStorageRecord) {
       this.emitDataEvent(new actions.UpdatedStorageRecordAction(payload));
+  }
+
+  emitRemovedEvent(id: number) {
+      this.emitDataEvent(new actions.UpdatedStorageRecordAction({ id }));
   }
 }

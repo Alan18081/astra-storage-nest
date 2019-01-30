@@ -17,6 +17,7 @@ import { UsersService } from './users.service';
 import { IUser } from '../../../../Common/src/entities';
 import {CreateUserDto, FindUsersListDto} from '@astra/common/dto';
 import {ApiExceptionFilter} from '../../helpers/filters/api.filter';
+import {ReqUser} from '../../helpers/decorators/user.decorator';
 
 @Controller('users')
 @UseFilters(ApiExceptionFilter)
@@ -31,6 +32,13 @@ export class UsersController {
   @ApiOperation({ title: 'Find list of users' })
   findMany(@Query() dto: FindUsersListDto): Promise<IUser[]> {
     return this.usersService.findMany(dto);
+  }
+
+  @Get('profile')
+  @UseGuards(AuthGuard('jwt'))
+  @ApiOperation({ title: 'Find user by token' })
+  findProfile(@ReqUser() user: IUser): Promise<IUser | undefined> {
+    return this.usersService.findOne({ id: user.id });
   }
 
   @Get(':id')

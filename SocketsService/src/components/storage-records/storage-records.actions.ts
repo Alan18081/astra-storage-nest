@@ -16,9 +16,9 @@ export class UpdatedStorageRecordAction implements Action {
   ) {}
 }
 
-export class RemovedStoragerecordAction implements Action {
+export class RemovedStorageRecordAction implements Action {
   readonly type = DataActions.REMOVED_STORAGE_RECORD;
   constructor(
-    public payload: IStorageRecord,
+    public payload: { id: string },
   ) {}
 }

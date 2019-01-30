@@ -25,6 +25,7 @@ export class AuthController {
   ) {}
 
   @Post('login')
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({ title: 'Login for generating access token' })
   @HttpCode(HttpStatus.OK)
   async login(@Body() dto: LoginDto): Promise<JwtUserResponse> {
@@ -32,12 +33,14 @@ export class AuthController {
   }
 
   @Post('login/project')
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({ title: 'Login project for generating project access token' })
   async loginProject(@Body() dto: LoginProjectDto): Promise<JwtProjectResponse> {
     return this.authService.loginProject(dto);
   }
 
   @Post('login/projectAccount')
+  @HttpCode(HttpStatus.OK)
   @UseGuards(AuthGuard('jwtProject'))
   @ApiOperation({ title: 'Login project account for generation access token' })
   async loginProjectAccount(

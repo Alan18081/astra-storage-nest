@@ -21,4 +21,9 @@ export class StorageRecordsController {
     this.storageRecordsGateway.emitUpdatedEvent(payload);
   }
 
+  @MessagePattern({ cmd: CommunicationCodes.SOCKET_REMOVED_STORAGE_RECORD })
+  handleRemove(payload: { id: number }): void {
+      this.storageRecordsGateway.emitRemovedEvent(payload);
+  }
+
 }
