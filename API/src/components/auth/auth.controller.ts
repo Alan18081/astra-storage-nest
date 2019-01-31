@@ -1,6 +1,6 @@
 import {
-  Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
-  HttpCode, HttpStatus, Param, UseFilters,
+    Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
+    HttpCode, HttpStatus, Param, UseFilters, ParseIntPipe,
 } from '@nestjs/common';
 import { ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Response } from 'express';
@@ -66,15 +66,15 @@ export class AuthController {
   @ApiOperation({ title: 'Callback for google authentication' })
   googleLoginCallback(@ReqUser() user: IUser | null, @Res() res: Response): void {
     if (user) {
-      res.redirect(`/user-auth/google/success?userId=${user.id}`);
+      res.redirect(`/auth/google/success?userId=${user.id}`);
     } else {
-      res.redirect('/user-auth/google/fail');
+      res.redirect('/auth/google/fail');
     }
   }
 
   @Get('google/success')
   @ApiOperation({ title: 'Google success authentication' })
-  async googleSuccess(@Query('userId') userId: number): Promise<JwtUserResponse | void> {
+  async googleSuccess(@Query('userId', new ParseIntPipe()) userId: number): Promise<JwtUserResponse | void> {
     const user = await this.usersService.findOne({ id: userId });
     if (user) {
       return await this.authService.login(user);
