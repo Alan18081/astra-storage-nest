@@ -41,7 +41,7 @@ export class ProjectAccountsService {
 
     async createOne(payload: CreateProjectAccountDto): Promise<ProjectAccount> {
         const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email, payload.projectId);
-
+        console.log(payload, projectAccount);
         if (projectAccount) {
             throw new RpcException(Messages.USER_ALREADY_EXISTS);
         }

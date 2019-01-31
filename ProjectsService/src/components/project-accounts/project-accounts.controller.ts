@@ -29,6 +29,7 @@ export class ProjectAccountsController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT })
     @UseGuards(ValidProjectOwnerGuard)
+    @UseInterceptors(ClassSerializerInterceptor)
     async findOne(dto: FindProjectAccountDto): Promise<ProjectAccount | undefined> {
         return this.projectAccountsService.findById(dto.id);
     }
