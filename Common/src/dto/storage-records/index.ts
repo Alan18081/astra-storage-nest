@@ -9,3 +9,5 @@ export * from './find-storage-records-list-by-account.dto';
 export * from './update-storage-record.dto';
 
 export * from './remove-storage-record.dto';
+
+export * from './remove-storage-records-list-by-storage.dto';

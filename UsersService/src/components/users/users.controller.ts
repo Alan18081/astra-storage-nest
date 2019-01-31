@@ -59,7 +59,7 @@ export class UsersController {
         return this.usersService.updateOne(dto.id, dto);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.REMOVE_USER} )
+    @MessagePattern({ cmd: CommunicationCodes.REMOVE_USER })
     async removeOne(dto: RemoveUserDto): Promise<void> {
         await this.usersService.removeById(dto.id);
     }

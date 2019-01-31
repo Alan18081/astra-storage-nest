@@ -96,22 +96,6 @@ export class AuthController {
     await this.usersService.changePassword(user.id, payload.oldPassword, payload.newPassword);
 
   }
-  //
-  // @Get('verifyEmail')
-  // @HttpCode(HttpStatus.ACCEPTED)
-  // @UseGuards(AuthGuard('jwt'))
-  // @ApiBearerAuth()
-  // @ApiOperation({ title: 'Verify your email' })
-  // async verifyEmail(@ReqUser() user: IUser): Promise<void> {
-  //   await this.authService.verifyEmail(user);
-  // }
-  //
-  // @Get('verifyEmail/hash/:hash')
-  // @HttpCode(HttpStatus.ACCEPTED)
-  // @ApiOperation({ title: 'Route to which you will be redirected when click btn in your email' })
-  // async verifyEmailHash(@Param('hash') hash: string): Promise<void> {
-  //   console.log(hash);
-  // }
 
   @Post('resetPassword')
   @HttpCode(HttpStatus.ACCEPTED)
@@ -121,6 +105,7 @@ export class AuthController {
   }
 
   @Get('resetPassword/hash/:hash')
+  @HttpCode(HttpStatus.OK)
   @ApiOperation({ title: 'Verify reset password hash' })
   async verifyResetPasswordHash(@Param('hash') hash: string): Promise<void> {
     await this.usersService.verifyResetPasswordHash(hash);

@@ -31,11 +31,15 @@ export class StorageRecordsRepository extends MongoRepository<StorageRecord> {
     }
 
     async updateOneAndFind(id: string, data: Partial<StorageRecord>): Promise<StorageRecord | undefined> {
-      const result = await this.findOneAndUpdate({ _id: new ObjectId(id) }, { $set: { data }});
-      return result.value;
+      await this.updateOne({ _id: new ObjectId(id) }, { $set: { data }});
+      return this.findById(id);
     }
 
     async removeById(id: string): Promise<void> {
       await this.deleteOne({ _id: new ObjectId(id) });
+    }
+
+    async removeByStorage(storageId: number): Promise<void> {
+      await this.deleteMany({ storageId });
     }
 }

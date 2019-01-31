@@ -19,16 +19,9 @@ export class ProjectAccountsService {
       @InjectRepository(ProjectAccountsRepository)
       private readonly projectAccountsRepository: ProjectAccountsRepository,
       private readonly hashService: HashService,
-      private readonly projectsService: ProjectsService,
     ) {}
 
     async findMany({ page, limit, userId, projectId }: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
-        const project = await this.projectsService.findOneByUserId(projectId, userId);
-
-        if (!project) {
-            throw new RpcException(Messages.INVALID_PERMISSIONS);
-        }
-
         if (page && limit) {
             return await this.projectAccountsRepository.findManyWithPagination({ projectId }, { page, limit });
         }
@@ -37,7 +30,9 @@ export class ProjectAccountsService {
     }
 
     async findById(id: number): Promise<ProjectAccount | undefined> {
-        return this.projectAccountsRepository.findById(id);
+        const res = await this.projectAccountsRepository.findById(id);
+        console.log('Project account', res);
+        return res;
     }
 
     async findOneByEmail({ email, projectId }: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {

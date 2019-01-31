@@ -1,4 +1,4 @@
-import {Controller, UseFilters} from '@nestjs/common';
+import { Controller, UseFilters, UseGuards } from '@nestjs/common';
 import {
     CommunicationCodes,
     PaginatedResponse,
@@ -14,6 +14,7 @@ import {
 } from '@astra/common/dto';
 import { StoragesService } from './storages.service';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';
+import { ValidProjectOwnerGuard } from '../../helpers/guards/valid-project-owner.guard';
 
 @Controller()
 @UseFilters(ExceptionFilter)
@@ -24,6 +25,7 @@ export class StoragesController {
   ) {}
 
   @MessagePattern({ cmd: CommunicationCodes.GET_STORAGES_LIST })
+  @UseGuards(ValidProjectOwnerGuard)
   async findManyByProject(dto: FindStoragesListDto): Promise<Storage[] | PaginatedResponse<Storage>> {
     return this.storagesService.findManyByProject(dto);
   }

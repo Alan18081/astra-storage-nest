@@ -65,7 +65,7 @@ export class UsersService {
 
     removeOne(dto: RemoveUserDto): Promise<void> {
         return this.client
-            .send({ cmd: CommunicationCodes.CREATE_USER }, dto)
+            .send({ cmd: CommunicationCodes.REMOVE_USER }, dto)
             .toPromise();
     }
 

@@ -26,6 +26,7 @@ export const mockStorageRecordsRepository = {
     removeById() {},
     findMany() {},
     findManyWithPagination() {},
+    removeByStorage() {},
 };
 
 export const mockHashService = {

@@ -30,4 +30,9 @@ __decorate([
     class_validator_1.MinLength(config_1.PASSWORD_LENGTH),
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "password", void 0);
+__decorate([
+    class_validator_1.IsNumber(),
+    class_validator_1.IsOptional(),
+    __metadata("design:type", Number)
+], CreateUserDto.prototype, "roleId", void 0);
 exports.CreateUserDto = CreateUserDto;

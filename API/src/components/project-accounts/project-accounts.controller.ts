@@ -17,7 +17,7 @@ export class ProjectAccountsController {
        private readonly projectAccountsService: ProjectAccountsService,
     ) {}
 
-    @Get('')
+    @Get()
     @UseGuards(AuthGuard('jwt'))
     @ApiOperation({ title: 'Find many project accounts' })
     async findMany(

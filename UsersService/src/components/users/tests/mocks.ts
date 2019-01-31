@@ -43,6 +43,6 @@ export const mockHashService = {
 
 export const mockEmailsClient = {
   send() {
-      return { toPromise() {} }
-  }
+      return { toPromise() {} };
+  },
 };

@@ -20,12 +20,7 @@ export class ProjectAccount extends BaseEntity implements IProjectAccount {
     password: string;
 
     @PrimaryColumn('integer')
-    @Exclude()
     projectId: number;
-
-    @PrimaryColumn('integer')
-    @Exclude()
-    ownerId: number;
 
     @Column({ nullable: true })
     @Exclude()

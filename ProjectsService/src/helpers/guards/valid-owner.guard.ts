@@ -3,7 +3,7 @@ import {Observable} from 'rxjs/internal/Observable';
 import {ProjectsService} from '../../components/projects/projects.service';
 
 @Injectable()
-export class ValidProjectOwnerGuard implements CanActivate {
+export class ValidOwnerGuard implements CanActivate {
 
     constructor(
        private readonly projectsService: ProjectsService,
@@ -11,6 +11,6 @@ export class ValidProjectOwnerGuard implements CanActivate {
 
     async canActivate(context: ExecutionContext): Promise<boolean> {
         const data = context.switchToRpc().getData();
-        return this.projectsService.isValidOwner(data.projectId, data.userId);
+        return this.projectsService.isValidOwner(data.id, data.userId);
     }
 }

@@ -1,6 +1,5 @@
-import {IsEmail, IsString, MinLength} from 'class-validator';
+import { IsEmail, IsNumber, IsOptional, IsString, MinLength } from 'class-validator';
 import { PASSWORD_LENGTH } from '../../config';
-
 
 export class CreateUserDto {
 
@@ -16,5 +15,9 @@ export class CreateUserDto {
     @IsString()
     @MinLength(PASSWORD_LENGTH)
     password: string;
+
+    @IsNumber()
+    @IsOptional()
+    roleId: number;
 
 }

@@ -10,7 +10,7 @@ import {
     FindProjectsListByUserDto, RemoveProjectDto, UpdateProjectDto
 } from '@astra/common/dto';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';
-import { ValidProjectOwnerGuard } from '../../helpers/guards/valid-project-owner.guard';
+import { ValidOwnerGuard } from '../../helpers/guards/valid-owner.guard';
 
 @Controller()
 @UseFilters(ExceptionFilter)
@@ -32,7 +32,7 @@ export class ProjectsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT })
-    @UseGuards(ValidProjectOwnerGuard)
+    @UseGuards(ValidOwnerGuard)
     async findOne(dto: FindProjectDto): Promise<Project | undefined> {
         return this.projectsService.findById(dto.id);
     }
@@ -48,13 +48,13 @@ export class ProjectsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.UPDATE_PROJECT })
-    @UseGuards(ValidProjectOwnerGuard)
+    @UseGuards(ValidOwnerGuard)
     async updateOne(dto: UpdateProjectDto): Promise<Project | undefined> {
         return this.projectsService.updateOne(dto);
     }
 
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_PROJECT })
-    @UseGuards(ValidProjectOwnerGuard)
+    @UseGuards(ValidOwnerGuard)
     async removeOne({ id }: RemoveProjectDto): Promise<void> {
         await this.projectsService.removeById(id);
     }

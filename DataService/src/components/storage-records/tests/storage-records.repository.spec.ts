@@ -89,20 +89,19 @@ describe('UsersRepository', () => {
         };
 
         beforeEach(() => {
-            jest.spyOn(storageRecordsRepository, 'findOneAndUpdate').mockImplementation(async () => {
-                return {
-                    value: mockStorageRecord,
-                };
-            });
+            jest.spyOn(storageRecordsRepository, 'updateOne').mockImplementation(async () => {});
+            jest.spyOn(storageRecordsRepository, 'findById').mockImplementation(async () => mockStorageRecord);
         });
-        it('should call storageRecordsRepository.findOneAndUpdate', async () => {
-            const spy = jest.spyOn(storageRecordsRepository, 'findOneAndUpdate').mockImplementation(async () => {
-                return {
-                    value: mockStorageRecord,
-                };
-            });
+        it('should call storageRecordsRepository.updateOne', async () => {
+            const spy = jest.spyOn(storageRecordsRepository, 'updateOne').mockImplementation(async () => {});
             await storageRecordsRepository.updateOneAndFind(mockStorageRecord.id, payload);
             expect(spy).toBeCalledWith({ _id: new ObjectId(mockStorageRecord.id) }, { $set: { data: payload }});
+        });
+
+        it('should call storageRecordsRepository.findById', async () => {
+          const spy = jest.spyOn(storageRecordsRepository, 'findById').mockImplementation(async () => mockStorageRecord);
+          await storageRecordsRepository.updateOneAndFind(mockStorageRecord.id, payload);
+          expect(spy).toBeCalledWith(mockStorageRecord.id);
         });
 
         it('should return value of result', async () => {
@@ -113,10 +112,19 @@ describe('UsersRepository', () => {
     describe('removeById', () => {
         const id = '507f1f77bcf86cd799439011';
         it('should call storageRecordsRepository.deleteOne', async () => {
-            const spy = jest.spyOn(storageRecordsRepository, 'deleteOne').mockImplementation(async () => mockStorageRecord);
+            const spy = jest.spyOn(storageRecordsRepository, 'deleteOne').mockImplementation(async () => {});
             await storageRecordsRepository.removeById(id);
             expect(spy).toBeCalledWith({ _id: new ObjectId(id) });
         });
     });
+
+  describe('removeByStorage', () => {
+    const storageId = 12;
+    it('should call storageRecordsRepository.deleteMany', async () => {
+      const spy = jest.spyOn(storageRecordsRepository, 'deleteMany').mockImplementation(async () => {});
+      await storageRecordsRepository.removeByStorage(storageId);
+      expect(spy).toBeCalledWith({ storageId });
+    });
+  });
 
 });

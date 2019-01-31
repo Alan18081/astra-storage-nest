@@ -13,6 +13,7 @@ import {
 import { StorageRecord } from './storage-record.entity';
 import { createClientOptions } from '@astra/common/helpers';
 import { SerializerService } from '@astra/common/services';
+import { RemoveStorageRecordsListByStorageDto } from '../../../../Common/src/dto/storage-records';
 
 @Controller()
 export class StorageRecordsController {
@@ -57,6 +58,11 @@ export class StorageRecordsController {
     @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORD })
     async removeOne(payload: RemoveStorageRecordDto): Promise<void> {
         await this.storageRecordsService.removeById(payload.id);
+    }
+
+    @MessagePattern({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORDS_LIST_BY_STORAGE })
+    async removeByStorage(payload: RemoveStorageRecordsListByStorageDto): Promise<void> {
+        await this.storageRecordsService.removeByStorage(payload.storageId);
     }
 
 }

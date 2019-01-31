@@ -59,7 +59,7 @@ export class StoragesService {
                .send({ cmd: CommunicationCodes.REMOVE_STORAGE }, { id, userId })
                .toPromise(),
            this.dataClient
-               .send({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORDS_LIST }, { storageId: id, userId })
+               .send({ cmd: CommunicationCodes.REMOVE_STORAGE_RECORDS_LIST_BY_STORAGE }, { storageId: id })
                .toPromise(),
         ]);
     }

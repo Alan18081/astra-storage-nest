@@ -23,7 +23,6 @@ export class ProjectAccountsService {
     }
 
     async findOneForSdk(id: number): Promise<IProjectAccount | undefined> {
-      console.log('Account ', id);
         return this.client
             .send({ cmd: CommunicationCodes.SDK_GET_PROJECT_ACCOUNT }, { id })
             .toPromise();

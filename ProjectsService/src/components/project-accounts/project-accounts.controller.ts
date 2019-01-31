@@ -22,6 +22,7 @@ export class ProjectAccountsController {
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNTS_LIST })
     @UseGuards(ValidProjectOwnerGuard)
+    @UseInterceptors(ClassSerializerInterceptor)
     async findMany(query: FindProjectAccountsListDto): Promise<ProjectAccount[] | PaginatedResponse<ProjectAccount>> {
         return this.projectAccountsService.findMany(query);
     }
@@ -39,7 +40,6 @@ export class ProjectAccountsController {
     }
 
     @MessagePattern({ cmd: CommunicationCodes.GET_PROJECT_ACCOUNT_BY_EMAIL })
-    @UseGuards(ValidProjectOwnerGuard)
     async findOneByEmail(dto: FindProjectAccountByEmailDto): Promise<ProjectAccount | undefined> {
         return this.projectAccountsService.findOneByEmail(dto);
     }

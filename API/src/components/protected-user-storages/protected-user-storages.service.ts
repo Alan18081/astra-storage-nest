@@ -19,7 +19,6 @@ export class ProtectedUserStoragesService {
                 { cmd: CommunicationCodes.SDK_GET_STORAGE_RECORDS_LIST },
                 { path,  accountId },
             ).toPromise();
-
     }
 
     async findOne(id: string, accountId: number): Promise<IStorageRecord | undefined> {

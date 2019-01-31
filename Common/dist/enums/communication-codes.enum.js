@@ -36,7 +36,7 @@ var CommunicationCodes;
     CommunicationCodes["CREATE_STORAGE_RECORD"] = "[DataService] Create Storage Record";
     CommunicationCodes["UPDATE_STORAGE_RECORD"] = "[DataService] Update Storage Record";
     CommunicationCodes["REMOVE_STORAGE_RECORD"] = "[DataService] Remove Storage Record";
-    CommunicationCodes["REMOVE_STORAGE_RECORDS_LIST"] = "[DataService] Remove Storage Records List";
+    CommunicationCodes["REMOVE_STORAGE_RECORDS_LIST_BY_STORAGE"] = "[DataService] Remove Storage Records List By Storage";
     CommunicationCodes["LOGIN_PROJECT_ACCOUNT"] = "[ProjectsService] Login Project Account";
     CommunicationCodes["GET_PROJECT_ACCOUNTS_LIST"] = "[ProjectsService] Get Project Accounts List";
     CommunicationCodes["GET_PROJECT_ACCOUNT"] = "[ProjectsService] Get Project Account";

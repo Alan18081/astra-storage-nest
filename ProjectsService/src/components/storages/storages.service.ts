@@ -17,12 +17,6 @@ export class StoragesService {
   ) {}
 
   async findManyByProject({ projectId, userId, page, limit }: FindStoragesListDto): Promise<Storage[] | PaginatedResponse<Storage>> {
-    const project = await this.projectsService.findOneByUserId(projectId, userId);
-
-    if (!project) {
-      throw new RpcException(Messages.INVALID_PERMISSIONS);
-    }
-
     if (page && limit) {
       return this.storagesRepository.findManyWithPagination({ projectId }, { page, limit });
     }

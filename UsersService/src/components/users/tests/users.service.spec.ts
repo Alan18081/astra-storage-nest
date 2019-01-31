@@ -13,10 +13,9 @@ import {
     mockUser,
     mockUserHash,
     mockUserHashesService,
-    mockUsersRepository, mockUserWithoutPassword
+    mockUsersRepository, mockUserWithoutPassword,
 } from './mocks';
 import {HashService} from '@astra/common/services';
-import {UserHash} from '../../user-hashes/user-hash.entity';
 
 describe('UsersService', () => {
   let usersService;
@@ -183,7 +182,7 @@ describe('UsersService', () => {
      const email = 'alan@gmail.com';
      beforeEach(() => {
          jest.spyOn(mockUserHashesService, 'createOne').mockImplementation(async () => mockUserHash);
-         jest.spyOn(mockEmailsClient, 'send').mockImplementation(async () => ({
+         jest.spyOn(mockEmailsClient, 'send').mockImplementation(() => ({
              toPromise() {},
          }));
      });

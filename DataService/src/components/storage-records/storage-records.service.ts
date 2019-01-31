@@ -38,4 +38,8 @@ export class StorageRecordsService {
         await this.storageRecordsRepository.removeById(recordId);
     }
 
+    async removeByStorage(storageId: number): Promise<void> {
+        await this.storageRecordsRepository.removeByStorage(storageId);
+    }
+
 }

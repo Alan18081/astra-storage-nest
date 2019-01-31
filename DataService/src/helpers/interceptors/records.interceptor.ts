@@ -7,6 +7,13 @@ import {mapStorageRecord} from '../utils/map-storage-record';
 export class RecordsInterceptor implements NestInterceptor {
     intercept(context: ExecutionContext, call$: Observable<any>): Observable<any> {
         return call$
-            .pipe(map(mapStorageRecord));
+            .pipe(map(data => {
+                if (Array.isArray(data)) {
+                  return data.map(mapStorageRecord);
+                }
+                if (data) {
+                    return mapStorageRecord(data);
+                }
+            }));
     }
 }

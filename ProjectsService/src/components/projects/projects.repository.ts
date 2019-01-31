@@ -10,7 +10,9 @@ export class ProjectsRepository extends Repository<Project> {
   }
 
   async findOneByUserId(id: number, userId: number): Promise<Project | undefined> {
-    return this.findOne({ id, userId });
+    const res = await this.findOne({ id, userId });
+    console.log(res);
+    return res;
   }
 
   async findById(id: number): Promise<Project | undefined> {

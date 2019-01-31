@@ -2,7 +2,7 @@ import {
     Body,
     Controller,
     Delete,
-    Get,
+    Get, HttpCode, HttpStatus,
     Param, ParseIntPipe,
     Post,
     Put,
@@ -58,6 +58,7 @@ export class StoragesController {
     }
 
     @Post('')
+    @HttpCode(HttpStatus.OK)
     @UseGuards(AuthGuard('jwt'))
     @ApiOperation({ title: 'Create new storage' })
     async createOne(@ReqUser() user: IUser, @Body() body: any): Promise<IStorage> {

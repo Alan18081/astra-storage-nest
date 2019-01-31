@@ -33,7 +33,7 @@ export declare enum CommunicationCodes {
     CREATE_STORAGE_RECORD = "[DataService] Create Storage Record",
     UPDATE_STORAGE_RECORD = "[DataService] Update Storage Record",
     REMOVE_STORAGE_RECORD = "[DataService] Remove Storage Record",
-    REMOVE_STORAGE_RECORDS_LIST = "[DataService] Remove Storage Records List",
+    REMOVE_STORAGE_RECORDS_LIST_BY_STORAGE = "[DataService] Remove Storage Records List By Storage",
     LOGIN_PROJECT_ACCOUNT = "[ProjectsService] Login Project Account",
     GET_PROJECT_ACCOUNTS_LIST = "[ProjectsService] Get Project Accounts List",
     GET_PROJECT_ACCOUNT = "[ProjectsService] Get Project Account",

@@ -1,5 +1,6 @@
 import {ClassSerializerInterceptor, Controller, UseInterceptors} from '@nestjs/common';
 import {StorageRecordsService} from './storage-records.service';
+import { cloneDeep } from 'lodash';
 import {MessagePattern} from '@nestjs/microservices';
 import {CommunicationCodes} from '@astra/common/enums';
 import {StorageRecord} from './storage-record.entity';
@@ -9,7 +10,7 @@ import {
     FindStorageRecordsListDto, RemoveStorageRecordDto,
     UpdateStorageRecordDto,
 } from '@astra/common/dto';
-import { PaginatedResponse } from '@astra/common/interfaces ';
+import { PaginatedResponse } from '@astra/common/interfaces';
 import {RecordsInterceptor} from '../../helpers/interceptors/records.interceptor';
 import {SocketDataEmitterService} from '../core/socket-data-emitter.service';
 
@@ -35,14 +36,15 @@ export class SdkStorageRecordsController {
     @MessagePattern({ cmd: CommunicationCodes.SDK_CREATE_STORAGE_RECORD })
     async createOne(payload: CreateStorageRecordDto): Promise<StorageRecord> {
         const storageRecord = await this.storageRecordsService.createOne(payload);
-        this.socketDataEmitterService.emitCreatedEvent(storageRecord);
+        this.socketDataEmitterService.emitCreatedEvent(cloneDeep(storageRecord));
         return storageRecord;
     }
 
     @MessagePattern({ cmd: CommunicationCodes.SDK_UPDATE_STORAGE_RECORD })
     async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
         const storageRecord = await this.storageRecordsService.updateOne(payload.id, payload.data);
-        this.socketDataEmitterService.emitUpdatedEvent(storageRecord);
+        console.log(storageRecord);
+        this.socketDataEmitterService.emitUpdatedEvent(cloneDeep(storageRecord));
         return storageRecord;
     }
 
