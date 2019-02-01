@@ -18,7 +18,6 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "@astra/common": "file:../Common/dist",
     "@nestjs/common": "^5.0.0",
     "@nestjs/core": "^5.0.0",
     "@nestjs/jwt": "^0.2.1",

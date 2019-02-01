@@ -1,0 +1,10 @@
+version: '2'
+services:
+  db:
+    image: postgres:9.6.1
+    environment:
+      POSTGRES_PASSWORD: "qwerty1"
+    ports:
+      - "5432:5432"
+  users_service:
+    image: "astra-storage/users-service"

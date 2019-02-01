@@ -1,5 +1,5 @@
 import {Module} from '@nestjs/common';
-import {HashService} from '@astra/common/services';
+import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
 
 @Module({
     providers: [HashService],

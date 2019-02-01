@@ -2,9 +2,9 @@ import { Test } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { UsersService } from '../users.service';
 import { User } from '../user.entity';
-import { CreateUserDto, SetNewPasswordDto, ChangePasswordDto} from '@astra/common/dto';
+import { CreateUserDto, SetNewPasswordDto, ChangePasswordDto} from '@bit/alan18081.astra-storage.common.dist/dto';
 import {RpcException} from '@nestjs/microservices';
-import {Messages, CommunicationCodes, HashTypes} from '@astra/common/enums';
+import {Messages, CommunicationCodes, HashTypes} from '@bit/alan18081.astra-storage.common.dist/enums';
 import {UserHashesService} from '../../user-hashes/user-hashes.service';
 import {UsersRepository} from '../users.repository';
 import {
@@ -15,7 +15,7 @@ import {
     mockUserHashesService,
     mockUsersRepository, mockUserWithoutPassword,
 } from './mocks';
-import {HashService} from '@astra/common/services';
+import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
 
 describe('UsersService', () => {
   let usersService;
