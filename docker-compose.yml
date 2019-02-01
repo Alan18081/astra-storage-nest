@@ -8,3 +8,5 @@ services:
       - "5432:5432"
   users_service:
     image: "astra-storage/users-service"
+    depends_on:
+      - db

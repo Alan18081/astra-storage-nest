@@ -10,7 +10,6 @@ import {
     FindProjectAccountsListDto,
 } from '@astra/common/dto';
 import { RpcException } from '@nestjs/microservices';
-import {ProjectsService} from '../projects/projects.service';
 
 @Injectable()
 export class ProjectAccountsService {
