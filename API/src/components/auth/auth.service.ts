@@ -3,7 +3,7 @@ import {
     Queues,
     CommunicationCodes,
     JwtUserResponse,
-    JwtProjectResponse, JwtProjectAccountResponse,
+    JwtProjectResponse, JwtProjectAccountResponse, IUser,
 } from '@astra/common';
 import { LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
@@ -17,6 +17,10 @@ export class AuthService {
 
   async login(dto: LoginDto): Promise<JwtUserResponse> {
     return this.authClient.send({ cmd: CommunicationCodes.LOGIN }, dto).toPromise();
+  }
+
+  async loginByGoogle(googleId: string): Promise<JwtUserResponse> {
+    return this.authClient.send({ cmd: CommunicationCodes.LOGIN_BY_GOOGLE }, { googleId }).toPromise();
   }
 
   async loginProject(dto: LoginProjectDto): Promise<JwtProjectResponse> {

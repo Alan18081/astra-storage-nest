@@ -20,5 +20,4 @@ export const mockProjectAccount = {
     email: 'alan@gmail.com',
     password: 'some hash',
     projectId: 4,
-    ownerId: 10,
 };

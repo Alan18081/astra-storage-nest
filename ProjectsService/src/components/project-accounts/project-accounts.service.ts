@@ -10,7 +10,6 @@ import {
     FindProjectAccountsListDto,
 } from '@astra/common/dto';
 import { RpcException } from '@nestjs/microservices';
-import {ProjectsService} from '../projects/projects.service';
 
 @Injectable()
 export class ProjectAccountsService {
@@ -31,7 +30,6 @@ export class ProjectAccountsService {
 
     async findById(id: number): Promise<ProjectAccount | undefined> {
         const res = await this.projectAccountsRepository.findById(id);
-        console.log('Project account', res);
         return res;
     }
 
@@ -41,7 +39,6 @@ export class ProjectAccountsService {
 
     async createOne(payload: CreateProjectAccountDto): Promise<ProjectAccount> {
         const projectAccount = await this.projectAccountsRepository.findOneByEmail(payload.email, payload.projectId);
-        console.log(payload, projectAccount);
         if (projectAccount) {
             throw new RpcException(Messages.USER_ALREADY_EXISTS);
         }

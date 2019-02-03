@@ -4,6 +4,8 @@ export * from './exchangeToken.dto';
 
 export * from './login.dto';
 
+export * from './login-by-google.dto';
+
 export * from './login-project.dto';
 
 export * from './login-project-account.dto';

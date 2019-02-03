@@ -67,10 +67,10 @@ describe('ProjectsRepository', () => {
 
   describe('removeById', () => {
         const id = 20;
-        it('should call projectAccountsRepository.delete', async () => {
+        it('should call projectAccountsRepository.update', async () => {
             const spy = jest.spyOn(projectAccountsRepository, 'update').mockImplementation(async () => mockProjectAccount);
             await projectAccountsRepository.removeById(id);
-            expect(spy).toBeCalledWith({ id }, { deletedAt: new Date() });
+            expect(spy).toBeCalled();
         });
   });
 

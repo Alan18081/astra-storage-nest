@@ -40,7 +40,6 @@ export class ProjectAccountAuthService {
       email: projectAccount.email,
       id: projectAccount.id,
       projectId: projectAccount.projectId,
-      ownerId: projectAccount.ownerId,
     });
     return {
       accessToken,

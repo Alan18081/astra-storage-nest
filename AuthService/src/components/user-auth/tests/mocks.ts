@@ -26,9 +26,6 @@ export const mockUser = {
     lastName: 'Morgan',
     email: 'gogunov00@gmail.com',
     password: 'hello',
-};
-
-export const mockJwtPayload = {
-  id: 20,
-  email: 'alan@gmail.com',
+    googledId: 20,
+    roleId: 1,
 };

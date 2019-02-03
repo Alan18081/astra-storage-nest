@@ -10,6 +10,7 @@ export declare enum CommunicationCodes {
     REMOVE_USER = "[UsersService] Remove User",
     RESET_USER_PASSWORD = "[UsersService] Reset User Password",
     LOGIN = "[AuthService] Login User",
+    LOGIN_BY_GOOGLE = "[AuthService] Login User By Google",
     LOGIN_PROJECT = "[AuthService] Login Project",
     AUTH_PROJECT_BY_TOKEN = "[AuthService] Auth Project By Token",
     GET_PROJECTS_LIST = "[ProjectsService] Get Projects List",

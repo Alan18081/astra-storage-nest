@@ -13,6 +13,7 @@ var CommunicationCodes;
     CommunicationCodes["REMOVE_USER"] = "[UsersService] Remove User";
     CommunicationCodes["RESET_USER_PASSWORD"] = "[UsersService] Reset User Password";
     CommunicationCodes["LOGIN"] = "[AuthService] Login User";
+    CommunicationCodes["LOGIN_BY_GOOGLE"] = "[AuthService] Login User By Google";
     CommunicationCodes["LOGIN_PROJECT"] = "[AuthService] Login Project";
     CommunicationCodes["AUTH_PROJECT_BY_TOKEN"] = "[AuthService] Auth Project By Token";
     CommunicationCodes["GET_PROJECTS_LIST"] = "[ProjectsService] Get Projects List";

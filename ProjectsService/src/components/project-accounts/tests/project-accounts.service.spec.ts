@@ -39,26 +39,6 @@ describe('ProjectsService', () => {
             projectId: 7,
         };
 
-        beforeEach(() => {
-            jest.spyOn(mockProjectsService, 'findOneByUserId').mockImplementation(async () => mockProject);
-        });
-
-        it('should call projectsService.findOneByUserId', async () => {
-            const spy = jest.spyOn(mockProjectsService, 'findOneByUserId').mockImplementation(async () => ({}));
-            await projectAccountsService.findMany(payload);
-            expect(spy).toBeCalledWith(payload.projectId, payload.userId);
-        });
-
-        it('should throw an exception if project is not found', async () => {
-            jest.spyOn(mockProjectsService, 'findOneByUserId').mockImplementation(async () => undefined);
-            try {
-                await projectAccountsService.findMany(payload);
-                expect(false);
-            } catch (e) {
-                expect(JSON.stringify(e)).toEqual(JSON.stringify(new RpcException(Messages.INVALID_PERMISSIONS)));
-            }
-        });
-
         it('should call projectAccountsRepository.findMany if page and limit are not provided', async () => {
             jest.spyOn(mockProjectsService, 'findOneByUserId').mockImplementation(async () => ({}));
             const spy = jest.spyOn(mockProjectAccountsRepository, 'findMany').mockImplementation(async () => []);

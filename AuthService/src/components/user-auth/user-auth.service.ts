@@ -4,7 +4,6 @@ import {
     CommunicationCodes,
     IUser,
     JWT_EXPIRES,
-    JwtUserPayload,
     JwtUserResponse,
     Messages,
     Queues,
@@ -12,7 +11,7 @@ import {
 import { isString } from 'lodash';
 import {HashService} from '@astra/common/services';
 import {JwtService} from '@nestjs/jwt';
-import {LoginDto} from '@astra/common/dto';
+import {LoginByGoogleDto, LoginDto} from '@astra/common/dto';
 import {createClientOptions} from '@astra/common/helpers';
 import {RefreshTokensService} from '../refresh-tokens/refresh-tokens.service';
 
@@ -36,10 +35,29 @@ export class UserAuthService {
             throw new RpcException(Messages.USER_NOT_FOUND);
         }
 
+        if (!user.password) {
+            throw new RpcException(Messages.USER_DOESNT_HAVE_PASSWORD);
+        }
+
         if (!( await this.hashService.compareHash(dto.password, user.password))) {
             throw new RpcException(Messages.WRONG_PASSWORD);
         }
 
+        return this.generateTokens(user);
+    }
+
+    async loginByGoogle(dto: LoginByGoogleDto): Promise<JwtUserResponse> {
+        const user: IUser = await this.usersClient.send({ cmd: CommunicationCodes.GET_USER_BY_GOOGLE_ID }, { googleId: dto.googleId })
+            .toPromise();
+
+        if (!user) {
+            throw new RpcException(Messages.USER_NOT_FOUND);
+        }
+
+        return this.generateTokens(user);
+    }
+
+    private async generateTokens(user: IUser): Promise<JwtUserResponse> {
         const accessToken = this.jwtService.sign({ id: user.id, email: user.email });
         const refreshToken = await this.refreshTokensService.createOne({ accessToken, userId: user.id });
 

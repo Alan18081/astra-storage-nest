@@ -66,7 +66,7 @@ export class AuthController {
   @ApiOperation({ title: 'Callback for google authentication' })
   googleLoginCallback(@ReqUser() user: IUser | null, @Res() res: Response): void {
     if (user) {
-      res.redirect(`/auth/google/success?userId=${user.id}`);
+      res.redirect(`/auth/google/success?googleId=${user.googleId}`);
     } else {
       res.redirect('/auth/google/fail');
     }
@@ -74,11 +74,8 @@ export class AuthController {
 
   @Get('google/success')
   @ApiOperation({ title: 'Google success authentication' })
-  async googleSuccess(@Query('userId', new ParseIntPipe()) userId: number): Promise<JwtUserResponse | void> {
-    const user = await this.usersService.findOne({ id: userId });
-    if (user) {
-      return await this.authService.login(user);
-    }
+  async googleSuccess(@Query('googleId') googleId: string): Promise<JwtUserResponse | void> {
+    return this.authService.loginByGoogle(googleId);
   }
 
   @Get('google/fail')

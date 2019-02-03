@@ -90,7 +90,6 @@ describe('ProjectAccountsAuthService', () => {
                 email: mockProjectAccount.email,
                 id: mockProjectAccount.id,
                 projectId: mockProjectAccount.projectId,
-                ownerId: mockProjectAccount.ownerId,
             });
         });
 

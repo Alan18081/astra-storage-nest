@@ -23,7 +23,7 @@ export class UsersController {
     ) {}
 
     @MessagePattern({ cmd: CommunicationCodes.GET_USERS_LIST })
-    async findMany(dto: FindUsersListDto): Promise<User[]> {
+    async findMany(): Promise<User[]> {
         return this.usersService.findMany();
     }
 

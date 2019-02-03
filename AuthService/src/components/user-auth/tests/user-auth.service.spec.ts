@@ -7,10 +7,9 @@ import {
     mockUsersClient,
     mockUser,
     mockRefreshTokensService,
-    mockJwtPayload,
 } from './mocks';
 import {HashService} from '@astra/common/services';
-import {LoginDto} from '@astra/common/dto';
+import {LoginByGoogleDto, LoginDto} from '@astra/common/dto';
 import {CommunicationCodes, JWT_EXPIRES, Messages} from '@astra/common';
 import {RpcException} from '@nestjs/microservices';
 import {RefreshTokensService} from '../../refresh-tokens/refresh-tokens.service';
@@ -75,6 +74,24 @@ describe('UserAuthService', () => {
             }
         });
 
+        it('should throw an exception if user does not have password', async () => {
+            jest.spyOn(mockUsersClient, 'send').mockImplementation(
+                () => ({
+                    async toPromise() {
+                        const { password, ...data } = mockUser;
+                        return data;
+                    },
+                })
+            );
+
+            try {
+                await userAuthService.login(payload);
+                expect(false);
+            } catch (e) {
+                expect(JSON.stringify(e)).toEqual(JSON.stringify(new RpcException(Messages.USER_DOESNT_HAVE_PASSWORD)));
+            }
+        });
+
         it('should call hashService.compareHash', async () => {
             const spy = jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
             await userAuthService.login(payload);
@@ -91,24 +108,15 @@ describe('UserAuthService', () => {
             }
         });
 
-        it('should call jwtService.sign', async () => {
+        it('should call userAuthService.generateTokens', async () => {
             jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
-            const spy = jest.spyOn(mockJwtService, 'sign').mockImplementation(() => accessToken);
-            await userAuthService.login(payload);
-            expect(spy).toBeCalledWith({
-               id: mockUser.id,
-               email: mockUser.email,
-            });
-        });
-
-        it('should call refreshTokensService.createOne', async () => {
-            jest.spyOn(mockJwtService, 'sign').mockImplementation(() => accessToken);
-            const spy = jest.spyOn(mockRefreshTokensService, 'createOne').mockImplementation(async () => mockRefreshToken);
-            await userAuthService.login(payload);
-            expect(spy).toBeCalledWith({
+            const spy = jest.spyOn(userAuthService, 'generateTokens').mockImplementation(async () => ({
                 accessToken,
-                userId: mockUser.id,
-            });
+                refreshToken: mockRefreshToken.token,
+                expiresIn: JWT_EXPIRES,
+            }));
+            await userAuthService.login(payload);
+            expect(spy).toBeCalledWith(mockUser);
         });
 
         it('should return object with access token', async () => {
@@ -117,7 +125,70 @@ describe('UserAuthService', () => {
             expect(await userAuthService.login(payload)).toEqual({
                 accessToken,
                 expiresIn: JWT_EXPIRES,
-                refreshToken: mockRefreshToken.token
+                refreshToken: mockRefreshToken.token,
+            });
+        });
+    });
+
+    describe('loginByGoogle', () => {
+        const payload: LoginByGoogleDto = {
+            googleId: '12343545',
+        };
+
+        const accessToken = 'access token';
+
+        beforeEach(() => {
+            jest.spyOn(mockUsersClient, 'send').mockImplementation(
+                () => ({
+                    async toPromise() {
+                        return mockUser;
+                    },
+                })
+            );
+            jest.spyOn(mockRefreshTokensService, 'createOne').mockImplementation( () => mockRefreshToken);
+        });
+
+        it('should call usersClient.send', async () => {
+            jest.spyOn(mockHashService, 'compareHash').mockImplementation(() => true);
+            const spy = jest.spyOn(mockUsersClient, 'send');
+
+            await userAuthService.loginByGoogle(payload);
+            expect(spy).toBeCalledWith({ cmd: CommunicationCodes.GET_USER_BY_GOOGLE_ID }, { googleId: payload.googleId });
+        });
+
+        it('should throw an exception if user is not found', async () => {
+            jest.spyOn(mockUsersClient, 'send').mockImplementation(
+                () => ({
+                    async toPromise() {},
+                })
+            );
+
+            try {
+                await userAuthService.loginByGoogle(payload);
+                expect(false);
+            } catch (e) {
+                expect(JSON.stringify(e)).toEqual(JSON.stringify(new RpcException(Messages.USER_NOT_FOUND)));
+            }
+        });
+
+        it('should call userAuthService.generateTokens', async () => {
+            jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
+            const spy = jest.spyOn(userAuthService, 'generateTokens').mockImplementation(async () => ({
+                accessToken,
+                refreshToken: mockRefreshToken.token,
+                expiresIn: JWT_EXPIRES,
+            }));
+            await userAuthService.loginByGoogle(payload);
+            expect(spy).toBeCalledWith(mockUser);
+        });
+
+        it('should return object with access token', async () => {
+            jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
+            jest.spyOn(mockJwtService, 'sign').mockImplementation( () => accessToken);
+            expect(await userAuthService.loginByGoogle(payload)).toEqual({
+                accessToken,
+                expiresIn: JWT_EXPIRES,
+                refreshToken: mockRefreshToken.token,
             });
         });
     });
@@ -193,4 +264,47 @@ describe('UserAuthService', () => {
         });
     });
 
+    describe('generateTokens', () => {
+        const accessToken = 'access token';
+
+        it('should throw an exception if provided password doesn\'t match with account password', async () => {
+            jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => false);
+            try {
+                await userAuthService.generateTokens(mockUser);
+                expect(false);
+            } catch (e) {
+                expect(JSON.stringify(e)).toEqual(JSON.stringify(new RpcException(Messages.WRONG_PASSWORD)));
+            }
+        });
+
+        it('should call jwtService.sign', async () => {
+            jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
+            const spy = jest.spyOn(mockJwtService, 'sign').mockImplementation(() => accessToken);
+            await userAuthService.login(mockUser);
+            expect(spy).toBeCalledWith({
+                id: mockUser.id,
+                email: mockUser.email,
+            });
+        });
+
+        it('should call refreshTokensService.createOne', async () => {
+            jest.spyOn(mockJwtService, 'sign').mockImplementation(() => accessToken);
+            const spy = jest.spyOn(mockRefreshTokensService, 'createOne').mockImplementation(async () => mockRefreshToken);
+            await userAuthService.login(mockUser);
+            expect(spy).toBeCalledWith({
+                accessToken,
+                userId: mockUser.id,
+            });
+        });
+
+        it('should return object with access token', async () => {
+            jest.spyOn(mockHashService, 'compareHash').mockImplementation(async () => true);
+            jest.spyOn(mockJwtService, 'sign').mockImplementation( () => accessToken);
+            expect(await userAuthService.login(mockUser)).toEqual({
+                accessToken,
+                expiresIn: JWT_EXPIRES,
+                refreshToken: mockRefreshToken.token,
+            });
+        });
+    });
 });
