@@ -3,7 +3,7 @@ import {
   Controller,
   Delete,
   Get,
-  HttpCode, HttpStatus,
+  HttpCode, HttpStatus, NotFoundException,
   Param, ParseIntPipe,
   Post,
   Put,
@@ -19,6 +19,7 @@ import {CreateUserDto, FindUsersListDto} from '@astra/common/dto';
 import {ApiExceptionFilter} from '../../helpers/filters/api.filter';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import { AdminGuard } from '../../helpers/guards/admin.guard';
+import { Messages } from '@astra/common';
 
 @Controller('users')
 @UseFilters(ApiExceptionFilter)
@@ -46,8 +47,13 @@ export class UsersController {
   @Get(':id')
   @UseGuards(AuthGuard('jwt'), AdminGuard)
   @ApiOperation({ title: 'Find user by id' })
-  findOne(@Param('id') id: number): Promise<IUser | undefined> {
-    return this.usersService.findOne({ id });
+  async findOne(@Param('id') id: number): Promise<IUser | undefined> {
+    const user = await this.usersService.findOne({ id });
+    if (!user) {
+      throw new NotFoundException(Messages.USER_NOT_FOUND);
+    }
+
+    return user;
   }
 
   @Post('')

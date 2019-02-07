@@ -4,11 +4,11 @@ import { PaginatedResponse } from '@astra/common/interfaces';
 import { StorageRecordsService } from './storage-records.service';
 import { ClientProxy, MessagePattern, Client } from '@nestjs/microservices';
 import {
-    CreateStorageRecordDto,
-    FindStorageRecordDto,
-    FindStorageRecordsListDto,
-    RemoveStorageRecordDto,
-    UpdateStorageRecordDto,
+  CreateStorageRecordDto,
+  FindStorageRecordDto,
+  FindStorageRecordsListDto, FindStorageRecordsListForOwnerDto,
+  RemoveStorageRecordDto,
+  UpdateStorageRecordDto,
 } from '@astra/common/dto';
 import { StorageRecord } from './storage-record.entity';
 import { createClientOptions } from '@astra/common/helpers';
@@ -27,7 +27,7 @@ export class StorageRecordsController {
     ) {}
 
     @MessagePattern({ cmd: CommunicationCodes.GET_STORAGE_RECORDS_LIST })
-    async findMany(payload: FindStorageRecordsListDto): Promise<StorageRecord[] | PaginatedResponse<StorageRecord>> {
+    async findMany(payload: FindStorageRecordsListForOwnerDto): Promise<StorageRecord[] | PaginatedResponse<StorageRecord>> {
         return this.storageRecordsService.findMany(payload);
     }
 

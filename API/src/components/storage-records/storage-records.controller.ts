@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
 import {IStorageRecord, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
@@ -17,15 +17,21 @@ export class StorageRecordsController {
   ) {}
 
   @Get('')
-  @ApiOperation({ title: 'Get storage record by id as admin' })
-  async findMany(@Param('storageId') storageId: number): Promise<IStorageRecord[]> {
+  @ApiOperation({ title: 'Get storage records list as storage owner' })
+  async findMany(@Param('storageId', new ParseIntPipe()) storageId: number): Promise<IStorageRecord[]> {
     return this.storageRecordsService.findMany(storageId);
+  }
+
+  @Get(':id')
+  @ApiOperation({ title: 'Get storage record by id as storage owner' })
+  async findOne(@Param('id') id: string): Promise<IStorageRecord | undefined> {
+    return this.storageRecordsService.findOne(id);
   }
 
   @Post('')
   @ApiOperation({ title: 'Create storage record by id as admin' })
   async createOne(
-    @Param('storageId') storageId: number,
+    @Param('storageId', new ParseIntPipe()) storageId: number,
     @ReqUser() user: IUser,
     @Body() body: any,
   ): Promise<any> {

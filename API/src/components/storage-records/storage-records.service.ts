@@ -20,6 +20,12 @@ export class StorageRecordsService {
             .toPromise();
     }
 
+    async findOne(id: string): Promise<IStorageRecord | undefined> {
+      return this.client
+        .send({ cmd: CommunicationCodes.GET_STORAGE_RECORD }, { id })
+        .toPromise();
+    }
+
     async createOne(storageId: number, userId: number, data: any): Promise<IStorageRecord> {
         const storage: IStorage = await this.storagesService.findOne(storageId, userId);
 
@@ -31,6 +37,7 @@ export class StorageRecordsService {
             .send({ cmd: CommunicationCodes.CREATE_STORAGE_RECORD }, {
                 projectId: storage.projectId,
                 storageId: storage.id,
+                path: storage.path,
                 userId,
                 data,
             })
