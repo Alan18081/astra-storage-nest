@@ -1,13 +1,16 @@
 FROM node:10
 
-RUN useradd -ms /bin/bash astra_storage_user
+RUN npm i -g typescript ts-node nodemon
 
-USER astra_storage_user
+WORKDIR /var/www/astra_storage/users_service
+ADD package.json /var/www/astra_storage/users_service
+ADD yarn.lock /var/www/astra_storage/users_service
+RUN yarn install
 
-WORKDIR /home/nodejs/astra-storage/UsersService
+ADD . /var/www/astra_storage/users_service
 
-COPY package.json .
-RUN npm i --production
-COPY . .
+RUN ["chmod", "+x", "/var/www/astra_storage/users_service/start.sh"]
 
-CMD ["npm", "run", "start:prod"]
+EXPOSE 4000
+
+CMD ["./start.sh"]
