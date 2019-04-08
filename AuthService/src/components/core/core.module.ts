@@ -1,8 +1,16 @@
 import {Module} from '@nestjs/common';
-import {HashService} from '@astra/common/services';
+import {HashService, ConfigService} from '@bit/alan18081.astra-storage.common.dist/services';
+
+const providers = [
+    HashService,
+    {
+        provide: ConfigService,
+        useValue: new ConfigService(`${process.env.NODE_ENV}.env`)
+    }
+];
 
 @Module({
-    providers: [HashService],
-    exports: [HashService],
+    providers: [...providers],
+    exports: [...providers],
 })
 export class CoreModule {}

@@ -4,11 +4,11 @@ import { CoreModule } from '../../core/core.module';
 import { RefreshTokensService } from '../refresh-tokens.service';
 import {
     CreateRefreshTokenDto,
-} from '@astra/common/dto';
+} from '@bit/alan18081.astra-storage.common.dist/dto';
 import {
     mockHashService, mockRefreshToken, mockRefreshTokensRepository,
 } from './mocks';
-import {HashService} from '@astra/common/services';
+import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
 import {RefreshTokensRepository} from '../refresh-tokens.repository';
 import {mockJwtService} from '../../user-auth/tests/mocks';
 import {JwtService} from '@nestjs/jwt';

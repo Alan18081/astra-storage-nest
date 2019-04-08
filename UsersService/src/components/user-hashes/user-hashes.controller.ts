@@ -1,8 +1,8 @@
 import {Controller, UseFilters} from '@nestjs/common';
-import {CommunicationCodes, ServiceExceptionFilter} from '@astra/common';
+import {CommunicationCodes} from '@bit/alan18081.astra-storage.common.dist';
 import {UserHashesService} from './user-hashes.service';
 import {MessagePattern} from '@nestjs/microservices';
-import {VerifyUserHashDto} from '@astra/common/dto';
+import {VerifyUserHashDto} from '@bit/alan18081.astra-storage.common.dist/dto';
 
 @Controller()
 export class UserHashesController {

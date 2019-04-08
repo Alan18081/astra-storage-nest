@@ -4,16 +4,15 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@nestjs/common": "^5.5.0",
-    "@nestjs/microservices": "^5.5.0",
+    "@nestjs/common": "^5.7.4",
+    "@nestjs/microservices": "^5.7.4",
     "@nestjs/swagger": "^2.5.1",
-    "@types/node": "^10.12.18",
-    "bcrypt": "^3.0.3",
+    "@types/node": "^10.14.4",
+    "bcrypt": "^3.0.5",
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
     "dotenv": "^7.0.0",
-    "rxjs": "^6.3.3",
-    "typeorm": "^0.2.11"
+    "rxjs": "^6.4.0"
   },
   "scripts": {
     "build": "rm -rf ./dist && tsc"

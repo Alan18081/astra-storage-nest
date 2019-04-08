@@ -7,6 +7,8 @@ rm -rf node_modules
 yarn
 rm -rf dist
 yarn build
+bit add dist/*
+bit export alan18081.astra-storage
 
 MICROSERVICES=(
     API
@@ -22,7 +24,6 @@ MICROSERVICES=(
 for i in ${MICROSERVICES[@]}; do
     echo "Transpiling ${i}"
     cd ../${i}
-    rm -rf node_modules
-    yarn
+    npm i @bit/alan18081.astra-storage.common.dist
     rm -rf dist
 done

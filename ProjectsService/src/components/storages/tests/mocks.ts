@@ -1,5 +1,5 @@
 import { Storage } from '../storage.entity';
-import {StorageType} from '@astra/common';
+import {StorageType} from '@bit/alan18081.astra-storage.common.dist';
 
 export const mockStorage = {
     id: 20,

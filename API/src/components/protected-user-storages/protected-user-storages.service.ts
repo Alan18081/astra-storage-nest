@@ -1,11 +1,11 @@
 import {Injectable} from '@nestjs/common';
-import {createClientOptions} from '@astra/common/helpers';
+import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {
     CommunicationCodes,
     IStorageRecord,
     Queues,
-} from '@astra/common';
+} from '@bit/alan18081.astra-storage.common.dist';
 
 @Injectable()
 export class ProtectedUserStoragesService {

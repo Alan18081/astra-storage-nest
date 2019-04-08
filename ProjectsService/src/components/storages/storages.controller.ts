@@ -2,7 +2,7 @@ import { Controller, UseFilters, UseGuards } from '@nestjs/common';
 import {
     CommunicationCodes,
     PaginatedResponse,
-} from '@astra/common';
+} from '@bit/alan18081.astra-storage.common.dist';
 import { MessagePattern } from '@nestjs/microservices';
 import { Storage } from './storage.entity';
 import {
@@ -11,7 +11,7 @@ import {
   FindStorageDto,
   FindStoragesListDto, RemoveStorageDto,
   UpdateStorageDto,
-} from '@astra/common/dto';
+} from '@bit/alan18081.astra-storage.common.dist/dto';
 import { StoragesService } from './storages.service';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 import { ValidProjectOwnerGuard } from '../../helpers/guards/valid-project-owner.guard';

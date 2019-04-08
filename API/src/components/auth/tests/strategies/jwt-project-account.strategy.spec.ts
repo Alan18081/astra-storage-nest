@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import {mockProjectAccount, mockProjectAccountsService} from '../mocks';
 import {UnauthorizedException} from '@nestjs/common';
-import {Messages} from '@astra/common';
+import {Messages} from '@bit/alan18081.astra-storage.common.dist';
 import {JwtProjectAccountStrategy} from '../../strategies/jwt-project-account.strategy';
 import {ProjectAccountsService} from '../../../project-accounts/project-accounts.service';
 

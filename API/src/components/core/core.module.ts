@@ -1,0 +1,17 @@
+import {Module} from "@nestjs/common";
+import {ConfigService} from "@bit/alan18081.astra-storage.common.dist/services";
+
+const providers = [
+    {
+        provide: ConfigService,
+        useValue: new ConfigService(`${process.env.NODE_ENV}.env`)
+    }
+];
+
+@Module({
+    imports: [],
+    providers: [...providers],
+    exports: [...providers],
+    controllers: []
+})
+export class CoreModule {}

@@ -1,16 +1,20 @@
 import { Module } from '@nestjs/common';
 import { StorageRecordsModule } from './components/storage-records/storage-records.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DataServiceConfig } from '@astra/common/config';
+import {ConfigService} from "@bit/alan18081.astra-storage.common.dist/services";
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-       type: 'mongodb',
-       host: DataServiceConfig.DB_HOST,
-       database: DataServiceConfig.DATABASE,
-       entities: ["src/**/**.entity{.ts,.js}"],
-       synchronize: true,
+        useFactory: (configService: ConfigService) => ({
+            type: 'postgres',
+            host: configService.get('DB_HOST'),
+            port: configService.get('DB_PORT'),
+            database: configService.get('DB_NAME'),
+            entities: [__dirname + '/**/*.entity{.ts,.js}'],
+            synchronize: true,
+        }),
+        inject: [ConfigService],
     }),
     StorageRecordsModule,
   ],

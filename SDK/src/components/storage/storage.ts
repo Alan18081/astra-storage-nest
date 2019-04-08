@@ -1,4 +1,4 @@
-import { PaginatedResponse } from '@astra/common/interfaces/paginated-response.interface';
+import { PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist/interfaces/paginated-response.interface';
 import { apiRequest } from '../../helpers/api-request';
 import { StorageType } from '../../helpers/storage-types.enum';
 

@@ -1,21 +1,24 @@
 import { Module } from '@nestjs/common';
 import {UserAuthModule} from './components/user-auth/user-auth.module';
 import {TypeOrmModule} from '@nestjs/typeorm';
-import { AuthServiceConfig } from '@astra/common/config';
 import { ProjectAuthModule } from './components/project-auth/project-auth.module';
 import { ProjectAccountAuthModule } from './components/project-account-auth/project-account-auth.module';
+import {ConfigService} from "@bit/alan18081.astra-storage.common.dist/services";
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-        type: 'postgres',
-        host: AuthServiceConfig.DB_HOST,
-        port: AuthServiceConfig.DB_PORT,
-        database: AuthServiceConfig.DATABASE,
-        username: AuthServiceConfig.DB_USER,
-        password: AuthServiceConfig.DB_PASSWORD,
-        entities: [__dirname + '/**/*.entity{.ts,.js}'],
-        synchronize: true,
+    TypeOrmModule.forRootAsync({
+        useFactory: (configService: ConfigService) => ({
+            type: 'postgres',
+            host: configService.get('DB_HOST'),
+            port: configService.get('DB_PORT'),
+            database: configService.get('DB_NAME'),
+            username: configService.get('DB_USER'),
+            password: configService.get('DB_PASSWORD'),
+            entities: [__dirname + '/**/*.entity{.ts,.js}'],
+            synchronize: true,
+        }),
+        inject: [ConfigService],
     }),
     UserAuthModule,
     ProjectAuthModule,

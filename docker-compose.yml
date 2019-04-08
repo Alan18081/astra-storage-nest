@@ -11,24 +11,40 @@ services:
   auth_service_db:
     container_name: auth_service_db
     hostname: auth_service_db
-    image: mysql:5.7
+    image: postgres
     restart: always
     environment:
-      MYSQL_DATABASE: 'auth_service_db'
-      MYSQL_USER: 'auth_service_db_user'
-      MYSQL_PASSWORD: 'auth_service_db_user'
-      MYSQL_ROOT_PASSWORD: 'auth_service_db_user'
+      POSTGRES_DB: 'as_auth_service'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'qwerty1'
     ports:
-      - '3306:3306'
+      - '5432:5432'
     expose:
-      - '3306'
+      - '5432'
+  api_gateway:
+    container_name: api_gateway
+    hostname: api_gateway
+    build:
+      context: ./API
+      dockerfile: ./Dockerfile
+    env_file:
+      - './API/local.env'
+      - './Common/common.env'
+    volumes:
+      - ./src:/var/www/astra_storage/auth_service/src
+    ports:
+      - '5000:5000'
+    depends_on:
+      - auth_service_db
   auth_service:
     container_name: auth_service
     hostname: auth_service
     build:
       context: ./AuthService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file:
+      - './AuthService/local.env'
+      - './Common/common.env'
     volumes:
       - ./src:/var/www/astra_storage/auth_service/src
 #    ports:
@@ -41,7 +57,7 @@ services:
     build:
       context: ./EmailsService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file: './AuthService/local.env'
     volumes:
       - ./src:/var/www/astra_storage/emails_service/src
 #    ports:
@@ -52,7 +68,7 @@ services:
     build:
       context: ./SocketsService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file: "./SocketsService/local.env"
     volumes:
       - ./src:/var/www/astra_storage/sockets_service/src
 #    ports:
@@ -60,24 +76,23 @@ services:
   projects_service_db:
     container_name: projects_service_db
     hostname: projects_service_db
-    image: mysql:5.7
+    image: postgres
     restart: always
     environment:
-      MYSQL_DATABASE: 'projects_service_db'
-      MYSQL_USER: 'projects_service_db_user'
-      MYSQL_PASSWORD: 'projects_service_db_user'
-      MYSQL_ROOT_PASSWORD: 'projects_service_db_user'
+      POSTGRES_DB: 'as_projects_service'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'qwerty1'
     ports:
-      - '3306:3306'
+      - '5432:5432'
     expose:
-      - '3306'
+      - '5432'
   projects_service:
     container_name: projects_service
     hostname: projects_service
     build:
       context: ./ProjectsService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file: './ProjectsService/local.env'
     volumes:
       - ./src:/var/www/astra_storage/projects_service/src
 #    ports:
@@ -87,27 +102,26 @@ services:
   users_service_db:
     container_name: users_service_db
     hostname: users_service_db
-    image: mysql:5.7
+    image: postgres
     restart: always
     environment:
-      MYSQL_DATABASE: 'users_service_db'
-      MYSQL_USER: 'users_service_db_user'
-      MYSQL_PASSWORD: 'users_service_db_user'
-      MYSQL_ROOT_PASSWORD: 'users_service_db_user'
+      POSTGRES_DB: 'as_users_service'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'qwerty1'
     ports:
-      - '3306:3306'
+      - '5432:5432'
     expose:
-      - '3306'
+      - '5432'
   users_service:
-      container_name: users_service
-      hostname: users_service
-      build:
-        context: ./UsersService
-        dockerfile: ./Dockerfile
-      env_file: "./local.env"
-      volumes:
-        - ./src:/var/www/astra_storage/users_service/src
-      ports:
-        - "4000:4000"
-      depends_on:
-        - users_service_db
+    container_name: users_service
+    hostname: users_service
+    build:
+      context: ./UsersService
+      dockerfile: ./Dockerfile
+    env_file: './UsersService/local.env'
+    volumes:
+      - ./src:/var/www/astra_storage/users_service/src
+#    ports:
+#      - "4000:4000"
+    depends_on:
+      - users_service_db

@@ -1,6 +1,6 @@
 import {CanActivate, ExecutionContext, Injectable} from '@nestjs/common';
-import {createClientOptions} from '@astra/common/helpers';
-import {CommunicationCodes, IStorage, Queues, StorageType} from '@astra/common';
+import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
+import {CommunicationCodes, IStorage, Queues, StorageType} from '@bit/alan18081.astra-storage.common.dist';
 import {Client, ClientProxy} from '@nestjs/microservices';
 
 @Injectable()

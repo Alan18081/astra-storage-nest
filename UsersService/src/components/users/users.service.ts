@@ -1,13 +1,13 @@
 import {Injectable} from '@nestjs/common';
-import {CommunicationCodes, HashTypes, Messages, Queues} from '@astra/common';
+import {CommunicationCodes, HashTypes, Messages, Queues} from '@bit/alan18081.astra-storage.common.dist';
 import {User} from './user.entity';
 import {UsersRepository} from './users.repository';
-import {HashService} from '@astra/common/services';
+import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
 import {InjectRepository} from '@nestjs/typeorm';
-import { ChangePasswordDto, CreateUserByGoogleDto, CreateUserDto, SetNewPasswordDto } from '@astra/common/dto';
+import { ChangePasswordDto, CreateUserByGoogleDto, CreateUserDto, SetNewPasswordDto } from '@bit/alan18081.astra-storage.common.dist/dto';
 import {ClientProxy, RpcException, Client} from '@nestjs/microservices';
 import {UserHashesService} from '../user-hashes/user-hashes.service';
-import {createClientOptions} from '@astra/common/helpers';
+import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
 
 @Injectable()
 export class UsersService {

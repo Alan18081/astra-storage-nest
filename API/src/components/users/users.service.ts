@@ -4,7 +4,7 @@ import {
     CommunicationCodes,
     IUser,
     Queues,
-} from '@astra/common';
+} from '@bit/alan18081.astra-storage.common.dist';
 import {
   CreateUserByGoogleDto,
   CreateUserDto,
@@ -12,8 +12,8 @@ import {
   FindUsersListDto,
   RemoveUserDto, SetNewPasswordDto,
   UpdateUserDto
-} from '@astra/common/dto';
-import {createClientOptions} from '@astra/common/helpers';
+} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
 
 @Injectable()
 export class UsersService {

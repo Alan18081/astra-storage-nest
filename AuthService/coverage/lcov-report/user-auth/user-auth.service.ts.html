@@ -181,11 +181,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Injectable} from '@nestjs/common';
 import {ClientProxy, Client, RpcException} from '@nestjs/microservices';
-import {CommunicationCodes, IUser, JWT_EXPIRES, JwtUserResponse, Messages, Queues} from '@astra/common';
-import {HashService} from '@astra/common/services';
+import {CommunicationCodes, IUser, JWT_EXPIRES, JwtUserResponse, Messages, Queues} from '@bit/alan18081.astra-storage.common.dist';
+import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
 import {JwtService} from '@nestjs/jwt';
-import {LoginDto} from '@astra/common/dto';
-import {createClientOptions} from '@astra/common/helpers';
+import {LoginDto} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
 import {RefreshTokensService} from '../refresh-tokens/refresh-tokens.service';
 &nbsp;
 @Injectable()

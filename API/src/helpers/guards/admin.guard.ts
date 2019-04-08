@@ -1,5 +1,5 @@
 import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
-import { Roles } from '@astra/common/enums';
+import { Roles } from '@bit/alan18081.astra-storage.common.dist/enums';
 
 @Injectable()
 export class AdminGuard implements CanActivate {

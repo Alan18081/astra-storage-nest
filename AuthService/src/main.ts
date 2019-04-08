@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { Queues, ServiceExceptionFilter } from '@astra/common';
-import { createClientOptions } from '@astra/common/helpers';
+import { Queues, ServiceExceptionFilter } from '@bit/alan18081.astra-storage.common.dist';
+import { createClientOptions } from '@bit/alan18081.astra-storage.common.dist/helpers';
 import { ValidationPipe } from '@nestjs/common';
 
 async function bootstrap() {

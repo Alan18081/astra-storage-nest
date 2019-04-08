@@ -1,9 +1,9 @@
 import {Controller} from '@nestjs/common';
 import {RefreshTokensService} from './refresh-tokens.service';
 import {MessagePattern} from '@nestjs/microservices';
-import {CommunicationCodes} from '@astra/common';
+import {CommunicationCodes} from '@bit/alan18081.astra-storage.common.dist';
 import {RefreshToken} from './refresh-token.entity';
-import {CreateRefreshTokenDto} from '@astra/common/dto';
+import {CreateRefreshTokenDto} from '@bit/alan18081.astra-storage.common.dist/dto';
 
 @Controller()
 export class RefreshTokensController {

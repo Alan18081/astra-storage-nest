@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import {mockProject, mockProjectsService, mockUser, mockUsersService} from '../mocks';
 import {UnauthorizedException} from '@nestjs/common';
-import {Messages} from '@astra/common';
+import {Messages} from '@bit/alan18081.astra-storage.common.dist';
 import {JwtProjectStrategy} from '../../strategies/jwt-project.strategy';
 import {ProjectsService} from '../../../projects/projects.service';
 import mock = jest.mock;

@@ -2,9 +2,9 @@ import { Test } from '@nestjs/testing';
 import {mockStorageRecord, mockStorageRecords} from './mocks';
 import {StorageRecordsRepository} from '../storage-records.repository';
 import {ObjectId} from 'mongodb';
-import {PaginatedResponse} from '@astra/common';
+import {PaginatedResponse} from '@bit/alan18081.astra-storage.common.dist';
 import {StorageRecord} from '../storage-record.entity';
-import {PaginationDto} from '@astra/common/dto';
+import {PaginationDto} from '@bit/alan18081.astra-storage.common.dist/dto';
 
 describe('UsersRepository', () => {
   let storageRecordsRepository;

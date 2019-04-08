@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
-import {IProjectAccount, IStorageRecord} from '@astra/common';
+import {IProjectAccount, IStorageRecord} from '@bit/alan18081.astra-storage.common.dist';
 import {ProtectedUserStoragesService} from './protected-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {AuthGuard} from '@nestjs/passport';

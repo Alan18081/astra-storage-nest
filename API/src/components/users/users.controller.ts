@@ -15,11 +15,11 @@ import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
 import { AuthGuard } from '@nestjs/passport';
 import { UsersService } from './users.service';
 import { IUser } from '../../../../Common/src/entities';
-import {CreateUserDto, FindUsersListDto} from '@astra/common/dto';
+import {CreateUserDto, FindUsersListDto} from '@bit/alan18081.astra-storage.common.dist/dto';
 import {ApiExceptionFilter} from '../../helpers/filters/api.filter';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import { AdminGuard } from '../../helpers/guards/admin.guard';
-import { Messages } from '@astra/common';
+import { Messages } from '@bit/alan18081.astra-storage.common.dist';
 
 @Controller('users')
 @UseFilters(ApiExceptionFilter)

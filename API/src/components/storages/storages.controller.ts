@@ -11,7 +11,7 @@ import {
     UseGuards,
 } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
-import { IProject, IStorage, IUser, StorageType } from '@astra/common';
+import { IProject, IStorage, IUser, StorageType } from '@bit/alan18081.astra-storage.common.dist';
 import {StoragesService} from './storages.service';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';

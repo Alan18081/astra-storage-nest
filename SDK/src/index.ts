@@ -2,7 +2,7 @@ import { Project } from './components/project/project';
 import { apiRequest } from './helpers/api-request';
 import * as io from 'socket.io-client';
 import { WS_API_URL } from './config';
-import { WsCodes } from '@astra/common/enums';
+import { WsCodes } from '@bit/alan18081.astra-storage.common.dist/enums';
 import { promisify } from 'util';
 import { handle } from './helpers/handle';
 

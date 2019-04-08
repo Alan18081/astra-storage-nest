@@ -2,7 +2,7 @@ import {ClassSerializerInterceptor, Controller, UseInterceptors} from '@nestjs/c
 import {MessagePattern} from '@nestjs/microservices';
 import {
     CommunicationCodes,
-} from '@astra/common';
+} from '@bit/alan18081.astra-storage.common.dist';
 import {
     CreateUserByGoogleDto,
     CreateUserDto,
@@ -11,7 +11,7 @@ import {
     FindUsersListDto,
     RemoveUserDto, ResetPasswordDto, SetNewPasswordDto,
     UpdateUserDto, FindUserByGoogleIdDto, ChangePasswordDto,
-} from '@astra/common/dto';
+} from '@bit/alan18081.astra-storage.common.dist/dto';
 import {User} from './user.entity';
 import {UsersService} from './users.service';
 

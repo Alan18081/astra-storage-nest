@@ -1,4 +1,4 @@
-import {IUser, Roles} from '@astra/common';
+import {IUser, Roles} from '@bit/alan18081.astra-storage.common.dist';
 import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm';
 import {Exclude} from 'class-transformer';
 

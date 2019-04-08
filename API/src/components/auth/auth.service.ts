@@ -3,11 +3,11 @@ import {
     Queues,
     CommunicationCodes,
     JwtUserResponse,
-    JwtProjectResponse, JwtProjectAccountResponse, IUser,
-} from '@astra/common';
-import { LoginDto, LoginProjectDto } from '@astra/common/dto';
+    JwtProjectResponse, JwtProjectAccountResponse,
+} from '@bit/alan18081.astra-storage.common.dist';
+import { LoginDto, LoginProjectDto } from '@bit/alan18081.astra-storage.common.dist/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
-import { createClientOptions } from '@astra/common/helpers';
+import { createClientOptions } from '@bit/alan18081.astra-storage.common.dist/helpers';
 
 @Injectable()
 export class AuthService {

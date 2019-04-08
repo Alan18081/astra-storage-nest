@@ -49,7 +49,7 @@ npm manifest:
       "test:e2e": "jest --config ./test/jest-e2e.json"
     },
     "dependencies": {
-      "@astra/common": "file:../Common/dist",
+      "@bit/alan18081.astra-storage.common.dist": "file:../Common/dist",
       "@nestjs/common": "^5.4.0",
       "@nestjs/core": "^5.4.0",
       "@nestjs/jwt": "^0.2.1",
@@ -110,7 +110,7 @@ Lockfile:
   # yarn lockfile v1
   
   
-  "@astra/common@file:../Common/dist":
+  "@bit/alan18081.astra-storage.common.dist@file:../Common/dist":
     version "0.0.0"
   
   "@babel/code-frame@^7.0.0-beta.35":

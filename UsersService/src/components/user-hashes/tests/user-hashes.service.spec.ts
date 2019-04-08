@@ -4,8 +4,8 @@ import { UserHashesService } from '../user-hashes.service';
 import { UserHash } from '../user-hash.entity';
 import {UserHashesRepository} from '../user-hashes.repository';
 import {mockHash, mockUserHashesRepository} from './mocks';
-import {HashService} from '@astra/common/services';
-import { HashTypes } from '@astra/common/enums';
+import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
+import { HashTypes } from '@bit/alan18081.astra-storage.common.dist/enums';
 import {mockHashService} from '../../users/tests/mocks';
 
 describe('UserHashesService', () => {

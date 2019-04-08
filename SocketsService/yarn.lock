@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@astra/common@file:../Common/dist":
+"@bit/alan18081.astra-storage.common.dist@file:../Common/dist":
   version "0.0.0"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":

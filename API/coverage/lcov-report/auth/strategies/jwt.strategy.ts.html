@@ -92,8 +92,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
-import { JwtUserPayload, Messages } from '@astra/common';
-import { IUser, JWT_SECRET } from '@astra/common';
+import { JwtUserPayload, Messages } from '@bit/alan18081.astra-storage.common.dist';
+import { IUser, JWT_SECRET } from '@bit/alan18081.astra-storage.common.dist';
 import {UsersService} from '../../users/users.service';
 &nbsp;
 @Injectable()

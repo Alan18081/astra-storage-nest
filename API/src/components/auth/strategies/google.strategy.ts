@@ -1,18 +1,19 @@
 import {PassportStrategy} from '@nestjs/passport';
 import {Strategy} from 'passport-google-oauth20';
-import {GOOGLE_CALLBACK_URL, GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET} from '@astra/common/config';
 import {Injectable} from '@nestjs/common';
 import {UsersService} from '../../users/users.service';
+import {ConfigService} from '@bit/alan18081.astra-storage.common.dist/services';
 
 @Injectable()
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(
     private readonly usersService: UsersService,
+    private readonly configService: ConfigService
   ) {
     super({
-      clientID: GOOGLE_CLIENT_ID,
-      clientSecret: GOOGLE_CLIENT_SECRET,
-      callbackURL: GOOGLE_CALLBACK_URL,
+      clientID: configService.get('GOOGLE_CLIENT_ID'),
+      clientSecret: configService.get('GOOGLE_CLIENT_SECRET'),
+      callbackURL: configService.get('GOOGLE_CALLBACK_URL'),
       passReqToCallback: true,
       scope: ['openid', 'email'],
     });

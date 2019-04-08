@@ -1,8 +1,8 @@
 import {
     Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
-    HttpCode, HttpStatus, Param, UseFilters, ParseIntPipe,
+    HttpCode, HttpStatus, Param, UseFilters,
 } from '@nestjs/common';
-import { ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto, LoginProjectDto } from '@astra/common/dto';
+import { ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto, LoginProjectDto } from '@bit/alan18081.astra-storage.common.dist/dto';
 import { Response } from 'express';
 import {ApiBearerAuth, ApiOperation, ApiUseTags} from '@nestjs/swagger';
 import {UsersService} from '../users/users.service';
@@ -10,7 +10,7 @@ import {Messages} from '../../helpers/enums/messages.enum';
 import {AuthService} from './auth.service';
 import {AuthGuard} from '@nestjs/passport';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
-import {IProject, IUser, JwtProjectAccountResponse, JwtProjectResponse, JwtUserResponse} from '@astra/common';
+import {IProject, IUser, JwtProjectAccountResponse, JwtProjectResponse, JwtUserResponse} from '@bit/alan18081.astra-storage.common.dist';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {Project} from '../../helpers/decorators/project.decorator';
 
