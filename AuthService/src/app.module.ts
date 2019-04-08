@@ -3,7 +3,7 @@ import {UserAuthModule} from './components/user-auth/user-auth.module';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import { ProjectAuthModule } from './components/project-auth/project-auth.module';
 import { ProjectAccountAuthModule } from './components/project-account-auth/project-account-auth.module';
-import {ConfigService} from "@bit/alan18081.astra-storage.common.dist/services";
+import {ConfigService} from "@astra/common/services";
 
 @Module({
   imports: [

@@ -13,9 +13,9 @@ import {
     UseGuards
 } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
-import {IProject, IUser} from '@bit/alan18081.astra-storage.common.dist';
+import {IProject, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
-import {CreateProjectDto, UpdateProjectDto} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {CreateProjectDto, UpdateProjectDto} from '@astra/common/dto';
 import {ProjectsService} from './projects.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {ApiOperation, ApiUseTags} from '@nestjs/swagger';

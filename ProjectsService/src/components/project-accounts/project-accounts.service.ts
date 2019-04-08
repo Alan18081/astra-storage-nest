@@ -2,13 +2,13 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import {ProjectAccountsRepository} from './project-accounts.repository';
 import {ProjectAccount} from './project-account.entity';
-import { Messages, PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist';
-import { HashService } from '@bit/alan18081.astra-storage.common.dist/services';
+import { Messages, PaginatedResponse } from '@astra/common';
+import { HashService } from '@astra/common/services';
 import {
     CreateProjectAccountDto,
     FindProjectAccountByEmailDto,
     FindProjectAccountsListDto,
-} from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common/dto';
 import { RpcException } from '@nestjs/microservices';
 
 @Injectable()

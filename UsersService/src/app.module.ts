@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import {UsersModule} from './components/users/users.module';
 import {TypeOrmModule} from '@nestjs/typeorm';
 import {UserHashesModule} from './components/user-hashes/user-hashes.module';
-import {ConfigService} from "@bit/alan18081.astra-storage.common.dist/services";
+import {ConfigService} from "@astra/common/services";
 
 @Module({
   imports: [

@@ -1,5 +1,5 @@
-import { PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist/interfaces';
-import { PaginationDto } from '@bit/alan18081.astra-storage.common.dist/dto';
+import { PaginatedResponse } from '@astra/common/interfaces';
+import { PaginationDto } from '@astra/common/dto';
 import {EntityRepository, MongoRepository} from 'typeorm';
 import { StorageRecord } from './storage-record.entity';
 import {ObjectId} from 'mongodb';

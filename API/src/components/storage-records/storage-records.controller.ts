@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
-import {IStorageRecord, IUser} from '@bit/alan18081.astra-storage.common.dist';
+import {IStorageRecord, IUser} from '@astra/common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {StorageRecordsService} from './storage-records.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';

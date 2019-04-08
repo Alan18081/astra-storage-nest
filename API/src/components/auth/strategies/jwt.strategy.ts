@@ -1,9 +1,9 @@
 import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
-import { JwtUserPayload, Messages, IUser } from '@bit/alan18081.astra-storage.common.dist';
+import { JwtUserPayload, Messages, IUser } from '@astra/common';
 import {UsersService} from '../../users/users.service';
-import {ConfigService} from '@bit/alan18081.astra-storage.common.dist/services';
+import {ConfigService} from '@astra/common/services';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {

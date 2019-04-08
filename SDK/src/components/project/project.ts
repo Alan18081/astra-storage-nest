@@ -2,10 +2,10 @@ import { ProjectAccount } from '../project-account/project-account';
 import { apiRequest } from '../../helpers/api-request';
 import { PublicStorage } from '../storage/public-storage';
 import { ProtectedStorage } from '../storage/protected-storage';
-import { StorageType, WsCodes } from '@bit/alan18081.astra-storage.common.dist/enums';
+import { StorageType, WsCodes } from '@astra/common/enums';
 import { Observable } from 'rxjs';
 import * as SocketIOClient from 'socket.io-client';
-import { Action } from '@bit/alan18081.astra-storage.common.dist/interfaces';
+import { Action } from '@astra/common/interfaces';
 
 export class Project {
 

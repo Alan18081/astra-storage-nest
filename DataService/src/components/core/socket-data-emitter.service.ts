@@ -1,9 +1,9 @@
 import {Injectable} from '@nestjs/common';
-import {IStorageRecord} from '@bit/alan18081.astra-storage.common.dist/entities';
-import {Queues, CommunicationCodes} from '@bit/alan18081.astra-storage.common.dist/enums';
+import {IStorageRecord} from '@astra/common/entities';
+import {Queues, CommunicationCodes} from '@astra/common/enums';
 import {Client, ClientProxy} from '@nestjs/microservices';
-import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
-import {SerializerService} from '@bit/alan18081.astra-storage.common.dist/services';
+import {createClientOptions} from '@astra/common/helpers';
+import {SerializerService} from '@astra/common/services';
 import {mapStorageRecord} from '../../helpers/utils/map-storage-record';
 
 @Injectable()

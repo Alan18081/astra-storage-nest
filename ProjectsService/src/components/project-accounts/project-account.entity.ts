@@ -1,4 +1,4 @@
-import { BaseEntity, IProjectAccount } from '@bit/alan18081.astra-storage.common.dist';
+import { BaseEntity, IProjectAccount } from '@astra/common';
 import {Column, Entity, Index, PrimaryColumn, PrimaryGeneratedColumn} from 'typeorm';
 import {Exclude} from 'class-transformer';
 

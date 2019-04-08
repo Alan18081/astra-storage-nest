@@ -7,10 +7,10 @@ import {
   JwtUserPayload,
   Messages,
   Queues
-} from '@bit/alan18081.astra-storage.common.dist';
+} from '@astra/common';
 import { JwtService } from '@nestjs/jwt';
-import { LoginProjectDto } from '@bit/alan18081.astra-storage.common.dist/dto';
-import { createClientOptions } from '@bit/alan18081.astra-storage.common.dist/helpers';
+import { LoginProjectDto } from '@astra/common/dto';
+import { createClientOptions } from '@astra/common/helpers';
 import { ClientProxy, Client, RpcException } from '@nestjs/microservices';
 import { isString } from 'util';
 

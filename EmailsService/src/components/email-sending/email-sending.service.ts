@@ -3,7 +3,7 @@ import * as sgEmail from '@sendgrid/mail';
 import {SendResetPasswordEmailDto} from '../../../../Common/src/dto/emails';
 import {Email} from './email';
 import {EmailTemplatesService} from './email-templates.service';
-import {ConfigService} from "@bit/alan18081.astra-storage.common.dist/services";
+import {ConfigService} from "@astra/common/services";
 
 @Injectable()
 export class EmailSendingService {

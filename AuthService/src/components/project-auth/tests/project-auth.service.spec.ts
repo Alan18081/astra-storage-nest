@@ -2,9 +2,9 @@ import { Test } from '@nestjs/testing';
 import {ProjectAuthService} from '../project-auth.service';
 import {JwtService} from '@nestjs/jwt';
 import { mockHashService, mockJwtProjectPayload, mockJwtService, mockProject, mockProjectsClient } from './mocks';
-import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
-import {LoginProjectDto} from '@bit/alan18081.astra-storage.common.dist/dto';
-import {CommunicationCodes, Messages} from '@bit/alan18081.astra-storage.common.dist';
+import {HashService} from '@astra/common/services';
+import {LoginProjectDto} from '@astra/common/dto';
+import {CommunicationCodes, Messages} from '@astra/common';
 import {RpcException} from '@nestjs/microservices';
 
 describe('ProjectAuthService', () => {

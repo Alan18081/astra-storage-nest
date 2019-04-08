@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@astra/common@https://github.com/Alan18081/astra-storage-common.git":
+  version "0.0.0"
+  resolved "https://github.com/Alan18081/astra-storage-common.git#fe86816151a938d93a3dc63783c9cdb5a869ef5a"
+
 "@babel/code-frame@^7.0.0-beta.35":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -18,36 +22,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@bit/alan18081.astra-storage.common.dist@^1.0.1":
-  version "1.0.1"
-  resolved "https://node.bitsrc.io/alan18081.astra-storage.common.dist/-/alan18081.astra-storage.common.dist-1.0.1.tgz#b40c0920a63d623cca265db3effd14fdc78161a8"
-  integrity sha1-tAwJIKY9YjzKJl2z7/0U/ceBYag=
-  dependencies:
-    "@nestjs/common" "^5.5.0"
-    "@nestjs/microservices" "^5.5.0"
-    "@nestjs/swagger" "^2.5.1"
-    bcrypt "^3.0.3"
-    class-transformer "^0.2.0"
-    class-validator "^0.9.1"
-    dotenv "^7.0.0"
-    rxjs "^6.3.3"
-    typeorm "^0.2.11"
-
 "@nestjs/common@^5.0.0", "@nestjs/common@^5.4.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.5.0.tgz#6427d440f96e23c38945620fd74cb6ec61da8224"
   integrity sha512-Ifh1D4ypsJYs/3YBIocU+X5yuAZSVKuCsz8kaKB4ZUO5WwJjh4/x6hlr4A+9XUMe8fPLtYXVohJoRUU5HbwyIA==
-  dependencies:
-    axios "0.18.0"
-    cli-color "1.2.0"
-    deprecate "1.0.0"
-    multer "1.3.0"
-    uuid "3.3.2"
-
-"@nestjs/common@^5.5.0":
-  version "5.7.4"
-  resolved "https://registry.yarnpkg.com/@nestjs/common/-/common-5.7.4.tgz#32eaf1de87449ab56af7e3a15b9060811150429a"
-  integrity sha512-Fic27fW81cYdiGJn9KV1Ebz2jdyFCHSLb/jaU3ByiduP//CpZGkeZotA9bs8nEckSKigXTsGqiwXRFqvOSVRLQ==
   dependencies:
     axios "0.18.0"
     cli-color "1.2.0"
@@ -680,14 +658,6 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bcrypt@^3.0.3:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/bcrypt/-/bcrypt-3.0.5.tgz#37a296c48ebf39fe6b28e4da3a221bf80da5aa26"
-  integrity sha512-m4o91nB+Ce8696Ao4R3B/WtVWTc1Lszgd098/OIjU9D/URmdYwT3ooBs9uv1b97J5YhZweTq9lldPefTYZ0TwA==
-  dependencies:
-    nan "2.13.1"
-    node-pre-gyp "0.12.0"
-
 big.js@^5.2.2:
   version "5.2.2"
   resolved "https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz#65f0af382f578bcdc742bd9c281e9cb2d7768328"
@@ -958,11 +928,6 @@ ci-info@^1.5.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-1.6.0.tgz#2ca20dbb9ceb32d4524a683303313f0304b1e497"
   integrity sha512-vsGdkwSCDpWmP80ncATX7iea5DWQemg1UgCW5J8tqjU3lYw4FBYuj89J0CTVomA7BEfvSZd84GmHko+MxFQU2A==
-
-class-transformer@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/class-transformer/-/class-transformer-0.2.0.tgz#e54b34112e8ef7f913ef938c81fed8ed949fc9c7"
-  integrity sha512-6N/5WkEmLZCKxyC2CAPYQIJt3pDZzDFag7AExpyWRm7CjaS/U62VDRU+Z2AUrQaNpnuiXRlli0so4PJUqGSVZQ==
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -3688,11 +3653,6 @@ mz@^2.4.0:
     object-assign "^4.0.1"
     thenify-all "^1.0.0"
 
-nan@2.13.1:
-  version "2.13.1"
-  resolved "https://registry.yarnpkg.com/nan/-/nan-2.13.1.tgz#a15bee3790bde247e8f38f1d446edcdaeb05f2dd"
-  integrity sha512-I6YB/YEuDeUZMmhscXKxGgZlFnhsn5y0hgOZBadkzfTRrZBtJDZeg6eQf7PYMIEclwmorTKK8GztsyOUSVBREA==
-
 nan@^2.9.2:
   version "2.12.1"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.12.1.tgz#7b1aa193e9aa86057e3c7bbd0ac448e770925552"
@@ -3768,22 +3728,6 @@ node-notifier@^5.2.1:
     semver "^5.5.0"
     shellwords "^0.1.1"
     which "^1.3.0"
-
-node-pre-gyp@0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/node-pre-gyp/-/node-pre-gyp-0.12.0.tgz#39ba4bb1439da030295f899e3b520b7785766149"
-  integrity sha512-4KghwV8vH5k+g2ylT+sLTjy5wmUOb9vPhnM8NHvRf9dHmnW/CndrFXy2aRPaPST6dugXSdHXfeaHQm77PIz/1A==
-  dependencies:
-    detect-libc "^1.0.2"
-    mkdirp "^0.5.1"
-    needle "^2.2.1"
-    nopt "^4.0.1"
-    npm-packlist "^1.1.6"
-    npmlog "^4.0.2"
-    rc "^1.2.7"
-    rimraf "^2.6.1"
-    semver "^5.3.0"
-    tar "^4"
 
 node-pre-gyp@^0.10.0:
   version "0.10.3"

@@ -1,4 +1,4 @@
-import { IUser } from '@bit/alan18081.astra-storage.common.dist/entities';
+import { IUser } from '@astra/common/entities';
 
 export interface Socket {
   id: string;

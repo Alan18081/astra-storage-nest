@@ -7,12 +7,12 @@ import {
     JwtUserResponse,
     Messages,
     Queues,
-} from '@bit/alan18081.astra-storage.common.dist';
+} from '@astra/common';
 import { isString } from 'lodash';
-import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
+import {HashService} from '@astra/common/services';
 import {JwtService} from '@nestjs/jwt';
-import {LoginByGoogleDto, LoginDto} from '@bit/alan18081.astra-storage.common.dist/dto';
-import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
+import {LoginByGoogleDto, LoginDto} from '@astra/common/dto';
+import {createClientOptions} from '@astra/common/helpers';
 import {RefreshTokensService} from '../refresh-tokens/refresh-tokens.service';
 
 @Injectable()

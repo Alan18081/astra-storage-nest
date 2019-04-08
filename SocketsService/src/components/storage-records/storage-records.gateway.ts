@@ -1,7 +1,7 @@
 import { WebSocketGateway, WebSocketServer } from '@nestjs/websockets';
-import {Action} from '@bit/alan18081.astra-storage.common.dist/interfaces';
-import { WsCodes } from '@bit/alan18081.astra-storage.common.dist/enums';
-import { IStorageRecord } from '@bit/alan18081.astra-storage.common.dist/entities';
+import {Action} from '@astra/common/interfaces';
+import { WsCodes } from '@astra/common/enums';
+import { IStorageRecord } from '@astra/common/entities';
 import * as actions from './storage-records.actions';
 
 @WebSocketGateway(5001, { namespace: '/' })

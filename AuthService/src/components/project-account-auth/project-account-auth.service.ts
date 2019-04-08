@@ -5,12 +5,12 @@ import {
   JwtProjectAccountResponse,
   Messages,
   Queues,
-} from '@bit/alan18081.astra-storage.common.dist';
+} from '@astra/common';
 import { JwtService } from '@nestjs/jwt';
-import { LoginProjectAccountDto } from '@bit/alan18081.astra-storage.common.dist/dto';
-import { createClientOptions } from '@bit/alan18081.astra-storage.common.dist/helpers';
+import { LoginProjectAccountDto } from '@astra/common/dto';
+import { createClientOptions } from '@astra/common/helpers';
 import { ClientProxy, Client, RpcException } from '@nestjs/microservices';
-import { HashService } from '@bit/alan18081.astra-storage.common.dist/services';
+import { HashService } from '@astra/common/services';
 
 @Injectable()
 export class ProjectAccountAuthService {

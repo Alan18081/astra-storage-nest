@@ -9,12 +9,12 @@ import {
     FindStorageDto,
     UpdateStorageDto,
     CreateStorageDto,
-} from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common/dto';
 import {StoragesService} from '../storages.service';
 import {StoragesRepository} from '../storages.repository';
 import {ProjectsService} from '../../projects/projects.service';
 import {RpcException} from '@nestjs/microservices';
-import {Messages} from '@bit/alan18081.astra-storage.common.dist/enums';
+import {Messages} from '@astra/common/enums';
 import {mockProject} from '../../projects/tests/mocks';
 
 describe('StoragesService', () => {

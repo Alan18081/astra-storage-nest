@@ -1,5 +1,5 @@
 import {Module} from '@nestjs/common';
-import {HashService, ConfigService} from '@bit/alan18081.astra-storage.common.dist/services';
+import {HashService, ConfigService} from '@astra/common/services';
 
 const providers = [
     HashService,

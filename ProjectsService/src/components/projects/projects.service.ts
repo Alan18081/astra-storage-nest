@@ -2,7 +2,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import * as uid from 'uid';
 import {Project} from './project.entity';
 import {ProjectsRepository} from './projects.repository';
-import {CreateProjectDto, FindProjectByClientInfoDto, UpdateProjectDto} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {CreateProjectDto, FindProjectByClientInfoDto, UpdateProjectDto} from '@astra/common/dto';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()

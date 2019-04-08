@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import {ConfigService, SerializerService} from '@bit/alan18081.astra-storage.common.dist/services';
+import {ConfigService, SerializerService} from '@astra/common/services';
 import {SocketDataEmitterService} from './socket-data-emitter.service';
 
 const providers = [

@@ -8,9 +8,9 @@ import {
     mockUser,
     mockRefreshTokensService,
 } from './mocks';
-import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
-import {LoginByGoogleDto, LoginDto} from '@bit/alan18081.astra-storage.common.dist/dto';
-import {CommunicationCodes, JWT_EXPIRES, Messages} from '@bit/alan18081.astra-storage.common.dist';
+import {HashService} from '@astra/common/services';
+import {LoginByGoogleDto, LoginDto} from '@astra/common/dto';
+import {CommunicationCodes, JWT_EXPIRES, Messages} from '@astra/common';
 import {RpcException} from '@nestjs/microservices';
 import {RefreshTokensService} from '../../refresh-tokens/refresh-tokens.service';
 import {mockRefreshToken} from '../../refresh-tokens/tests/mocks';

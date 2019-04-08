@@ -17,7 +17,7 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "@bit/alan18081.astra-storage.common.dist": "^1.0.1",
+    "@astra/common": "https://github.com/Alan18081/astra-storage-common.git",
     "@types/axios": "^0.14.0",
     "@types/node": "^10.12.18",
     "@types/socket.io-client": "^1.4.32",

@@ -1,9 +1,9 @@
 import {Injectable} from '@nestjs/common';
 import {ClientProxy} from '@nestjs/microservices';
 import { Client } from '@nestjs/microservices';
-import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
-import {CommunicationCodes, IProject, Queues} from '@bit/alan18081.astra-storage.common.dist';
-import {CreateProjectDto, UpdateProjectDto} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {createClientOptions} from '@astra/common/helpers';
+import {CommunicationCodes, IProject, Queues} from '@astra/common';
+import {CreateProjectDto, UpdateProjectDto} from '@astra/common/dto';
 
 @Injectable()
 export class ProjectsService {

@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
 import { getRepositoryToken } from '@nestjs/typeorm';
-import {CreateStorageRecordDto, FindStorageRecordsListDto} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {CreateStorageRecordDto, FindStorageRecordsListDto} from '@astra/common/dto';
 import {
     mockStorageRecord, mockStorageRecords, mockStorageRecordsRepository,
 } from './mocks';

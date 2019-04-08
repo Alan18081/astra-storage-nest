@@ -1,6 +1,6 @@
 import { Storage } from './storage';
 import { StorageType } from '../../helpers/storage-types.enum';
-import { PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist/interfaces/paginated-response.interface';
+import { PaginatedResponse } from '@astra/common/interfaces/paginated-response.interface';
 
 export class PublicStorage extends Storage{
 

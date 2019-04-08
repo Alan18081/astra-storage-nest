@@ -13,7 +13,7 @@ import {
     UpdateProjectDto,
     RemoveProjectDto,
     CreateProjectDto,
-} from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common/dto';
 
 describe('ProjectsService', () => {
   let projectsService;

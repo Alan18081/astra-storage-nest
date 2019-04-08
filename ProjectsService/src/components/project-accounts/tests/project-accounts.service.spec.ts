@@ -7,15 +7,15 @@ import {
     FindProjectDto,
     RemoveProjectDto,
     CreateProjectAccountDto,
-} from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common/dto';
 import {ProjectAccountsService} from '../project-accounts.service';
 import {ProjectsService} from '../../projects/projects.service';
 import {ProjectAccountsRepository} from '../project-accounts.repository';
-import {Messages} from '@bit/alan18081.astra-storage.common.dist/enums';
+import {Messages} from '@astra/common/enums';
 import {RpcException} from '@nestjs/microservices';
 import {mockHashService, mockProject} from '../../projects/tests/mocks';
 import {mockProjectsService} from '../../storages/tests/mocks';
-import {HashService} from '@bit/alan18081.astra-storage.common.dist/services';
+import {HashService} from '@astra/common/services';
 
 describe('ProjectsService', () => {
   let projectAccountsService;

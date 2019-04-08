@@ -1,12 +1,12 @@
 import {ClassSerializerInterceptor, Controller, UseFilters, UseGuards, UseInterceptors} from '@nestjs/common';
 import { MessagePattern} from '@nestjs/microservices';
-import { CommunicationCodes, PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist';
+import { CommunicationCodes, PaginatedResponse } from '@astra/common';
 import {
     CreateProjectAccountDto,
     FindProjectAccountsListDto,
     FindProjectAccountByEmailDto,
     FindProjectAccountDto, RemoveProjectAccountDto, FindProjectAccountSdkDto,
-} from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common/dto';
 import { ProjectAccount } from './project-account.entity';
 import { ProjectAccountsService } from './project-accounts.service';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';

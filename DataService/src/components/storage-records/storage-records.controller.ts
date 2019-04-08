@@ -1,6 +1,6 @@
 import { Controller } from '@nestjs/common';
-import { CommunicationCodes, Queues } from '@bit/alan18081.astra-storage.common.dist/enums';
-import { PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist/interfaces';
+import { CommunicationCodes, Queues } from '@astra/common/enums';
+import { PaginatedResponse } from '@astra/common/interfaces';
 import { StorageRecordsService } from './storage-records.service';
 import { ClientProxy, MessagePattern, Client } from '@nestjs/microservices';
 import {
@@ -9,10 +9,10 @@ import {
   FindStorageRecordsListDto, FindStorageRecordsListForOwnerDto,
   RemoveStorageRecordDto,
   UpdateStorageRecordDto,
-} from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common/dto';
 import { StorageRecord } from './storage-record.entity';
-import { createClientOptions } from '@bit/alan18081.astra-storage.common.dist/helpers';
-import { SerializerService } from '@bit/alan18081.astra-storage.common.dist/services';
+import { createClientOptions } from '@astra/common/helpers';
+import { SerializerService } from '@astra/common/services';
 import { RemoveStorageRecordsListByStorageDto } from '../../../../Common/src/dto/storage-records';
 
 @Controller()

@@ -1,8 +1,8 @@
-import { Messages, PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist';
+import { Messages, PaginatedResponse } from '@astra/common';
 import { Storage} from './storage.entity';
 import {StoragesRepository} from './storages.repository';
 import { Injectable } from '@nestjs/common';
-import { CreateStorageDto, FindStoragesListDto } from '@bit/alan18081.astra-storage.common.dist/dto';
+import { CreateStorageDto, FindStoragesListDto } from '@astra/common/dto';
 import { RpcException } from '@nestjs/microservices';
 import {InjectRepository} from '@nestjs/typeorm';
 import {ProjectsService} from '../projects/projects.service';

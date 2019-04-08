@@ -1,7 +1,7 @@
 import {Injectable, NotFoundException} from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
-import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
-import {CommunicationCodes, IStorage, IStorageRecord, Messages, Queues} from '@bit/alan18081.astra-storage.common.dist';
+import {createClientOptions} from '@astra/common/helpers';
+import {CommunicationCodes, IStorage, IStorageRecord, Messages, Queues} from '@astra/common';
 import {StoragesService} from '../storages/storages.service';
 
 @Injectable()

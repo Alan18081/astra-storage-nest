@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { CommunicationCodes } from '@bit/alan18081.astra-storage.common.dist/enums';
-import { IStorageRecord } from '@bit/alan18081.astra-storage.common.dist/entities';
+import { CommunicationCodes } from '@astra/common/enums';
+import { IStorageRecord } from '@astra/common/entities';
 import { StorageRecordsGateway } from './storage-records.gateway';
 
 @Controller()

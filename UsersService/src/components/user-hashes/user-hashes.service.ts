@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { UserHash } from './user-hash.entity';
-import { HashService } from '@bit/alan18081.astra-storage.common.dist/services';
+import { HashService } from '@astra/common/services';
 import { UserHashesRepository } from './user-hashes.repository';
-import { HashTypes } from '@bit/alan18081.astra-storage.common.dist';
+import { HashTypes } from '@astra/common';
 
 @Injectable()
 export class UserHashesService {

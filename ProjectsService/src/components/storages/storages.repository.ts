@@ -1,4 +1,4 @@
-import {BaseRepository } from '@bit/alan18081.astra-storage.common.dist';
+import {BaseRepository } from '@astra/common';
 import { Storage } from './storage.entity';
 import {
   EntityRepository,

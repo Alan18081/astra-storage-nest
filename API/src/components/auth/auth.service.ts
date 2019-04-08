@@ -4,10 +4,10 @@ import {
     CommunicationCodes,
     JwtUserResponse,
     JwtProjectResponse, JwtProjectAccountResponse,
-} from '@bit/alan18081.astra-storage.common.dist';
-import { LoginDto, LoginProjectDto } from '@bit/alan18081.astra-storage.common.dist/dto';
+} from '@astra/common';
+import { LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';
-import { createClientOptions } from '@bit/alan18081.astra-storage.common.dist/helpers';
+import { createClientOptions } from '@astra/common/helpers';
 
 @Injectable()
 export class AuthService {

@@ -18,9 +18,7 @@ services:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'qwerty1'
     ports:
-      - '5432:5432'
-    expose:
-      - '5432'
+      - '5532:5432'
   api_gateway:
     container_name: api_gateway
     hostname: api_gateway
@@ -31,11 +29,9 @@ services:
       - './API/local.env'
       - './Common/common.env'
     volumes:
-      - ./src:/var/www/astra_storage/auth_service/src
+      - ./src:/var/www/astra_storage/api_gateway/src
     ports:
       - '5000:5000'
-    depends_on:
-      - auth_service_db
   auth_service:
     container_name: auth_service
     hostname: auth_service
@@ -47,8 +43,6 @@ services:
       - './Common/common.env'
     volumes:
       - ./src:/var/www/astra_storage/auth_service/src
-#    ports:
-#      - "4000:4000"
     depends_on:
       - auth_service_db
   emails_service:
@@ -57,11 +51,9 @@ services:
     build:
       context: ./EmailsService
       dockerfile: ./Dockerfile
-    env_file: './AuthService/local.env'
+    env_file: './EmailsService/local.env'
     volumes:
       - ./src:/var/www/astra_storage/emails_service/src
-#    ports:
-#      - "4000:4000"
   sockets_service:
     container_name: sockets_service
     hostname: sockets_service
@@ -71,8 +63,6 @@ services:
     env_file: "./SocketsService/local.env"
     volumes:
       - ./src:/var/www/astra_storage/sockets_service/src
-#    ports:
-#      - "4000:4000"
   projects_service_db:
     container_name: projects_service_db
     hostname: projects_service_db
@@ -83,9 +73,7 @@ services:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'qwerty1'
     ports:
-      - '5432:5432'
-    expose:
-      - '5432'
+      - '5632:5432'
   projects_service:
     container_name: projects_service
     hostname: projects_service
@@ -95,8 +83,6 @@ services:
     env_file: './ProjectsService/local.env'
     volumes:
       - ./src:/var/www/astra_storage/projects_service/src
-#    ports:
-#      - "4000:4000"
     depends_on:
       - projects_service_db
   users_service_db:
@@ -109,9 +95,7 @@ services:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'qwerty1'
     ports:
-      - '5432:5432'
-    expose:
-      - '5432'
+      - '5732:5432'
   users_service:
     container_name: users_service
     hostname: users_service
@@ -121,7 +105,5 @@ services:
     env_file: './UsersService/local.env'
     volumes:
       - ./src:/var/www/astra_storage/users_service/src
-#    ports:
-#      - "4000:4000"
     depends_on:
       - users_service_db

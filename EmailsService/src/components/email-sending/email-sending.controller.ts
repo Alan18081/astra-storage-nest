@@ -1,9 +1,9 @@
 import {Controller, UseFilters} from '@nestjs/common';
-import {ServiceExceptionFilter} from '@bit/alan18081.astra-storage.common.dist/filters';
+import {ServiceExceptionFilter} from '@astra/common/filters';
 import {EmailSendingService} from './email-sending.service';
-import {CommunicationCodes} from '@bit/alan18081.astra-storage.common.dist';
+import {CommunicationCodes} from '@astra/common';
 import {MessagePattern} from '@nestjs/microservices';
-import {SendResetPasswordEmailDto} from '@bit/alan18081.astra-storage.common.dist/dto';
+import {SendResetPasswordEmailDto} from '@astra/common/dto';
 
 @Controller()
 @UseFilters(ServiceExceptionFilter)

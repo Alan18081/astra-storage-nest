@@ -1,7 +1,7 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import {createClientOptions} from '@bit/alan18081.astra-storage.common.dist/helpers';
-import {Queues} from '@bit/alan18081.astra-storage.common.dist';
+import {createClientOptions} from '@astra/common/helpers';
+import {Queues} from '@astra/common';
 
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.DATA_SERVICE));

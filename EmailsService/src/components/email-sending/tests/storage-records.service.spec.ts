@@ -2,8 +2,8 @@ import { Test } from '@nestjs/testing';
 import {EmailSendingService} from '../email-sending.service';
 import {EmailTemplatesService} from '../email-templates.service';
 import {mockEmailTemplatesService, mockSgEmail} from './mocks';
-import {SendResetPasswordEmailDto} from '@bit/alan18081.astra-storage.common.dist/dto';
-import {EmailsServiceConfig} from '@bit/alan18081.astra-storage.common.dist';
+import {SendResetPasswordEmailDto} from '@astra/common/dto';
+import {EmailsServiceConfig} from '@astra/common';
 import {Email} from '../email';
 
 describe('StorageRecordsService', () => {

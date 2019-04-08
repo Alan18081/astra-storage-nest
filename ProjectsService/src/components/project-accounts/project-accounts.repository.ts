@@ -1,7 +1,7 @@
 import { EntityRepository, FindManyOptions } from 'typeorm';
 import { ProjectAccount } from './project-account.entity';
-import { BaseRepository, PaginatedResponse } from '@bit/alan18081.astra-storage.common.dist';
-import { PaginationDto } from '@bit/alan18081.astra-storage.common.dist/dto';
+import { BaseRepository, PaginatedResponse } from '@astra/common';
+import { PaginationDto } from '@astra/common/dto';
 
 @EntityRepository(ProjectAccount)
 export class ProjectAccountsRepository extends BaseRepository<ProjectAccount> {
