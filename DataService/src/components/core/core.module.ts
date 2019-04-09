@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import {Global, Module} from '@nestjs/common';
 import {ConfigService, SerializerService} from '@astra/common/services';
 import {SocketDataEmitterService} from './socket-data-emitter.service';
 
@@ -11,6 +11,7 @@ const providers = [
     }
 ];
 
+@Global()
 @Module({
   providers: [...providers],
   exports: [...providers],

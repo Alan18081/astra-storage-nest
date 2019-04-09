@@ -2,6 +2,7 @@ import {CanActivate, ExecutionContext, Injectable} from '@nestjs/common';
 import {createClientOptions} from '@astra/common/helpers';
 import {CommunicationCodes, IStorage, Queues, StorageType} from '@astra/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
+import {configService} from '../config.instance';
 
 @Injectable()
 export class ProtectedStorageGuard implements CanActivate {

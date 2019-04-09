@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import {Global, Module} from '@nestjs/common';
 import { ClientsStoreService } from './clients-store.service';
 import {ConfigService} from "@astra/common/services";
 
@@ -10,6 +10,7 @@ const providers = [
   }
 ];
 
+@Global()
 @Module({
   providers: [...providers],
   exports: [...providers],

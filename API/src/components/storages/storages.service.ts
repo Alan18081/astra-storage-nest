@@ -2,6 +2,7 @@ import { BadRequestException, Injectable, NotFoundException } from '@nestjs/comm
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {createClientOptions} from '@astra/common/helpers';
 import { CommunicationCodes, IStorage, Messages, Queues, StorageType } from '@astra/common';
+import {configService} from '../../helpers/config.instance';
 
 @Injectable()
 export class StoragesService {

@@ -12,7 +12,8 @@
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
     "dotenv": "^7.0.0",
-    "rxjs": "^6.4.0"
+    "rxjs": "^6.4.0",
+    "typeorm": "^0.2.16"
   },
   "scripts": {
     "build": "rm -rf ./dist && tsc"

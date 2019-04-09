@@ -7,3 +7,5 @@ export * from './entities';
 export * from './interfaces';
 
 export * from './filters';
+
+export * from './orm';

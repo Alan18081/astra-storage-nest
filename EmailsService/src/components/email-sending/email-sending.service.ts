@@ -1,6 +1,6 @@
 import {Injectable} from '@nestjs/common';
 import * as sgEmail from '@sendgrid/mail';
-import {SendResetPasswordEmailDto} from '../../../../Common/src/dto/emails';
+import {SendResetPasswordEmailDto} from '@astra/common/dto';
 import {Email} from './email';
 import {EmailTemplatesService} from './email-templates.service';
 import {ConfigService} from "@astra/common/services";
