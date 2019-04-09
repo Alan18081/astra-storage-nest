@@ -11,19 +11,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 class BaseRepository extends typeorm_1.Repository {
     findById(id) {
-        const _super = Object.create(null, {
-            findOne: { get: () => super.findOne }
-        });
+        const _super = name => super[name];
         return __awaiter(this, void 0, void 0, function* () {
-            return _super.findOne.call(this, id);
+            return _super("findOne").call(this, id);
         });
     }
     findManyWithPagination(query, { page, limit }) {
-        const _super = Object.create(null, {
-            findAndCount: { get: () => super.findAndCount }
-        });
+        const _super = name => super[name];
         return __awaiter(this, void 0, void 0, function* () {
-            const [data, count] = yield _super.findAndCount.call(this, {
+            const [data, count] = yield _super("findAndCount").call(this, {
                 skip: (page - 1) * limit,
                 take: limit,
                 where: query,
