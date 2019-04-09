@@ -5,5 +5,5 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./enums"));
 __export(require("./config"));
-__export(require("./orm"));
 __export(require("./filters"));
+__export(require("./orm"));

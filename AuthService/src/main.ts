@@ -4,6 +4,7 @@ import { Queues, ServiceExceptionFilter } from '@astra/common';
 import { createClientOptions } from '@astra/common/helpers';
 import { ValidationPipe } from '@nestjs/common';
 
+
 async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.AUTH_SERVICE));
   app.useGlobalPipes(new ValidationPipe());

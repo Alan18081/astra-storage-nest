@@ -3,8 +3,11 @@ import { createClientOptions } from '@astra/common/helpers';
 import { CommunicationCodes, Messages, Queues, WsCodes } from '@astra/common/enums';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { ClientsStoreService } from './components/core/clients-store.service';
+import {ConfigService} from "@astra/common/services";
 
-@WebSocketGateway(5001, { namespace: '/' })
+const configService = new ConfigService(`${process.env.NODE_ENV}.env`);
+
+@WebSocketGateway(+configService.get('WS_PORT'), { namespace: '/' })
 export class AppGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
   @Client(createClientOptions(Queues.AUTH_SERVICE))

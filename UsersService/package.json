@@ -18,7 +18,7 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "@astra/common": "file:../Common/dist",
+    "@astra/common": "https://github.com/Alan18081/astra-storage-common.git#master",
     "@nestjs/common": "^5.0.0",
     "@nestjs/core": "^5.0.0",
     "@nestjs/jwt": "^0.2.1",

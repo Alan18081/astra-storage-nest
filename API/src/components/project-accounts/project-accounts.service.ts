@@ -2,7 +2,7 @@ import {Injectable} from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {createClientOptions} from '@astra/common/helpers';
 import {CommunicationCodes, IProjectAccount, Queues} from '@astra/common';
-import { CreateProjectAccountDto } from '@astra/common/dto';
+
 
 @Injectable()
 export class ProjectAccountsService {

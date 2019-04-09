@@ -2,8 +2,9 @@
 # yarn lockfile v1
 
 
-"@astra/common@file:../Common/dist":
+"@astra/common@https://github.com/Alan18081/astra-storage-common.git#master":
   version "0.0.0"
+  resolved "https://github.com/Alan18081/astra-storage-common.git#17f0fd8def17540bfc866a5f4db22f2afbbadb9a"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"

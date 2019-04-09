@@ -1,17 +1,11 @@
 import { Module } from '@nestjs/common';
-import { JwtModule } from '@nestjs/jwt';
 import { ProjectAuthController } from './project-auth.controller';
-import { ProjectAuthService } from './project-auth.service';
-import { JWT_EXPIRES, JWT_SECRET } from '@astra/common';
+import {CustomJwtModule} from "../custom-jwt/custom-jwt.module";
+import {ProjectAuthService} from "./project-auth.service";
 
 @Module({
   imports: [
-    JwtModule.register({
-      secretOrPrivateKey: JWT_SECRET,
-      signOptions: {
-        expiresIn: JWT_EXPIRES,
-      },
-    }),
+    CustomJwtModule,
   ],
   controllers: [ProjectAuthController],
   providers: [ProjectAuthService],

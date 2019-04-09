@@ -1,6 +1,13 @@
 version: '3'
 
 services:
+  rabbitmq_server:
+    container_name: rabbitmq_server
+    hostname: rabbitmq_server
+    image: 'bitnami/rabbitmq:latest'
+    environment:
+      - RABBITMQ_USERNAME=astra_user
+      - RABBITMQ_PASSWORD=astra_password
   data_service_db:
     container_name: data_service_db
     hostname: data_service_db
@@ -11,103 +18,110 @@ services:
   auth_service_db:
     container_name: auth_service_db
     hostname: auth_service_db
-    image: mysql:5.7
+    image: postgres
     restart: always
     environment:
-      MYSQL_DATABASE: 'auth_service_db'
-      MYSQL_USER: 'auth_service_db_user'
-      MYSQL_PASSWORD: 'auth_service_db_user'
-      MYSQL_ROOT_PASSWORD: 'auth_service_db_user'
+      POSTGRES_DB: 'as_auth_service'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'qwerty1'
+    command: -p 5532
+  api_gateway:
+    container_name: api_gateway
+    hostname: api_gateway
+    build:
+      context: ./API
+      dockerfile: ./Dockerfile
+    env_file:
+      - './API/local.env'
+    volumes:
+      - ./API/src:/var/www/astra_storage/api_gateway/src
     ports:
-      - '3306:3306'
+      - '5000:5000'
     expose:
-      - '3306'
+      - '5000'
+    depends_on:
+      - rabbitmq_server
   auth_service:
     container_name: auth_service
     hostname: auth_service
     build:
       context: ./AuthService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file:
+      - './AuthService/local.env'
     volumes:
-      - ./src:/var/www/astra_storage/auth_service/src
-#    ports:
-#      - "4000:4000"
+      - ./AuthService/src:/var/www/astra_storage/auth_service/src
     depends_on:
       - auth_service_db
+      - rabbitmq_server
   emails_service:
     container_name: emails_service
     hostname: emails_service
     build:
       context: ./EmailsService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file: './EmailsService/local.env'
     volumes:
-      - ./src:/var/www/astra_storage/emails_service/src
-#    ports:
-#      - "4000:4000"
+      - ./EmailsService/src:/var/www/astra_storage/emails_service/src
   sockets_service:
     container_name: sockets_service
     hostname: sockets_service
     build:
       context: ./SocketsService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file: "./SocketsService/local.env"
     volumes:
-      - ./src:/var/www/astra_storage/sockets_service/src
-#    ports:
-#      - "4000:4000"
+      - ./SocketsService/src:/var/www/astra_storage/sockets_service/src
+    depends_on:
+      - rabbitmq_server
   projects_service_db:
     container_name: projects_service_db
     hostname: projects_service_db
-    image: mysql:5.7
+    image: postgres
     restart: always
     environment:
-      MYSQL_DATABASE: 'projects_service_db'
-      MYSQL_USER: 'projects_service_db_user'
-      MYSQL_PASSWORD: 'projects_service_db_user'
-      MYSQL_ROOT_PASSWORD: 'projects_service_db_user'
-    ports:
-      - '3306:3306'
-    expose:
-      - '3306'
+      POSTGRES_DB: 'as_projects_service'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'qwerty1'
+    command: -p 5632
   projects_service:
     container_name: projects_service
     hostname: projects_service
     build:
       context: ./ProjectsService
       dockerfile: ./Dockerfile
-    env_file: "./local.env"
+    env_file: './ProjectsService/local.env'
     volumes:
-      - ./src:/var/www/astra_storage/projects_service/src
-#    ports:
-#      - "4000:4000"
+      - ./ProjectsService/src:/var/www/astra_storage/projects_service/src
     depends_on:
       - projects_service_db
+      - rabbitmq_server
   users_service_db:
     container_name: users_service_db
     hostname: users_service_db
-    image: mysql:5.7
+    image: postgres
     restart: always
     environment:
-      MYSQL_DATABASE: 'users_service_db'
-      MYSQL_USER: 'users_service_db_user'
-      MYSQL_PASSWORD: 'users_service_db_user'
-      MYSQL_ROOT_PASSWORD: 'users_service_db_user'
-    ports:
-      - '3306:3306'
-    expose:
-      - '3306'
+      POSTGRES_DB: 'as_users_service'
+      POSTGRES_USER: 'postgres'
+      POSTGRES_PASSWORD: 'qwerty1'
+    command: -p 5732
   users_service:
-      container_name: users_service
-      hostname: users_service
-      build:
-        context: ./UsersService
-        dockerfile: ./Dockerfile
-      env_file: "./local.env"
-      volumes:
-        - ./src:/var/www/astra_storage/users_service/src
-      ports:
-        - "4000:4000"
-      depends_on:
-        - users_service_db
+    container_name: users_service
+    hostname: users_service
+    build:
+      context: ./UsersService
+      dockerfile: ./Dockerfile
+    env_file: './UsersService/local.env'
+    volumes:
+      - ./UsersService/src:/var/www/astra_storage/users_service/src
+    depends_on:
+      - users_service_db
+      - rabbitmq_server
+
+volumes:
+#  api_gateway:
+#  auth_service:
+#  sockets_service:
+  projects_service:
+#  users_service:

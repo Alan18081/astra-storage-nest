@@ -3,7 +3,7 @@ import {
     Queues,
     CommunicationCodes,
     JwtUserResponse,
-    JwtProjectResponse, JwtProjectAccountResponse, IUser,
+    JwtProjectResponse, JwtProjectAccountResponse,
 } from '@astra/common';
 import { LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Client, ClientProxy } from '@nestjs/microservices';

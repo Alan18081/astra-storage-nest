@@ -8,20 +8,6 @@ export class ClientsStoreService {
   private userIdsToSocketIds: Map<number, string> = new Map();
   private socketIdsToUserIds: Map<string, number> = new Map();
 
-  getSocketById(socketId: string): Socket | undefined {
-    const userId = this.socketIdsToUserIds.get(socketId);
-    if(userId) {
-      return this.sockets.get(JSON.stringify({ userId, socketId }));
-    }
-  }
-
-  getSocketByUserId(userId: number): Socket | undefined {
-    const socketId = this.userIdsToSocketIds.get(userId);
-    if (socketId) {
-      return this.sockets.get(JSON.stringify({ userId, socketId }));
-    }
-  }
-
   addSocket(socket: Socket): void {
     this.userIdsToSocketIds.set(socket.user.id, socket.id);
     this.socketIdsToUserIds.set(socket.id, socket.user.id);

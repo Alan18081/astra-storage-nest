@@ -1,15 +1,19 @@
 import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
-import {IProjectAccount, JWT_SECRET, JwtProjectAccountPayload, Messages} from '@astra/common';
+import {IProjectAccount, JwtProjectAccountPayload, Messages} from '@astra/common';
 import {ProjectAccountsService} from '../../project-accounts/project-accounts.service';
+import {ConfigService} from '@astra/common/services';
 
 @Injectable()
 export class JwtProjectAccountStrategy extends PassportStrategy(Strategy, 'jwtProjectAccount') {
-    constructor(private readonly projectAccountsService: ProjectAccountsService) {
+    constructor(
+        private readonly projectAccountsService: ProjectAccountsService,
+        private readonly configService: ConfigService
+    ) {
     super({
       jwtFromRequest: ExtractJwt.fromUrlQueryParameter('accountToken'),
-      secretOrKey: JWT_SECRET,
+      secretOrKey: configService.get('JWT_SECRET'),
       passReqToCallback: true,
     });
   }

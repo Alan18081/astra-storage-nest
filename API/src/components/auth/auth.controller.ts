@@ -1,6 +1,6 @@
 import {
     Body, Controller, Get, Post, UnauthorizedException, UseGuards, Res, Query, Put,
-    HttpCode, HttpStatus, Param, UseFilters, ParseIntPipe,
+    HttpCode, HttpStatus, Param, UseFilters,
 } from '@nestjs/common';
 import { ExchangeTokenDto, SetNewPasswordDto, ResetPasswordDto, LoginDto, LoginProjectDto } from '@astra/common/dto';
 import { Response } from 'express';

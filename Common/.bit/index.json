@@ -1,0 +1,34 @@
+[
+  {
+    "id": {
+      "scope": null,
+      "name": "common/dist"
+    },
+    "isSymlink": true,
+    "hash": "839eff4e3bfe1fc7af8b1a6a5276e8e4259d9e39"
+  },
+  {
+    "id": {
+      "scope": null,
+      "name": "astra-storage-nest/common"
+    },
+    "isSymlink": true,
+    "hash": "9e316ef158e4d6758c42a500a21d27306e40ac52"
+  },
+  {
+    "id": {
+      "scope": "alan18081.astra-storage",
+      "name": "common/dist"
+    },
+    "isSymlink": false,
+    "hash": "51ef379ac5c121439a23a3f3c81452ff6743d0eb"
+  },
+  {
+    "id": {
+      "scope": "alan18081.astra-storage",
+      "name": "astra-storage-nest/common"
+    },
+    "isSymlink": false,
+    "hash": "ca951f24a11c43d0f3d5b29b57b28d82500b65ea"
+  }
+]

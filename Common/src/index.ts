@@ -6,6 +6,6 @@ export * from './entities';
 
 export * from './interfaces';
 
-export * from './orm';
-
 export * from './filters';
+
+export * from './orm';

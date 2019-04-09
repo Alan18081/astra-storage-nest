@@ -17,15 +17,17 @@
     "webpack": "webpack --config webpack.config.js"
   },
   "dependencies": {
-    "@astra/common": "file:../Common/dist",
+    "@astra/common": "https://github.com/Alan18081/astra-storage-common.git#master",
     "@nestjs/common": "^5.0.0",
     "@nestjs/core": "^5.0.0",
     "@nestjs/microservices": "^5.6.2",
     "@nestjs/websockets": "^5.6.2",
     "amqp-connection-manager": "^2.3.0",
     "amqplib": "^0.5.3",
+    "bcrypt": "^3.0.5",
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
+    "dotenv": "^7.0.0",
     "fastify-formbody": "^2.0.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0",
