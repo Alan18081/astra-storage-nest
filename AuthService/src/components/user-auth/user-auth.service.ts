@@ -14,7 +14,6 @@ import {JwtService} from '@nestjs/jwt';
 import {LoginByGoogleDto, LoginDto} from '@astra/common/dto';
 import {createClientOptions} from '@astra/common/helpers';
 import {RefreshTokensService} from '../refresh-tokens/refresh-tokens.service';
-import {configService} from '../../helpers/config.instance';
 
 @Injectable()
 export class UserAuthService {

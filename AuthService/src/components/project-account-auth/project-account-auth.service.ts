@@ -11,7 +11,6 @@ import { LoginProjectAccountDto } from '@astra/common/dto';
 import { createClientOptions } from '@astra/common/helpers';
 import { ClientProxy, Client, RpcException } from '@nestjs/microservices';
 import { HashService } from '@astra/common/services';
-import {configService} from '../../helpers/config.instance';
 
 @Injectable()
 export class ProjectAccountAuthService {

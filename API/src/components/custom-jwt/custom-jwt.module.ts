@@ -7,15 +7,12 @@ import {CoreModule} from "../core/core.module";
     imports: [
         CoreModule,
         JwtModule.registerAsync({
-            useFactory: (configService: ConfigService) => {
-                console.log(configService);
-                return {
-                    secretOrPrivateKey: configService.get('JWT_SECRET'),
-                    signOptions: {
-                        expiresIn: +configService.get('JWT_EXPIRES'),
-                    },
-                }
-            },
+            useFactory: (configService: ConfigService) => ({
+                secretOrPrivateKey: configService.get('JWT_SECRET'),
+                signOptions: {
+                    expiresIn: +configService.get('JWT_EXPIRES'),
+                },
+            }),
             inject: [ConfigService]
         }),
     ],
