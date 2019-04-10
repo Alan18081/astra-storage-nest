@@ -6,21 +6,17 @@ Service for managing users data
 
 ## Installation
 
+Firstly install docker and docker-compose\
+Then run in project directory
+
 ```bash
-$ npm install
+$ docker-compose build
 ```
 
 ## Running the app
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-npm run start:prod
+$ docker-compose up
 ```
 
 ## Test
@@ -28,9 +24,6 @@ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
