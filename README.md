@@ -1,10 +1,22 @@
-# astra-storage-nest
+# Astra-storage
 
-## Setup
-Install postgres and mongodb locally
+## Description
 
-### Installing dependencies
-Run "bash ./build" to install dependencies
+Service for managing users data\
+Microservices-based system
 
-### Start project
-Run "pm2 start ./ecosystem.config.js" to start app 
+## Installation
+
+Firstly install docker and docker-compose\
+Then run in project directory
+
+```bash
+$ docker-compose build
+```
+
+## Running the app
+
+```bash
+$ docker-compose up
+```
+

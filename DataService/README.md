@@ -1,26 +1,25 @@
-# data-service
+# Data-service
 
 ## Description
 
-Service for storing records created by users
+Service for storing records created by users\
+Part of astra-storage microservices-based system
 
 ## Installation
 
+Firstly install docker\
+Then run in project directory
+
 ```bash
-$ npm install
+$ docker pull mongo
+$ docker build --tag as_data_service .
 ```
 
-## Running the app
+## Running the microservice
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-npm run start:prod
+$ docker run -h data_service_db -t mongo -p 27017:27017
+$ docker run as_data_service
 ```
 
 ## Test
@@ -28,9 +27,6 @@ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
 
 # test coverage
 $ npm run test:cov

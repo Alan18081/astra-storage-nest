@@ -2,25 +2,22 @@
 
 ## Description
 
-Sockets service for realtime notifications
+Sockets service for real-time notifications\
+Part of astra-storage microservices-based system
 
 ## Installation
 
+Firstly install docker\
+Then run in project directory
+
 ```bash
-$ npm install
+$ docker build --tag as_sockets_service .
 ```
 
-## Running the app
+## Running the microservice
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-npm run start:prod
+$ docker run as_sockets_service
 ```
 
 ## Test
@@ -28,9 +25,6 @@ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
 
 # test coverage
 $ npm run test:cov

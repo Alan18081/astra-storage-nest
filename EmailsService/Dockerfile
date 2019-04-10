@@ -10,6 +10,4 @@ ADD . /var/www/astra_storage/emails_service
 
 RUN ["chmod", "+x", "/var/www/astra_storage/emails_service/start.sh"]
 
-EXPOSE 4000
-
 CMD ["./start.sh"]

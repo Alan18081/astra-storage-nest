@@ -1,26 +1,25 @@
-# users-service
+# Users-service
 
 ## Description
 
-Service for managing users data
+Service for managing users data\
+Part of astra-storage microservices-based system
 
 ## Installation
 
+Firstly install docker\
+Then run in project directory
+
 ```bash
-$ npm install
+$ docker pull postgres
+$ docker build --tag as_users_service .
 ```
 
-## Running the app
+## Running the microservice
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-npm run start:prod
+$ docker run -h users_service_db -t postgres -p 5732:5432
+$ docker run as_users_service
 ```
 
 ## Test
@@ -28,9 +27,6 @@ npm run start:prod
 ```bash
 # unit tests
 $ npm run test
-
-# e2e tests
-$ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
