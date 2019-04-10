@@ -21,7 +21,6 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
 
   async validate(req: Request, accessToken: string, refreshToken: string, profile: any, done: Function): Promise<any> {
     try {
-      console.log(profile.id);
       const user = await this.usersService.findOneByGoogleId(profile.id);
 
       if (user) {

@@ -9,8 +9,6 @@ async function bootstrap() {
   const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.USERS_SERVICE));
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new ServiceExceptionFilter());
-  await app.listen(() => {
-    console.log('UsersService is running');
-  });
+  await app.listen(() => console.log('UsersService is running'));
 }
 bootstrap();

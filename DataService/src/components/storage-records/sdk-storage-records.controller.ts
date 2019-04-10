@@ -43,7 +43,6 @@ export class SdkStorageRecordsController {
     @MessagePattern({ cmd: CommunicationCodes.SDK_UPDATE_STORAGE_RECORD })
     async updateOne(payload: UpdateStorageRecordDto): Promise<StorageRecord | undefined> {
         const storageRecord = await this.storageRecordsService.updateOne(payload.id, payload.data);
-        console.log(storageRecord);
         this.socketDataEmitterService.emitUpdatedEvent(cloneDeep(storageRecord));
         return storageRecord;
     }

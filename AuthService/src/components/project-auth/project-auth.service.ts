@@ -13,7 +13,6 @@ import { LoginProjectDto } from '@astra/common/dto';
 import { createClientOptions } from '@astra/common/helpers';
 import { ClientProxy, Client, RpcException } from '@nestjs/microservices';
 import { isString } from 'util';
-import {configService} from '../../helpers/config.instance';
 
 @Injectable()
 export class ProjectAuthService {
