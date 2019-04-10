@@ -15,6 +15,19 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
+  data_service:
+    container_name: data_service
+    hostname: data_service
+    build:
+      context: ./DataService
+      dockerfile: ./Dockerfile
+    env_file:
+      - './DataService/local.env'
+    volumes:
+      - ./DataService/src:/var/www/astra_storage/auth_service/src
+    depends_on:
+      - data_service_db
+      - rabbitmq_server
   auth_service_db:
     container_name: auth_service_db
     hostname: auth_service_db
@@ -120,8 +133,9 @@ services:
       - rabbitmq_server
 
 volumes:
-#  api_gateway:
-#  auth_service:
-#  sockets_service:
+  data_service:
+  api_gateway:
+  auth_service:
+  sockets_service:
   projects_service:
-#  users_service:
+  users_service:

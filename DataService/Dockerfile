@@ -1,8 +1,7 @@
 FROM node:10
 
-RUN npm i -g typescript ts-node nodemon
-
 WORKDIR /var/www/astra_storage/data_service
+RUN npm i -g typescript ts-node nodemon
 ADD package.json /var/www/astra_storage/data_service
 RUN yarn install
 

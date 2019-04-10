@@ -9,11 +9,11 @@ import {
   FindStorageRecordsListDto, FindStorageRecordsListForOwnerDto,
   RemoveStorageRecordDto,
   UpdateStorageRecordDto,
+  RemoveStorageRecordsListByStorageDto,
 } from '@astra/common/dto';
 import { StorageRecord } from './storage-record.entity';
 import { createClientOptions } from '@astra/common/helpers';
 import { SerializerService } from '@astra/common/services';
-import { RemoveStorageRecordsListByStorageDto } from '../../../../Common/src/dto/storage-records';
 
 @Controller()
 export class StorageRecordsController {

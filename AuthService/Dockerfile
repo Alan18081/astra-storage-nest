@@ -1,8 +1,8 @@
 FROM node:10
 
+WORKDIR /var/www/astra_storage/auth_service
 RUN npm i -g typescript ts-node nodemon
 
-WORKDIR /var/www/astra_storage/auth_service
 ADD package.json /var/www/astra_storage/auth_service
 RUN yarn install
 

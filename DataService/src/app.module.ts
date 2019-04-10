@@ -5,11 +5,11 @@ import {ConfigService} from "@astra/common/services";
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
+    TypeOrmModule.forRootAsync({
         useFactory: (configService: ConfigService) => ({
-            type: 'postgres',
+            type: 'mongodb',
             host: configService.get('DB_HOST'),
-            port: configService.get('DB_PORT'),
+            port: +configService.get('DB_PORT'),
             database: configService.get('DB_NAME'),
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
             synchronize: true,
