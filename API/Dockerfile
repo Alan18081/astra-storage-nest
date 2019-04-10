@@ -10,6 +10,6 @@ ADD . /var/www/astra_storage/api_gateway
 
 RUN ["chmod", "+x", "/var/www/astra_storage/api_gateway/start.sh"]
 
-EXPOSE 4000
+EXPOSE 5000
 
 CMD ["./start.sh"]

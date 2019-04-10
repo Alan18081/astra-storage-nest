@@ -1,22 +1,23 @@
-# users-service
+# Users-service
 
 ## Description
 
-Service for managing users data
+Service for managing users data\
+Part of astra-storage microservices-based system
 
 ## Installation
 
-Firstly install docker and docker-compose\
+Firstly install docker\
 Then run in project directory
 
 ```bash
-$ docker-compose build
+$ docker build --tag as_users_service .
 ```
 
-## Running the app
+## Running the microservice
 
 ```bash
-$ docker-compose up
+$ docker run as_users_service
 ```
 
 ## Test

@@ -2,7 +2,8 @@
 
 ## Description
 
-Service for managing users data
+Service for managing users data\
+Microservices-based system
 
 ## Installation
 
@@ -17,15 +18,5 @@ $ docker-compose build
 
 ```bash
 $ docker-compose up
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# test coverage
-$ npm run test:cov
 ```
 
