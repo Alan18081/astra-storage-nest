@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
 import {mockUser, mockUsersService} from '../mocks';
-import {UsersService} from '../../../users/users.service';
+import {UsersServiceOld} from '../../../users/users.service.old';
 import {JwtStrategy} from '../../strategies/jwt.strategy';
 import {UnauthorizedException} from '@nestjs/common';
 import {Messages} from '@astra/common';
@@ -12,7 +12,7 @@ describe('JwtStrategy', () => {
        const module = await Test.createTestingModule({
           providers: [
               JwtStrategy,
-              { provide: UsersService, useValue: mockUsersService },
+              { provide: UsersServiceOld, useValue: mockUsersService },
           ],
        }).compile();
 

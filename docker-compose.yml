@@ -120,8 +120,8 @@ services:
       - rabbitmq_server
 
 volumes:
-#  api_gateway:
-#  auth_service:
-#  sockets_service:
+  api_gateway:
+  auth_service:
+  sockets_service:
   projects_service:
-#  users_service:
+  users_service:

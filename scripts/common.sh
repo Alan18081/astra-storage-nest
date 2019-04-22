@@ -12,7 +12,7 @@ bit export alan18081.astra-storage
 
 MICROSERVICES=(
     API
-    UsersService
+    UsersServiceOld
     AuthService
     ProjectsService
     DataService

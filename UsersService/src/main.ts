@@ -1,14 +1,27 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { Queues, ServiceExceptionFilter } from '@astra/common';
-import {createClientOptions} from '@astra/common/helpers';
+import { ServiceExceptionFilter } from '@astra/common';
 import {ValidationPipe} from '@nestjs/common';
+import {Transport} from '@nestjs/microservices';
+import {join} from 'path';
+import {ConfigService} from '@astra/common/services';
 
 
 async function bootstrap() {
-  const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.USERS_SERVICE));
+    console.log(join(__dirname, 'proto/users.proto'));
+  const app = await NestFactory.createMicroservice(AppModule, {
+      transport: Transport.GRPC,
+      options: {
+          url: '0.0.0.0:5000',
+          package: 'users',
+          protoPath: join(__dirname, 'proto/users.proto'),
+      },
+  });
+  const config = app.get(ConfigService);
+  // app.connectMicroservice();
   app.useGlobalPipes(new ValidationPipe());
   app.useGlobalFilters(new ServiceExceptionFilter());
-  await app.listen(() => console.log('UsersService is running'));
+  // await app.startAllMicroservicesAsync();
+  await app.listen(() => console.log('UsersServiceOld is running'));
 }
 bootstrap();

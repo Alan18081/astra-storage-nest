@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@astra/common": "https://github.com/Alan18081/astra-storage-common.git#master",
+    "@grpc/proto-loader": "^0.5.0",
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
     "@nestjs/jwt": "^6.0.0",
@@ -34,6 +35,7 @@
     "class-validator": "^0.9.1",
     "dotenv": "^7.0.0",
     "express-rate-limit": "^3.3.2",
+    "grpc": "^1.20.0",
     "helmet": "^3.15.0",
     "passport": "^0.4.0",
     "passport-google-oauth20": "^1.0.0",

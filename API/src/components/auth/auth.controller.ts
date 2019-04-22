@@ -19,8 +19,9 @@ import {Project} from '../../helpers/decorators/project.decorator';
 @ApiUseTags('Auth')
 export class AuthController {
 
+    private readonly usersService: UsersService;
+
   constructor(
-    private readonly usersService: UsersService,
     private readonly authService: AuthService,
   ) {}
 
@@ -84,34 +85,34 @@ export class AuthController {
     return new UnauthorizedException(Messages.FAILED_GOOGLE_AUTH);
   }
 
-  @Put('changePassword')
-  @UseGuards(AuthGuard('jwt'))
-  @HttpCode(HttpStatus.ACCEPTED)
-  @ApiBearerAuth()
-  @ApiOperation({ title: 'Create new password' })
-  async changePassword(@ReqUser() user: IUser, @Body() payload: any): Promise<void> {
-    await this.usersService.changePassword(user.id, payload.oldPassword, payload.newPassword);
-
-  }
-
-  @Post('resetPassword')
-  @HttpCode(HttpStatus.ACCEPTED)
-  @ApiOperation({ title: 'Reset password' })
-  async resetPassword(@Body() dto: ResetPasswordDto): Promise<void> {
-    await this.usersService.resetPassword(dto.email);
-  }
-
-  @Get('resetPassword/hash/:hash')
-  @HttpCode(HttpStatus.OK)
-  @ApiOperation({ title: 'Verify reset password hash' })
-  async verifyResetPasswordHash(@Param('hash') hash: string): Promise<void> {
-    await this.usersService.verifyResetPasswordHash(hash);
-  }
-
-  @Post('newPassword')
-  @HttpCode(HttpStatus.ACCEPTED)
-  @ApiOperation({ title: 'Set new password' })
-  async setNewPassword(@Body() body: SetNewPasswordDto): Promise<void> {
-    await this.usersService.setNewPassword(body);
-  }
+  // @Put('changePassword')
+  // @UseGuards(AuthGuard('jwt'))
+  // @HttpCode(HttpStatus.ACCEPTED)
+  // @ApiBearerAuth()
+  // @ApiOperation({ title: 'Create new password' })
+  // async changePassword(@ReqUser() user: IUser, @Body() payload: any): Promise<void> {
+  //   await this.usersService.changePassword(user.id, payload.oldPassword, payload.newPassword);
+  //
+  // }
+  //
+  // @Post('resetPassword')
+  // @HttpCode(HttpStatus.ACCEPTED)
+  // @ApiOperation({ title: 'Reset password' })
+  // async resetPassword(@Body() dto: ResetPasswordDto): Promise<void> {
+  //   await this.usersService.resetPassword(dto.email);
+  // }
+  //
+  // @Get('resetPassword/hash/:hash')
+  // @HttpCode(HttpStatus.OK)
+  // @ApiOperation({ title: 'Verify reset password hash' })
+  // async verifyResetPasswordHash(@Param('hash') hash: string): Promise<void> {
+  //   await this.usersService.verifyResetPasswordHash(hash);
+  // }
+  //
+  // @Post('newPassword')
+  // @HttpCode(HttpStatus.ACCEPTED)
+  // @ApiOperation({ title: 'Set new password' })
+  // async setNewPassword(@Body() body: SetNewPasswordDto): Promise<void> {
+  //   await this.usersService.setNewPassword(body);
+  // }
 }

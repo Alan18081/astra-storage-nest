@@ -1,13 +1,13 @@
 import {PassportStrategy} from '@nestjs/passport';
 import {Strategy} from 'passport-google-oauth20';
 import {Injectable} from '@nestjs/common';
-import {UsersService} from '../../users/users.service';
+// import {UsersServiceOld} from '../../users/users.service.old';
 import {ConfigService} from '@astra/common/services';
 
 @Injectable()
 export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   constructor(
-    private readonly usersService: UsersService,
+    // private readonly usersService: UsersServiceOld,
     private readonly configService: ConfigService
   ) {
     super({
@@ -20,24 +20,24 @@ export class GoogleStrategy extends PassportStrategy(Strategy, 'google') {
   }
 
   async validate(req: Request, accessToken: string, refreshToken: string, profile: any, done: Function): Promise<any> {
-    try {
-      const user = await this.usersService.findOneByGoogleId(profile.id);
-
-      if (user) {
-        return done(null, user);
-      }
-
-      const newUser = await this.usersService.createOneByGoogle({
-        firstName: profile.name.givenName,
-        lastName: profile.name.familyName,
-        email: profile.emails[0].value,
-        googleId: profile.id,
-      });
-
-      return done(null, newUser);
-    } catch (e) {
-      done(e, false);
-    }
+    // try {
+    //   con  st user = await this.usersService.findOneByGoogleId(profile.id);
+    //
+    //   if (user) {
+    //     return done(null, user);
+    //   }
+    //
+    //   const newUser = await this.usersService.createOneByGoogle({
+    //     firstName: profile.name.givenName,
+    //     lastName: profile.name.familyName,
+    //     email: profile.emails[0].value,
+    //     googleId: profile.id,
+    //   });
+    //
+    //   return done(null, newUser);
+    // } catch (e) {
+    //   done(e, false);
+    // }
   }
 
 }

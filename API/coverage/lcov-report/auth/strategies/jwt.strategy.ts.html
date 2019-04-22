@@ -94,11 +94,11 @@ import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
 import { JwtUserPayload, Messages } from '@bit/alan18081.astra-storage.common.dist';
 import { IUser, JWT_SECRET } from '@bit/alan18081.astra-storage.common.dist';
-import {UsersService} from '../../users/users.service';
+import {UsersServiceOld} from '../../users/users.service';
 &nbsp;
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
-  constructor(private readonly usersService: UsersService) {
+  constructor(private readonly usersService: UsersServiceOld) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       secretOrKey: JWT_SECRET,

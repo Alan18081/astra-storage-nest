@@ -17,7 +17,7 @@ import {
 } from './mocks';
 import {HashService} from '@astra/common/services';
 
-describe('UsersService', () => {
+describe('UsersServiceOld', () => {
   let usersService;
   const mockUsers = [new User({}), new User({})];
 

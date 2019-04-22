@@ -41,7 +41,7 @@
 29 silly install printInstalled
 30 verbose stack Error: EISDIR: illegal operation on a directory, read
 30 verbose stack     at Error (native)
-31 verbose cwd /home/octopus/PhpstormProjects/astra-storage-nest/UsersService
+31 verbose cwd /home/octopus/PhpstormProjects/astra-storage-nest/UsersServiceOld
 32 error Linux 4.15.0-43-generic
 33 error argv "/usr/bin/nodejs" "/usr/share/npm/bin/npm-cli.js" "install" "--scripts-prepend-node-path=auto"
 34 error node v4.2.6

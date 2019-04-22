@@ -125,7 +125,7 @@
       </package>
       <package name="users">
         <metrics statements="18" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
-        <file name="users.service.ts" path="/home/alex/PhpstormProjects/astra-storage/API/src/components/users/users.service.ts">
+        <file name="users.service.old.ts" path="/home/alex/PhpstormProjects/astra-storage/API/src/components/users/users.service.old.ts">
           <metrics statements="18" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="2" count="2" type="stmt"/>

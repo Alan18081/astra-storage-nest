@@ -1,5 +1,5 @@
 import {ClassSerializerInterceptor, Controller, UseInterceptors} from '@nestjs/common';
-import {MessagePattern} from '@nestjs/microservices';
+import {GrpcMethod, MessagePattern} from '@nestjs/microservices';
 import {
     CommunicationCodes,
 } from '@astra/common';
@@ -43,9 +43,11 @@ export class UsersController {
         return this.usersService.findOneByEmail(dto.email);
     }
 
-    @MessagePattern({ cmd: CommunicationCodes.CREATE_USER })
+    // @MessagePattern({ cmd: CommunicationCodes.CREATE_USER })
     @UseInterceptors(ClassSerializerInterceptor)
-    async createOne(dto: CreateUserDto): Promise<User> {
+    @GrpcMethod('UsersService', 'CreateOne')
+    async createOne(dto: CreateUserDto, metadata: any): Promise<User> {
+        console.log(dto);
         return this.usersService.createOne(dto);
     }
 

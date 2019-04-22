@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@astra/common": "https://github.com/Alan18081/astra-storage-common.git#master",
+    "@grpc/proto-loader": "^0.5.0",
     "@nestjs/common": "^5.0.0",
     "@nestjs/core": "^5.0.0",
     "@nestjs/jwt": "^0.2.1",
@@ -31,6 +32,7 @@
     "class-transformer": "^0.2.0",
     "class-validator": "^0.9.1",
     "fastify-formbody": "^2.0.0",
+    "grpc": "^1.20.0",
     "pg": "^7.7.1",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0",

@@ -2,13 +2,13 @@ import {Injectable, UnauthorizedException} from '@nestjs/common';
 import {PassportStrategy} from '@nestjs/passport';
 import {ExtractJwt, Strategy} from 'passport-jwt';
 import { JwtUserPayload, Messages, IUser } from '@astra/common';
-import {UsersService} from '../../users/users.service';
+// import {UsersServiceOld} from '../../users/users.service.old';
 import {ConfigService} from '@astra/common/services';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   constructor(
-      private readonly usersService: UsersService,
+      // private readonly usersService: UsersServiceOld,
       private readonly configService: ConfigService,
   ) {
     super({
@@ -18,10 +18,11 @@ export class JwtStrategy extends PassportStrategy(Strategy, 'jwt') {
   }
 
   async validate(payload: JwtUserPayload): Promise<IUser> {
-    const user = await this.usersService.findOneByEmail(payload.email);
-    if (!user) {
-      throw new UnauthorizedException(Messages.INVALID_TOKEN);
-    }
-    return user;
+    // const user = await this.usersService.findOneByEmail(payload.email);
+    // if (!user) {
+    //   throw new UnauthorizedException(Messages.INVALID_TOKEN);
+    // }
+    // return user;
+      return null;
   }
 }

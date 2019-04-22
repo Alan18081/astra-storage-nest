@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package users;
+
+service UsersService {
+    rpc CreateOne(CreateOneMessage) returns (User) {}
+}
+
+message CreateOneMessage {
+    string firstName = 1;
+    string lastName = 2;
+    string email = 3;
+    string password = 4;
+    int32 roleId = 5;
+}
+
+message User {
+    int32 id = 20;
+    string firstName = 1;
+    string lastName = 2;
+    string email = 3;
+    string password = 4;
+    int32 roleId = 5;
+}

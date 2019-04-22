@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
 import {GoogleStrategy} from '../../strategies/google.strategy';
-import {UsersService} from '../../../users/users.service';
+import {UsersServiceOld} from '../../../users/users.service.old';
 import {mockUser, mockUsersService} from '../mocks';
 
 describe('GoogleStrategy', () => {
@@ -10,7 +10,7 @@ describe('GoogleStrategy', () => {
        const module = await Test.createTestingModule({
           providers: [
               GoogleStrategy,
-              { provide: UsersService, useValue: mockUsersService },
+              { provide: UsersServiceOld, useValue: mockUsersService },
           ],
        }).compile();
 

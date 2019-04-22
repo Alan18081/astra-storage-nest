@@ -2,7 +2,7 @@
 MICROSERVICES=(
     API
     AuthService
-    UsersService
+    UsersServiceOld
     ProjectsService
     DataService
     EmailsService

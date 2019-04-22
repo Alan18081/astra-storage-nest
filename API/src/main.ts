@@ -4,6 +4,8 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as helmet from 'helmet';
 import * as rateLimit from 'express-rate-limit';
 import {ConfigService} from "@astra/common/services";
+import {Transport} from '@nestjs/microservices';
+import {join} from 'path';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -17,6 +19,25 @@ async function bootstrap() {
     max: 100
   }));
 
+  app.connectMicroservice({
+      transport: Transport.GRPC,
+      options: {
+          url: '0.0.0.0:5000',
+          package: 'api',
+          protoPath: join(__dirname, 'proto/api.proto'),
+          // loader: {
+          //     keepCase: true,
+          //     longs: Number,
+          //     defaults: false,
+          //     arrays: true,
+          //     objects: true,
+          //     // includeDirs: [protoDir],
+          // },
+      },
+  });
+
+  console.log('Hello');
+
   const options = new DocumentBuilder()
     .setTitle('Astra-store')
     .setDescription('Platform for selling and buying products online')
@@ -27,7 +48,7 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, options);
 
   SwaggerModule.setup('api', app, document);
-
+    await app.startAllMicroservicesAsync();
   await app.listen(+config.get('PORT'));
 }
 bootstrap();
