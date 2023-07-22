@@ -5,7 +5,7 @@ import { UserHash } from './user-hash.entity';
 export class UserHashesRepository extends Repository<UserHash> {
 
   async findOneByHash(hash: string): Promise<UserHash | undefined> {
-    return this.findOne({ hash });
+    return this.findOne({ where: { hash } });
   }
 
   async removeById(id: number): Promise<void> {

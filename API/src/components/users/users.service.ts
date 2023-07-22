@@ -4,7 +4,7 @@ import {
     CommunicationCodes,
     IUser,
     Queues,
-} from '@astra/common';
+} from 'astra-common';
 import {
   CreateUserByGoogleDto,
   CreateUserDto,
@@ -12,14 +12,14 @@ import {
   FindUsersListDto,
   RemoveUserDto, SetNewPasswordDto,
   UpdateUserDto
-} from '@astra/common/dto';
-import {createClientOptions} from '@astra/common/helpers';
+} from 'astra-common';
+import {createClientOptions} from 'astra-common';
 
 
 @Injectable()
 export class UsersService {
 
-    @Client(createClientOptions(Queues.USERS_SERVICE))
+    @Client(createClientOptions(Queues.USERS_SERVICE, process.env.RABBIT_URL))
     private readonly client: ClientProxy;
 
     findMany(dto: FindUsersListDto): Promise<IUser[]> {

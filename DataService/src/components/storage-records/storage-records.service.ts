@@ -2,7 +2,7 @@ import { StorageRecordsRepository } from './storage-records.repository';
 import {PaginatedResponse} from '../../../../Common/dist/interfaces';
 import { Injectable } from '@nestjs/common';
 import { StorageRecord } from './storage-record.entity';
-import { FindStorageRecordsListDto } from '@astra/common/dto';
+import { FindStorageRecordsListDto } from 'astra-common';
 import {InjectRepository} from '@nestjs/typeorm';
 
 @Injectable()

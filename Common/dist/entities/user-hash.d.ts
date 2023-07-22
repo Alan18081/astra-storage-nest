@@ -3,3 +3,4 @@ export interface IUserHash {
     userId: number;
     hash: string;
 }
+//# sourceMappingURL=user-hash.d.ts.map

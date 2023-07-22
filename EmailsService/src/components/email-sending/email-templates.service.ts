@@ -1,7 +1,7 @@
 import {Injectable} from '@nestjs/common';
 import {compileFile, compileTemplate} from 'pug';
 import {join} from 'path';
-import { EmailsServiceConfig } from '@astra/common/config';
+import { EmailsServiceConfig } from 'astra-common';
 
 @Injectable()
 export class EmailTemplatesService {

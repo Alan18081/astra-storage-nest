@@ -5,3 +5,4 @@ export declare class UpdateProjectDto {
     description?: string;
     storagesCount?: number;
 }
+//# sourceMappingURL=update-project.dto.d.ts.map

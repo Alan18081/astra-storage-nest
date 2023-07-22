@@ -7,7 +7,7 @@ export const createClientOptions = (queue: Queues, url: string): RmqOptions => {
     transport: Transport.RMQ,
     options: {
       queue,
-      urls: [RABBIT_MQ_URL],
+      urls: [url],
     },
   };
 };

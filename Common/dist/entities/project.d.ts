@@ -9,3 +9,4 @@ export interface IProject {
     userId: number;
     createdAt: Date;
 }
+//# sourceMappingURL=project.d.ts.map

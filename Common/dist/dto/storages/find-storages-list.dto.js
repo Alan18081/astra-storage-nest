@@ -9,16 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindStoragesListDto = void 0;
 const class_validator_1 = require("class-validator");
 const pagination_dto_1 = require("../common/pagination.dto");
 class FindStoragesListDto extends pagination_dto_1.PaginationDto {
 }
+exports.FindStoragesListDto = FindStoragesListDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], FindStoragesListDto.prototype, "userId", void 0);
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], FindStoragesListDto.prototype, "projectId", void 0);
-exports.FindStoragesListDto = FindStoragesListDto;

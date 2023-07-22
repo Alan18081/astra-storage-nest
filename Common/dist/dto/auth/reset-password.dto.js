@@ -9,13 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ResetPasswordDto = void 0;
 const class_validator_1 = require("class-validator");
 const swagger_1 = require("@nestjs/swagger");
 class ResetPasswordDto {
 }
+exports.ResetPasswordDto = ResetPasswordDto;
 __decorate([
-    class_validator_1.IsEmail(),
-    swagger_1.ApiModelProperty(),
+    (0, class_validator_1.IsEmail)(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], ResetPasswordDto.prototype, "email", void 0);
-exports.ResetPasswordDto = ResetPasswordDto;

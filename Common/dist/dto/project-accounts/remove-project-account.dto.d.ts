@@ -3,3 +3,4 @@ export declare class RemoveProjectAccountDto {
     projectId: number;
     userId: number;
 }
+//# sourceMappingURL=remove-project-account.dto.d.ts.map

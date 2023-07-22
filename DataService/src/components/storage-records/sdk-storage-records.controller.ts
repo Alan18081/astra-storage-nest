@@ -2,15 +2,15 @@ import {ClassSerializerInterceptor, Controller, UseInterceptors} from '@nestjs/c
 import {StorageRecordsService} from './storage-records.service';
 import { cloneDeep } from 'lodash';
 import {MessagePattern} from '@nestjs/microservices';
-import {CommunicationCodes} from '@astra/common/enums';
+import {CommunicationCodes} from 'astra-common';
 import {StorageRecord} from './storage-record.entity';
 import {
     CreateStorageRecordDto,
     FindStorageRecordDto,
     FindStorageRecordsListDto, RemoveStorageRecordDto,
     UpdateStorageRecordDto,
-} from '@astra/common/dto';
-import { PaginatedResponse } from '@astra/common/interfaces';
+} from 'astra-common';
+import { PaginatedResponse } from 'astra-common';
 import {RecordsInterceptor} from '../../helpers/interceptors/records.interceptor';
 import {SocketDataEmitterService} from '../core/socket-data-emitter.service';
 

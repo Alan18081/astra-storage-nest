@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.GOOGLE_CALLBACK_URL = exports.GOOGLE_CLIENT_SECRET = exports.GOOGLE_CLIENT_ID = exports.JWT_EXPIRES = exports.JWT_SECRET = exports.RABBIT_MQ_URL = exports.PASSWORD_LENGTH = void 0;
 exports.PASSWORD_LENGTH = 4;
 exports.RABBIT_MQ_URL = 'amqp://hyjmvawo:Vdm3_ic0x1U8fVwN_3SrOwfLA72vkmAY@shark.rmq.cloudamqp.com/hyjmvawo';
 exports.JWT_SECRET = 'Endurance & Enterprise';

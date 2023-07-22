@@ -4,3 +4,4 @@ export declare class LoginProjectAccountDto {
     email: string;
     password: string;
 }
+//# sourceMappingURL=login-project-account.dto.d.ts.map

@@ -7,3 +7,4 @@ export * from './remove-user.dto';
 export * from './reset-user-password.dto';
 export * from './update-user.dto';
 export * from './find-users-list.dto';
+//# sourceMappingURL=index.d.ts.map

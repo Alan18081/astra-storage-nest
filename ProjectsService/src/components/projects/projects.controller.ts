@@ -1,4 +1,4 @@
-import {CommunicationCodes} from '@astra/common';
+import {CommunicationCodes} from 'astra-common';
 import {ProjectsService} from './projects.service';
 import { Controller, UseFilters, UseGuards } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
@@ -8,7 +8,7 @@ import {
     FindProjectByClientInfoDto,
     FindProjectDto,
     FindProjectsListByUserDto, RemoveProjectDto, UpdateProjectDto
-} from '@astra/common/dto';
+} from 'astra-common';
 import {ExceptionFilter} from '../../helpers/filters/custom.filter';
 import { ValidOwnerGuard } from '../../helpers/guards/valid-owner.guard';
 

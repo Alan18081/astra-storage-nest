@@ -9,20 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SetNewPasswordDto = void 0;
 const class_validator_1 = require("class-validator");
 const swagger_1 = require("@nestjs/swagger");
 const config_1 = require("../../config");
 class SetNewPasswordDto {
 }
+exports.SetNewPasswordDto = SetNewPasswordDto;
 __decorate([
-    class_validator_1.IsString(),
-    swagger_1.ApiModelProperty(),
+    (0, class_validator_1.IsString)(),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], SetNewPasswordDto.prototype, "hash", void 0);
 __decorate([
-    class_validator_1.IsString(),
-    class_validator_1.MinLength(config_1.PASSWORD_LENGTH),
-    swagger_1.ApiModelProperty(),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(config_1.PASSWORD_LENGTH),
+    (0, swagger_1.ApiProperty)(),
     __metadata("design:type", String)
 ], SetNewPasswordDto.prototype, "password", void 0);
-exports.SetNewPasswordDto = SetNewPasswordDto;

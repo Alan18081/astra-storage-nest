@@ -7,17 +7,17 @@ import {
   JwtUserPayload,
   Messages,
   Queues
-} from '@astra/common';
+} from 'astra-common';
 import { JwtService } from '@nestjs/jwt';
-import { LoginProjectDto } from '@astra/common/dto';
-import { createClientOptions } from '@astra/common/helpers';
+import { LoginProjectDto } from 'astra-common';
+import { createClientOptions } from 'astra-common';
 import { ClientProxy, Client, RpcException } from '@nestjs/microservices';
 import { isString } from 'util';
 
 @Injectable()
 export class ProjectAuthService {
 
-  @Client(createClientOptions(Queues.PROJECTS_SERVICE))
+  @Client(createClientOptions(Queues.PROJECTS_SERVICE, process.env.RABBIT_URL))
   private readonly projectsClient: ClientProxy;
 
   constructor(

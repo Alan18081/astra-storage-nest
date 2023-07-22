@@ -3,7 +3,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { JwtService } from '@nestjs/jwt';
 import { RefreshToken } from './refresh-token.entity';
 import {RefreshTokensRepository} from './refresh-tokens.repository';
-import {CreateRefreshTokenDto} from '@astra/common/dto';
+import {CreateRefreshTokenDto} from 'astra-common';
 
 @Injectable()
 export class RefreshTokensService {

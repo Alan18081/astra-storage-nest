@@ -1,6 +1,6 @@
-import { Action } from '@astra/common/interfaces';
-import { DataActions } from '@astra/common/enums';
-import { IStorageRecord } from '@astra/common/entities';
+import { Action } from 'astra-common';
+import { DataActions } from 'astra-common';
+import { IStorageRecord } from 'astra-common';
 
 export class CreatedStorageRecordAction implements Action {
   readonly type = DataActions.CREATED_STORAGE_RECORD;

@@ -20,3 +20,4 @@ export declare enum Messages {
     INVALID_PASSWORD_HASH = "Provided hash for resetting password is invalid",
     INVALID_STORAGE_TYPE = "Provided type doesn't match with storage type"
 }
+//# sourceMappingURL=messages.enum.d.ts.map

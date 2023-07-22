@@ -1,5 +1,4 @@
-import { BaseEntity, IStorage, StorageType } from '@astra/common';
-import { toNumber, toString } from 'lodash';
+import { BaseEntity, IStorage, StorageType } from 'astra-common';
 import {Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
 import { Project } from '../projects/project.entity';
 

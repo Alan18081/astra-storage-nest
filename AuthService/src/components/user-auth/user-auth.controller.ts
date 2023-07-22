@@ -1,9 +1,9 @@
 import {Controller} from '@nestjs/common';
 import {UserAuthService} from './user-auth.service';
 import {MessagePattern} from '@nestjs/microservices';
-import { CommunicationCodes } from '@astra/common/enums';
-import { JwtUserResponse } from '@astra/common/interfaces';
-import {ExchangeTokenDto, LoginByGoogleDto, LoginDto} from '@astra/common/dto';
+import { CommunicationCodes } from 'astra-common';
+import { JwtUserResponse } from 'astra-common';
+import {ExchangeTokenDto, LoginByGoogleDto, LoginDto} from 'astra-common';
 
 @Controller()
 export class UserAuthController {

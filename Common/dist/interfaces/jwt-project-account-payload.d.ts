@@ -4,3 +4,4 @@ export interface JwtProjectAccountPayload {
     id: number;
     ownerId: number;
 }
+//# sourceMappingURL=jwt-project-account-payload.d.ts.map

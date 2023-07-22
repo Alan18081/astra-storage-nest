@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { ProjectAuthService } from './project-auth.service';
-import { CommunicationCodes, IUser, JwtProjectResponse } from '@astra/common';
-import { AuthByTokenDto, LoginProjectDto } from '@astra/common/dto';
+import { CommunicationCodes, IUser, JwtProjectResponse } from 'astra-common';
+import { AuthByTokenDto, LoginProjectDto } from 'astra-common';
 import { MessagePattern } from '@nestjs/microservices';
 
 @Controller()

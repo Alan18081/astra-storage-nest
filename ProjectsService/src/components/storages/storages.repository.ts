@@ -1,24 +1,32 @@
-import {BaseRepository } from '@astra/common';
+import {BaseRepository } from 'astra-common';
 import { Storage } from './storage.entity';
 import {
-  EntityRepository,
-  Transaction, TransactionRepository,
+    DataSource,
+    EntityRepository,
+    Transaction,
 } from 'typeorm';
 import { ProjectsRepository } from '../projects/projects.repository';
+import {Project} from "../projects/project.entity";
 
 @EntityRepository(Storage)
 export class StoragesRepository extends BaseRepository<Storage> {
 
+    constructor(
+        private dataSource: DataSource
+    ) {
+        super(Storage, dataSource.manager);
+    }
+
     async findById(id: number): Promise<Storage | undefined> {
-        return this.findOne({ id });
+        return this.findOne({ where: { id } });
     }
 
     async findManyByProjectId(projectId: number): Promise<Storage[]> {
-        return this.find({ projectId });
+        return this.find({ where: {  projectId } });
     }
 
     async findOneByPath(path: string): Promise<Storage | undefined> {
-        return this.findOne({ path });
+        return this.findOne({ where: {  path } });
     }
 
     async updateOneAndFind(id: number, data: Partial<Storage>): Promise<Storage | undefined> {
@@ -30,15 +38,11 @@ export class StoragesRepository extends BaseRepository<Storage> {
         await this.delete({ id });
     }
 
-    @Transaction()
     async createOne(
       storage: Storage,
       projectId: number,
-      @TransactionRepository()
-      storagesRepository?: StoragesRepository,
-      @TransactionRepository()
-      projectsRepository?: ProjectsRepository,
     ): Promise<Storage> {
+        const projectsRepository = new ProjectsRepository(Project, this.dataSource.manager);
         await projectsRepository.incrementStoragesCount(projectId);
         return this.save(storage);
     }

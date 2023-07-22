@@ -9,23 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SendResetPasswordEmailDto = void 0;
 const class_validator_1 = require("class-validator");
 class SendResetPasswordEmailDto {
 }
+exports.SendResetPasswordEmailDto = SendResetPasswordEmailDto;
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], SendResetPasswordEmailDto.prototype, "firstName", void 0);
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], SendResetPasswordEmailDto.prototype, "lastName", void 0);
 __decorate([
-    class_validator_1.IsEmail(),
+    (0, class_validator_1.IsEmail)(),
     __metadata("design:type", String)
 ], SendResetPasswordEmailDto.prototype, "email", void 0);
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], SendResetPasswordEmailDto.prototype, "hash", void 0);
-exports.SendResetPasswordEmailDto = SendResetPasswordEmailDto;

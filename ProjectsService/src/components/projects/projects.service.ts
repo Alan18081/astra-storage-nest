@@ -1,14 +1,12 @@
 import { InjectRepository } from '@nestjs/typeorm';
-import * as uid from 'uid';
+import {uid} from 'uid';
 import {Project} from './project.entity';
 import {ProjectsRepository} from './projects.repository';
-import {CreateProjectDto, FindProjectByClientInfoDto, UpdateProjectDto} from '@astra/common/dto';
+import {CreateProjectDto, FindProjectByClientInfoDto, UpdateProjectDto} from 'astra-common';
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class ProjectsService {
-
-    private readonly randomGenerator = uid;
 
     constructor(
       @InjectRepository(ProjectsRepository)
@@ -29,8 +27,8 @@ export class ProjectsService {
 
     async createOne(body: CreateProjectDto): Promise<Project> {
         const project = new Project({ ...body });
-        project.clientId = this.randomGenerator(10);
-        project.clientSecret = this.randomGenerator(15);
+        project.clientId = uid(10);
+        project.clientSecret = uid(15);
 
         return this.projectsRepository.save(project);
     }

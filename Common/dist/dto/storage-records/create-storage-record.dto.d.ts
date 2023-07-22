@@ -5,3 +5,4 @@ export declare class CreateStorageRecordDto {
     data: any;
     accountId?: number;
 }
+//# sourceMappingURL=create-storage-record.dto.d.ts.map

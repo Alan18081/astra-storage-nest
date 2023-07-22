@@ -4,3 +4,4 @@ export * from './find-project-by-client-info.dto';
 export * from './find-projects-list-by-user.dto';
 export * from './remove-project.dto';
 export * from './update-project.dto';
+//# sourceMappingURL=index.d.ts.map

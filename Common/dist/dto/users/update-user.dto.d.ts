@@ -4,3 +4,4 @@ export declare class UpdateUserDto {
     lastName: string;
     email: string;
 }
+//# sourceMappingURL=update-user.dto.d.ts.map

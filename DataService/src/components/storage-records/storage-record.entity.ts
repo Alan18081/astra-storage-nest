@@ -1,5 +1,5 @@
-import {Column, Entity, ObjectID, ObjectIdColumn} from 'typeorm';
-import {IStorageRecord} from '@astra/common/entities';
+import {Column, Entity, ObjectIdColumn} from 'typeorm';
+import {IStorageRecord} from 'astra-common';
 import {Exclude, Transform} from 'class-transformer';
 
 @Entity()
@@ -7,7 +7,7 @@ export class StorageRecord implements IStorageRecord {
 
     @ObjectIdColumn()
     @Transform(value => value.toString())
-    id: ObjectID;
+    id: string;
 
     @Column()
     @Exclude()
@@ -22,7 +22,7 @@ export class StorageRecord implements IStorageRecord {
 
     @Column()
     @Exclude()
-    accountId?: number;
+    accountId: number;
 
     @Column()
     data: any;

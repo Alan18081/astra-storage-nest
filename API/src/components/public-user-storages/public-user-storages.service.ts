@@ -1,14 +1,14 @@
 import {Injectable, NotFoundException} from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
-import {createClientOptions} from '@astra/common/helpers';
-import {CommunicationCodes, IStorage, IStorageRecord, Messages, Queues} from '@astra/common';
+import {createClientOptions} from 'astra-common';
+import {CommunicationCodes, IStorage, IStorageRecord, Messages, Queues} from 'astra-common';
 import {StoragesService} from '../storages/storages.service';
 
 
 @Injectable()
 export class PublicUserStoragesService {
 
-    @Client(createClientOptions(Queues.DATA_SERVICE))
+    @Client(createClientOptions(Queues.DATA_SERVICE, process.env.RABBIT_URL))
     private readonly client: ClientProxy;
 
     constructor(

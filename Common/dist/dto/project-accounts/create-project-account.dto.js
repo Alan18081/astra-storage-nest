@@ -9,27 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateProjectAccountDto = void 0;
 const class_validator_1 = require("class-validator");
 class CreateProjectAccountDto {
 }
+exports.CreateProjectAccountDto = CreateProjectAccountDto;
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateProjectAccountDto.prototype, "login", void 0);
 __decorate([
-    class_validator_1.IsEmail(),
+    (0, class_validator_1.IsEmail)(),
     __metadata("design:type", String)
 ], CreateProjectAccountDto.prototype, "email", void 0);
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateProjectAccountDto.prototype, "password", void 0);
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], CreateProjectAccountDto.prototype, "projectId", void 0);
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], CreateProjectAccountDto.prototype, "ownerId", void 0);
-exports.CreateProjectAccountDto = CreateProjectAccountDto;

@@ -1,16 +1,16 @@
 import { OnGatewayConnection, OnGatewayDisconnect, WebSocketGateway, WsException } from '@nestjs/websockets';
-import { createClientOptions } from '@astra/common/helpers';
-import { CommunicationCodes, Messages, Queues, WsCodes } from '@astra/common/enums';
+import { createClientOptions } from 'astra-common';
+import { CommunicationCodes, Messages, Queues, WsCodes } from 'astra-common';
 import { Client, ClientProxy } from '@nestjs/microservices';
 import { ClientsStoreService } from './components/core/clients-store.service';
-import {ConfigService} from "@astra/common/services";
+import {ConfigService} from "astra-common";
 
 const configService = new ConfigService(`${process.env.NODE_ENV}.env`);
 
 @WebSocketGateway(+configService.get('WS_PORT'), { namespace: '/' })
 export class AppGateway implements OnGatewayConnection, OnGatewayDisconnect {
 
-  @Client(createClientOptions(Queues.AUTH_SERVICE))
+  @Client(createClientOptions(Queues.AUTH_SERVICE, configService.get('RABBIT_URL')))
   private readonly authClient: ClientProxy;
 
   constructor(

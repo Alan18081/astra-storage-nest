@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Queues = void 0;
 var Queues;
 (function (Queues) {
     Queues["API"] = "[Queue] API Service";
@@ -10,4 +11,4 @@ var Queues;
     Queues["PAYMENTS_SERVICE"] = "[Queue] Payments Service";
     Queues["EMAILS_SERVICE"] = "[Queue] Emails Service";
     Queues["SOCKETS_SERVICE"] = "[Queue] Sockets Service";
-})(Queues = exports.Queues || (exports.Queues = {}));
+})(Queues || (exports.Queues = Queues = {}));

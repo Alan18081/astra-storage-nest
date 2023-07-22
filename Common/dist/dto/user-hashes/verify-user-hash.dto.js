@@ -9,11 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.VerifyUserHashDto = void 0;
 const class_validator_1 = require("class-validator");
 class VerifyUserHashDto {
 }
+exports.VerifyUserHashDto = VerifyUserHashDto;
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], VerifyUserHashDto.prototype, "hash", void 0);
-exports.VerifyUserHashDto = VerifyUserHashDto;

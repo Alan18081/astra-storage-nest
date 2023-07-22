@@ -4,3 +4,4 @@ export declare class SendResetPasswordEmailDto {
     email: string;
     hash: string;
 }
+//# sourceMappingURL=send-reset-password-email.dto.d.ts.map

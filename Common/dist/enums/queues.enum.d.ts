@@ -8,3 +8,4 @@ export declare enum Queues {
     EMAILS_SERVICE = "[Queue] Emails Service",
     SOCKETS_SERVICE = "[Queue] Sockets Service"
 }
+//# sourceMappingURL=queues.enum.d.ts.map

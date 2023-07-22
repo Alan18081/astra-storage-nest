@@ -9,3 +9,4 @@ export interface IStorage {
     project: IProject;
     typeId: StorageType;
 }
+//# sourceMappingURL=storage.d.ts.map

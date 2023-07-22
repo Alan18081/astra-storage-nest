@@ -3,3 +3,4 @@ export declare class ConfigService {
     constructor(filePath: string);
     get(key: string): string;
 }
+//# sourceMappingURL=config.service.d.ts.map

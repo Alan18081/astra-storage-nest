@@ -1,6 +1,6 @@
 import {Global, Module} from '@nestjs/common';
 import { ClientsStoreService } from './clients-store.service';
-import {ConfigService} from "@astra/common/services";
+import {ConfigService} from "astra-common";
 
 const providers = [
   ClientsStoreService,

@@ -1,7 +1,7 @@
 import { Controller } from '@nestjs/common';
 import { MessagePattern } from '@nestjs/microservices';
-import { CommunicationCodes } from '@astra/common/enums';
-import { IStorageRecord } from '@astra/common/entities';
+import { CommunicationCodes } from 'astra-common';
+import { IStorageRecord } from 'astra-common';
 import { StorageRecordsGateway } from './storage-records.gateway';
 
 @Controller()
@@ -23,7 +23,7 @@ export class StorageRecordsController {
 
   @MessagePattern({ cmd: CommunicationCodes.SOCKET_REMOVED_STORAGE_RECORD })
   handleRemove(payload: { id: number }): void {
-      this.storageRecordsGateway.emitRemovedEvent(payload);
+      this.storageRecordsGateway.emitRemovedEvent(payload.id);
   }
 
 }

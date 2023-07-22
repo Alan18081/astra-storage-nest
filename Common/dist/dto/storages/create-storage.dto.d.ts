@@ -5,3 +5,4 @@ export declare class CreateStorageDto {
     userId: number;
     path: string;
 }
+//# sourceMappingURL=create-storage.dto.d.ts.map

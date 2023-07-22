@@ -4,3 +4,4 @@ export declare class UpdateStorageDto {
     description?: string;
     path?: string;
 }
+//# sourceMappingURL=update-storage.dto.d.ts.map

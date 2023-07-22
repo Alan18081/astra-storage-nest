@@ -65,3 +65,4 @@ export declare enum CommunicationCodes {
     SOCKET_UPDATED_STORAGE_RECORD = "[SocketsService] Update Storage Record",
     SOCKET_REMOVED_STORAGE_RECORD = "[SocketsService] Removed Storage Record"
 }
+//# sourceMappingURL=communication-codes.enum.d.ts.map

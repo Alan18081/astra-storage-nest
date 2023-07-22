@@ -4,15 +4,15 @@ import {
     CommunicationCodes,
     JwtUserResponse,
     JwtProjectResponse, JwtProjectAccountResponse,
-} from '@astra/common';
-import { LoginDto, LoginProjectDto } from '@astra/common/dto';
+} from 'astra-common';
+import { LoginDto, LoginProjectDto } from 'astra-common';
 import { Client, ClientProxy } from '@nestjs/microservices';
-import { createClientOptions } from '@astra/common/helpers';
+import { createClientOptions } from 'astra-common';
 
 @Injectable()
 export class AuthService {
 
-  @Client(createClientOptions(Queues.AUTH_SERVICE))
+  @Client(createClientOptions(Queues.AUTH_SERVICE, process.env.RABBIT_URL))
   private readonly authClient: ClientProxy;
 
   async login(dto: LoginDto): Promise<JwtUserResponse> {

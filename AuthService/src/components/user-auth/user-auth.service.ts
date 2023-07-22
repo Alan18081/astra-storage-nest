@@ -7,18 +7,17 @@ import {
     JwtUserResponse,
     Messages,
     Queues,
-} from '@astra/common';
-import { isString } from 'lodash';
-import {HashService} from '@astra/common/services';
+} from 'astra-common';
+import {HashService} from 'astra-common';
 import {JwtService} from '@nestjs/jwt';
-import {LoginByGoogleDto, LoginDto} from '@astra/common/dto';
-import {createClientOptions} from '@astra/common/helpers';
+import {LoginByGoogleDto, LoginDto} from 'astra-common';
+import {createClientOptions} from 'astra-common';
 import {RefreshTokensService} from '../refresh-tokens/refresh-tokens.service';
 
 @Injectable()
 export class UserAuthService {
 
-    @Client(createClientOptions(Queues.USERS_SERVICE))
+    @Client(createClientOptions(Queues.USERS_SERVICE, process.env.RABBIT_URL))
     private readonly usersClient: ClientProxy;
 
     constructor(

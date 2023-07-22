@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { StorageRecordsModule } from './components/storage-records/storage-records.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import {ConfigService} from "@astra/common/services";
+import {ConfigService} from "astra-common";
 
 @Module({
   imports: [

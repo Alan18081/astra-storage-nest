@@ -2,13 +2,13 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import {ProjectAccountsRepository} from './project-accounts.repository';
 import {ProjectAccount} from './project-account.entity';
-import { Messages, PaginatedResponse } from '@astra/common';
-import { HashService } from '@astra/common/services';
+import { Messages, PaginatedResponse } from 'astra-common';
+import { HashService } from 'astra-common';
 import {
     CreateProjectAccountDto,
     FindProjectAccountByEmailDto,
     FindProjectAccountsListDto,
-} from '@astra/common/dto';
+} from 'astra-common';
 import { RpcException } from '@nestjs/microservices';
 
 @Injectable()

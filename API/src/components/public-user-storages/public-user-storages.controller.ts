@@ -1,15 +1,15 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import { AuthGuard } from '@nestjs/passport';
 import {Project} from '../../helpers/decorators/project.decorator';
-import {IProject, IStorageRecord} from '@astra/common';
+import {IProject, IStorageRecord} from 'astra-common';
 import {PublicUserStoragesService} from './public-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
-import {ApiUseTags} from '@nestjs/swagger';
+import {ApiTags} from '@nestjs/swagger';
 
 @Controller('storages/public/:path')
 @UseGuards(AuthGuard('jwtProject'))
 @UseFilters(ApiExceptionFilter)
-@ApiUseTags('Public User Storages')
+@ApiTags('Public User Storages')
 export class PublicUserStoragesController {
 
     constructor(

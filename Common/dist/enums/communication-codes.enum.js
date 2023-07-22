@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CommunicationCodes = void 0;
 var CommunicationCodes;
 (function (CommunicationCodes) {
     CommunicationCodes["GET_USERS_LIST"] = "[UsersService] Get Users List";
@@ -67,4 +68,4 @@ var CommunicationCodes;
     CommunicationCodes["SOCKET_CREATED_STORAGE_RECORD"] = "[SocketsService] Created Storage Record";
     CommunicationCodes["SOCKET_UPDATED_STORAGE_RECORD"] = "[SocketsService] Update Storage Record";
     CommunicationCodes["SOCKET_REMOVED_STORAGE_RECORD"] = "[SocketsService] Removed Storage Record";
-})(CommunicationCodes = exports.CommunicationCodes || (exports.CommunicationCodes = {}));
+})(CommunicationCodes || (exports.CommunicationCodes = CommunicationCodes = {}));

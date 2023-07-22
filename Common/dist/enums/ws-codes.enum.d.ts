@@ -4,3 +4,4 @@ export declare enum WsCodes {
     AUTH_PROJECT_ERROR = "[Socket] Authorization Project Failed",
     DATA_CHANGED = "[Socket] Data Changed"
 }
+//# sourceMappingURL=ws-codes.enum.d.ts.map

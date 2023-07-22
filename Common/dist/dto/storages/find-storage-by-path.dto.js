@@ -9,20 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindStorageByPathDto = void 0;
 const class_validator_1 = require("class-validator");
 class FindStorageByPathDto {
 }
+exports.FindStorageByPathDto = FindStorageByPathDto;
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], FindStorageByPathDto.prototype, "path", void 0);
 __decorate([
-    class_validator_1.IsNumber(),
+    (0, class_validator_1.IsNumber)(),
     __metadata("design:type", Number)
 ], FindStorageByPathDto.prototype, "projectId", void 0);
 __decorate([
-    class_validator_1.IsBoolean(),
-    class_validator_1.IsOptional(),
+    (0, class_validator_1.IsBoolean)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Boolean)
 ], FindStorageByPathDto.prototype, "includeData", void 0);
-exports.FindStorageByPathDto = FindStorageByPathDto;

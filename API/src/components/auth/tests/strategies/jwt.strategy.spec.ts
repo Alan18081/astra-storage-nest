@@ -3,7 +3,7 @@ import {mockUser, mockUsersService} from '../mocks';
 import {UsersService} from '../../../users/users.service';
 import {JwtStrategy} from '../../strategies/jwt.strategy';
 import {UnauthorizedException} from '@nestjs/common';
-import {Messages} from '@astra/common';
+import {Messages} from 'astra-common';
 
 describe('JwtStrategy', () => {
     let jwtStrategy;

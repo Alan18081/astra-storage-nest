@@ -5,3 +5,4 @@ export declare class CreateProjectAccountDto {
     projectId: number;
     ownerId: number;
 }
+//# sourceMappingURL=create-project-account.dto.d.ts.map

@@ -9,11 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindProjectAccountSdkDto = void 0;
 const class_validator_1 = require("class-validator");
 class FindProjectAccountSdkDto {
 }
+exports.FindProjectAccountSdkDto = FindProjectAccountSdkDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], FindProjectAccountSdkDto.prototype, "id", void 0);
-exports.FindProjectAccountSdkDto = FindProjectAccountSdkDto;

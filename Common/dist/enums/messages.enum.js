@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Messages = void 0;
 var Messages;
 (function (Messages) {
     Messages["INTERNAL_SERVER_ERROR"] = "Server cannot process your request, because of internal error";
@@ -22,4 +23,4 @@ var Messages;
     Messages["INVALID_REFRESH_TOKEN"] = "Provided refresh token is invalid";
     Messages["INVALID_PASSWORD_HASH"] = "Provided hash for resetting password is invalid";
     Messages["INVALID_STORAGE_TYPE"] = "Provided type doesn't match with storage type";
-})(Messages = exports.Messages || (exports.Messages = {}));
+})(Messages || (exports.Messages = Messages = {}));

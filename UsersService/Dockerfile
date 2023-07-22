@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:16
 
 WORKDIR /var/www/astra_storage/users_service
 RUN npm i -g typescript ts-node nodemon

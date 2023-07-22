@@ -1,17 +1,17 @@
 import {Injectable} from '@nestjs/common';
-import {createClientOptions} from '@astra/common/helpers';
+import {createClientOptions} from 'astra-common';
 import {Client, ClientProxy} from '@nestjs/microservices';
 import {
     CommunicationCodes,
     IStorageRecord,
     Queues,
-} from '@astra/common';
+} from 'astra-common';
 
 
 @Injectable()
 export class ProtectedUserStoragesService {
 
-    @Client(createClientOptions(Queues.DATA_SERVICE))
+    @Client(createClientOptions(Queues.DATA_SERVICE, process.env.RABBIT_URL))
     private readonly client: ClientProxy;
 
     async findMany(path: string, accountId: number): Promise<IStorageRecord[]> {

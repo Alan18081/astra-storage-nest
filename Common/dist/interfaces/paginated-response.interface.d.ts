@@ -4,3 +4,4 @@ export interface PaginatedResponse<T> {
     totalCount: number;
     data: T[];
 }
+//# sourceMappingURL=paginated-response.interface.d.ts.map

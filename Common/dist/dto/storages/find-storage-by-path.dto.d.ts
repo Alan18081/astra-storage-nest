@@ -3,3 +3,4 @@ export declare class FindStorageByPathDto {
     projectId: number;
     includeData?: boolean;
 }
+//# sourceMappingURL=find-storage-by-path.dto.d.ts.map

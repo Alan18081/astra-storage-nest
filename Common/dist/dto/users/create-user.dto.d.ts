@@ -5,3 +5,4 @@ export declare class CreateUserDto {
     password: string;
     roleId: number;
 }
+//# sourceMappingURL=create-user.dto.d.ts.map

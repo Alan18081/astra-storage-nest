@@ -1,15 +1,15 @@
 import {Injectable} from '@nestjs/common';
-import {IStorageRecord} from '@astra/common/entities';
-import {Queues, CommunicationCodes} from '@astra/common/enums';
+import {IStorageRecord} from 'astra-common';
+import {Queues, CommunicationCodes} from 'astra-common';
 import {Client, ClientProxy} from '@nestjs/microservices';
-import {createClientOptions} from '@astra/common/helpers';
-import {SerializerService} from '@astra/common/services';
+import {createClientOptions} from 'astra-common';
+import {SerializerService} from 'astra-common';
 import {mapStorageRecord} from '../../helpers/utils/map-storage-record';
 
 @Injectable()
 export class SocketDataEmitterService {
 
-    @Client(createClientOptions(Queues.SOCKETS_SERVICE))
+    @Client(createClientOptions(Queues.SOCKETS_SERVICE, process.env.RABBIT_URL))
     private readonly socketsClient: ClientProxy;
 
     constructor(

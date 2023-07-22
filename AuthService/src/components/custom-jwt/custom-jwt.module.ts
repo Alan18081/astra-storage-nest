@@ -1,5 +1,5 @@
 import {Module} from "@nestjs/common";
-import {ConfigService} from "@astra/common/services";
+import {ConfigService} from "astra-common";
 import {JwtModule} from "@nestjs/jwt";
 import {CoreModule} from "../core/core.module";
 

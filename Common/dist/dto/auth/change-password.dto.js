@@ -9,22 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangePasswordDto = void 0;
 const class_validator_1 = require("class-validator");
 const config_1 = require("../../config");
 class ChangePasswordDto {
 }
+exports.ChangePasswordDto = ChangePasswordDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], ChangePasswordDto.prototype, "id", void 0);
 __decorate([
-    class_validator_1.IsString(),
-    class_validator_1.MinLength(config_1.PASSWORD_LENGTH),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(config_1.PASSWORD_LENGTH),
     __metadata("design:type", String)
 ], ChangePasswordDto.prototype, "oldPassword", void 0);
 __decorate([
-    class_validator_1.IsString(),
-    class_validator_1.MinLength(config_1.PASSWORD_LENGTH),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(config_1.PASSWORD_LENGTH),
     __metadata("design:type", String)
 ], ChangePasswordDto.prototype, "newPassword", void 0);
-exports.ChangePasswordDto = ChangePasswordDto;

@@ -9,30 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateUserDto = void 0;
 const class_validator_1 = require("class-validator");
 const config_1 = require("../../config");
 class CreateUserDto {
 }
+exports.CreateUserDto = CreateUserDto;
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "firstName", void 0);
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "lastName", void 0);
 __decorate([
-    class_validator_1.IsEmail(),
+    (0, class_validator_1.IsEmail)(),
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "email", void 0);
 __decorate([
-    class_validator_1.IsString(),
-    class_validator_1.MinLength(config_1.PASSWORD_LENGTH),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(config_1.PASSWORD_LENGTH),
     __metadata("design:type", String)
 ], CreateUserDto.prototype, "password", void 0);
 __decorate([
-    class_validator_1.IsNumber(),
-    class_validator_1.IsOptional(),
+    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], CreateUserDto.prototype, "roleId", void 0);
-exports.CreateUserDto = CreateUserDto;

@@ -5,3 +5,4 @@ import * as EmailsServiceConfig from './emails-service';
 import * as DataServiceConfig from './data-service';
 export * from './common';
 export { UsersServiceConfig, ProjectsServiceConfig, AuthServiceConfig, EmailsServiceConfig, DataServiceConfig, };
+//# sourceMappingURL=index.d.ts.map

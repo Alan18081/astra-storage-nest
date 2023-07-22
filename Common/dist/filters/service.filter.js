@@ -6,14 +6,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ServiceExceptionFilter = void 0;
 const common_1 = require("@nestjs/common");
 const throwError_1 = require("rxjs/internal/observable/throwError");
-let ServiceExceptionFilter = class ServiceExceptionFilter {
+let ServiceExceptionFilter = exports.ServiceExceptionFilter = class ServiceExceptionFilter {
     catch(exception, host) {
-        return throwError_1.throwError(new common_1.BadRequestException(exception.message));
+        return (0, throwError_1.throwError)(new common_1.BadRequestException(exception.message));
     }
 };
-ServiceExceptionFilter = __decorate([
-    common_1.Catch()
+exports.ServiceExceptionFilter = ServiceExceptionFilter = __decorate([
+    (0, common_1.Catch)()
 ], ServiceExceptionFilter);
-exports.ServiceExceptionFilter = ServiceExceptionFilter;

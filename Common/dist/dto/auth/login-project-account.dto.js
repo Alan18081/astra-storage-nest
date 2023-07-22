@@ -9,24 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LoginProjectAccountDto = void 0;
 const class_validator_1 = require("class-validator");
 class LoginProjectAccountDto {
 }
+exports.LoginProjectAccountDto = LoginProjectAccountDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], LoginProjectAccountDto.prototype, "projectId", void 0);
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], LoginProjectAccountDto.prototype, "userId", void 0);
 __decorate([
-    class_validator_1.IsEmail(),
+    (0, class_validator_1.IsEmail)(),
     __metadata("design:type", String)
 ], LoginProjectAccountDto.prototype, "email", void 0);
 __decorate([
-    class_validator_1.IsString(),
-    class_validator_1.MinLength(3),
+    (0, class_validator_1.IsString)(),
+    (0, class_validator_1.MinLength)(3),
     __metadata("design:type", String)
 ], LoginProjectAccountDto.prototype, "password", void 0);
-exports.LoginProjectAccountDto = LoginProjectAccountDto;

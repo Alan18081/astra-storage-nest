@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:16
 
 WORKDIR /var/www/astra_storage/api_gateway
 RUN yarn global add typescript ts-node nodemon

@@ -9,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ConfigService = void 0;
 const dotenv = require("dotenv");
 const fs_1 = require("fs");
 const common_1 = require("@nestjs/common");
-let ConfigService = class ConfigService {
+let ConfigService = exports.ConfigService = class ConfigService {
     constructor(filePath) {
-        this.envConfig = dotenv.parse(fs_1.readFileSync(filePath));
+        this.envConfig = dotenv.parse((0, fs_1.readFileSync)(filePath));
     }
     get(key) {
         return this.envConfig[key];
     }
 };
-ConfigService = __decorate([
-    common_1.Injectable(),
+exports.ConfigService = ConfigService = __decorate([
+    (0, common_1.Injectable)(),
     __metadata("design:paramtypes", [String])
 ], ConfigService);
-exports.ConfigService = ConfigService;

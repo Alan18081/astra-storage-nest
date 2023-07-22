@@ -6,17 +6,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.HashService = void 0;
 const common_1 = require("@nestjs/common");
 const bcrypt = require("bcrypt");
-let HashService = class HashService {
+let HashService = exports.HashService = class HashService {
     constructor() {
         this.ROUNDS = 10;
     }
@@ -31,7 +33,6 @@ let HashService = class HashService {
         });
     }
 };
-HashService = __decorate([
-    common_1.Injectable()
+exports.HashService = HashService = __decorate([
+    (0, common_1.Injectable)()
 ], HashService);
-exports.HashService = HashService;

@@ -1,79 +1,351 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts" line="14" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce07e1d0-647c-4d6e-ab9b-729b1e54aaf8" name="Default" comment="">
+    <list default="true" id="ce07e1d0-647c-4d6e-ab9b-729b1e54aaf8" name="Default" comment="&lt;type&gt;: &lt;description&gt; &lt;jira number&gt;&#10;&#10;[optional body]&#10;&#10;[optional footer]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/API/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/API/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/API/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/API/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/google.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project-account.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project-account.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt-project.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/strategies/jwt.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/tests/strategies/jwt-project-account.strategy.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/tests/strategies/jwt-project-account.strategy.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/tests/strategies/jwt-project.strategy.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/tests/strategies/jwt-project.strategy.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/auth/tests/strategies/jwt.strategy.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/auth/tests/strategies/jwt.strategy.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/custom-jwt/custom-jwt.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/custom-jwt/custom-jwt.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/project-accounts/project-accounts.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/projects/projects.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/projects/projects.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/projects/projects.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/protected-user-storages/protected-user-storages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/public-user-storages/public-user-storages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storage-records/storage-records.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/storages/storages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/components/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/components/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/helpers/guards/admin.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/helpers/guards/admin.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/helpers/guards/protected-storage.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/helpers/guards/protected-storage.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/API/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/API/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AuthService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/custom-jwt/custom-jwt.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/custom-jwt/custom-jwt.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/project-account-auth/project-account-auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/project-account-auth/project-account-auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/project-account-auth/project-account-auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/project-account-auth/project-account-auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/project-auth/project-auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/project-auth/project-auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/project-auth/project-auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/project-auth/project-auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/refresh-tokens/refresh-tokens.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/components/user-auth/user-auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AuthService/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/AuthService/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/auth-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/auth-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/auth-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/auth-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/common.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/common.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/data-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/data-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/data-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/data-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/emails-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/emails-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/emails-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/emails-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/projects-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/projects-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/projects-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/projects-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/users-service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/users-service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/config/users-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/config/users-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/auth-by-token.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/auth-by-token.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/auth-by-token.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/auth-by-token.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/change-password.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/exchangeToken.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/exchangeToken.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/exchangeToken.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/exchangeToken.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login-by-google.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login-by-google.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login-by-google.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login-by-google.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login-project-account.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login-project-account.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login-project-account.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login-project-account.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login-project.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login-project.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login-project.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login-project.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/login.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/login.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/reset-password.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/reset-password.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/reset-password.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/reset-password.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/set-new-password.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/set-new-password.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/auth/set-new-password.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/auth/set-new-password.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/common/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/common/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/common/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/common/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/common/pagination.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/common/pagination.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/common/pagination.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/common/pagination.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/emails/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/emails/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/emails/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/emails/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/emails/send-reset-password-email.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/emails/send-reset-password-email.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/emails/send-reset-password-email.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/emails/send-reset-password-email.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/create-project-account.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/create-project-account.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/create-project-account.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/create-project-account.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-by-email.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-by-email.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-by-email.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-by-email.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-sdk.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-sdk.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-sdk.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account-sdk.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-account.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-accounts-list.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-accounts-list.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-accounts-list.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/find-project-accounts-list.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account-by-token.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account-by-token.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account-by-token.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account-by-token.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/remove-project-account.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/validate-project.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/validate-project.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/project-accounts/validate-project.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/project-accounts/validate-project.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/create-project.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/create-project.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/create-project.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/create-project.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/find-project-by-client-info.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/find-project-by-client-info.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/find-project-by-client-info.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/find-project-by-client-info.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/find-project.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/find-project.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/find-project.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/find-project.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/find-projects-list-by-user.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/find-projects-list-by-user.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/find-projects-list-by-user.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/find-projects-list-by-user.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/remove-project.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/remove-project.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/remove-project.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/remove-project.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/update-project.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/update-project.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/projects/update-project.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/projects/update-project.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/create-refresh-token.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/create-refresh-token.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/create-refresh-token.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/create-refresh-token.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/refresh-tokens/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/create-storage-record.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/create-storage-record.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/create-storage-record.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/create-storage-record.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-record.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-record.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-record.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-record.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-by-account.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-by-account.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-by-account.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-by-account.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-for-owner.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-for-owner.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-for-owner.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list-for-owner.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/find-storage-records-list.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-record.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-record.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-record.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-record.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-records-list-by-storage.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-records-list-by-storage.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-records-list-by-storage.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/remove-storage-records-list-by-storage.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/update-storage-record.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/update-storage-record.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storage-records/update-storage-record.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storage-records/update-storage-record.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/change-storage-type.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/change-storage-type.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/change-storage-type.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/change-storage-type.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/create-storage.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/create-storage.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/create-storage.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/create-storage.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage-by-path.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage-by-path.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage-by-path.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage-by-path.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/find-storage.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/find-storages-list.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/find-storages-list.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/find-storages-list.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/find-storages-list.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/remove-storage.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/remove-storage.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/remove-storage.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/remove-storage.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage-data.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage-data.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage-data.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage-data.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/storages/update-storage.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/user-hashes/find-user-hash-by-hash.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/user-hashes/find-user-hash-by-hash.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/user-hashes/find-user-hash-by-hash.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/user-hashes/find-user-hash-by-hash.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/user-hashes/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/user-hashes/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/user-hashes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/user-hashes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/user-hashes/verify-user-hash.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/user-hashes/verify-user-hash.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/user-hashes/verify-user-hash.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/user-hashes/verify-user-hash.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/create-user-by-google.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/create-user-by-google.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/create-user-by-google.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/create-user-by-google.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/create-user.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/create-user.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/create-user.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/create-user.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-email.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-email.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-email.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-email.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-google-id.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-google-id.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-google-id.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-user-by-google-id.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-user.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-user.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-user.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-user.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-users-list.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-users-list.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/find-users-list.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/find-users-list.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/remove-user.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/remove-user.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/remove-user.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/remove-user.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/reset-user-password.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/reset-user-password.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/reset-user-password.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/reset-user-password.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/update-user.dto.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/update-user.dto.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/dto/users/update-user.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/dto/users/update-user.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/entity-info.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/entity-info.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/project-account.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/project-account.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/project.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/project.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/storage-record.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/storage-record.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/storage.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/storage.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/user-hash.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/user-hash.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/entities/user.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/entities/user.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/communication-codes.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/data-actions.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/data-actions.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/data-actions.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/data-actions.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/email-titles.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/email-titles.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/email-titles.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/email-titles.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/hash-types.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/hash-types.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/hash-types.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/hash-types.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/messages.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/messages.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/messages.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/messages.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/queues.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/queues.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/queues.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/queues.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/roles.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/roles.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/roles.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/roles.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/storage-type.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/storage-type.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/storage-type.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/storage-type.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/template-types.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/template-types.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/template-types.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/template-types.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/ws-codes.enum.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/ws-codes.enum.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/enums/ws-codes.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/enums/ws-codes.enum.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/filters/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/filters/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/filters/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/filters/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/filters/service.filter.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/filters/service.filter.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/filters/service.filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/filters/service.filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/helpers/create-client-options.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/helpers/create-client-options.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/helpers/create-client-options.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/helpers/create-client-options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/helpers/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/helpers/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/action.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/action.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-account-payload.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-account-payload.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-account-response.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-account-response.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-payload.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-payload.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-response.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/jwt-project-response.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/jwt-user-payload.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/jwt-user-payload.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/jwt-user-response.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/jwt-user-response.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/interfaces/paginated-response.interface.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/interfaces/paginated-response.interface.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/orm/base.entity.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/orm/base.entity.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/orm/base.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/orm/base.entity.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/orm/base.repository.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/orm/base.repository.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/orm/base.repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/orm/base.repository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/orm/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/orm/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/orm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/orm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/config.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/config.service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/config.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/config.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/hash.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/hash.service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/hash.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/hash.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/serializer.service.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/serializer.service.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/dist/services/serializer.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/Common/dist/services/serializer.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/auth/login-by-google.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/auth/login-by-google.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/auth/login-project.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/auth/login-project.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/auth/login.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/auth/login.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/auth/reset-password.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/auth/reset-password.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/auth/set-new-password.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/auth/set-new-password.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/dto/users/find-user.dto.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/dto/users/find-user.dto.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/helpers/create-client-options.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/helpers/create-client-options.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/src/orm/base.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Common/src/orm/base.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/Common/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Common/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Common/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/core/socket-data-emitter.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/core/socket-data-emitter.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/sdk-storage-records.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-record.entity.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/components/storage-records/storage-records.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/helpers/interceptors/records.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/helpers/interceptors/records.interceptor.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/helpers/utils/map-storage-record.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/helpers/utils/map-storage-record.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataService/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DataService/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EmailsService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-sending.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/components/email-sending/email-templates.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EmailsService/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/EmailsService/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectsService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-account.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/project-accounts/project-accounts.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/project.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/project.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/projects/projects.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storage.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storage.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/components/storages/storages.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectsService/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectsService/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/src/app.gateway.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/src/app.gateway.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/src/components/storage-records/storage-records.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/src/components/storage-records/storage-records.actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/src/components/storage-records/storage-records.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/src/components/storage-records/storage-records.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/src/components/storage-records/storage-records.gateway.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/src/components/storage-records/storage-records.gateway.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/SocketsService/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SocketsService/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UsersService/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersService/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/core/core.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/core/core.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/user-hashes/tests/user-hashes.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/user-hashes/tests/user-hashes.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/user-hashes/user-hashes.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/tests/users.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/tests/users.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/users.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/users.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/users.repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/components/users/users.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/components/users/users.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersService/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/UsersService/src/main.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ProjectsService/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DataService/src/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="local.env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/local.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="3" column="7" selection-start-line="3" selection-end-line="3" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DataService/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-168" />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -100,6 +372,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -164,6 +439,12 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="docker-desktop" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/UsersService/node_modules" />
   </component>
@@ -187,6 +468,7 @@
     <option name="width" value="1922" />
     <option name="height" value="1092" />
   </component>
+  <component name="ProjectId" id="2SfytVil3TZpXnEwcerWx9PkEBb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -235,14 +517,26 @@
       </pane>
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "go.import.settings.migrated": "true",
+    "last_opened_file_path": "/Users/oostapiuk/projects/astra-storage-nest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "ts.external.directory.path": "/Users/oostapiuk/projects/astra-storage-nest/SocketsService/node_modules/typescript/lib"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -255,18 +549,7 @@
       <recent name="$PROJECT_DIR$/DataService" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -281,6 +564,9 @@
       <workItem from="1554807094682" duration="18102000" />
       <workItem from="1554876624236" duration="3446000" />
       <workItem from="1554885375509" duration="2336000" />
+      <workItem from="1689552145944" duration="1661000" />
+      <workItem from="1689553818658" duration="2312000" />
+      <workItem from="1690055988653" duration="6579000" />
     </task>
     <servers />
   </component>
@@ -314,28 +600,28 @@
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
     <option name="exactExcludedFiles">
       <list>
-        <option value="$PROJECT_DIR$/API/src/helpers/enums/messages.enum.js" />
         <option value="$PROJECT_DIR$/API/src/helpers/enums/roles.enum.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/users/dto/create-user.dto.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/refresh-tokens/interfaces/create-refresh-token.interface.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/auth/dto/login.dto.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/auth/dto/exchangeToken.dto.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/auth/dto/send-phone-verification-code.dto.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/auth/interfaces/jwt-payload.interface.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/auth/interfaces/jwt-response.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/helpers/enums/hash-types.enum.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/helpers/enums/template-types.enum.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/helpers/enums/gender.enum.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/users/dto/find-many-users-list.dto.js" />
-        <option value="$PROJECT_DIR$/../astra-store/src/components/users/dto/change-password.dto.js" />
+        <option value="$PROJECT_DIR$/API/src/helpers/enums/messages.enum.js" />
       </list>
     </option>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>false</integration-enabled>
+    <settings-migrated>true</settings-migrated>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -345,7 +631,6 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">

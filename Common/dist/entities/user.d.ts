@@ -7,3 +7,4 @@ export interface IUser {
     googleId?: string;
     roleId: number;
 }
+//# sourceMappingURL=user.d.ts.map

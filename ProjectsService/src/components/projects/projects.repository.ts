@@ -6,19 +6,19 @@ import { Project } from './project.entity';
 export class ProjectsRepository extends Repository<Project> {
 
   async findManyByUser(userId: number): Promise<Project[]> {
-    return this.find({ userId });
+    return this.find({ where: { userId } });
   }
 
   async findOneByUserId(id: number, userId: number): Promise<Project | undefined> {
-    return this.findOne({ id, userId });
+    return this.findOne({ where: { id, userId } });
   }
 
   async findById(id: number): Promise<Project | undefined> {
-    return this.findOne({ id });
+    return this.findOne({ where: { id } });
   }
 
   async findOneByClientInfo(clientId: string, clientSecret: string): Promise<Project | undefined> {
-    return this.findOne({ clientId, clientSecret });
+    return this.findOne({ where: {  clientId, clientSecret } });
   }
 
   async updateOneAndFind(id: number, data: Partial<Project>): Promise<Project | undefined> {

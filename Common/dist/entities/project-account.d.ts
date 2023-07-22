@@ -6,3 +6,4 @@ export interface IProjectAccount extends IEntityInfo {
     password: string;
     projectId: number;
 }
+//# sourceMappingURL=project-account.d.ts.map

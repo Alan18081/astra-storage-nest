@@ -1,18 +1,18 @@
 import {Injectable} from '@nestjs/common';
-import {CommunicationCodes, HashTypes, Messages, Queues} from '@astra/common';
+import {CommunicationCodes, HashTypes, Messages, Queues} from 'astra-common';
 import {User} from './user.entity';
 import {UsersRepository} from './users.repository';
-import {HashService} from '@astra/common/services';
+import {HashService} from 'astra-common';
 import {InjectRepository} from '@nestjs/typeorm';
-import { ChangePasswordDto, CreateUserByGoogleDto, CreateUserDto, SetNewPasswordDto } from '@astra/common/dto';
+import { ChangePasswordDto, CreateUserByGoogleDto, CreateUserDto, SetNewPasswordDto } from 'astra-common';
 import {ClientProxy, RpcException, Client} from '@nestjs/microservices';
 import {UserHashesService} from '../user-hashes/user-hashes.service';
-import {createClientOptions} from '@astra/common/helpers';
+import {createClientOptions} from 'astra-common';
 
 @Injectable()
 export class UsersService {
 
-    @Client(createClientOptions(Queues.EMAILS_SERVICE))
+    @Client(createClientOptions(Queues.EMAILS_SERVICE, process.env.RABBIT_URL))
     private readonly emailsClient: ClientProxy;
 
     constructor(

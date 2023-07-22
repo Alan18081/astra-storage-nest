@@ -3,3 +3,4 @@ export declare enum DataActions {
     UPDATED_STORAGE_RECORD = "[Storage Records] Updated Storage Record",
     REMOVED_STORAGE_RECORD = "[Storage Records] Removed Storage Record"
 }
+//# sourceMappingURL=data-actions.enum.d.ts.map

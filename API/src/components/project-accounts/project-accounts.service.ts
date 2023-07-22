@@ -1,13 +1,13 @@
 import {Injectable} from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
-import {createClientOptions} from '@astra/common/helpers';
-import {CommunicationCodes, IProjectAccount, Queues} from '@astra/common';
+import {createClientOptions} from 'astra-common';
+import {CommunicationCodes, IProjectAccount, Queues} from 'astra-common';
 
 
 @Injectable()
 export class ProjectAccountsService {
 
-    @Client(createClientOptions(Queues.PROJECTS_SERVICE))
+    @Client(createClientOptions(Queues.PROJECTS_SERVICE, process.env.RABBIT_URL))
     private readonly client: ClientProxy;
 
     async findMany(projectId: number, userId: number): Promise<IProjectAccount[]> {

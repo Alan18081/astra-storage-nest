@@ -9,11 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.FindStorageRecordDto = void 0;
 const class_validator_1 = require("class-validator");
 class FindStorageRecordDto {
 }
+exports.FindStorageRecordDto = FindStorageRecordDto;
 __decorate([
-    class_validator_1.IsMongoId(),
+    (0, class_validator_1.IsMongoId)(),
     __metadata("design:type", String)
 ], FindStorageRecordDto.prototype, "id", void 0);
-exports.FindStorageRecordDto = FindStorageRecordDto;

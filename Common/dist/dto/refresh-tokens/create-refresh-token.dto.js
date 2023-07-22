@@ -9,15 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateRefreshTokenDto = void 0;
 const class_validator_1 = require("class-validator");
 class CreateRefreshTokenDto {
 }
+exports.CreateRefreshTokenDto = CreateRefreshTokenDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], CreateRefreshTokenDto.prototype, "userId", void 0);
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateRefreshTokenDto.prototype, "accessToken", void 0);
-exports.CreateRefreshTokenDto = CreateRefreshTokenDto;

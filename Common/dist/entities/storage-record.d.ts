@@ -6,3 +6,4 @@ export interface IStorageRecord {
     accountId: number;
     data: object;
 }
+//# sourceMappingURL=storage-record.d.ts.map

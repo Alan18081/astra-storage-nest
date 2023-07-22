@@ -1,5 +1,5 @@
-import { PaginatedResponse } from '@astra/common/interfaces';
-import { PaginationDto } from '@astra/common/dto';
+import { PaginatedResponse } from 'astra-common';
+import { PaginationDto } from 'astra-common';
 import {EntityRepository, MongoRepository} from 'typeorm';
 import { StorageRecord } from './storage-record.entity';
 import {ObjectId} from 'mongodb';
@@ -27,7 +27,7 @@ export class StorageRecordsRepository extends MongoRepository<StorageRecord> {
     }
 
     async findById(id: string): Promise<StorageRecord | undefined> {
-      return this.findOne(id);
+      return this.findOne({ where: { id } });
     }
 
     async updateOneAndFind(id: string, data: Partial<StorageRecord>): Promise<StorageRecord | undefined> {

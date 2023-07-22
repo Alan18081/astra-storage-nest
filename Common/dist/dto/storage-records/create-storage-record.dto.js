@@ -9,28 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.CreateStorageRecordDto = void 0;
 const class_validator_1 = require("class-validator");
 class CreateStorageRecordDto {
 }
+exports.CreateStorageRecordDto = CreateStorageRecordDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], CreateStorageRecordDto.prototype, "projectId", void 0);
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], CreateStorageRecordDto.prototype, "storageId", void 0);
 __decorate([
-    class_validator_1.IsString(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateStorageRecordDto.prototype, "path", void 0);
 __decorate([
-    class_validator_1.IsDefined(),
+    (0, class_validator_1.IsDefined)(),
     __metadata("design:type", Object)
 ], CreateStorageRecordDto.prototype, "data", void 0);
 __decorate([
-    class_validator_1.IsInt(),
-    class_validator_1.IsOptional(),
+    (0, class_validator_1.IsInt)(),
+    (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], CreateStorageRecordDto.prototype, "accountId", void 0);
-exports.CreateStorageRecordDto = CreateStorageRecordDto;

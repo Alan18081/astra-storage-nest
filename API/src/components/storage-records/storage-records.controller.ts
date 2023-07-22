@@ -1,15 +1,15 @@
 import { Body, Controller, Delete, Get, Param, ParseIntPipe, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
-import {IStorageRecord, IUser} from '@astra/common';
+import {IStorageRecord, IUser} from 'astra-common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {StorageRecordsService} from './storage-records.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
-import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
+import {ApiOperation, ApiTags} from '@nestjs/swagger';
 
 @Controller('storages/:storageId/records')
 @UseGuards(AuthGuard('jwt'))
 @UseFilters(ApiExceptionFilter)
-@ApiUseTags('Storage Records')
+@ApiTags('Storage Records')
 export class StorageRecordsController {
 
   constructor(
@@ -17,19 +17,19 @@ export class StorageRecordsController {
   ) {}
 
   @Get('')
-  @ApiOperation({ title: 'Get storage records list as storage owner' })
+  @ApiOperation({ summary: 'Get storage records list as storage owner' })
   async findMany(@Param('storageId', new ParseIntPipe()) storageId: number): Promise<IStorageRecord[]> {
     return this.storageRecordsService.findMany(storageId);
   }
 
   @Get(':id')
-  @ApiOperation({ title: 'Get storage record by id as storage owner' })
+  @ApiOperation({ summary: 'Get storage record by id as storage owner' })
   async findOne(@Param('id') id: string): Promise<IStorageRecord | undefined> {
     return this.storageRecordsService.findOne(id);
   }
 
   @Post('')
-  @ApiOperation({ title: 'Create storage record by id as admin' })
+  @ApiOperation({ summary: 'Create storage record by id as admin' })
   async createOne(
     @Param('storageId', new ParseIntPipe()) storageId: number,
     @ReqUser() user: IUser,
@@ -39,7 +39,7 @@ export class StorageRecordsController {
   }
 
   @Put(':id')
-  @ApiOperation({ title: 'Update storage by id as admin' })
+  @ApiOperation({ summary: 'Update storage by id as admin' })
   async updateOne(
       @Param('id') id: string,
       @Body() body: any,
@@ -48,7 +48,7 @@ export class StorageRecordsController {
   }
 
   @Delete(':id')
-  @ApiOperation({ title: 'Delete storage by id as admin' })
+  @ApiOperation({ summary: 'Delete storage by id as admin' })
   async removeOne(@Param('id') id: string): Promise<any> {
     await this.storageRecordsService.removeOne(id);
   }

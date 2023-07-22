@@ -6,14 +6,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.SerializerService = void 0;
 const common_1 = require("@nestjs/common");
 const class_transformer_1 = require("class-transformer");
-let SerializerService = class SerializerService {
+let SerializerService = exports.SerializerService = class SerializerService {
     exclude(obj) {
-        return class_transformer_1.classToPlain(obj);
+        return (0, class_transformer_1.classToPlain)(obj);
     }
 };
-SerializerService = __decorate([
-    common_1.Injectable()
+exports.SerializerService = SerializerService = __decorate([
+    (0, common_1.Injectable)()
 ], SerializerService);
-exports.SerializerService = SerializerService;

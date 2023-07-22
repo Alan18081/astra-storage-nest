@@ -1,16 +1,16 @@
 import { Body, Controller, Delete, Get, Param, Post, Query, UseFilters, UseGuards } from '@nestjs/common';
 import {AuthGuard} from '@nestjs/passport';
-import { IProject, IProjectAccount, IUser } from '@astra/common';
+import { IProject, IProjectAccount, IUser } from 'astra-common';
 import {ReqUser} from '../../helpers/decorators/user.decorator';
 import {ProjectAccountsService} from './project-accounts.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import { Project } from '../../helpers/decorators/project.decorator';
 import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
-import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
+import {ApiOperation, ApiTags} from '@nestjs/swagger';
 
 @Controller('projectAccounts')
 @UseFilters(ApiExceptionFilter)
-@ApiUseTags('Project Accounts')
+@ApiTags('Project Accounts')
 export class ProjectAccountsController {
 
     constructor(
@@ -19,7 +19,7 @@ export class ProjectAccountsController {
 
     @Get()
     @UseGuards(AuthGuard('jwt'))
-    @ApiOperation({ title: 'Find many project accounts' })
+    @ApiOperation({ summary: 'Find many project accounts' })
     async findMany(
         @ReqUser() user: IUser,
         @Query('projectId') projectId: string,
@@ -29,7 +29,7 @@ export class ProjectAccountsController {
 
     @Get('me/profile')
     @UseGuards(AuthGuard('jwtProjectAccount'))
-    @ApiOperation({ title: 'Get profile by account token' })
+    @ApiOperation({ summary: 'Get profile by account token' })
     async findOneByToken(
         @ProjectAccount() projectAccount: IProjectAccount,
     ): Promise<IProjectAccount | undefined> {
@@ -38,7 +38,7 @@ export class ProjectAccountsController {
 
     @Get(':id')
     @UseGuards(AuthGuard('jwt'))
-    @ApiOperation({ title: 'Find project account' })
+    @ApiOperation({ summary: 'Find project account' })
     async findOne(
         @ReqUser() user: IUser,
         @Param('id') accountId: number,
@@ -49,7 +49,7 @@ export class ProjectAccountsController {
 
     @Post('')
     @UseGuards(AuthGuard('jwtProject'))
-    @ApiOperation({ title: 'Create project account' })
+    @ApiOperation({ summary: 'Create project account' })
     async createOne(
       @Project() project: IProject,
       @Body() dto: any,
@@ -59,7 +59,7 @@ export class ProjectAccountsController {
 
     @Delete(':id')
     @UseGuards(AuthGuard('jwt'))
-    @ApiOperation({ title: 'Remove project account' })
+    @ApiOperation({ summary: 'Remove project account' })
     async removeOne(
         @ReqUser() user: IUser,
         @Param('id') id: number,
@@ -70,7 +70,7 @@ export class ProjectAccountsController {
 
     @Delete('token')
     @UseGuards(AuthGuard('jwtProjectToken'))
-    @ApiOperation({ title: 'Remove project account from sdk via account token' })
+    @ApiOperation({ summary: 'Remove project account from sdk via account token' })
     async removeOneByToken(
         @ProjectAccount() projectAccount: IProjectAccount,
     ): Promise<void> {

@@ -5,11 +5,11 @@ import {RefreshToken} from './refresh-token.entity';
 export class RefreshTokensRepository extends Repository<RefreshToken> {
 
     async findOneByUserId(userId: number): Promise<RefreshToken | undefined> {
-        return this.findOne({ userId });
+        return this.findOne({ where: { userId } });
     }
 
     async findOneByToken(token: string): Promise<RefreshToken | undefined> {
-        return this.findOne({ token });
+        return this.findOne({ where: { token } });
     }
 
     async removeById(id: number): Promise<void> {

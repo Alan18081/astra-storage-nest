@@ -1,12 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
-import { createClientOptions } from '@astra/common/helpers';
-import { Queues } from '@astra/common/enums';
+import { createClientOptions, Queues } from 'astra-common';
 
 async function bootstrap() {
-  const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.SOCKETS_SERVICE));
+  const app = await NestFactory.createMicroservice(AppModule, createClientOptions(Queues.SOCKETS_SERVICE, process.env.RABBIT_URL));
   app.useGlobalPipes(new ValidationPipe());
-  await app.listen(() => console.log('SocketsService is running'));
+  await app.listen();
 }
 bootstrap();

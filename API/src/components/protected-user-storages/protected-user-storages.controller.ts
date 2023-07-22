@@ -1,15 +1,15 @@
 import { Body, Controller, Delete, Get, Param, Post, Put, UseFilters, UseGuards } from '@nestjs/common';
 import {ProjectAccount} from '../../helpers/decorators/project-account.decorator';
-import {IProjectAccount, IStorageRecord} from '@astra/common';
+import {IProjectAccount, IStorageRecord} from 'astra-common';
 import {ProtectedUserStoragesService} from './protected-user-storages.service';
 import { ApiExceptionFilter } from '../../helpers/filters/api.filter';
 import {AuthGuard} from '@nestjs/passport';
-import {ApiOperation, ApiUseTags} from '@nestjs/swagger';
+import {ApiOperation, ApiTags} from '@nestjs/swagger';
 
 @Controller('storages/protected/:path')
 @UseFilters(ApiExceptionFilter)
 @UseGuards(AuthGuard('jwtProjectAccount'))
-@ApiUseTags('Protected User Storages')
+@ApiTags('Protected User Storages')
 export class ProtectedUserStoragesController {
 
     constructor(
@@ -17,7 +17,7 @@ export class ProtectedUserStoragesController {
     ) {}
 
     @Get('')
-    @ApiOperation({ title: 'Find list of storage records' })
+    @ApiOperation({ summary: 'Find list of storage records' })
     async findStorageRecordsList(
         @Param('path') path: string,
         @ProjectAccount() account: IProjectAccount,
@@ -26,7 +26,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Get(':recordId')
-    @ApiOperation({ title: 'Find storage record by id' })
+    @ApiOperation({ summary: 'Find storage record by id' })
     async getStorageDataRecord(
         @Param('recordId') recordId: string,
         @ProjectAccount() account: IProjectAccount,
@@ -35,7 +35,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Post('')
-    @ApiOperation({ title: 'Create new storage record' })
+    @ApiOperation({ summary: 'Create new storage record' })
     async createStorageRecord(
         @Param('path') path: string,
         @ProjectAccount() account: IProjectAccount,
@@ -46,7 +46,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Put(':recordId')
-    @ApiOperation({ title: 'Update storage record by id' })
+    @ApiOperation({ summary: 'Update storage record by id' })
     async updateStorageRecordData(
         @Param('path') path: string,
         @Param('recordId') recordId: string,
@@ -57,7 +57,7 @@ export class ProtectedUserStoragesController {
     }
 
     @Delete(':recordId')
-    @ApiOperation({ title: 'Delete storage record by id' })
+    @ApiOperation({ summary: 'Delete storage record by id' })
     async removeOne(
         @Param('path') path: string,
         @Param('recordId') recordId: string,

@@ -4,3 +4,4 @@ export declare class CreateUserByGoogleDto {
     email: string;
     googleId: string;
 }
+//# sourceMappingURL=create-user-by-google.dto.d.ts.map

@@ -4,3 +4,4 @@ export declare const EMAIL_USERNAME = "ZEVS channel";
 export declare const EMAIL_TEMPLATES_FOLDER = "templates";
 export declare const APP_NAME = "Astra Storage";
 export declare const APP_URL = "http://localhost:5000";
+//# sourceMappingURL=emails-service.d.ts.map

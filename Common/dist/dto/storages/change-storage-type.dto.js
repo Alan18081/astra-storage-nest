@@ -9,15 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ChangeStorageTypeDto = void 0;
 const class_validator_1 = require("class-validator");
 class ChangeStorageTypeDto {
 }
+exports.ChangeStorageTypeDto = ChangeStorageTypeDto;
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], ChangeStorageTypeDto.prototype, "storageId", void 0);
 __decorate([
-    class_validator_1.IsInt(),
+    (0, class_validator_1.IsInt)(),
     __metadata("design:type", Number)
 ], ChangeStorageTypeDto.prototype, "typeId", void 0);
-exports.ChangeStorageTypeDto = ChangeStorageTypeDto;

@@ -1,15 +1,15 @@
 import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import {Client, ClientProxy} from '@nestjs/microservices';
-import {createClientOptions} from '@astra/common/helpers';
-import { CommunicationCodes, IStorage, Messages, Queues, StorageType } from '@astra/common';
+import {createClientOptions} from 'astra-common';
+import { CommunicationCodes, IStorage, Messages, Queues, StorageType } from 'astra-common';
 
 @Injectable()
 export class StoragesService {
 
-    @Client(createClientOptions(Queues.PROJECTS_SERVICE))
+    @Client(createClientOptions(Queues.PROJECTS_SERVICE, process.env.RABBIT_URL))
     private readonly projectsClient: ClientProxy;
 
-    @Client(createClientOptions(Queues.DATA_SERVICE))
+    @Client(createClientOptions(Queues.DATA_SERVICE, process.env.RABBIT_URL))
     private readonly dataClient: ClientProxy;
 
     async findManyByProject(query: any): Promise<IStorage[]> {

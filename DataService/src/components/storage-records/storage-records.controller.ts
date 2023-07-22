@@ -1,24 +1,24 @@
 import { Controller } from '@nestjs/common';
-import { CommunicationCodes, Queues } from '@astra/common/enums';
-import { PaginatedResponse } from '@astra/common/interfaces';
+import { CommunicationCodes, Queues } from 'astra-common';
+import { PaginatedResponse } from 'astra-common';
 import { StorageRecordsService } from './storage-records.service';
 import { ClientProxy, MessagePattern, Client } from '@nestjs/microservices';
 import {
   CreateStorageRecordDto,
   FindStorageRecordDto,
-  FindStorageRecordsListDto, FindStorageRecordsListForOwnerDto,
+  FindStorageRecordsListForOwnerDto,
   RemoveStorageRecordDto,
   UpdateStorageRecordDto,
   RemoveStorageRecordsListByStorageDto,
-} from '@astra/common/dto';
+} from 'astra-common';
 import { StorageRecord } from './storage-record.entity';
-import { createClientOptions } from '@astra/common/helpers';
-import { SerializerService } from '@astra/common/services';
+import { createClientOptions } from 'astra-common';
+import { SerializerService } from 'astra-common';
 
 @Controller()
 export class StorageRecordsController {
 
-    @Client(createClientOptions(Queues.SOCKETS_SERVICE))
+    @Client(createClientOptions(Queues.SOCKETS_SERVICE, process.env.RABBIT_URL))
     private readonly socketsClient: ClientProxy;
 
     constructor(
